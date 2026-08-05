@@ -14,11 +14,13 @@ The objective is to generate truthful, role-specific resumes while maximizing al
 career-engine/
 │
 ├── knowledge-base/
-│   ├── 01_candidate_profile.md
-│   ├── 02_experience.md
-│   ├── 03_projects.md
-│   ├── 04_security_assessments.md
-│   └── 05_achievements.md
+│   ├── 01_candidate_profile.md       # Master profile, skills, tools, resume rules
+│   ├── 02_experience.md              # Experience index and resume selection logic
+│   ├── 03_projects.md                # VigiLynx + CipherCrack
+│   ├── 04_security_assessments.md    # Black-box web app security assessment
+│   ├── 05_achievements.md            # Achievements and certifications
+│   ├── 06_epicor_internship.md       # Epicor internship knowledge base
+│   └── 07_mindpex_vapt.md            # Mindpex VAPT freelance knowledge base
 │
 ├── engine/
 │   ├── 01_resume_generation_rules.md
@@ -215,6 +217,7 @@ The engine currently supports
 - Product Security Engineer
 - Detection Engineer
 - Security Engineer
+- DevSecOps Engineer
 - Security Analyst (SOC)
 - Threat Intelligence Analyst
 - Security Research Engineer
@@ -307,7 +310,7 @@ generalize while preserving
 
 # Resume Constraints
 
-Always produce
+## When One Experience Entry Is on the Resume
 
 Experience
 
@@ -336,6 +339,38 @@ Certifications
 Resume Length
 
 - One Page
+
+## When Two Experience Entries Are on the Resume
+
+Experience 1 (Mindpex VAPT Freelance)
+
+- 3 bullets
+
+Experience 2 (Epicor Internship)
+
+- 3 bullets
+
+Project
+
+- 1 entry, 3 bullets
+
+Skills
+
+- 12–15
+
+Achievements
+
+- Maximum 2
+
+Certifications
+
+- Maximum 2
+
+Resume Length
+
+- One Page
+
+See 02_experience.md for role-based rules on when to include one vs two experience entries.
 
 ---
 

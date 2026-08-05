@@ -91,7 +91,7 @@ Resume Length
 
 - One page only
 
-Experience
+Experience Bullets (per entry)
 
 - Exactly 3 bullets
 - Maximum 2 lines per bullet
@@ -101,15 +101,17 @@ Project / Security Assessment
 - Exactly 3 bullets
 - Maximum 2 lines per bullet
 
+See 02_experience.md for one-page layout rules when two experience entries are present.
+
 Skills
 
-- 12–18 skills
+- 12–18 skills (compress to 12–15 when two experience entries are on the page)
 - Group by category
 - Dynamically reorder based on JD
 
 Achievements
 
-- Maximum 3
+- Maximum 3 (compress to 2 when two experience entries are on the page)
 
 Certifications
 
@@ -453,6 +455,49 @@ Experience
 
 ---
 
+interactsh
+
+Priority
+
+High
+
+Experience
+
+- SSRF out-of-band detection
+- OAST (Out-of-Band Application Security Testing)
+- Blind vulnerability confirmation via callback server
+
+---
+
+nikto
+
+Priority
+
+Medium
+
+Experience
+
+- Web server scanning
+- HTTP misconfiguration discovery
+- Security header enumeration
+- Information disclosure detection
+
+---
+
+sqlmap
+
+Priority
+
+Medium
+
+Experience
+
+- SQL injection testing
+- Database vulnerability assessment
+- Parameter-based injection validation
+
+---
+
 # Operating Systems
 
 Linux
@@ -552,6 +597,10 @@ Additional
 - Malware Analysis
 - Authentication
 - Authorization
+- SSRF
+- LLM / AI Security
+- Multi-tenant SaaS Security
+- PostgreSQL RLS Analysis
 
 ---
 
@@ -632,8 +681,9 @@ Only optimize wording.
 
 Highest
 
-- Internship
-- Security Assessment
+- Mindpex VAPT Freelance
+- Epicor Internship
+- Black-box Security Assessment
 - VigiLynx
 - CipherCrack
 
@@ -660,17 +710,36 @@ Determine target role.
 Rewrite:
 
 - Summary
-- Internship
+- Experience bullets
 - Skills
 - Achievements
 
-Select the two strongest experiences from:
+Experience Section Logic
+
+Always include Epicor Internship.
+
+Include Mindpex VAPT Freelance when JD targets:
+
+- Application Security
+- Product Security
+- Red Team
+- Penetration Testing
+- DevSecOps
+- Security Engineering
+
+For all other roles, Mindpex may replace one project slot.
+
+Project / Assessment Section Logic
+
+Select the two strongest from:
 
 - VigiLynx
 - CipherCrack
 - Black-box Web Application Security Assessment
 
 Never include all three.
+
+When Mindpex is in the Experience section, the project slot drops to one item.
 
 ---
 

@@ -35,6 +35,7 @@ engine/
 - 01_resume_generation_rules.md
 - 02_role_intelligence_matrix.md
 - 03_resume_budget.md
+- 04_company_intelligence.md
 
 All files are mandatory.
 
@@ -88,7 +89,108 @@ Analyze the Job Description.
 
 Step 4
 
-Identify the primary cybersecurity role.
+Run Company Intelligence.
+
+This step is **mandatory**. Read engine/04_company_intelligence.md before proceeding.
+
+### 4a — Extract Company Signals
+
+From the JD, identify:
+
+- Company name (if stated)
+- Scale signals (startup, enterprise, FAANG, consultancy, government)
+- Security maturity signals (team size, CISO org, embedded security, etc.)
+- Role context signals (founding member, IC, part of large team, etc.)
+
+### 4b — Classify Company Type
+
+Map signals to ONE of:
+
+- Startup
+- Enterprise / Large Corporation
+- Big Tech / Product Company
+- Consultancy / MSSP
+- Government / Defense
+
+If unknown, default to Enterprise.
+
+### 4c — Apply Modifier
+
+Apply the tone, bullet verb preference, and skills ordering modifier defined in engine/04_company_intelligence.md for the classified type.
+
+### 4d — Output Company Intelligence Report
+
+Output the following before proceeding:
+
+```
+Company Intelligence Report
+Company Name: [name or "unknown"]
+Company Type: [classified type]
+Confidence: [High / Medium / Low]
+Key Signals: [signals detected]
+Applied Modifier: [summary of tone/emphasis changes]
+```
+
+If confidence is Low, ask the candidate: "I classified this as [type] — does that sound right?"
+
+Otherwise, proceed without asking.
+
+↓
+
+Step 5
+
+Perform Gap Analysis and ask clarifying questions.
+
+This step is **mandatory**. Do NOT skip it.
+
+Do NOT generate the resume until the candidate responds.
+
+### 5a — Gap Analysis
+
+Compare every JD requirement against the knowledge base.
+
+For each requirement, tag it as one of:
+
+- COVERED — clearly evidenced in the knowledge base
+- PARTIAL — partially evidenced, could be strengthened
+- MISSING — no evidence found in the knowledge base
+
+### 5b — Consolidated Q&A (Soft-Denial)
+
+Ask the candidate **one single message** with ALL of the following:
+
+**For MISSING items** — ask presence questions:
+
+> "The JD requires [X]. I found no evidence of this in the knowledge base. Do you have any real, unreported experience with [X]?"
+
+**For PARTIAL items** — ask depth-probing questions:
+
+> "You have [existing evidence] from [context]. Did you also [deeper aspect of the requirement]? For example: [specific scenario or tool]."
+
+Group questions by category. Be specific. Be direct.
+
+Do NOT ask questions one at a time.
+
+Wait for the candidate's answers before proceeding.
+
+### 5c — Incorporate Answers
+
+After the candidate responds:
+
+- MISSING confirmed → Add to working context as newly confirmed experience.
+- MISSING denied → Mark as unaddressable. Omit from resume. Note in ATS Analysis.
+- PARTIAL elaborated → Replace the partial evidence with the fuller context.
+- PARTIAL denied → Keep existing partial evidence as-is. Do not inflate.
+
+↓
+
+Step 6
+
+Identify the primary cybersecurity role and generate a Role Classification Report.
+
+### 6a — Classify Role
+
+Score the JD against every supported role using keyword density.
 
 Possible roles
 
@@ -102,13 +204,36 @@ Possible roles
 - Security Research
 - SOC
 
-Choose ONE primary role.
+Assign a confidence percentage to every role.
+
+Choose the role with the highest confidence as the primary role.
 
 Never generate hybrid resumes unless explicitly requested.
 
+### 6b — Output Role Classification Report
+
+Output the following before proceeding:
+
+```
+Role Classification Report
+Primary Role: [role] ([confidence]%)
+Secondary: [role] ([confidence]%)
+Tertiary: [role] ([confidence]%)
+Rationale: [1–2 sentences explaining why the primary role was chosen]
+Company Modifier Applied: [yes/no — which modifier]
+```
+
+Then ask the candidate:
+
+> "I've classified this as a **[Primary Role]** position. Does this look correct, or would you like to target a different role?"
+
+Wait for confirmation before proceeding.
+
+If the candidate corrects the role, update the primary role and re-apply the Role Intelligence Matrix accordingly.
+
 ↓
 
-Step 5
+Step 7
 
 Extract important keywords.
 
@@ -146,7 +271,7 @@ Databases
 
 ↓
 
-Step 6
+Step 8
 
 Score every experience.
 
@@ -169,7 +294,7 @@ Certifications
 
 ↓
 
-Step 7
+Step 9
 
 Select experiences.
 
@@ -189,7 +314,7 @@ Never include all three.
 
 ↓
 
-Step 8
+Step 10
 
 Rewrite every section.
 
@@ -211,27 +336,80 @@ Certifications
 
 ↓
 
-Step 9
+Step 11
 
 Apply ATS optimization.
 
 ↓
 
-Step 10
+Step 12
 
 Validate against resume budget.
 
 ↓
 
-Step 11
+Step 13
 
 Validate truthfulness.
 
 ↓
 
-Step 12
+Step 14
+
+Generate draft resume.
+
+Present the full draft resume to the candidate.
+
+Do NOT call it "final".
+
+After presenting, ask:
+
+> "Here is your draft resume. Would you like to refine any section — for example: Experience bullets, Skills, Summary, or Projects? Type the section name and your feedback, or type **'approve'** to finalize."
+
+Wait for the candidate's response before proceeding.
+
+↓
+
+Step 15
+
+Iterative Refinement Loop.
+
+This step is **mandatory** unless the candidate types 'approve' immediately.
+
+### 15a — Handle Feedback
+
+For each piece of feedback received:
+
+- Identify the specific section and bullet(s) referenced.
+- Rewrite ONLY that section. Do not regenerate the full resume.
+- Present the rewritten section in isolation.
+- Ask: "Does this look better, or would you like further changes?"
+
+### 15b — Constraints During Refinement
+
+- Do NOT relax the Truth Guard. Never introduce fabricated information during refinement.
+- Do NOT violate the resume budget. If a rewrite is too long, compress before presenting.
+- Do NOT change the primary role unless the candidate explicitly requests it.
+
+### 15c — Repeat Until Approved
+
+Continue the refinement loop until the candidate types **'approve'**.
+
+Maximum refinement rounds: **3**
+
+After 3 rounds, ask:
+
+> "We've done 3 refinement rounds. Would you like one final pass or shall I finalize the resume as-is?"
+
+↓
+
+Step 16
 
 Generate final resume.
+
+Present the complete, approved resume.
+
+Label it clearly as the **Final Resume**.
 
 ---
 
@@ -544,7 +722,19 @@ Every statement must be supported by evidence.
 
 Before returning the resume, verify
 
+✓ Company Intelligence Report was generated
+
+✓ Gap Analysis was performed and Q&A was completed with the candidate
+
+✓ All candidate-confirmed additions are incorporated
+
+✓ All unaddressable gaps are noted in the ATS Analysis
+
+✓ Role Classification Report was generated and confirmed by candidate
+
 ✓ Correct target role selected
+
+✓ Refinement loop was offered to the candidate
 
 ✓ Epicor included
 
@@ -581,12 +771,44 @@ After the resume, provide
 Include
 
 - Target Role
+- Company Type Modifier Applied
 - Important Keywords Found
 - Keywords Successfully Covered
 - Missing Keywords
+- Unaddressable Gaps (items candidate confirmed they do not have)
 - Resume Strengths
 - Weaknesses
 - Suggestions for Improvement
+
+---
+
+## Competing Candidate Benchmark
+
+Simulate what a strong competing candidate for this specific role and company type typically has.
+
+For each item in the benchmark, tag it as:
+
+- ✅ YOU HAVE IT — clearly evidenced in the resume
+- 🟡 YOU'RE CLOSE — partially evidenced, could be stronger
+- ❌ GAP TO BUILD — not present; a strong competitor likely has this
+
+Output exactly 5 benchmark items.
+
+After the benchmark, provide:
+
+### Priority Gap to Close
+
+Identify the single most impactful GAP TO BUILD item.
+
+Suggest ONE concrete, actionable way to close it within 30–60 days.
+
+Example:
+
+> "A strong Application Security candidate typically has hands-on SAST pipeline integration. Consider adding a GitHub Actions workflow with Semgrep scanning to one of your existing projects and documenting the findings."
+
+Be specific. Be actionable. Never suggest fabricating experience.
+
+Only suggest building real, verifiable skills.
 
 ---
 

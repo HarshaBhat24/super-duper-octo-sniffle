@@ -25,7 +25,8 @@ career-engine/
 ├── engine/
 │   ├── 01_resume_generation_rules.md
 │   ├── 02_role_intelligence_matrix.md
-│   └── 03_resume_budget.md
+│   ├── 03_resume_budget.md
+│   └── 04_company_intelligence.md
 │
 ├── prompts/
 │   └── master_resume_prompt.md
@@ -156,7 +157,23 @@ Read Job Description
 
 ↓
 
-Identify Target Role
+Company Intelligence — Classify company type; apply tone modifier; output Company Intelligence Report
+
+↓
+
+Gap Analysis — Tag each JD requirement as COVERED / PARTIAL / MISSING
+
+↓
+
+Consolidated Q&A — MISSING: presence questions | PARTIAL: depth-probing questions; wait for response
+
+↓
+
+Incorporate Candidate Answers
+
+↓
+
+Role Classification Report — Score all roles; output top 3 with confidence %; ask candidate to confirm
 
 ↓
 
@@ -196,11 +213,23 @@ Perform Truth Validation
 
 ↓
 
-Generate Resume
+Generate Draft Resume — present to candidate
 
 ↓
 
-Generate ATS Analysis
+Iterative Refinement Loop — targeted section rewrites; repeat until 'approve' (max 3 rounds)
+
+↓
+
+Generate Final Resume
+
+↓
+
+ATS Analysis
+
+↓
+
+Competing Candidate Benchmark — 5 items tagged YOU HAVE IT / YOU'RE CLOSE / GAP TO BUILD + Priority Gap advice
 ```
 
 Never skip any step.

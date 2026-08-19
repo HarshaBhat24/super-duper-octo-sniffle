@@ -25,6 +25,10 @@ knowledge-base/
 - 03_projects.md
 - 04_security_assessments.md
 - 05_achievements.md
+- 06_epicor_internship.md
+- 07_mindpex_vapt.md
+
+Note: 06 and 07 are the primary factual sources for the two experience entries. Do not skip them.
 
 ---
 
@@ -40,6 +44,26 @@ engine/
 All files are mandatory.
 
 Do not skip any file.
+
+---
+
+## Examples
+
+examples/
+
+- appsec.md
+- detection_engineer.md
+- devsecops.md
+- product_security.md
+- redteam.md
+- security_engineering.md
+- soc.md
+
+Read the example matching the classified role BEFORE generating any bullets.
+
+Use examples to determine: section order, terminology, bullet framing, and skills ordering.
+
+Do NOT copy example bullets verbatim. Generate fresh bullets from the knowledge base.
 
 ---
 
@@ -147,13 +171,15 @@ Do NOT generate the resume until the candidate responds.
 
 ### 5a — Gap Analysis
 
+Before tagging anything as MISSING, cross-reference `knowledge-base/00_changelog.md` for recently added skills or experience that may not yet be fully documented in every KB file.
+
 Compare every JD requirement against the knowledge base.
 
 For each requirement, tag it as one of:
 
 - COVERED — clearly evidenced in the knowledge base
 - PARTIAL — partially evidenced, could be strengthened
-- MISSING — no evidence found in the knowledge base
+- MISSING — no evidence found in the knowledge base or changelog
 
 ### 5b — Consolidated Q&A (Soft-Denial)
 
@@ -199,10 +225,14 @@ Possible roles
 - Product Security
 - Application Security
 - Security Engineer
+- DevSecOps
 - Detection Engineer
 - Threat Intelligence
 - Security Research
 - SOC
+- Purple Team
+
+Note: DevSecOps triggers Layout A (Mindpex + Epicor in Experience). Purple Team is scored but rarely reaches top confidence; if classified as Purple Team, confirm with candidate before proceeding.
 
 Assign a confidence percentage to every role.
 
@@ -273,48 +303,82 @@ Databases
 
 Step 8
 
-Score every experience.
+Score every experience and project against the JD using the Project Scoring Rubric.
 
-Experience
+Experience Entries
 
-Epicor
+- Mindpex VAPT Freelance (07_mindpex_vapt.md)
+- Epicor Software Internship (06_epicor_internship.md)
 
 Projects
 
 - VigiLynx
 - CipherCrack
-
-Security Assessment
-
-Black-box Web Application Security Assessment
+- Black-box Web Application Security Assessment
 
 Achievements
 
 Certifications
 
+Scoring weights per project (see engine/01_resume_generation_rules.md):
+
+- Security relevance: 40%
+- Technical depth: 25%
+- JD keyword match: 20%
+- ATS coverage: 10%
+- Verified metrics: 5%
+
 ↓
 
 Step 9
 
-Select experiences.
+Experience Structure Decision.
 
-Rules
+This step is **mandatory** and must run before any bullets are written.
 
-Always include
+Using the confirmed primary role, check the Role-Based Pairing table in 02_experience.md:
 
-Epicor
+| Primary Role | Experience Section | Project Slot |
+|---|---|---|
+| AppSec / ProdSec | Mindpex + Epicor | VigiLynx OR Security Assessment |
+| Red Team / Pentesting | Mindpex + Epicor | CipherCrack OR Security Assessment |
+| DevSecOps | Mindpex + Epicor | VigiLynx |
+| Security Engineering | Mindpex + Epicor | VigiLynx |
+| Detection Engineering | Epicor only | VigiLynx + CipherCrack |
+| SOC | Epicor only | VigiLynx + CipherCrack |
+| Threat Intelligence | Epicor only | VigiLynx + CipherCrack |
+| Security Research | Epicor only | CipherCrack + Security Assessment |
 
-Choose ONLY TWO
+If Mindpex is in the Experience section:
 
-- VigiLynx
-- CipherCrack
-- Security Assessment
+- Projects: exactly 1 entry (3 bullets)
+- Skills: 12–15 items
+- Achievements: max 2
 
-Never include all three.
+If Mindpex is NOT in the Experience section:
+
+- Mindpex occupies one project slot
+- Projects: 2 entries (3 bullets each)
+- Skills: 12–18 items
+- Achievements: max 3
 
 ↓
 
 Step 10
+
+Select experiences per the decision above.
+
+Epicor: always included.
+
+Choose ONLY the number of projects determined in Step 9.
+
+Never include all three projects.
+
+Never include Mindpex in both Experience and Project sections simultaneously.
+
+↓
+
+Step 11
 
 Rewrite every section.
 
@@ -336,25 +400,25 @@ Certifications
 
 ↓
 
-Step 11
+Step 12
 
 Apply ATS optimization.
 
 ↓
 
-Step 12
+Step 13
 
 Validate against resume budget.
 
 ↓
 
-Step 13
+Step 14
 
 Validate truthfulness.
 
 ↓
 
-Step 14
+Step 15
 
 Generate draft resume.
 
@@ -370,13 +434,13 @@ Wait for the candidate's response before proceeding.
 
 ↓
 
-Step 15
+Step 16
 
 Iterative Refinement Loop.
 
 This step is **mandatory** unless the candidate types 'approve' immediately.
 
-### 15a — Handle Feedback
+### 16a — Handle Feedback
 
 For each piece of feedback received:
 
@@ -385,13 +449,13 @@ For each piece of feedback received:
 - Present the rewritten section in isolation.
 - Ask: "Does this look better, or would you like further changes?"
 
-### 15b — Constraints During Refinement
+### 16b — Constraints During Refinement
 
 - Do NOT relax the Truth Guard. Never introduce fabricated information during refinement.
 - Do NOT violate the resume budget. If a rewrite is too long, compress before presenting.
 - Do NOT change the primary role unless the candidate explicitly requests it.
 
-### 15c — Repeat Until Approved
+### 16c — Repeat Until Approved
 
 Continue the refinement loop until the candidate types **'approve'**.
 
@@ -403,7 +467,7 @@ After 3 rounds, ask:
 
 ↓
 
-Step 16
+Step 17
 
 Generate final resume.
 
@@ -457,49 +521,27 @@ Never guess.
 
 # Resume Constraints
 
-Experience
+Two Experience Entries (Mindpex + Epicor in Experience section)
 
-Exactly
+- Each experience: exactly 3 bullets, max 2 lines each
+- Projects: 1 entry, exactly 3 bullets
+- Skills: 12–15 items
+- Achievements: max 2
+- Certifications: exactly 2
+- Summary: optional (only if fits within one page)
+- Resume: one page
 
-3 bullets
+One Experience Entry (Epicor only in Experience section)
 
-Project 1
+- Experience: exactly 3 bullets, max 2 lines each
+- Projects: 2 entries, exactly 3 bullets each (one may be Mindpex as project)
+- Skills: 12–18 items
+- Achievements: max 3
+- Certifications: exactly 2
+- Summary: optional
+- Resume: one page
 
-Exactly
-
-3 bullets
-
-Project 2
-
-Exactly
-
-3 bullets
-
-Skills
-
-12–18
-
-Achievements
-
-Maximum
-
-3
-
-Certifications
-
-Exactly
-
-2
-
-Summary
-
-Optional
-
-Resume
-
-One page
-
-These constraints are mandatory.
+These constraints are mandatory. Determine which applies from Step 9.
 
 ---
 
@@ -539,6 +581,18 @@ Always include.
 Rewrite dynamically according to the selected role.
 
 Never use QA-heavy language when a security-oriented interpretation is supported by the knowledge base.
+
+Mindpex VAPT Freelance
+
+Include in Experience section when role is: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering.
+
+For all other roles: include as a project slot entry.
+
+Never appear in both Experience and Projects simultaneously.
+
+Always described as: "Freelance VAPT Engagement — Enterprise SaaS Platform"
+
+Never disclose the client name (Mindpex) in the resume.
 
 ---
 
@@ -734,15 +788,27 @@ Before returning the resume, verify
 
 ✓ Correct target role selected
 
+✓ Experience Structure Decision (Step 9) was executed — Layout A or B confirmed
+
+✓ Mindpex VAPT appears in correct location (Experience section for Layout A / Project slot for Layout B)
+
+✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform" — no client name used
+
+✓ Epicor included in Experience section
+
+✓ Correct number of project slots used (1 for Layout A / 2 for Layout B)
+
+✓ Bullet count per section matches layout constraints
+
+✓ Skills count within layout cap (12–15 for Layout A / 12–18 for Layout B)
+
+✓ Achievements count within layout cap (max 2 for Layout A / max 3 for Layout B)
+
 ✓ Refinement loop was offered to the candidate
 
-✓ Epicor included
+✓ Skills reordered per role and company modifier
 
-✓ Correct projects selected
-
-✓ Skills reordered
-
-✓ Achievements reordered
+✓ Achievements reordered per role
 
 ✓ CompTIA Security+ included
 

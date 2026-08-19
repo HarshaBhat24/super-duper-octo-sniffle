@@ -56,6 +56,7 @@ Priority Tier 1
 - Application Security Engineer
 - Product Security Engineer
 - Security Engineer
+- DevSecOps Engineer
 - Penetration Tester
 
 Priority Tier 2
@@ -664,6 +665,10 @@ Never claim:
 - Kubernetes administration
 - Reverse Engineering expertise
 - Malware Development
+- Bug bounty experience — the Mindpex engagement was authorized freelance VAPT, not a bug bounty program
+- Penetration testing firm — this was individual freelance work, not employment at a security firm
+- Red team operator — CTF and VAPT experience does not equal a red team role in an organization
+- CVE publication — no CVEs have been assigned or published
 
 Never fabricate:
 

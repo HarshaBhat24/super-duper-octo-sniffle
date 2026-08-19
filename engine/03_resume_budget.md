@@ -75,73 +75,85 @@ Otherwise omit.
 
 ---
 
-# Experience
+# Layout Selection
 
-Maximum Entries
+Before applying any budget, determine the layout from the Experience Structure Decision (master_resume_prompt.md Step 9).
 
-1
+**Layout A** — Mindpex VAPT + Epicor both in Experience section
 
-(Epicor)
+Applies when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering
 
-Bullets
+**Layout B** — Epicor only in Experience section
 
-Exactly 3
-
-Each Bullet
-
-Maximum 2 lines
-
-Preferred Length
-
-28–36 words
+Applies when JD targets: Detection Engineering, SOC, Threat Intelligence, Security Research
 
 ---
 
-# Projects / Security Assessment
+# Experience Budget
 
-Exactly TWO entries.
+## Layout A (Two Experience Entries)
 
-Choose from
+Entry 1: Mindpex VAPT Freelance
 
-- VigiLynx
-- CipherCrack
-- Security Assessment
+- Bullets: exactly 3
+- Max 2 lines per bullet
+- Preferred length: 28–36 words
 
-Never include all three.
+Entry 2: Epicor Software Internship
 
-Each Entry
+- Bullets: exactly 3
+- Max 2 lines per bullet
+- Preferred length: 28–36 words
 
-Exactly 3 bullets.
+## Layout B (One Experience Entry)
 
-Each Bullet
+Entry 1: Epicor Software Internship
 
-Maximum 2 lines.
-
-Preferred Length
-
-28–36 words.
+- Bullets: exactly 3
+- Max 2 lines per bullet
+- Preferred length: 28–36 words
 
 ---
 
-# Skills
+# Projects Budget
 
-Categories
+## Layout A (Two Experience Entries)
 
-4–6
+Project slots: exactly 1
 
-Total Skills
+Choose from: VigiLynx / CipherCrack / Security Assessment
 
-Minimum
+- Bullets: exactly 3
+- Max 2 lines per bullet
+- Preferred length: 28–36 words
 
-12
+Note: Mindpex is in Experience, not here.
 
-Maximum
+## Layout B (One Experience Entry)
 
-18
+Project slots: exactly 2
 
-Prioritize
+Slot 1: Mindpex VAPT (always, described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
 
-Security concepts before technologies.
+Slot 2: choose from VigiLynx / CipherCrack / Security Assessment per Role Intelligence Matrix
+
+- Bullets: exactly 3 per slot
+- Max 2 lines per bullet
+- Preferred length: 28–36 words
+
+Never include all three of VigiLynx + CipherCrack + Security Assessment.
+
+---
+
+# Skills Budget
+
+Categories: 4–6
+
+Layout A (two experience entries): 12–15 total skills
+
+Layout B (one experience entry): 12–18 total skills
+
+Prioritize security concepts before technologies.
 
 ---
 
@@ -165,13 +177,13 @@ Never exceed two certifications unless explicitly requested.
 
 ---
 
-# Achievements
+# Achievements Budget
 
-Maximum
+Layout A (two experience entries): max 2
 
-3
+Layout B (one experience entry): max 3
 
-Order dynamically according to the selected role.
+Order dynamically by target role.
 
 Prefer measurable achievements.
 
@@ -316,13 +328,39 @@ Avoid generic software engineering wording when a security-specific equivalent e
 
 Before returning the resume, verify
 
+## Layout A (Two Experience Entries)
+
 ✓ One page
 
-✓ Exactly 3 experience bullets
+✓ Exactly 3 bullets for Mindpex experience
 
-✓ Exactly 3 bullets for Project/Assessment 1
+✓ Exactly 3 bullets for Epicor experience
 
-✓ Exactly 3 bullets for Project/Assessment 2
+✓ Exactly 3 bullets for the single project slot
+
+✓ 12–15 skills
+
+✓ Maximum 2 achievements
+
+✓ Exactly 2 certifications
+
+✓ Education within 2 lines
+
+✓ No fabricated information
+
+✓ JD-specific terminology applied
+
+✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform" (no client name)
+
+## Layout B (One Experience Entry)
+
+✓ One page
+
+✓ Exactly 3 bullets for Epicor experience
+
+✓ Exactly 3 bullets for Mindpex project slot
+
+✓ Exactly 3 bullets for second project slot
 
 ✓ 12–18 skills
 

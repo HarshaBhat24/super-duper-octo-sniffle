@@ -14,7 +14,9 @@
 
 Maximum achievements on resume
 
-3
+Layout A (two experience entries): 2
+
+Layout B (one experience entry): 3
 
 Maximum certifications
 
@@ -23,6 +25,10 @@ Maximum certifications
 Achievements should be dynamically reordered according to the Job Description.
 
 Certifications should always appear after Skills unless explicitly requested otherwise.
+
+Layout A applies to: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering.
+
+Layout B applies to: Detection Engineering, SOC, Threat Intelligence, Security Research.
 
 ---
 
@@ -567,6 +573,24 @@ HackAthena
 3.
 
 CTF Experience
+
+---
+
+## DevSecOps
+
+Note: Layout A — max 2 achievements.
+
+Order
+
+1.
+
+HackAthena
+
+2.
+
+CTF Experience
+
+Rationale: HackAthena demonstrates security tooling and threat detection in a CI/CD-adjacent context. CTF experience demonstrates practical offensive familiarity, supporting the security gate role.
 
 ---
 

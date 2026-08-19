@@ -14,16 +14,17 @@ The objective is to generate truthful, role-specific resumes while maximizing al
 career-engine/
 │
 ├── knowledge-base/
+│   ├── 00_changelog.md               # KB update log — track new skills, certs, projects
 │   ├── 01_candidate_profile.md       # Master profile, skills, tools, resume rules
 │   ├── 02_experience.md              # Experience index and resume selection logic
 │   ├── 03_projects.md                # VigiLynx + CipherCrack
 │   ├── 04_security_assessments.md    # Black-box web app security assessment
 │   ├── 05_achievements.md            # Achievements and certifications
-│   ├── 06_epicor_internship.md       # Epicor internship knowledge base
-│   └── 07_mindpex_vapt.md            # Mindpex VAPT freelance knowledge base
+│   ├── 06_epicor_internship.md       # Epicor internship knowledge base (primary CI/CD source)
+│   └── 07_mindpex_vapt.md            # Mindpex VAPT freelance knowledge base (primary security source)
 │
 ├── engine/
-│   ├── 01_resume_generation_rules.md
+│   ├── 01_resume_generation_rules.md # Pipeline steps, scoring rubric, selection logic
 │   ├── 02_role_intelligence_matrix.md
 │   ├── 03_resume_budget.md
 │   └── 04_company_intelligence.md
@@ -34,9 +35,14 @@ career-engine/
 ├── examples/
 │   ├── appsec.md
 │   ├── detection_engineer.md
+│   ├── devsecops.md
 │   ├── product_security.md
 │   ├── redteam.md
+│   ├── security_engineering.md
 │   └── soc.md
+│
+├── outputs/
+│   └── log.md                        # Resume version tracking log
 │
 └── README.md
 ```

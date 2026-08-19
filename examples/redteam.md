@@ -66,9 +66,7 @@ Summary
 
 Experience
 
-↓
-
-Security Assessment
+(Mindpex VAPT Freelance, then Epicor)
 
 ↓
 
@@ -90,6 +88,8 @@ Achievements
 
 Education
 
+Note: Layout A. Two experience entries, 1 project slot (CipherCrack). Security Assessment is covered by Mindpex in Experience.
+
 ---
 
 # Summary Style
@@ -103,7 +103,7 @@ Characteristics
 
 Good Example
 
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience in offensive security, web application penetration testing, and security tooling. Performed authorized black-box security assessments, developed offensive cryptography utilities, and solved 150+ CTF challenges while ranking in the Top 10% on TryHackMe.
+CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience in full-scope VAPT, offensive security, and security tooling development. Identified 9 Critical findings including SSRF, account takeover, and SQL wildcard injection across a multi-tenant SaaS platform; delivered attack chains with CVSS scoring, remediation, and 7 domain-specific audit reports.
 
 Avoid
 
@@ -116,7 +116,33 @@ Avoid
 
 # Experience
 
-Epicor
+## Mindpex VAPT Freelance
+
+Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+
+Focus
+
+- SSRF via unvalidated webhook URL (OOB confirmed with interactsh)
+- Account takeover via invitation flow forced password override
+- SQL wildcard injection enabling mass-deletion in single authenticated request
+- Cross-tenant deletion via foreign UUID injection
+- Attack chain documentation with CVSS scoring
+
+Example Bullet
+
+Exploited SSRF via unvalidated webhook URL to demonstrate internal network reach; confirmed OOB callback using interactsh and documented full attack chain with remediation.
+
+Example Bullet
+
+Discovered account takeover via invitation flow forced password override; traced privilege escalation path from low-privilege invite to full account control on any target email.
+
+Example Bullet
+
+Identified SQL wildcard injection in admin delete handler enabling full organization data wipe in a single authenticated request; validated mass-deletion impact and delivered remediation.
+
+---
+
+## Epicor Software Internship
 
 Focus
 
@@ -134,37 +160,7 @@ Suppress
 
 Example Bullet
 
-Applied adversarial input validation and edge-case testing across enterprise workflows to identify unexpected application behaviors while improving automation reliability.
-
----
-
-# Security Assessment
-
-Priority
-
-★★★★★
-
-Focus
-
-- Reconnaissance
-- Enumeration
-- Authentication Testing
-- Authorization Testing
-- API Security
-- OWASP
-- Manual Testing
-
-Example Bullet
-
-Performed an authorized black-box security assessment of a SaaS web application, identifying authentication, authorization, and configuration weaknesses through manual testing and structured reconnaissance.
-
-Example Bullet
-
-Validated access-control flaws and API security issues through manual request manipulation, endpoint enumeration, and business-logic testing using Burp Suite, ffuf, and Gobuster.
-
-Example Bullet
-
-Produced a professional penetration testing report containing CVSS scoring, attack chains, technical findings, and secure architecture recommendations for identified vulnerabilities.
+Developed PowerShell and Batch automation scripts for build and environment provisioning across Linux-based CI/CD execution environments; performed log-based root cause analysis for pipeline failures.
 
 ---
 
@@ -188,51 +184,50 @@ Suppress
 
 Example Bullet
 
-Developed an offline Python-based cryptanalysis toolkit implementing nine classical ciphers with automated brute-force workflows to accelerate CTF problem solving.
+Developed an offline Python-based cryptanalysis toolkit implementing 9 classical ciphers with automated brute-force workflows; used across 10–20 CTF competitions to accelerate cryptanalysis.
 
 Example Bullet
 
-Implemented modular cryptographic algorithms including Hill, Affine, Vigenère, and Four-Square ciphers using modular arithmetic, matrix operations, and reusable CLI architecture.
+Implemented modular cryptographic algorithms including Hill, Affine, Vigenère, and Four-Square ciphers using modular arithmetic and matrix operations (1,324+ LOC).
 
 Example Bullet
 
-Used the toolkit during multiple Capture The Flag competitions to automate repetitive cryptanalysis tasks and reduce dependence on external tools.
+Designed reusable CLI architecture enabling independent cipher invocation, reducing repetitive manual effort during offensive security competitions.
 
 ---
 
 # Skills
 
-Programming
-
-- Python
-- Bash
-- JavaScript
-
-Operating Systems
-
-- Linux
-- Kali Linux
-- Ubuntu
-
 Security
 
 - Penetration Testing
-- Web Application Security
+- VAPT
+- SSRF
 - Authentication
 - Authorization
 - Cryptography
 - Reconnaissance
 - Enumeration
 
+Programming
+
+- Python
+- PowerShell
+- Bash
+
+Operating Systems
+
+- Linux
+- Kali Linux
+
 Tools
 
 - Burp Suite
 - ffuf
-- Gobuster
 - Nmap
-- Wireshark
-- Metasploit
-- CyberChef
+- interactsh
+
+Note: Layout A — target 12–15 total skills.
 
 ---
 
@@ -250,15 +245,13 @@ ISC2 Certified in Cybersecurity (CC)
 
 # Achievements
 
+Layout A cap: max 2
+
 1.
 
 Solved 150+ CTF challenges across web exploitation, cryptography, and digital forensics.
 
 2.
-
-Ranked in the Top 10% on TryHackMe.
-
-3.
 
 Finalist — KJSSE CTF 2.0 (17th of 662 teams).
 
@@ -300,27 +293,33 @@ High Priority
 
 # Validation Checklist
 
-The generated resume should satisfy
+✓ Mindpex VAPT in Experience section (Layout A)
 
-✓ Epicor included
+✓ Epicor in Experience section
 
-✓ Security Assessment included
+✓ CipherCrack as sole project slot
 
-✓ CipherCrack included
+✓ Security Assessment excluded (covered by Mindpex in Experience)
 
-✓ VigiLynx excluded unless phishing/browser security appears in the JD
+✓ SSRF, account takeover, SQL wildcard injection mentioned in Mindpex bullets
+
+✓ 12–15 skills (Layout A cap)
+
+✓ Max 2 achievements (Layout A cap)
 
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
 
-✓ Three bullets per experience
+✓ Three bullets per section
 
 ✓ One page
 
 ✓ ATS optimized
 
 ✓ No fabricated information
+
+✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
 
 ---
 

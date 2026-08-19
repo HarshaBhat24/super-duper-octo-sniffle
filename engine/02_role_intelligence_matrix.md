@@ -97,7 +97,26 @@ Role Score
 
 Experience
 
-Epicor
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- SSRF exploitation with OOB confirmation (interactsh)
+- Account takeover via invitation flow privilege escalation
+- SQL wildcard injection enabling mass-deletion
+- Attack chain documentation with CVSS scoring
+- Penetration testing methodology (OWASP WSTG)
+
+Suppress
+
+- Audit logging gaps (use for Detection Engineering roles)
+- RLS analysis detail (save for Product Security roles)
+
+Entry 2 — Epicor Software Internship
 
 ★★★★☆
 
@@ -118,17 +137,15 @@ Suppress
 
 Project Selection
 
+Layout A: 1 slot only (Mindpex is in Experience)
+
 1
-
-Security Assessment
-
-★★★★★
-
-2
 
 CipherCrack
 
 ★★★★★
+
+Note: Security Assessment may replace CipherCrack if JD emphasizes methodology over tooling.
 
 Exclude
 
@@ -241,7 +258,21 @@ Role Score
 
 Experience
 
-Epicor
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- SSRF and unauthenticated RLS access to security-critical tables (MFA, webhooks)
+- Account takeover via invitation flow forced password override
+- PostgreSQL RLS static analysis across 47 migration files
+- 30+ CVSS-scored findings with code-level remediation (TypeScript, Python, SQL)
+- Multi-tenant isolation violations
+
+Entry 2 — Epicor Software Internship
 
 ★★★★★
 
@@ -258,17 +289,15 @@ Emphasize
 
 Project Selection
 
+Layout A: 1 slot only (Mindpex is in Experience)
+
 1.
-
-Security Assessment
-
-★★★★★
-
-2.
 
 VigiLynx
 
 ★★★★★
+
+Note: Security Assessment may replace VigiLynx if JD emphasizes assessment work over tooling.
 
 Exclude
 
@@ -368,7 +397,21 @@ Role Score
 
 Experience
 
-Epicor
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- SSRF via unvalidated webhook URL (confirmed OOB with interactsh)
+- BOLA and authentication bypass findings
+- SQL wildcard injection in admin delete handler
+- Prompt injection and LLM memory poisoning
+- Code-level remediation in TypeScript, Python, SQL
+
+Entry 2 — Epicor Software Internship
 
 ★★★★★
 
@@ -384,19 +427,19 @@ Focus
 
 Project Selection
 
+Layout A: 1 slot only (Mindpex is in Experience)
+
 1.
 
 Security Assessment
 
 ★★★★★
 
-2.
+Note: VigiLynx may replace Security Assessment if JD emphasizes threat detection alongside AppSec.
 
-VigiLynx
+Exclude
 
-★★★★☆
-
----
+CipherCrack unless cryptography appears in the JD.
 
 Technical Skills
 
@@ -857,7 +900,21 @@ Role Score
 
 Experience
 
-Epicor
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- Full-scope VAPT across 7 security domains
+- Static code analysis + dynamic testing methodology
+- 30+ CVSS-scored findings with code-level remediation
+- Dead middleware (rate limiting bypass), audit logging gaps
+- Multi-tenant SaaS security architecture findings
+
+Entry 2 — Epicor Software Internship
 
 ★★★★★
 
@@ -874,17 +931,15 @@ Focus
 
 Project Selection
 
+Layout A: 1 slot only (Mindpex is in Experience)
+
 1.
 
 VigiLynx
 
 ★★★★★
 
-2.
-
-Security Assessment
-
-★★★★☆
+Note: Security Assessment may replace VigiLynx if JD emphasizes web app security over tooling.
 
 ---
 
@@ -944,6 +999,175 @@ Summary Focus
 - Automation
 - Secure Systems
 - Application Security
+
+---
+
+Preferred Terminology
+
+Use
+
+- Engineered
+- Secured
+- Automated
+- Validated
+- Implemented
+
+---
+
+# ROLE
+
+## DevSecOps Engineer
+
+Role Score
+
+★★★★★
+
+---
+
+Experience
+
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- Full-scope VAPT as security gate before production
+- Dead middleware finding (rate limiting misconfiguration in Next.js middleware chain)
+- Code-level remediation delivery (TypeScript, Python, SQL)
+- Static analysis of infrastructure-layer security (RLS policies, header configs)
+- 7 domain-specific audit reports
+
+Suppress
+
+- Prompt injection detail (save for AI Security roles)
+
+Entry 2 — Epicor Software Internship
+
+★★★★★
+
+Emphasize
+
+- CI/CD pipeline-as-code (Jenkinsfile + Azure Pipelines YAML)
+- Jenkins to Azure DevOps migration
+- Build and test environment provisioning automation (PowerShell + Batch)
+- Log-based root cause analysis across Linux execution environments
+
+Suppress
+
+- QA/testing language
+- SQL database updates
+
+---
+
+Project Selection
+
+Layout A: 1 slot only (Mindpex is in Experience)
+
+1.
+
+VigiLynx
+
+★★★★★
+
+Emphasize: security automation pipeline, threat detection integration, VirusTotal API
+
+---
+
+Technical Skills
+
+Critical
+
+- CI/CD
+- Jenkins
+- Azure DevOps
+- Azure Pipelines YAML
+- PowerShell
+- Python
+- Linux
+
+Important
+
+- Bash
+- VAPT
+- SSRF
+- API Security
+- Static Analysis
+
+Useful
+
+- Burp Suite
+- Nmap
+- ffuf
+
+Suppress
+
+- React
+- Supabase
+
+---
+
+Security Concepts
+
+Critical
+
+- DevSecOps
+- CI/CD Security
+- Pipeline-as-Code
+- Security Automation
+- VAPT
+- Secure SDLC
+- Remediation Design
+
+Important
+
+- Static Code Analysis
+- Dynamic Testing
+- OWASP
+- API Security
+
+---
+
+Achievements
+
+Order
+
+1.
+
+HackAthena Winner
+
+2.
+
+150+ CTF Challenges
+
+---
+
+Summary Focus
+
+- DevSecOps
+- CI/CD Security
+- Security Automation
+- Full-Scope VAPT
+
+---
+
+Preferred Terminology
+
+Use
+
+- Engineered
+- Automated
+- Integrated
+- Deployed
+- Instrumented
+
+Avoid
+
+- QA
+- Test engineer
+- Regression
 
 ---
 
@@ -1058,7 +1282,21 @@ Role Score
 
 Experience
 
-Epicor
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- SSRF exploitation and OOB confirmation (interactsh)
+- SQL wildcard injection enabling mass-deletion in single request
+- Account takeover via invitation flow privilege escalation
+- Attack chain documentation with CVSS scoring
+- Full-scope manual penetration testing methodology (OWASP WSTG)
+
+Entry 2 — Epicor Software Internship
 
 ★★★★☆
 
@@ -1072,17 +1310,15 @@ Focus
 
 Project Selection
 
+Layout A: 1 slot only (Mindpex is in Experience)
+
 1.
-
-Security Assessment
-
-★★★★★
-
-2.
 
 CipherCrack
 
 ★★★★★
+
+Note: Security Assessment is already covered by Mindpex; CipherCrack adds offensive tooling depth.
 
 Exclude
 
@@ -1283,7 +1519,13 @@ High Priority (never remove unless irrelevant)
 
 # Project Selection Algorithm
 
-Assign a score to each project.
+First, determine the number of project slots from the Experience Structure Decision (master_resume_prompt.md Step 9):
+
+**Layout A roles** (AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering): 1 project slot
+
+**Layout B roles** (Detection Engineering, SOC, Threat Intelligence, Security Research): 2 project slots (Slot 1 is always Mindpex VAPT)
+
+Then score available projects against these criteria:
 
 Evaluation Criteria
 
@@ -1307,9 +1549,13 @@ Metrics
 
 5%
 
-Select the two highest scoring experiences.
+For Layout A: select the single highest-scoring project from VigiLynx / CipherCrack / Security Assessment.
 
-Epicor is always included separately.
+For Layout B: Slot 1 = Mindpex VAPT (fixed). Slot 2 = highest-scoring from VigiLynx / CipherCrack / Security Assessment.
+
+Epicor is always in Experience. Never place Epicor in a project slot.
+
+Never include Mindpex in both Experience and Projects simultaneously.
 
 ---
 

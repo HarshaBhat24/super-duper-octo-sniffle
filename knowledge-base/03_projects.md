@@ -25,23 +25,39 @@ A separate Security Assessment exists in:
 
 04_security_assessments.md
 
+Mindpex VAPT Freelance (07_mindpex_vapt.md) may also occupy a project slot.
+
 Do NOT automatically include both projects.
 
-The resume generator should choose the strongest projects according to the target role.
+The resume generator should choose based on the target role AND the layout determined by master_resume_prompt.md Step 9.
 
-Priority Matrix
+---
 
-| Role | Priority 1 | Priority 2 |
-|--------|------------|------------|
-| SOC | VigiLynx | CipherCrack |
-| Detection Engineering | VigiLynx | CipherCrack |
-| Threat Intelligence | VigiLynx | CipherCrack |
-| Security Engineering | VigiLynx | Security Assessment |
-| Application Security | Security Assessment | VigiLynx |
-| Product Security | Security Assessment | VigiLynx |
-| Red Team | Security Assessment | CipherCrack |
-| Pentesting | Security Assessment | CipherCrack |
-| Security Research | CipherCrack | Security Assessment |
+## Layout A Roles (2 experience entries → 1 project slot)
+
+For these roles Mindpex is in Experience. Only Priority 1 applies.
+
+| Role | Priority 1 (sole project slot) |
+|---|---|
+| Application Security | Security Assessment |
+| Product Security | Security Assessment |
+| Red Team | CipherCrack |
+| Pentesting | CipherCrack |
+| DevSecOps | VigiLynx |
+| Security Engineering | VigiLynx |
+
+---
+
+## Layout B Roles (1 experience entry → 2 project slots)
+
+For these roles Mindpex occupies Slot 1. Only Priority 2 must be chosen.
+
+| Role | Slot 1 (always) | Slot 2 |
+|---|---|---|
+| SOC | Mindpex VAPT | VigiLynx |
+| Detection Engineering | Mindpex VAPT | VigiLynx |
+| Threat Intelligence | Mindpex VAPT | VigiLynx |
+| Security Research | Mindpex VAPT | CipherCrack |
 
 ---
 

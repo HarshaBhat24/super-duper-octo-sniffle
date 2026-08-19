@@ -587,56 +587,34 @@ Mention only when JD requests
 
 Treat this assessment as professional security experience.
 
-It may replace a software project depending on the target role.
+It may replace a software project depending on the target role and layout.
 
-Preferred Pairings
+## Layout A Roles (1 project slot — Mindpex in Experience)
 
-SOC
+For these roles the Security Assessment KB (this file) is used as the sole project slot when the role calls for it.
 
-- VigiLynx
-- CipherCrack
+| Role | Use Security Assessment? |
+|---|---|
+| Application Security | Yes — primary project slot |
+| Product Security | Yes — primary project slot |
+| Red Team | No — CipherCrack is primary (Security Assessment covered by Mindpex in Experience) |
+| Pentesting | No — CipherCrack is primary (Security Assessment covered by Mindpex in Experience) |
+| DevSecOps | No — VigiLynx is primary |
+| Security Engineering | No — VigiLynx is primary |
 
-Detection Engineering
+## Layout B Roles (2 project slots — Mindpex in Slot 1)
 
-- VigiLynx
-- CipherCrack
+Security Assessment occupies Slot 2 for roles where it adds value. Otherwise use VigiLynx or CipherCrack.
 
-Threat Intelligence
+| Role | Slot 1 | Slot 2 |
+|---|---|---|
+| SOC | Mindpex VAPT | VigiLynx |
+| Detection Engineering | Mindpex VAPT | VigiLynx |
+| Threat Intelligence | Mindpex VAPT | VigiLynx |
+| Security Research | Mindpex VAPT | CipherCrack |
 
-- VigiLynx
-- CipherCrack
+Note: For Layout B roles, this KB file (Security Assessment) is generally not used as a project slot because Mindpex VAPT (07_mindpex_vapt.md) provides stronger security assessment signal in Slot 1.
 
-Application Security
-
-- Security Assessment
-- VigiLynx
-
-Product Security
-
-- Security Assessment
-- VigiLynx
-
-Security Engineering
-
-- Security Assessment
-- VigiLynx
-
-Red Team
-
-- Security Assessment
-- CipherCrack
-
-Pentesting
-
-- Security Assessment
-- CipherCrack
-
-Security Research
-
-- Security Assessment
-- CipherCrack
-
----
 
 # Never Mention
 

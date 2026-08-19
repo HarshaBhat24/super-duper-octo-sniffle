@@ -64,13 +64,11 @@ Summary
 
 Experience
 
+(Mindpex VAPT Freelance, then Epicor)
+
 ↓
 
 Security Assessment
-
-↓
-
-VigiLynx
 
 ↓
 
@@ -88,6 +86,8 @@ Achievements
 
 Education
 
+Note: Layout A. Two experience entries, 1 project slot (Security Assessment). VigiLynx excluded.
+
 ---
 
 # Summary Style
@@ -101,13 +101,39 @@ Characteristics
 
 Example
 
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with practical experience developing secure web applications, performing authorized application security assessments, and implementing browser-based threat detection systems. Experienced in authentication, authorization, API security, and secure software design.
+CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience conducting full-scope VAPT on a multi-tenant SaaS platform, CI/CD pipeline automation, and browser-based threat detection. Identified 30+ CVSS-scored findings including SSRF, RLS misconfigurations granting unauthenticated access to security-critical tables, and account takeover via auth flow vulnerabilities.
 
 ---
 
 # Experience
 
-Epicor
+## Mindpex VAPT Freelance
+
+Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+
+Focus
+
+- SSRF and unauthenticated RLS access to security-critical tables (MFA, webhook config)
+- Account takeover via invitation flow forced password override
+- PostgreSQL RLS static analysis across 47 migration files
+- 30+ CVSS-scored findings with code-level remediation
+- Multi-tenant isolation violations
+
+Example Bullet
+
+Audited 47 PostgreSQL RLS migration files identifying two Critical misconfigurations granting unauthenticated write access to global security configuration tables (MFA enforcement, SMTP, webhook URLs).
+
+Example Bullet
+
+Identified account takeover via invitation flow forced password override and privilege escalation with first-member auto-assigned admin role; delivered TypeScript and SQL remediation.
+
+Example Bullet
+
+Delivered 7-domain security audit with 30+ CVSS-scored findings covering API security, auth flows, RLS policies, LLM endpoints, and rate limiting across a Next.js + FastAPI SaaS platform.
+
+---
+
+## Epicor Software Internship
 
 Focus
 
@@ -125,15 +151,15 @@ Suppress
 
 Example Bullet
 
-Developed PowerShell automation supporting enterprise CI/CD workflows while investigating execution failures through Linux-based log analysis and debugging.
+Authored Jenkinsfile and Azure Pipelines YAML definitions for enterprise CI/CD pipelines; led Jenkins to Azure DevOps migration mapping build stages, triggers, and environment parameters.
 
 Example Bullet
 
-Performed adversarial input validation and boundary testing to improve application reliability across enterprise software workflows.
+Developed PowerShell automation for build and test environment provisioning; performed log-based root cause analysis for pipeline failures across Linux execution environments.
 
 Example Bullet
 
-Worked with Azure DevOps, SQL-backed systems, Jenkins pipelines, and Linux environments supporting secure software delivery.
+Worked with Azure DevOps, SQL-backed systems, Jenkins pipelines, and Linux environments supporting secure enterprise software delivery.
 
 ---
 
@@ -154,11 +180,11 @@ Focus
 
 Example Bullet
 
-Performed an authorized black-box assessment of a SaaS application, evaluating authentication, authorization, and API security to identify access-control weaknesses.
+Performed an authorized black-box assessment of a SaaS application evaluating authentication, authorization, and API security to identify access-control and configuration weaknesses.
 
 Example Bullet
 
-Validated business-logic flaws including Broken Object-Level Authorization while assessing secure API behavior through manual request manipulation.
+Validated business-logic flaws including Broken Object-Level Authorization through manual request manipulation and authorization testing with Burp Suite.
 
 Example Bullet
 
@@ -166,44 +192,7 @@ Designed remediation recommendations covering IAM improvements, secure middlewar
 
 ---
 
-# VigiLynx
-
-Priority
-
-★★★★★
-
-Focus
-
-- Browser Security
-- Secure Backend
-- Authentication
-- Threat Detection
-
-Suppress
-
-- Generic React work
-
-Example Bullet
-
-Developed secure backend authentication workflows integrating a Chrome extension with real-time phishing detection services.
-
-Example Bullet
-
-Implemented Random Forest–based URL detection and VirusTotal-powered malware analysis to improve browser-side security.
-
-Example Bullet
-
-Built monitoring dashboards providing authenticated users with threat visibility, malware history, and detection statistics.
-
----
-
 # Skills
-
-Programming
-
-- Python
-- JavaScript
-- TypeScript
 
 Security
 
@@ -211,28 +200,28 @@ Security
 - Authentication
 - Authorization
 - API Security
-- Browser Security
+- SSRF
+- OWASP
 - Secure Architecture
-- Threat Detection
+- Penetration Testing
+
+Programming
+
+- Python
+- TypeScript
 
 Systems
 
 - Linux
-- SQL
 - CI/CD
 
 Tools
 
 - Burp Suite
-- Git
-- VirusTotal API
-- Wireshark
+- Nmap
+- ffuf
 
-Development
-
-- Node.js
-- React
-- Supabase
+Note: Layout A — target 12–15 total skills.
 
 ---
 
@@ -250,15 +239,13 @@ ISC2 Certified in Cybersecurity (CC)
 
 # Achievements
 
+Layout A cap: max 2
+
 1.
 
 Winner — HackAthena'25 Cybersecurity Track
 
 2.
-
-Finalist — Smart India Hackathon (Top 1%)
-
-3.
 
 Solved 150+ CTF Challenges
 
@@ -285,21 +272,25 @@ Highest Priority
 
 # Validation Checklist
 
-✓ Epicor included
+✓ Mindpex VAPT in Experience section (Layout A)
 
-✓ Security Assessment included
+✓ Epicor in Experience section
 
-✓ VigiLynx included
+✓ Security Assessment as sole project slot
 
-✓ CipherCrack excluded
+✓ VigiLynx excluded (one-slot layout)
+
+✓ RLS misconfigs, SSRF, and account takeover mentioned in Mindpex bullets
+
+✓ 12–15 skills (Layout A cap)
+
+✓ Max 2 achievements (Layout A cap)
 
 ✓ Authentication emphasized
 
 ✓ Authorization emphasized
 
 ✓ Secure Architecture emphasized
-
-✓ Browser Security included
 
 ✓ CompTIA Security+
 
@@ -308,6 +299,10 @@ Highest Priority
 ✓ One page
 
 ✓ ATS optimized
+
+✓ No fabricated information
+
+✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
 
 ---
 

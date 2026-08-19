@@ -15,6 +15,8 @@ It should be used together with
 - knowledge-base/03_projects.md
 - knowledge-base/04_security_assessments.md
 - knowledge-base/05_achievements.md
+- knowledge-base/06_epicor_internship.md
+- knowledge-base/07_mindpex_vapt.md
 
 This file defines HOW resumes are generated.
 
@@ -50,79 +52,17 @@ The generator must NEVER invent
 
 # Resume Generation Pipeline
 
-Every resume follows this pipeline.
+The authoritative pipeline is defined in `prompts/master_resume_prompt.md`.
 
-Step 1
+This file (`engine/01_resume_generation_rules.md`) defines the **generation-specific rules** that the master pipeline delegates to:
 
-Read every knowledge-base file.
+- How to score experiences and projects (see Candidate Scoring and Project Scoring Rubric)
+- How to write bullets (see Experience Rewriting Rules and Bullet Formula)
+- How to generate skills (see Skills Generation Rules)
+- How to generate achievements (see Achievement Rules)
+- How to validate content (see Final Resume Validation)
 
-↓
-
-Step 2
-
-Analyze the Job Description.
-
-↓
-
-Step 3
-
-Determine the target cybersecurity role.
-
-↓
-
-Step 4
-
-Score every candidate experience.
-
-↓
-
-Step 5
-
-Select the strongest experience.
-
-↓
-
-Step 6
-
-Rewrite bullets.
-
-↓
-
-Step 7
-
-Generate skills.
-
-↓
-
-Step 8
-
-Generate achievements.
-
-↓
-
-Step 9
-
-Generate summary.
-
-↓
-
-Step 10
-
-Validate truthfulness.
-
-↓
-
-Step 11
-
-Validate ATS quality.
-
-↓
-
-Step 12
-
-Validate one-page budget.
-
-Never change the order.
+Do not follow a separate pipeline from this file. Follow `prompts/master_resume_prompt.md` for orchestration.
 
 ---
 
@@ -222,33 +162,26 @@ importance.
 
 # Candidate Scoring
 
-Score every experience.
+Score every experience and project.
 
-Experience
+Experience Entries
 
-Epicor
+- Mindpex VAPT Freelance — primary security experience (07_mindpex_vapt.md)
+- Epicor Software Internship — primary professional experience (06_epicor_internship.md)
 
 Projects
 
-VigiLynx
-
-CipherCrack
-
-Security Assessment
-
-Black-box Assessment
+- VigiLynx
+- CipherCrack
+- Black-box Security Assessment
 
 Achievements
 
-HackAthena
+- HackAthena
+- CTFs
+- TryHackMe
 
-CTFs
-
-TryHackMe
-
-Each receives a score.
-
-Highest scoring experiences become the resume.
+Each receives a score. Highest scoring experiences become the resume.
 
 ---
 
@@ -256,27 +189,24 @@ Highest scoring experiences become the resume.
 
 Epicor
 
-Always include.
+Always include. Never remove.
 
-Never remove.
+Mindpex VAPT Freelance
 
-Reason
+Include in Experience section when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering.
 
-Only professional experience.
+For all other roles: Mindpex occupies one project slot.
 
----
+Never appear in both Experience and Projects simultaneously.
 
-Choose ONLY TWO
+Projects
 
-from
+Choose ONLY the number of project slots determined by the Experience Structure Decision:
 
-- VigiLynx
+- 2 experience entries → 1 project slot
+- 1 experience entry → 2 project slots (one may be Mindpex)
 
-- CipherCrack
-
-- Security Assessment
-
-Never include all three.
+Never include all three projects (VigiLynx + CipherCrack + Security Assessment).
 
 ---
 
@@ -389,6 +319,26 @@ VigiLynx
 Security Assessment
 
 ---
+
+# Project Scoring Rubric
+
+Use these weights when choosing which projects to include.
+
+| Criterion | Weight |
+|---|---|
+| Security relevance to JD role | 40% |
+| Technical depth demonstrated | 25% |
+| JD keyword match | 20% |
+| ATS coverage potential | 10% |
+| Verified metrics present | 5% |
+
+Score all three candidates (VigiLynx, CipherCrack, Security Assessment) against this rubric.
+
+Select the top-scoring entries up to the project slot limit.
+
+Never select based on personal preference or default habits.
+
+Note: When Mindpex is in the project slot (non-AppSec/ProdSec/RedTeam roles), it automatically occupies one slot and is scored as primary. The second slot is chosen from the remaining two projects using the rubric above.
 
 # Experience Rewriting Rules
 

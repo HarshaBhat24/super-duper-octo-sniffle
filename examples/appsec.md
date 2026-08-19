@@ -59,13 +59,11 @@ Summary
 
 Experience
 
+(Mindpex VAPT Freelance, then Epicor)
+
 ↓
 
 Security Assessment
-
-↓
-
-VigiLynx
 
 ↓
 
@@ -83,6 +81,8 @@ Achievements
 
 Education
 
+Note: Layout A. Two experience entries, 1 project slot (Security Assessment). VigiLynx excluded from this layout.
+
 ---
 
 # Summary Style
@@ -96,13 +96,39 @@ Characteristics
 
 Example
 
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience in application security, authentication systems, API security testing, and secure web application design. Conducted authorized black-box security assessments and developed security-focused web applications emphasizing threat detection and secure architecture.
+CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience conducting a full-scope VAPT across 7 security domains, CI/CD pipeline automation, and secure web application development. Identified 30+ CVSS-scored findings including SSRF, authentication bypass, and SQL injection; delivered code-level remediation in TypeScript, Python, and SQL.
 
 ---
 
 # Experience
 
-Epicor
+## Mindpex VAPT Freelance
+
+Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+
+Focus
+
+- SSRF via unvalidated webhook URL (confirmed OOB with interactsh)
+- BOLA and authentication bypass in API routes
+- SQL wildcard injection in admin delete handler
+- Prompt injection and LLM memory poisoning
+- Code-level remediation (TypeScript, Python, SQL)
+
+Example Bullet
+
+Identified SSRF and mass-deletion vulnerabilities in a multi-tenant SaaS API via Burp Suite and interactsh OOB callbacks; documented attack chains with CVSS scoring and delivered TypeScript remediation.
+
+Example Bullet
+
+Audited 47 PostgreSQL RLS migrations discovering two Critical misconfigurations granting unauthenticated write access to security-critical tables (MFA configuration, webhook URLs).
+
+Example Bullet
+
+Delivered a 7-domain security audit with 30+ CVSS-scored findings and code-level remediation across a Next.js + FastAPI SaaS platform, covering API security, auth flows, LLM endpoints, and rate limiting.
+
+---
+
+## Epicor Software Internship
 
 Focus
 
@@ -119,15 +145,15 @@ Suppress
 
 Example Bullet
 
-Performed adversarial input validation and edge-case testing across enterprise applications to improve software robustness while developing automation for CI/CD workflows.
+Authored Jenkinsfile and Azure Pipelines YAML definitions for enterprise CI/CD pipelines, providing the integration layer for security tooling (SAST/DAST/secrets scanning).
 
 Example Bullet
 
-Developed PowerShell automation and investigated execution failures through log analysis, improving debugging efficiency across enterprise deployment pipelines.
+Developed PowerShell automation for build and test environment provisioning; performed log-based root cause analysis for pipeline failures across Linux execution environments.
 
 Example Bullet
 
-Worked with Linux environments, Azure DevOps repositories, SQL-backed systems, and Jenkins pipelines while supporting secure enterprise application delivery.
+Led Jenkins to Azure DevOps pipeline migration, mapping build stages, triggers, and execution parameters across toolchains while maintaining workflow continuity.
 
 ---
 
@@ -148,61 +174,19 @@ Focus
 
 Example Bullet
 
-Performed an authorized black-box assessment of a SaaS application to evaluate authentication, authorization, and API security, identifying access-control and configuration weaknesses.
+Performed an authorized black-box assessment of a SaaS application evaluating authentication, authorization, and API security; identified access-control and configuration weaknesses using Burp Suite and ffuf.
 
 Example Bullet
 
-Validated business-logic vulnerabilities including Broken Object-Level Authorization through manual request manipulation and authorization testing using Burp Suite and supporting tools.
+Validated business-logic vulnerabilities including Broken Object-Level Authorization through manual request manipulation and authorization testing.
 
 Example Bullet
 
-Produced remediation guidance covering secure authentication, IAM redesign, least-privilege enforcement, and secure middleware architecture.
-
----
-
-# VigiLynx
-
-Priority
-
-★★★★★
-
-Focus
-
-- Authentication
-- Secure Backend
-- Browser Security
-- Threat Detection
-
-Suppress
-
-- Generic React implementation
-
-Example Bullet
-
-Developed backend authentication workflows and integrated a Chrome extension with secure services to perform real-time phishing detection.
-
-Example Bullet
-
-Implemented URL feature extraction with a Random Forest model and integrated VirusTotal-based malware analysis for browser-side threat detection.
-
-Example Bullet
-
-Built security dashboards visualizing phishing detections, malware scan history, and user activity while storing detection data in Supabase.
+Produced remediation guidance covering secure authentication design, IAM redesign, least-privilege enforcement, and secure middleware architecture.
 
 ---
 
 # Skills
-
-Programming
-
-- Python
-- JavaScript
-- TypeScript
-
-Operating Systems
-
-- Linux
-- Windows
 
 Security
 
@@ -211,21 +195,28 @@ Security
 - Authentication
 - Authorization
 - OWASP
-- Secure Design
-- Threat Detection
+- SSRF
+- BOLA
+- Penetration Testing
+
+Programming
+
+- Python
+- TypeScript
+
+Operating Systems
+
+- Linux
+- Windows
 
 Tools
 
 - Burp Suite
-- Wireshark
-- Git
-- VirusTotal API
+- Nmap
+- ffuf
+- interactsh
 
-Development
-
-- Node.js
-- React
-- SQL
+Note: Layout A — target 12–15 total skills. Do not exceed.
 
 ---
 
@@ -243,6 +234,8 @@ ISC2 Certified in Cybersecurity (CC)
 
 # Achievements
 
+Layout A cap: max 2
+
 1.
 
 Winner — HackAthena'25 Cybersecurity Track
@@ -250,10 +243,6 @@ Winner — HackAthena'25 Cybersecurity Track
 2.
 
 Solved 150+ CTF challenges
-
-3.
-
-Finalist — Smart India Hackathon (Top 1%)
 
 ---
 
@@ -292,19 +281,25 @@ High Priority
 
 # Validation Checklist
 
-✓ Epicor included
+✓ Mindpex VAPT in Experience section (Layout A)
 
-✓ Security Assessment included
+✓ Epicor in Experience section
 
-✓ VigiLynx included
+✓ Security Assessment as sole project slot
 
-✓ CipherCrack omitted unless cryptography is requested
+✓ VigiLynx excluded (one-slot layout)
 
 ✓ Authentication emphasized
 
 ✓ Authorization emphasized
 
 ✓ OWASP concepts reflected
+
+✓ SSRF and BOLA mentioned in Mindpex bullets
+
+✓ 12–15 skills (Layout A cap)
+
+✓ Max 2 achievements (Layout A cap)
 
 ✓ CompTIA Security+ included
 
@@ -314,9 +309,9 @@ High Priority
 
 ✓ One-page resume
 
-✓ ATS optimized
-
 ✓ No fabricated information
+
+✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
 
 ---
 

@@ -58,6 +58,9 @@ examples/
 - redteam.md
 - security_engineering.md
 - soc.md
+- ai_llm_security.md
+- api_security.md
+- offensive_security.md
 
 Read the example matching the classified role BEFORE generating any bullets.
 
@@ -181,21 +184,68 @@ For each requirement, tag it as one of:
 - PARTIAL — partially evidenced, could be strengthened
 - MISSING — no evidence found in the knowledge base or changelog
 
-### 5b — Consolidated Q&A (Soft-Denial)
+### 5b — Consolidated Q&A (MCQ Format)
 
-Ask the candidate **one single message** with ALL of the following:
+Ask the candidate **one single message** with ALL questions consolidated.
 
-**For MISSING items** — ask presence questions:
+Format ALL questions as **numbered MCQs**. The candidate will reply with just the letter(s) to select an answer.
 
-> "The JD requires [X]. I found no evidence of this in the knowledge base. Do you have any real, unreported experience with [X]?"
+---
 
-**For PARTIAL items** — ask depth-probing questions:
+**For MISSING items involving a specific tool, technology, or platform:**
 
-> "You have [existing evidence] from [context]. Did you also [deeper aspect of the requirement]? For example: [specific scenario or tool]."
+Present an MCQ with the exact JD tool as one option, plus 2–3 close alternatives that serve the same purpose. Always include a "None" option.
 
-Group questions by category. Be specific. Be direct.
+Format:
 
-Do NOT ask questions one at a time.
+```
+Q[N]. The JD mentions [X]. Which of these have you worked with?
+   A) [Exact JD tool]
+   B) [Similar tool / alternative]
+   C) [Another similar tool]
+   D) None of the above
+```
+
+If the candidate picks A, B, or C — use that specific tool/technology in the resume.
+If the candidate picks D — mark as unaddressable. Omit from resume.
+
+---
+
+**For MISSING items involving a concept or process (not a specific tool):**
+
+Ask a presence question:
+
+```
+Q[N]. The JD requires [X]. I found no evidence of this in the knowledge base.
+   A) Yes — I have real, unreported experience with [X]. I'll describe it below.
+   B) No — I don't have this.
+```
+
+If the candidate picks A, prompt them to briefly describe it in the same reply.
+If the candidate picks B — mark as unaddressable.
+
+---
+
+**For PARTIAL items involving a specific tool or depth of experience:**
+
+Present an MCQ offering granularity options:
+
+```
+Q[N]. You have [existing evidence] from [context] with [tool/concept].
+      How far does your experience go?
+   A) [Specific deeper capability — e.g., wrote custom rules / automated pipeline]
+   B) [Moderate depth — e.g., used it ad hoc / manual usage]
+   C) [Surface level — e.g., just familiar with it conceptually]
+   D) [Exact JD phrasing, if different from above]
+```
+
+Use the selected option to set the bullet framing depth and tool naming.
+
+---
+
+Group questions by category (Tools, Concepts, Process). Number them sequentially (Q1, Q2, Q3...).
+
+Be specific. Be direct. Do NOT ask questions one at a time.
 
 Wait for the candidate's answers before proceeding.
 
@@ -231,8 +281,11 @@ Possible roles
 - Security Research
 - SOC
 - Purple Team
+- AI / LLM Security Engineer
+- API Security Engineer
+- Offensive Security Engineer
 
-Note: DevSecOps triggers Layout A (Mindpex + Epicor in Experience). Purple Team is scored but rarely reaches top confidence; if classified as Purple Team, confirm with candidate before proceeding.
+Note: DevSecOps triggers Layout A (Mindpex + Epicor in Experience). Purple Team is scored but rarely reaches top confidence; if classified as Purple Team, confirm with candidate before proceeding. AI/LLM Security, API Security, and Offensive Security all trigger Layout A.
 
 Assign a confidence percentage to every role.
 
@@ -338,16 +391,19 @@ This step is **mandatory** and must run before any bullets are written.
 
 Using the confirmed primary role, check the Role-Based Pairing table in 02_experience.md:
 
-| Primary Role | Experience Section | Project Slot |
-|---|---|---|
-| AppSec / ProdSec | Mindpex + Epicor | VigiLynx OR Security Assessment |
-| Red Team / Pentesting | Mindpex + Epicor | CipherCrack OR Security Assessment |
-| DevSecOps | Mindpex + Epicor | VigiLynx |
-| Security Engineering | Mindpex + Epicor | VigiLynx |
-| Detection Engineering | Epicor only | VigiLynx + CipherCrack |
-| SOC | Epicor only | VigiLynx + CipherCrack |
-| Threat Intelligence | Epicor only | VigiLynx + CipherCrack |
-| Security Research | Epicor only | CipherCrack + Security Assessment |
+| Primary Role | Layout | Experience Section | Project Slot |
+|---|---|---|---|
+| AppSec / ProdSec | A | Mindpex + Epicor | VigiLynx OR Security Assessment |
+| Red Team / Pentesting | A | Mindpex + Epicor | CipherCrack OR Security Assessment |
+| DevSecOps | A | Mindpex + Epicor | VigiLynx |
+| Security Engineering | A | Mindpex + Epicor | VigiLynx |
+| AI / LLM Security | A | Mindpex + Epicor | VigiLynx OR Security Assessment |
+| API Security | A | Mindpex + Epicor | Security Assessment |
+| Offensive Security | A | Mindpex + Epicor | CipherCrack |
+| Detection Engineering | B | Epicor only | Mindpex VAPT + VigiLynx |
+| SOC | B | Epicor only | Mindpex VAPT + VigiLynx |
+| Threat Intelligence | B | Epicor only | Mindpex VAPT + VigiLynx |
+| Security Research | B | Epicor only | Mindpex VAPT + CipherCrack |
 
 If Mindpex is in the Experience section:
 

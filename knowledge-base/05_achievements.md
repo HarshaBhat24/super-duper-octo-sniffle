@@ -540,6 +540,26 @@ TryHackMe
 
 ---
 
+## Security Research
+
+Order
+
+1.
+
+CTF Experience
+
+2.
+
+KJSSE CTF
+
+3.
+
+TryHackMe
+
+Rationale: Security Research roles prioritize demonstrated practical research experience. CTF challenges and competitive placements signal research aptitude and independent problem-solving.
+
+---
+
 ## Security Engineering
 
 Order
@@ -591,6 +611,60 @@ HackAthena
 CTF Experience
 
 Rationale: HackAthena demonstrates security tooling and threat detection in a CI/CD-adjacent context. CTF experience demonstrates practical offensive familiarity, supporting the security gate role.
+
+---
+
+## AI / LLM Security
+
+Note: Layout A — max 2 achievements.
+
+Order
+
+1.
+
+HackAthena Winner
+
+2.
+
+CTF Experience
+
+Rationale: HackAthena demonstrates security tooling and ML-based detection concepts directly adjacent to AI/LLM security work. CTF experience signals adversarial thinking applicable to prompt injection research.
+
+---
+
+## API Security
+
+Note: Layout A — max 2 achievements.
+
+Order
+
+1.
+
+HackAthena Winner
+
+2.
+
+CTF Experience
+
+Rationale: HackAthena demonstrates practical security tooling and web-security thinking. CTF experience shows web exploitation and reconnaissance skill — core to API security assessment.
+
+---
+
+## Offensive Security
+
+Note: Layout A — max 2 achievements.
+
+Order
+
+1.
+
+CTF Experience
+
+2.
+
+KJSSE CTF Finalist
+
+Rationale: Offensive Security roles prioritize demonstrated exploitation experience over hackathon wins. KJSSE CTF placement (17th / 662) is strong direct evidence of offensive skill.
 
 ---
 

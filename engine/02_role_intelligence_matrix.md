@@ -1487,6 +1487,481 @@ Summary Focus
 
 ---
 
+Summary Focus
+
+- Offensive and Defensive Security
+- Detection Engineering
+- Application Security
+
+---
+
+# ROLE
+
+## AI / LLM Security Engineer
+
+Role Score
+
+★★★★★
+
+---
+
+Experience
+
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- Direct prompt injection on open FastAPI `/groq/query` endpoint — raw user input passed verbatim to LLM with no sanitization
+- Indirect prompt injection via persistent employee memory poisoning — attacker-controlled transcript stored in long-term memory, influencing future LLM outputs
+- In-memory LLM context store with zero tenant isolation — any caller could read/write any employee memory by UUID
+- Unvalidated LLM context field on recommendation endpoint — no provenance or input trust boundary enforcement
+- Raw exception messages from failed LLM calls returned in API response (infrastructure disclosure)
+- Domain 2 (AI/LLM Endpoint Security) is the primary evidence anchor for this role
+
+Suppress
+
+- RLS policy detail (save for Product Security roles)
+- Rate limiting misconfiguration (save for DevSecOps)
+
+Entry 2 — Epicor Software Internship
+
+★★★★☆
+
+Emphasize
+
+- Python scripting
+- Automation
+- CI/CD pipeline as integration layer for security tooling
+
+---
+
+Project Selection
+
+Layout A: 1 slot only (Mindpex is in Experience)
+
+1.
+
+VigiLynx
+
+★★★★☆
+
+Note: VigiLynx demonstrates ML-based detection (Random Forest, VirusTotal API) which signals AI/security tooling capability adjacent to LLM security work. Security Assessment may replace VigiLynx if JD emphasizes traditional web assessment methodology alongside LLM security.
+
+---
+
+Technical Skills
+
+Critical
+
+- Python
+- Burp Suite
+- Linux
+- interactsh
+
+Important
+
+- JavaScript
+- Node.js
+- ffuf
+- curl
+
+Useful
+
+- SQL
+
+Suppress
+
+- React
+- PowerShell (unless automation appears in JD)
+
+---
+
+Security Concepts
+
+Critical
+
+- Prompt Injection
+- Indirect Prompt Injection
+- LLM Security
+- AI Trust Boundaries
+- Input Validation
+- Multi-tenant Isolation
+- OWASP LLM Top 10
+
+Important
+
+- API Security
+- Authentication
+- SSRF
+- Static Code Analysis
+
+---
+
+Achievements
+
+Order
+
+1.
+
+HackAthena Winner
+
+2.
+
+150+ CTF Challenges
+
+---
+
+Summary Focus
+
+- AI / LLM Security
+- Prompt Injection
+- Offensive Security Research
+- Multi-tenant SaaS Security
+
+---
+
+Preferred Terminology
+
+Use
+
+- Exploited
+- Identified
+- Validated
+- Assessed
+- Crafted (for payload crafting)
+- Traced (for attack chain tracing)
+
+Avoid
+
+- Dashboard
+- Frontend
+
+---
+
+# ROLE
+
+## API Security Engineer
+
+Role Score
+
+★★★★★
+
+---
+
+Experience
+
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- Enumeration of 61 Next.js API routes and 3 FastAPI Python service routers (ffuf, Nmap)
+- SSRF via unvalidated URL parameter in webhook endpoint (confirmed OOB with interactsh)
+- Broken Object-Level Authorization (BOLA) and authentication bypass across privileged admin routes
+- SQL wildcard injection in admin delete handler enabling mass-deletion in a single authenticated request
+- FastAPI services with zero authentication on all routes (confirmed via curl + Nmap port scan)
+- Cross-tenant deletion possible by supplying foreign organization UUID
+- Dead rate-limiting middleware finding — all perimeter controls completely inactive
+- ilike wildcard enabling bulk employee record update (sqlmap parameter injection)
+
+Suppress
+
+- LLM/AI security detail (save for AI Security roles)
+- RLS policy detail (save for Product Security roles)
+
+Entry 2 — Epicor Software Internship
+
+★★★★☆
+
+Emphasize
+
+- CI/CD pipeline knowledge as integration layer for API security tooling
+- Automation scripting
+- Linux execution environments
+
+---
+
+Project Selection
+
+Layout A: 1 slot only (Mindpex is in Experience)
+
+1.
+
+Security Assessment
+
+★★★★★
+
+Note: Security Assessment provides additional API security evidence beyond Mindpex — Burp Suite-based API request manipulation, parameter injection, authorization testing, and remediation design. VigiLynx may replace if JD emphasizes detection-side API monitoring.
+
+---
+
+Technical Skills
+
+Critical
+
+- Burp Suite
+- Python
+- ffuf
+- Nmap
+- interactsh
+
+Important
+
+- Linux
+- JavaScript
+- Node.js
+- sqlmap
+- curl
+
+Useful
+
+- SQL
+- Wireshark
+
+Suppress
+
+- React
+- Supabase
+- PowerShell (unless scripting appears in JD)
+
+---
+
+Security Concepts
+
+Critical
+
+- API Security
+- OWASP API Top 10
+- BOLA / IDOR
+- SSRF
+- Authentication Bypass
+- Rate Limiting
+- REST Security
+- Authorization Testing
+
+Important
+
+- SQL Injection
+- Business Logic Testing
+- Parameter Manipulation
+- Enumeration
+
+---
+
+Achievements
+
+Order
+
+1.
+
+HackAthena Winner
+
+2.
+
+150+ CTF Challenges
+
+---
+
+Summary Focus
+
+- API Security
+- Offensive Testing
+- OWASP API Top 10
+- Multi-tenant SaaS Vulnerability Research
+
+---
+
+Preferred Terminology
+
+Use
+
+- Enumerated
+- Assessed
+- Identified
+- Exploited
+- Validated
+- Mapped
+
+Avoid
+
+- Dashboard
+- Frontend
+- QA
+
+---
+
+# ROLE
+
+## Offensive Security Engineer
+
+Role Score
+
+★★★★★
+
+---
+
+Experience
+
+Note: Layout A applies. Both experience entries appear in the Experience section.
+
+This role is distinct from Red Team in framing: it emphasizes **security tool building** and **automated offensive workflows** alongside exploitation, rather than simulation or adversary emulation. CipherCrack is the primary anchor for tool-building credibility.
+
+Entry 1 — Mindpex VAPT Freelance
+
+★★★★★
+
+Emphasize
+
+- SSRF exploitation via unvalidated webhook URL with OOB confirmation (interactsh)
+- Account takeover via invitation flow forced password override — full privilege escalation chain
+- SQL wildcard injection enabling mass-deletion in a single authenticated request
+- Prompt injection on open LLM endpoint — raw input passed verbatim to model
+- Cross-tenant deletion via foreign UUID injection
+- Attack chain documentation with CVSS scoring
+- Full-scope manual testing methodology (OWASP WSTG)
+
+Suppress
+
+- Audit logging gaps (save for Detection Engineering)
+- RLS detail (save for Product Security)
+
+Entry 2 — Epicor Software Internship
+
+★★★★☆
+
+Emphasize
+
+- Linux
+- Scripting (PowerShell, Bash)
+- Automation
+- CI/CD pipeline knowledge
+
+Suppress
+
+- QA terminology
+- Regression
+
+---
+
+Project Selection
+
+Layout A: 1 slot only (Mindpex is in Experience)
+
+1.
+
+CipherCrack
+
+★★★★★
+
+Note: CipherCrack is the primary slot — it demonstrates offensive tooling development and cryptanalysis automation. Security Assessment may replace if JD explicitly emphasizes methodology and reporting over tooling.
+
+---
+
+Technical Skills
+
+Critical
+
+- Python
+- Burp Suite
+- ffuf
+- Nmap
+- Linux
+
+Important
+
+- Bash
+- Metasploit
+- CyberChef
+- interactsh
+- Gobuster
+- Wireshark
+
+Useful
+
+- SQL
+- PowerShell
+
+Suppress
+
+- React
+- Supabase
+
+---
+
+Security Concepts
+
+Critical
+
+- Offensive Security
+- Exploitation
+- Reconnaissance
+- Enumeration
+- Cryptanalysis
+- Web Security
+- OWASP
+
+Important
+
+- Authentication Testing
+- API Security
+- Brute Force
+- Automation
+
+---
+
+Achievements
+
+Order
+
+1.
+
+150+ CTF Challenges
+
+2.
+
+KJSSE CTF Finalist (17th / 662)
+
+3.
+
+Top 10% TryHackMe
+
+---
+
+Summary Focus
+
+- Offensive Security Engineering
+- Security Tooling Development
+- Exploitation and Cryptanalysis
+- Practical Security Assessments
+
+---
+
+Preferred Terminology
+
+Use
+
+- Exploited
+- Enumerated
+- Assessed
+- Identified
+- Automated
+- Developed (for tooling)
+
+Avoid
+
+- Monitored
+- Dashboard
+- QA
+
+---
+
 # Skill Suppression Matrix
 
 When space is limited, remove skills in this order.

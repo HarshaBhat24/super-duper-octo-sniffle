@@ -92,13 +92,18 @@ Only Epicor in Experience section:
 
 # Role-Based Pairing
 
-| Target Role | Experience | Project Slot |
-|---|---|---|
-| AppSec / ProdSec | Mindpex + Epicor | VigiLynx or Security Assessment |
-| Red Team / Pentesting | Mindpex + Epicor | CipherCrack or Security Assessment |
-| DevSecOps | Mindpex + Epicor | VigiLynx |
-| Security Engineering | Mindpex + Epicor | VigiLynx |
-| Detection Engineering | Epicor only | VigiLynx + CipherCrack |
-| SOC | Epicor only | VigiLynx + CipherCrack |
-| Threat Intelligence | Epicor only | VigiLynx + CipherCrack |
-| Security Research | Epicor only | CipherCrack + Security Assessment |
+| Target Role | Layout | Experience | Slot 1 (Project) | Slot 2 (Project) |
+|---|---|---|---|---|
+| AppSec / ProdSec | A | Mindpex + Epicor | VigiLynx or Security Assessment | — |
+| Red Team / Pentesting | A | Mindpex + Epicor | CipherCrack or Security Assessment | — |
+| DevSecOps | A | Mindpex + Epicor | VigiLynx | — |
+| Security Engineering | A | Mindpex + Epicor | VigiLynx | — |
+| AI / LLM Security | A | Mindpex + Epicor | VigiLynx or Security Assessment | — |
+| API Security | A | Mindpex + Epicor | Security Assessment | — |
+| Offensive Security | A | Mindpex + Epicor | CipherCrack | — |
+| Detection Engineering | B | Epicor only | Mindpex VAPT | VigiLynx |
+| SOC | B | Epicor only | Mindpex VAPT | VigiLynx |
+| Threat Intelligence | B | Epicor only | Mindpex VAPT | VigiLynx |
+| Security Research | B | Epicor only | Mindpex VAPT | CipherCrack |
+
+Note: Layout A has 1 project slot. Layout B has 2 project slots: Slot 1 is always Mindpex VAPT; Slot 2 is chosen by the scoring rubric.

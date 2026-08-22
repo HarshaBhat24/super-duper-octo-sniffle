@@ -61,15 +61,15 @@ Summary
 
 ↓
 
-Experience
+Experience (Epicor only)
 
 ↓
 
-VigiLynx
+Mindpex VAPT (Slot 1 — described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
 
 ↓
 
-CipherCrack
+VigiLynx (Slot 2)
 
 ↓
 
@@ -86,6 +86,8 @@ Achievements
 ↓
 
 Education
+
+Note: Layout B. Epicor only in Experience. Mindpex VAPT is always Slot 1 (project). VigiLynx is Slot 2. CipherCrack may replace VigiLynx as Slot 2 if JD emphasizes cryptography/automation over detection pipelines.
 
 ---
 
@@ -320,13 +322,13 @@ Avoid
 
 # Validation Checklist
 
-✓ Epicor included
+✓ Epicor in Experience section (Layout B)
 
-✓ VigiLynx included
+✓ Mindpex VAPT as Slot 1 project (described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
 
-✓ CipherCrack included
+✓ VigiLynx as Slot 2 project
 
-✓ Security Assessment excluded unless explicitly requested
+✓ Security Assessment excluded (Mindpex VAPT covers this)
 
 ✓ Detection Pipeline emphasized
 
@@ -338,17 +340,23 @@ Avoid
 
 ✓ PowerShell emphasized
 
+✓ Skills 12–18 (Layout B cap)
+
+✓ Max 3 achievements (Layout B cap)
+
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
 
-✓ Three bullets per experience
+✓ Three bullets per section
 
 ✓ One-page resume
 
 ✓ ATS optimized
 
 ✓ No fabricated information
+
+✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
 
 ---
 

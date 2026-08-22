@@ -82,6 +82,8 @@ Possible categories
 
 - Security Engineering
 
+- DevSecOps
+
 - Detection Engineering
 
 - Threat Intelligence
@@ -89,6 +91,12 @@ Possible categories
 - Security Research
 
 - SOC
+
+- AI / LLM Security
+
+- API Security
+
+- Offensive Security
 
 If multiple roles are present,
 
@@ -193,7 +201,7 @@ Always include. Never remove.
 
 Mindpex VAPT Freelance
 
-Include in Experience section when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering.
+Include in Experience section when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering, AI/LLM Security, API Security, Offensive Security.
 
 For all other roles: Mindpex occupies one project slot.
 
@@ -210,7 +218,7 @@ Never include all three projects (VigiLynx + CipherCrack + Security Assessment).
 
 ---
 
-# Experience Priority
+# Project Priority by Role
 
 Application Security
 
@@ -313,6 +321,54 @@ Security Engineering
 1
 
 VigiLynx
+
+2
+
+Security Assessment
+
+---
+
+DevSecOps
+
+1
+
+VigiLynx
+
+2
+
+Security Assessment
+
+---
+
+AI / LLM Security
+
+1
+
+VigiLynx
+
+2
+
+Security Assessment
+
+---
+
+API Security
+
+1
+
+Security Assessment
+
+2
+
+VigiLynx
+
+---
+
+Offensive Security
+
+1
+
+CipherCrack
 
 2
 
@@ -1660,7 +1716,7 @@ Before producing the final resume, verify that:
 
 - The resume targets a single cybersecurity role.
 - Epicor experience is included.
-- Exactly two projects/assessments are selected.
+- Exactly two projects/assessments are selected (Layout B) or exactly one project is selected (Layout A).
 - Bullet counts match the resume budget.
 - Skills are tailored to the JD.
 - CompTIA Security+ and ISC2 CC are included.

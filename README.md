@@ -15,31 +15,34 @@ career-engine/
 │
 ├── knowledge-base/
 │   ├── 00_changelog.md               # KB update log — track new skills, certs, projects
-│   ├── 01_candidate_profile.md       # Master profile, skills, tools, resume rules
-│   ├── 02_experience.md              # Experience index and resume selection logic
-│   ├── 03_projects.md                # VigiLynx + CipherCrack
-│   ├── 04_security_assessments.md    # Black-box web app security assessment
-│   ├── 05_achievements.md            # Achievements and certifications
-│   ├── 06_epicor_internship.md       # Epicor internship knowledge base (primary CI/CD source)
-│   └── 07_mindpex_vapt.md            # Mindpex VAPT freelance knowledge base (primary security source)
+│   ├── 01_candidate_profile.md       # Master profile, skills, tools, Truth Guard
+│   ├── 02_experience.md              # Experience index, Layout A/B decision, role pairing table
+│   ├── 03_projects.md                # VigiLynx + CipherCrack project KB
+│   ├── 04_security_assessments.md    # Black-box web app security assessment KB
+│   ├── 05_achievements.md            # Achievements, certifications, role-ordered priority
+│   ├── 06_epicor_internship.md       # Epicor internship KB (CI/CD, automation, Linux)
+│   └── 07_mindpex_vapt.md            # Mindpex VAPT freelance KB (7-domain security assessment)
 │
 ├── engine/
-│   ├── 01_resume_generation_rules.md # Pipeline steps, scoring rubric, selection logic
-│   ├── 02_role_intelligence_matrix.md
-│   ├── 03_resume_budget.md
-│   └── 04_company_intelligence.md
+│   ├── 01_resume_generation_rules.md # Scoring, bullet rules, ATS, Truth Guard, validation
+│   ├── 02_role_intelligence_matrix.md# Per-role emphasis, skills ordering, terminology
+│   ├── 03_resume_budget.md           # Layout A/B budgets, bullet counts, space constraints
+│   └── 04_company_intelligence.md    # Company type classification and tone modifiers
 │
 ├── prompts/
-│   └── master_resume_prompt.md
+│   └── master_resume_prompt.md       # Orchestration prompt — the 17-step generation pipeline
 │
 ├── examples/
-│   ├── appsec.md
-│   ├── detection_engineer.md
-│   ├── devsecops.md
-│   ├── product_security.md
-│   ├── redteam.md
-│   ├── security_engineering.md
-│   └── soc.md
+│   ├── appsec.md                     # Layout A — Application Security Engineer
+│   ├── product_security.md           # Layout A — Product Security Engineer
+│   ├── redteam.md                    # Layout A — Red Team Engineer
+│   ├── devsecops.md                  # Layout A — DevSecOps Engineer
+│   ├── security_engineering.md       # Layout A — Security Engineer
+│   ├── ai_llm_security.md            # Layout A — AI / LLM Security Engineer
+│   ├── api_security.md               # Layout A — API Security Engineer
+│   ├── offensive_security.md         # Layout A — Offensive Security Engineer
+│   ├── detection_engineer.md         # Layout B — Detection Engineer
+│   └── soc.md                        # Layout B — SOC Analyst
 │
 ├── outputs/
 │   └── log.md                        # Resume version tracking log
@@ -57,11 +60,12 @@ It is a structured knowledge base that allows an LLM to generate resumes, summar
 
 The repository separates
 
-- Candidate knowledge
-- Resume generation logic
-- Role intelligence
-- Formatting rules
-- Reference examples
+- Candidate knowledge (knowledge-base/)
+- Resume generation logic (engine/)
+- Role intelligence (engine/02_role_intelligence_matrix.md)
+- Formatting constraints (engine/03_resume_budget.md)
+- Company tone modifiers (engine/04_company_intelligence.md)
+- Reference examples (examples/)
 
 This prevents duplication and keeps all resume generations factually consistent.
 
@@ -112,12 +116,13 @@ These files define
 - ATS optimization
 - role selection
 - formatting constraints
+- company tone modifiers
 
 ---
 
 ### Step 3
 
-Read
+Read the example file matching the classified role from
 
 ```
 examples/
@@ -127,12 +132,13 @@ These are reference resumes.
 
 They define
 
-- style
-- emphasis
+- section order
+- style and emphasis
 - terminology
-- section ordering
+- bullet framing
+- skills ordering
 
-Never copy them.
+Never copy them verbatim.
 
 Only imitate their structure.
 
@@ -155,7 +161,7 @@ Follow it exactly.
 # Resume Generation Workflow
 
 ```
-Read Repository
+Read Repository (KB + Engine + matching example)
 
 ↓
 
@@ -171,7 +177,11 @@ Gap Analysis — Tag each JD requirement as COVERED / PARTIAL / MISSING
 
 ↓
 
-Consolidated Q&A — MISSING: presence questions | PARTIAL: depth-probing questions; wait for response
+Consolidated MCQ Q&A:
+  — MISSING tool/tech: present MCQ with exact JD tool + 2–3 alternatives + None option
+  — MISSING concept: A) Yes (describe below) / B) No
+  — PARTIAL depth: MCQ with granularity levels
+  Wait for candidate response before proceeding.
 
 ↓
 
@@ -179,7 +189,11 @@ Incorporate Candidate Answers
 
 ↓
 
-Role Classification Report — Score all roles; output top 3 with confidence %; ask candidate to confirm
+Role Classification Report — Score all 14 roles; output top 3 with confidence %; ask candidate to confirm
+
+↓
+
+Experience Structure Decision — Determine Layout A or Layout B from confirmed role
 
 ↓
 
@@ -187,35 +201,31 @@ Extract ATS Keywords
 
 ↓
 
-Determine Resume Strategy
+Score Experiences and Projects
 
 ↓
 
-Score Experiences
+Select Experiences and Projects per Layout Decision
 
 ↓
 
-Select Projects
+Rewrite Experience Bullets (3 per entry, max 2 lines each)
 
 ↓
 
-Rewrite Experience
+Generate Skills (12–15 for Layout A; 12–18 for Layout B)
 
 ↓
 
-Generate Skills
+Generate Achievements (max 2 for Layout A; max 3 for Layout B)
 
 ↓
 
-Generate Achievements
+Validate Resume Budget (one page, all counts verified)
 
 ↓
 
-Validate Resume Budget
-
-↓
-
-Perform Truth Validation
+Perform Truth Validation (no invented claims)
 
 ↓
 
@@ -244,21 +254,59 @@ Never skip any step.
 
 # Supported Roles
 
-The engine currently supports
+The engine currently supports **14 roles** across two layout types.
 
-- Red Team Engineer
-- Penetration Tester
-- Application Security Engineer
-- Product Security Engineer
-- Detection Engineer
-- Security Engineer
-- DevSecOps Engineer
-- Security Analyst (SOC)
-- Threat Intelligence Analyst
-- Security Research Engineer
-- Purple Team
+## Layout A — Two Experience Entries (Mindpex + Epicor in Experience; 1 project slot)
 
-The generator should automatically determine the closest role from the supplied Job Description.
+| Role | Primary Evidence Anchor | Default Project |
+|---|---|---|
+| Application Security Engineer | Mindpex Domain 1–7 (full-scope VAPT) | Security Assessment |
+| Product Security Engineer | Mindpex Domain 1–7 + RLS analysis | Security Assessment |
+| Red Team Engineer | Mindpex exploitation chain + CTFs | CipherCrack |
+| Penetration Tester | Mindpex SSRF, ATO, wildcard injection | CipherCrack or Security Assessment |
+| DevSecOps Engineer | Epicor CI/CD + Mindpex VAPT as security gate | VigiLynx |
+| Security Engineer | Mindpex multi-domain + Epicor automation | VigiLynx |
+| AI / LLM Security Engineer | Mindpex Domain 2 (prompt injection, memory poisoning, LLM trust boundaries) | VigiLynx |
+| API Security Engineer | Mindpex Domain 1 (61 API routes, SSRF, BOLA, rate limiting, zero-auth FastAPI) | Security Assessment |
+| Offensive Security Engineer | CipherCrack (9-cipher toolkit, 1,324+ LOC) + Mindpex exploitation chain | CipherCrack |
+
+## Layout B — One Experience Entry (Epicor only in Experience; 2 project slots)
+
+| Role | Slot 1 (Fixed) | Slot 2 |
+|---|---|---|
+| Detection Engineer | Mindpex VAPT | VigiLynx |
+| SOC Analyst | Mindpex VAPT | VigiLynx |
+| Threat Intelligence Analyst | Mindpex VAPT | VigiLynx |
+| Security Research Engineer | Mindpex VAPT | CipherCrack |
+| Purple Team | Mindpex VAPT | VigiLynx or Security Assessment |
+
+The generator automatically determines the closest role from the supplied Job Description.
+
+---
+
+# Layout Rules
+
+## Layout A (9 roles)
+
+Triggers when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering, AI/LLM Security, API Security, Offensive Security
+
+- Experience: Mindpex VAPT + Epicor (both in Experience section)
+- Projects: 1 slot (choose from VigiLynx / CipherCrack / Security Assessment per role matrix)
+- Skills: 12–15 items
+- Achievements: max 2
+- Certifications: exactly 2 (CompTIA Security+, ISC2 CC)
+
+## Layout B (5 roles)
+
+Triggers when JD targets: Detection Engineering, SOC, Threat Intelligence, Security Research, Purple Team
+
+- Experience: Epicor only (in Experience section)
+- Projects: 2 slots — Slot 1 is always Mindpex VAPT; Slot 2 chosen by scoring rubric
+- Skills: 12–18 items
+- Achievements: max 3
+- Certifications: exactly 2 (CompTIA Security+, ISC2 CC)
+
+**Rule:** Mindpex VAPT never appears in both Experience and Projects simultaneously.
 
 ---
 
@@ -299,9 +347,7 @@ Examples
 
 These files should be inspected before generating the resume.
 
-If they contain verified information,
-
-incorporate it naturally.
+If they contain verified information, incorporate it naturally.
 
 Never ignore uploaded files.
 
@@ -309,9 +355,7 @@ Never ignore uploaded files.
 
 # Conflict Resolution
 
-If two files disagree,
-
-prefer
+If two files disagree, prefer
 
 1. Newer information
 2. More detailed information
@@ -333,79 +377,41 @@ Never expose
 - secrets
 - proprietary implementations
 
-Instead,
-
-generalize while preserving
+Instead, generalize while preserving
 
 - technical concepts
 - demonstrated skills
 - engineering depth
 
+Mindpex must always be described as **"Freelance VAPT Engagement — Enterprise SaaS Platform"** on the resume.
+
 ---
 
 # Resume Constraints
 
-## When One Experience Entry Is on the Resume
+## Layout A (Two Experience Entries)
 
-Experience
+| Section | Constraint |
+|---|---|
+| Experience Entry 1 (Mindpex VAPT) | Exactly 3 bullets, max 2 lines each |
+| Experience Entry 2 (Epicor) | Exactly 3 bullets, max 2 lines each |
+| Project (1 slot) | Exactly 3 bullets, max 2 lines each |
+| Skills | 12–15 items |
+| Achievements | Max 2 |
+| Certifications | Exactly 2 |
+| Resume Length | One page |
 
-- 3 bullets
+## Layout B (One Experience Entry)
 
-Project 1
-
-- 3 bullets
-
-Project 2
-
-- 3 bullets
-
-Skills
-
-- 12–18
-
-Achievements
-
-- Maximum 3
-
-Certifications
-
-- Maximum 2
-
-Resume Length
-
-- One Page
-
-## When Two Experience Entries Are on the Resume
-
-Experience 1 (Mindpex VAPT Freelance)
-
-- 3 bullets
-
-Experience 2 (Epicor Internship)
-
-- 3 bullets
-
-Project
-
-- 1 entry, 3 bullets
-
-Skills
-
-- 12–15
-
-Achievements
-
-- Maximum 2
-
-Certifications
-
-- Maximum 2
-
-Resume Length
-
-- One Page
-
-See 02_experience.md for role-based rules on when to include one vs two experience entries.
+| Section | Constraint |
+|---|---|
+| Experience Entry (Epicor) | Exactly 3 bullets, max 2 lines each |
+| Project Slot 1 (Mindpex VAPT) | Exactly 3 bullets, max 2 lines each |
+| Project Slot 2 | Exactly 3 bullets, max 2 lines each |
+| Skills | 12–18 items |
+| Achievements | Max 3 |
+| Certifications | Exactly 2 |
+| Resume Length | One page |
 
 ---
 
@@ -413,39 +419,12 @@ See 02_experience.md for role-based rules on when to include one vs two experien
 
 Priority order
 
-1.
-
-Truthfulness
-
-↓
-
-2.
-
-Role Alignment
-
-↓
-
-3.
-
-Technical Depth
-
-↓
-
-4.
-
-ATS Optimization
-
-↓
-
-5.
-
-Readability
-
-↓
-
-6.
-
-Keyword Density
+1. Truthfulness
+2. Role Alignment
+3. Technical Depth
+4. ATS Optimization
+5. Readability
+6. Keyword Density
 
 Never sacrifice factual accuracy for ATS optimization.
 
@@ -458,10 +437,10 @@ Every generated resume should
 - Target a single cybersecurity role
 - Be ATS optimized
 - Fit on one page
-- Use measurable achievements
-- Prioritize security concepts
+- Use measurable achievements where verified
+- Prioritize security concepts over technology names
 - Avoid generic software engineering terminology
-- Demonstrate technical depth
+- Demonstrate technical depth in every bullet
 - Remain completely truthful
 
 ---
@@ -483,6 +462,18 @@ Using this repository, an LLM should be capable of generating
 
 ---
 
+# Gap Analysis — MCQ Format
+
+During Step 5b of the pipeline, the AI conducts interactive gap analysis using **Multiple Choice Questions** rather than open-ended questions.
+
+- **Missing tool/technology:** Presents the exact JD tool + 2–3 close alternatives + "None" option. Candidate replies with a letter. That exact tool is used in the resume.
+- **Missing concept/process:** A) Yes (describe it) / B) No
+- **Partial experience:** Granularity MCQ — e.g., A) Custom rule writing / B) Ad-hoc usage / C) Conceptual familiarity
+
+All questions are consolidated into a **single message**. Candidate replies with letters only. Answers are incorporated before any resume bullets are written.
+
+---
+
 # Future Expansion
 
 The repository is designed to grow over time.
@@ -496,6 +487,8 @@ New files may include
 - Security Assessments
 - Conference Talks
 - Open Source Contributions
+
+When adding new content, always update `00_changelog.md` with the change, reason, and date.
 
 The engine should automatically incorporate new knowledge while preserving existing behavior.
 

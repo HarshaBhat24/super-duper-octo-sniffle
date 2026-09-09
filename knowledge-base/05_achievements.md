@@ -12,23 +12,37 @@
 
 # Resume Rules
 
-Maximum achievements on resume
+## Section Name
 
-Layout A (two experience entries): 2
+Certifications and Achievements are merged into a single section called:
 
-Layout B (one experience entry): 3
+**Certifications & Achievements**
 
-Maximum certifications
+## Format
 
-2
+Compact list format. All entries on consecutive lines, no sub-bullets.
+
+Example:
+```
+Certifications & Achievements
+- CompTIA Security+ (SY0-701) — June 2026
+- ISC2 Certified in Cybersecurity (CC)
+- Winner — HackAthena'25 Cybersecurity Track (National Hackathon)
+- 17th / 662 Teams — KJSSE CTF 2.0 (National CTF)
+- Solved 200+ CTF Challenges | Top 10% TryHackMe
+```
+
+Certifications always appear first (in order: Security+, ISC2 CC).
+
+Achievements follow certifications, ordered dynamically by target role.
+
+## Counts
+
+Certifications: always exactly 2 (Security+ and ISC2 CC).
+
+Achievements: maximum 3 (choose dynamically based on role alignment).
 
 Achievements should be dynamically reordered according to the Job Description.
-
-Certifications should always appear after Skills unless explicitly requested otherwise.
-
-Layout A applies to: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering.
-
-Layout B applies to: Detection Engineering, SOC, Threat Intelligence, Security Research.
 
 ---
 
@@ -197,7 +211,7 @@ Practical Cybersecurity
 
 Challenges Solved
 
-150+
+200+
 
 Priority
 
@@ -598,35 +612,21 @@ CTF Experience
 
 ## DevSecOps
 
-Note: Layout A — max 2 achievements.
-
 Order
 
-1.
+1. HackAthena Winner
+2. CTF Experience (200+)
 
-HackAthena
-
-2.
-
-CTF Experience
-
-Rationale: HackAthena demonstrates security tooling and threat detection in a CI/CD-adjacent context. CTF experience demonstrates practical offensive familiarity, supporting the security gate role.
+Rationale: HackAthena demonstrates security tooling and threat detection. CTF experience shows offensive security familiarity, supporting the security gate role.
 
 ---
 
 ## AI / LLM Security
 
-Note: Layout A — max 2 achievements.
-
 Order
 
-1.
-
-HackAthena Winner
-
-2.
-
-CTF Experience
+1. HackAthena Winner
+2. CTF Experience (200+)
 
 Rationale: HackAthena demonstrates security tooling and ML-based detection concepts directly adjacent to AI/LLM security work. CTF experience signals adversarial thinking applicable to prompt injection research.
 
@@ -634,17 +634,10 @@ Rationale: HackAthena demonstrates security tooling and ML-based detection conce
 
 ## API Security
 
-Note: Layout A — max 2 achievements.
-
 Order
 
-1.
-
-HackAthena Winner
-
-2.
-
-CTF Experience
+1. HackAthena Winner
+2. CTF Experience (200+)
 
 Rationale: HackAthena demonstrates practical security tooling and web-security thinking. CTF experience shows web exploitation and reconnaissance skill — core to API security assessment.
 
@@ -652,17 +645,11 @@ Rationale: HackAthena demonstrates practical security tooling and web-security t
 
 ## Offensive Security
 
-Note: Layout A — max 2 achievements.
-
 Order
 
-1.
-
-CTF Experience
-
-2.
-
-KJSSE CTF Finalist
+1. CTF Experience (200+)
+2. KJSSE CTF Finalist (17th / 662 teams)
+3. TryHackMe Top 10%
 
 Rationale: Offensive Security roles prioritize demonstrated exploitation experience over hackathon wins. KJSSE CTF placement (17th / 662) is strong direct evidence of offensive skill.
 

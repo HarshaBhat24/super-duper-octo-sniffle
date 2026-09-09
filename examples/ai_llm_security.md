@@ -55,15 +55,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience (Mindpex + Epicor — both in Experience section)
-
-↓
-
-VigiLynx (ML detection pipeline — AI-adjacent signal)
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -71,31 +67,11 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
-
-Note: Layout A. Two experience entries, 1 project slot. Mindpex Domain 2 (LLM Endpoint Security) is the primary evidence anchor.
-
----
-
-# Summary Style
-
-Characteristics
-
-- Security research focused
-- AI/ML-adjacent framing
-- Technical and concise
-
-Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience identifying prompt injection, indirect memory poisoning, and LLM trust boundary violations in production AI systems. Conducted full-scope VAPT across 7 security domains on a multi-tenant SaaS platform integrating Groq and Cerebras LLMs; developed ML-based phishing detection tooling integrating Random Forest classification and VirusTotal API threat intelligence.
 
 ---
 
@@ -127,25 +103,31 @@ Discovered in-memory LLM context store with zero tenant isolation; any authentic
 
 ---
 
-## Epicor Software Internship
+## Epicor Software
 
 Focus
 
-- Python scripting
-- Automation
-- CI/CD pipeline as integration layer for security tooling
+- ADO CI/CD pipelines (agent-VM architecture)
+- PowerShell scripting deployed within those pipelines
+- TypeScript UI automation of enterprise application
+- VM disk cleanup and environment maintenance automation
+
+Suppress
+
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+- Azure Pipelines YAML authoring as primary framing
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Authored Jenkinsfile and Azure Pipelines YAML definitions for enterprise CI/CD pipelines, providing the integration layer for security tooling (SAST, DAST, secrets scanning).
+Created ADO CI/CD pipelines using agent-VM architecture to automate enterprise build workflows; authored PowerShell scripts executing within those pipelines for environment provisioning and maintenance.
 
 Example Bullet
 
-Developed PowerShell and Batch automation for build and test environment provisioning; performed log-based root cause analysis for pipeline failures across Linux execution environments.
-
-Example Bullet
-
-Led Jenkins to Azure DevOps pipeline migration, mapping build stages, triggers, and environment parameters while maintaining workflow continuity.
+Developed TypeScript UI automation of the enterprise application, supporting automated validation and workflow testing across the enterprise software stack.
 
 ---
 
@@ -173,6 +155,29 @@ Integrated VirusTotal threat intelligence APIs to automate malware analysis, par
 Example Bullet
 
 Engineered authenticated backend services and dashboards for persistent threat logging, malware scan history, and user-specific security event monitoring.
+
+---
+
+# Security Assessment
+
+Priority
+
+★★★★☆
+
+Focus
+
+- Secure Architecture
+- Authentication
+- Authorization
+- API Security testing
+
+Example Bullet
+
+Performed an authorized black-box assessment of a SaaS application evaluating authentication, authorization, and API security to identify access-control and configuration weaknesses.
+
+Example Bullet
+
+Validated business-logic flaws including Broken Object-Level Authorization and delivered remediation recommendations covering IAM improvements and least-privilege enforcement.
 
 ---
 
@@ -206,12 +211,13 @@ Tools
 - interactsh
 - ffuf
 - Nmap
-
-Note: Layout A — target 12–15 total skills.
+- Azure DevOps
 
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -221,11 +227,7 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
-
-Layout A cap: max 2
+Achievements
 
 1.
 
@@ -233,7 +235,7 @@ Winner — HackAthena'25 Cybersecurity Track
 
 2.
 
-Solved 150+ CTF challenges
+Solved 200+ CTF challenges
 
 ---
 
@@ -262,21 +264,31 @@ Highest Priority
 - AI Trust Boundaries
 - Multi-tenant Isolation
 - Python
+- TypeScript
 - Burp Suite
 - Linux
 - API Security
+- Azure DevOps
 
 ---
 
 # Validation Checklist
 
-✓ Mindpex VAPT in Experience section (Layout A)
+✓ No Summary section
+
+✓ Mindpex VAPT in Experience section (always)
 
 ✓ Domain 2 (LLM Endpoint Security) is the primary focus of Mindpex bullets
 
-✓ Epicor in Experience section
+✓ Epicor in Experience section (always)
 
-✓ VigiLynx as sole project slot (ML-adjacent signal)
+✓ 2–3 dynamically selected project slots
+
+✓ Certifications & Achievements merged into single section
+
+✓ ADO pipeline + PowerShell + TypeScript automation framing in Epicor bullets
+
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ Prompt injection findings explicitly covered
 
@@ -284,13 +296,13 @@ Highest Priority
 
 ✓ Zero tenant isolation finding covered
 
-✓ 12–15 skills (Layout A cap)
-
-✓ Max 2 achievements (Layout A cap)
-
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
+
+✓ HackAthena Winner included
+
+✓ 200+ CTF challenges included
 
 ✓ Three bullets per section
 

@@ -78,6 +78,31 @@ Every section should maximize alignment while remaining completely truthful.
 
 ---
 
+# Resume Structure (All Roles — Unified Layout)
+
+There is ONE fixed resume structure. It applies to ALL roles with no exceptions.
+
+```
+[Header]
+[Experience]
+  1. Mindpex Security Consulting — Freelance VAPT Engagement — Enterprise SaaS Platform
+  2. Epicor Software — Product Development Intern
+[Projects]
+  2–3 dynamically selected entries (score against JD; 3 only if all score high AND page fits)
+[Skills]
+[Certifications & Achievements]
+  Compact list: Security+ | ISC2 CC | achievements in role-priority order
+[Education]
+```
+
+**No Summary section.**
+
+**Mindpex is always in Experience.** It never moves to the Projects section.
+
+**Epicor is always in Experience.** It is always included.
+
+---
+
 # Inputs
 
 Input 1
@@ -158,113 +183,13 @@ Key Signals: [signals detected]
 Applied Modifier: [summary of tone/emphasis changes]
 ```
 
-If confidence is Low, ask the candidate: "I classified this as [type] — does that sound right?"
-
-Otherwise, proceed without asking.
-
 ↓
 
 Step 5
 
-Perform Gap Analysis and ask clarifying questions.
+Classify the target role and generate a Role Classification Report.
 
-This step is **mandatory**. Do NOT skip it.
-
-Do NOT generate the resume until the candidate responds.
-
-### 5a — Gap Analysis
-
-Before tagging anything as MISSING, cross-reference `knowledge-base/00_changelog.md` for recently added skills or experience that may not yet be fully documented in every KB file.
-
-Compare every JD requirement against the knowledge base.
-
-For each requirement, tag it as one of:
-
-- COVERED — clearly evidenced in the knowledge base
-- PARTIAL — partially evidenced, could be strengthened
-- MISSING — no evidence found in the knowledge base or changelog
-
-### 5b — Consolidated Q&A (MCQ Format)
-
-Ask the candidate **one single message** with ALL questions consolidated.
-
-Format ALL questions as **numbered MCQs**. The candidate will reply with just the letter(s) to select an answer.
-
----
-
-**For MISSING items involving a specific tool, technology, or platform:**
-
-Present an MCQ with the exact JD tool as one option, plus 2–3 close alternatives that serve the same purpose. Always include a "None" option.
-
-Format:
-
-```
-Q[N]. The JD mentions [X]. Which of these have you worked with?
-   A) [Exact JD tool]
-   B) [Similar tool / alternative]
-   C) [Another similar tool]
-   D) None of the above
-```
-
-If the candidate picks A, B, or C — use that specific tool/technology in the resume.
-If the candidate picks D — mark as unaddressable. Omit from resume.
-
----
-
-**For MISSING items involving a concept or process (not a specific tool):**
-
-Ask a presence question:
-
-```
-Q[N]. The JD requires [X]. I found no evidence of this in the knowledge base.
-   A) Yes — I have real, unreported experience with [X]. I'll describe it below.
-   B) No — I don't have this.
-```
-
-If the candidate picks A, prompt them to briefly describe it in the same reply.
-If the candidate picks B — mark as unaddressable.
-
----
-
-**For PARTIAL items involving a specific tool or depth of experience:**
-
-Present an MCQ offering granularity options:
-
-```
-Q[N]. You have [existing evidence] from [context] with [tool/concept].
-      How far does your experience go?
-   A) [Specific deeper capability — e.g., wrote custom rules / automated pipeline]
-   B) [Moderate depth — e.g., used it ad hoc / manual usage]
-   C) [Surface level — e.g., just familiar with it conceptually]
-   D) [Exact JD phrasing, if different from above]
-```
-
-Use the selected option to set the bullet framing depth and tool naming.
-
----
-
-Group questions by category (Tools, Concepts, Process). Number them sequentially (Q1, Q2, Q3...).
-
-Be specific. Be direct. Do NOT ask questions one at a time.
-
-Wait for the candidate's answers before proceeding.
-
-### 5c — Incorporate Answers
-
-After the candidate responds:
-
-- MISSING confirmed → Add to working context as newly confirmed experience.
-- MISSING denied → Mark as unaddressable. Omit from resume. Note in ATS Analysis.
-- PARTIAL elaborated → Replace the partial evidence with the fuller context.
-- PARTIAL denied → Keep existing partial evidence as-is. Do not inflate.
-
-↓
-
-Step 6
-
-Identify the primary cybersecurity role and generate a Role Classification Report.
-
-### 6a — Classify Role
+### 5a — Classify Role
 
 Score the JD against every supported role using keyword density.
 
@@ -285,15 +210,13 @@ Possible roles
 - API Security Engineer
 - Offensive Security Engineer
 
-Note: DevSecOps triggers Layout A (Mindpex + Epicor in Experience). Purple Team is scored but rarely reaches top confidence; if classified as Purple Team, confirm with candidate before proceeding. AI/LLM Security, API Security, and Offensive Security all trigger Layout A.
-
 Assign a confidence percentage to every role.
 
 Choose the role with the highest confidence as the primary role.
 
 Never generate hybrid resumes unless explicitly requested.
 
-### 6b — Output Role Classification Report
+### 5b — Output Role Classification Report
 
 Output the following before proceeding:
 
@@ -306,19 +229,13 @@ Rationale: [1–2 sentences explaining why the primary role was chosen]
 Company Modifier Applied: [yes/no — which modifier]
 ```
 
-Then ask the candidate:
-
-> "I've classified this as a **[Primary Role]** position. Does this look correct, or would you like to target a different role?"
-
-Wait for confirmation before proceeding.
-
-If the candidate corrects the role, update the primary role and re-apply the Role Intelligence Matrix accordingly.
+Do NOT ask the candidate to confirm the role. Proceed directly.
 
 ↓
 
-Step 7
+Step 6
 
-Extract important keywords.
+Extract important keywords from the JD.
 
 Categorize
 
@@ -354,26 +271,25 @@ Databases
 
 ↓
 
-Step 8
+Step 7
 
-Score every experience and project against the JD using the Project Scoring Rubric.
+Score every project and achievement against the JD.
 
-Experience Entries
+Experience Entries (always included — no scoring required)
 
 - Mindpex VAPT Freelance (07_mindpex_vapt.md)
 - Epicor Software Internship (06_epicor_internship.md)
 
-Projects
+Projects & Achievements to Score
 
 - VigiLynx
 - CipherCrack
 - Black-box Web Application Security Assessment
+- HackAthena
+- CTF Experience
+- TryHackMe Ranking
 
-Achievements
-
-Certifications
-
-Scoring weights per project (see engine/01_resume_generation_rules.md):
+Scoring weights (see engine/01_resume_generation_rules.md):
 
 - Security relevance: 40%
 - Technical depth: 25%
@@ -381,100 +297,59 @@ Scoring weights per project (see engine/01_resume_generation_rules.md):
 - ATS coverage: 10%
 - Verified metrics: 5%
 
-↓
-
-Step 9
-
-Experience Structure Decision.
-
-This step is **mandatory** and must run before any bullets are written.
-
-Using the confirmed primary role, check the Role-Based Pairing table in 02_experience.md:
-
-| Primary Role | Layout | Experience Section | Project Slot |
-|---|---|---|---|
-| AppSec / ProdSec | A | Mindpex + Epicor | VigiLynx OR Security Assessment |
-| Red Team / Pentesting | A | Mindpex + Epicor | CipherCrack OR Security Assessment |
-| DevSecOps | A | Mindpex + Epicor | VigiLynx |
-| Security Engineering | A | Mindpex + Epicor | VigiLynx |
-| AI / LLM Security | A | Mindpex + Epicor | VigiLynx OR Security Assessment |
-| API Security | A | Mindpex + Epicor | Security Assessment |
-| Offensive Security | A | Mindpex + Epicor | CipherCrack |
-| Detection Engineering | B | Epicor only | Mindpex VAPT + VigiLynx |
-| SOC | B | Epicor only | Mindpex VAPT + VigiLynx |
-| Threat Intelligence | B | Epicor only | Mindpex VAPT + VigiLynx |
-| Security Research | B | Epicor only | Mindpex VAPT + CipherCrack |
-
-If Mindpex is in the Experience section:
-
-- Projects: exactly 1 entry (3 bullets)
-- Skills: 12–15 items
-- Achievements: max 2
-
-If Mindpex is NOT in the Experience section:
-
-- Mindpex occupies one project slot
-- Projects: 2 entries (3 bullets each)
-- Skills: 12–18 items
-- Achievements: max 3
+Select 2–3 highest-scoring entries for the Projects & Key Achievements section.
 
 ↓
 
-Step 10
-
-Select experiences per the decision above.
-
-Epicor: always included.
-
-Choose ONLY the number of projects determined in Step 9.
-
-Never include all three projects.
-
-Never include Mindpex in both Experience and Project sections simultaneously.
-
-↓
-
-Step 11
+Step 8
 
 Rewrite every section.
 
 Generate
 
-Summary (optional)
-
 Experience
+
+  - Mindpex VAPT Freelance (always, 3 bullets, role-adapted framing)
+  - Epicor Software Internship (always, 3 bullets, role-adapted framing)
 
 Projects
 
+  - 2–3 dynamically selected entries (3 bullets each)
+  - Default 2 slots; use 3 only if all 3 score high AND resume fits on one page
+
 Skills
 
-Achievements
+Certifications & Achievements
+
+  - Compact list format (no sub-bullets)
+  - Certifications first: Security+ then ISC2 CC
+  - Then achievements in role-priority order (max 3)
 
 Education
 
-Certifications
+**Do NOT generate a Summary section.**
 
 ↓
 
-Step 12
+Step 9
 
 Apply ATS optimization.
 
 ↓
 
-Step 13
+Step 10
 
-Validate against resume budget.
+Validate against resume budget (engine/03_resume_budget.md).
 
 ↓
 
-Step 14
+Step 11
 
 Validate truthfulness.
 
 ↓
 
-Step 15
+Step 12
 
 Generate draft resume.
 
@@ -484,19 +359,19 @@ Do NOT call it "final".
 
 After presenting, ask:
 
-> "Here is your draft resume. Would you like to refine any section — for example: Experience bullets, Skills, Summary, or Projects? Type the section name and your feedback, or type **'approve'** to finalize."
+> "Here is your draft resume. Would you like to refine any section — for example: Experience bullets, Skills, or Projects? Type the section name and your feedback, or type **'approve'** to finalize."
 
 Wait for the candidate's response before proceeding.
 
 ↓
 
-Step 16
+Step 13
 
 Iterative Refinement Loop.
 
 This step is **mandatory** unless the candidate types 'approve' immediately.
 
-### 16a — Handle Feedback
+### 13a — Handle Feedback
 
 For each piece of feedback received:
 
@@ -505,13 +380,13 @@ For each piece of feedback received:
 - Present the rewritten section in isolation.
 - Ask: "Does this look better, or would you like further changes?"
 
-### 16b — Constraints During Refinement
+### 13b — Constraints During Refinement
 
 - Do NOT relax the Truth Guard. Never introduce fabricated information during refinement.
 - Do NOT violate the resume budget. If a rewrite is too long, compress before presenting.
 - Do NOT change the primary role unless the candidate explicitly requests it.
 
-### 16c — Repeat Until Approved
+### 13c — Repeat Until Approved
 
 Continue the refinement loop until the candidate types **'approve'**.
 
@@ -523,7 +398,7 @@ After 3 rounds, ask:
 
 ↓
 
-Step 17
+Step 14
 
 Generate final resume.
 
@@ -577,54 +452,17 @@ Never guess.
 
 # Resume Constraints
 
-Two Experience Entries (Mindpex + Epicor in Experience section)
+Both Experience Entries Always Present
 
-- Each experience: exactly 3 bullets, max 2 lines each
-- Projects: 1 entry, exactly 3 bullets
+- Mindpex: exactly 3 bullets, max 2 lines each
+- Epicor: exactly 3 bullets, max 2 lines each
+- Projects: 2–3 entries, exactly 3 bullets each (default 2; use 3 only if all score high and resume fits)
 - Skills: 12–15 items
-- Achievements: max 2
-- Certifications: exactly 2
-- Summary: optional (only if fits within one page)
+- Certifications & Achievements: compact list — exactly 2 certs + max 3 achievements
+- No Summary section
 - Resume: one page
 
-One Experience Entry (Epicor only in Experience section)
-
-- Experience: exactly 3 bullets, max 2 lines each
-- Projects: 2 entries, exactly 3 bullets each (one may be Mindpex as project)
-- Skills: 12–18 items
-- Achievements: max 3
-- Certifications: exactly 2
-- Summary: optional
-- Resume: one page
-
-These constraints are mandatory. Determine which applies from Step 9.
-
----
-
-# Summary Rules
-
-Generate only if
-
-- It improves JD alignment.
-
-- It fits within one page.
-
-Otherwise
-
-omit.
-
-If generated
-
-Maximum
-
-60 words.
-
-Mention
-
-- CompTIA Security+
-- ISC2 Certified in Cybersecurity (CC)
-
-when appropriate.
+These constraints are mandatory.
 
 ---
 
@@ -638,59 +476,33 @@ Rewrite dynamically according to the selected role.
 
 Never use QA-heavy language when a security-oriented interpretation is supported by the knowledge base.
 
+The VM cleanup PowerShell script (5 VMs, ~15 GB/week, ADO-triggered) is the strongest verifiable achievement at Epicor. Include it in at least one bullet unless a stronger JD-aligned topic takes its place.
+
 Mindpex VAPT Freelance
 
-Include in Experience section when role is: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering.
-
-For all other roles: include as a project slot entry.
-
-Never appear in both Experience and Projects simultaneously.
+Always included in the Experience section for ALL roles.
 
 Always described as: "Freelance VAPT Engagement — Enterprise SaaS Platform"
 
 Never disclose the client name (Mindpex) in the resume.
 
----
-
-# Project Selection Rules
-
-Follow the Role Intelligence Matrix.
-
-Never hardcode projects.
-
-Always choose the strongest two.
-
-Examples
-
-Red Team
-
-Security Assessment
-
-CipherCrack
+Never appears in the Projects section.
 
 ---
 
-SOC
+# Projects Section Rules
 
-VigiLynx
+Select 2–3 entries from: VigiLynx / CipherCrack / Security Assessment.
 
-CipherCrack
+Score all entries against the JD using the project scoring rubric.
 
----
+Default: select the 2 highest-scoring entries.
 
-Application Security
+Upgrade to 3 only if all three score high on alignment AND the resume fits on one page.
 
-Security Assessment
+See engine/02_role_intelligence_matrix.md for role-based project priority guidance.
 
-VigiLynx
-
----
-
-Detection Engineering
-
-VigiLynx
-
-CipherCrack
+See engine/03_resume_budget.md for the 2-vs-3 slot decision rule.
 
 ---
 
@@ -772,27 +584,7 @@ Operating Systems
 
 Supporting Technologies
 
----
-
-# Achievement Rules
-
-Maximum
-
-3
-
-Prioritize according to the selected role.
-
-Never include generic academic achievements over practical cybersecurity accomplishments.
-
----
-
-# Education Rules
-
-Keep concise.
-
-Maximum
-
-2 lines.
+Total: 12–15 items
 
 ---
 
@@ -834,41 +626,33 @@ Before returning the resume, verify
 
 ✓ Company Intelligence Report was generated
 
-✓ Gap Analysis was performed and Q&A was completed with the candidate
+✓ Role Classification Report was generated
 
-✓ All candidate-confirmed additions are incorporated
+✓ Correct target role selected (no candidate confirmation required)
 
-✓ All unaddressable gaps are noted in the ATS Analysis
+✓ No Summary section present
 
-✓ Role Classification Report was generated and confirmed by candidate
+✓ Mindpex VAPT in Experience section — described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
 
-✓ Correct target role selected
+✓ Epicor in Experience section
 
-✓ Experience Structure Decision (Step 9) was executed — Layout A or B confirmed
+✓ Each experience has exactly 3 bullets
 
-✓ Mindpex VAPT appears in correct location (Experience section for Layout A / Project slot for Layout B)
+✓ Projects section has 2–3 dynamically selected entries, each with exactly 3 bullets
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform" — no client name used
+✓ Skills: 12–15 items
 
-✓ Epicor included in Experience section
+✓ Certifications & Achievements section present (compact list format)
 
-✓ Correct number of project slots used (1 for Layout A / 2 for Layout B)
+✓ Exactly 2 certifications (CompTIA Security+ first, ISC2 CC second)
 
-✓ Bullet count per section matches layout constraints
+✓ Maximum 3 achievements in role-priority order
 
-✓ Skills count within layout cap (12–15 for Layout A / 12–18 for Layout B)
+✓ Education: max 2 lines
 
-✓ Achievements count within layout cap (max 2 for Layout A / max 3 for Layout B)
-
-✓ Refinement loop was offered to the candidate
+✓ Refinement loop offered to candidate
 
 ✓ Skills reordered per role and company modifier
-
-✓ Achievements reordered per role
-
-✓ CompTIA Security+ included
-
-✓ ISC2 CC included
 
 ✓ Resume fits one page
 
@@ -876,7 +660,9 @@ Before returning the resume, verify
 
 ✓ No fabricated information
 
-✓ No confidential information
+✓ No confidential information (Mindpex not named)
+
+✓ Epicor VM cleanup PowerShell script bullet present (unless overridden by stronger JD-aligned bullet)
 
 If any check fails,
 
@@ -897,7 +683,6 @@ Include
 - Important Keywords Found
 - Keywords Successfully Covered
 - Missing Keywords
-- Unaddressable Gaps (items candidate confirmed they do not have)
 - Resume Strengths
 - Weaknesses
 - Suggestions for Improvement
@@ -923,10 +708,6 @@ After the benchmark, provide:
 Identify the single most impactful GAP TO BUILD item.
 
 Suggest ONE concrete, actionable way to close it within 30–60 days.
-
-Example:
-
-> "A strong Application Security candidate typically has hands-on SAST pipeline integration. Consider adding a GitHub Actions workflow with Semgrep scanning to one of your existing projects and documenting the findings."
 
 Be specific. Be actionable. Never suggest fabricating experience.
 

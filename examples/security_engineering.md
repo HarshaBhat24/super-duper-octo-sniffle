@@ -53,15 +53,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience (Mindpex + Epicor — both in Experience section for this role)
-
-↓
-
-VigiLynx
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -69,30 +65,11 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
-
----
-
-# Summary Style
-
-Characteristics
-
-- Breadth across offensive and defensive security
-- Security tooling and automation emphasis
-- Engineering-first framing
-- Concise
-
-Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience in vulnerability assessment, API security testing, security automation, and CI/CD pipeline engineering. Conducted a full-scope freelance VAPT engagement across 7 security domains, identified 30+ CVSS-scored findings with code-level remediation, and developed security-focused tooling integrating ML-based threat detection.
 
 ---
 
@@ -127,22 +104,27 @@ Delivered code-level remediation in TypeScript, Python, and SQL across 30+ CVSS-
 
 Focus
 
-- CI/CD pipeline automation as a security-integration layer
-- PowerShell scripting for secure, repeatable environment provisioning
-- Log-based investigation methodology
-- Linux execution environments
+- ADO CI/CD pipelines (agent-VM architecture)
+- PowerShell scripting deployed within those pipelines
+- VM disk cleanup automation
+- Log-based root cause analysis on pipeline failures
+
+Suppress
+
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+- Generic QA / testing terminology
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Authored Jenkinsfile and Azure Pipelines YAML pipeline definitions implementing pipeline-as-code standards for enterprise CI/CD workflows; led Jenkins to Azure DevOps migration mapping all build stages, triggers, and parameters.
+Created ADO CI/CD pipelines using agent-VM architecture to automate enterprise build workflows; authored PowerShell scripts executing within those pipelines for environment provisioning and maintenance.
 
 Example Bullet
 
-Developed PowerShell and Batch automation scripts for reproducible build and test environment provisioning, enforcing consistent configuration across enterprise deployment targets.
-
-Example Bullet
-
-Performed log-based root cause analysis for pipeline and script execution failures across Linux environments, applying systematic investigation methodology to production build issues.
+Performed log-based root cause analysis for pipeline and script execution failures across Linux environments, applying systematic investigation methodology to recurring production build issues.
 
 ---
 
@@ -170,6 +152,30 @@ Developed a secure Node.js backend with Supabase-backed authentication, persiste
 Example Bullet
 
 Implemented browser-side security tooling with real-time phishing alerts and malware scan history, integrating frontend detection with backend threat intelligence APIs.
+
+---
+
+# Security Assessment
+
+Priority
+
+★★★★☆
+
+Focus
+
+- Secure Architecture
+- Authentication
+- Authorization
+- API Security
+- IAM
+
+Example Bullet
+
+Performed an authorized black-box assessment of a SaaS application evaluating authentication, authorization, and API security to identify access-control and configuration weaknesses.
+
+Example Bullet
+
+Validated business-logic flaws including Broken Object-Level Authorization and delivered remediation recommendations covering IAM, least-privilege enforcement, and secure middleware architecture.
 
 ---
 
@@ -211,11 +217,13 @@ Development
 
 - Node.js
 - SQL
-- CI/CD (Jenkins, Azure Pipelines)
+- CI/CD (ADO, Jenkins)
 
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -225,9 +233,7 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
+Achievements
 
 1.
 
@@ -235,7 +241,7 @@ Winner — HackAthena'25 Cybersecurity Track
 
 2.
 
-Solved 150+ CTF challenges
+Solved 200+ CTF challenges
 
 ---
 
@@ -266,6 +272,7 @@ High Priority
 - Burp Suite
 - CI/CD
 - PowerShell
+- Azure DevOps
 - OWASP
 - Security Automation
 
@@ -273,15 +280,19 @@ High Priority
 
 # Validation Checklist
 
-✓ Mindpex VAPT in Experience section
+✓ No Summary section
 
-✓ Epicor in Experience section
+✓ Mindpex VAPT in Experience section (always)
 
-✓ Only 1 project slot used (VigiLynx)
+✓ Epicor in Experience section (always)
 
-✓ Skills compressed to 12–15
+✓ 2–3 dynamically selected project slots
 
-✓ Achievements capped at 2
+✓ Certifications & Achievements merged into single section
+
+✓ ADO pipeline + VM cleanup script framing in Epicor bullets
+
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ Secure architecture language in Mindpex bullets
 
@@ -293,6 +304,10 @@ High Priority
 
 ✓ ISC2 CC included
 
+✓ HackAthena Winner included
+
+✓ 200+ CTF challenges included
+
 ✓ Three bullets per section
 
 ✓ One-page resume
@@ -303,9 +318,9 @@ High Priority
 
 # Reference Notes
 
-This is a two-experience-entry layout (Mindpex + Epicor both in Experience).
+Both Mindpex and Epicor are always in the Experience section for this role.
 
-Budget constraint: 1 project slot, max 2 achievements, 12–15 skills.
+Projects: VigiLynx primary, Security Assessment secondary. Agent selects 2–3 based on page space.
 
 Security Engineering sits between AppSec and DevSecOps. Tone should be:
 - Less tool-specific than AppSec

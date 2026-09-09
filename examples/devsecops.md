@@ -27,7 +27,6 @@ Generate new bullets from the knowledge base.
 Highest Priority
 
 - CI/CD Security
-- Pipeline-as-Code
 - Security Automation
 - Build Security
 - Infrastructure Security
@@ -54,15 +53,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience (Mindpex + Epicor — both in Experience section)
-
-↓
-
-VigiLynx
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -70,30 +65,11 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
-
----
-
-# Summary Style
-
-Characteristics
-
-- Engineering-first
-- Pipeline and automation focused
-- Security-embedded-in-SDLC framing
-- Concise
-
-Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience in CI/CD pipeline automation, DevSecOps toolchain migration, and enterprise security assessment. Authored Jenkinsfiles and Azure Pipelines YAML definitions, performed full-scope VAPT across 7 security domains, and developed security-focused tooling integrating threat detection and malware analysis.
 
 ---
 
@@ -128,22 +104,27 @@ Performed static analysis of 47 PostgreSQL migration files identifying unauthent
 
 Focus
 
-- CI/CD pipeline-as-code (Jenkinsfile + Azure Pipelines YAML)
-- Jenkins to Azure DevOps migration
-- PowerShell and Batch environment provisioning automation
-- Log-based root cause analysis
+- ADO CI/CD pipeline creation (agent-VM architecture)
+- PowerShell scripting deployed within those pipelines
+- VM disk cleanup automation
+- Log-based root cause analysis on pipeline failures
+
+Suppress
+
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+- Azure Pipelines YAML authoring as primary framing
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Authored Jenkinsfile and Azure Pipelines YAML definitions for enterprise CI/CD pipelines, implementing pipeline-as-code standards that support integration of SAST, DAST, and secrets scanning tooling.
+Created ADO CI/CD pipelines using agent-VM architecture to automate enterprise build and deployment workflows; authored PowerShell scripts executing within those pipelines for environment provisioning and maintenance.
 
 Example Bullet
 
-Led Jenkins to Azure DevOps pipeline migration, mapping build stages, triggers, and environment parameters across toolchains while maintaining build workflow continuity.
-
-Example Bullet
-
-Developed PowerShell and Batch automation scripts for build and test environment provisioning; performed log-based root cause analysis for pipeline failures across Linux execution environments.
+Performed log-based root cause analysis on pipeline and script failures — tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs.
 
 ---
 
@@ -188,9 +169,7 @@ CI/CD and Automation
 
 - Jenkins
 - Azure DevOps
-- Azure Pipelines YAML
-- Jenkinsfile (Groovy DSL)
-- Pipeline-as-Code
+- ADO Pipelines (agent-VM)
 
 Security
 
@@ -213,7 +192,9 @@ Tools
 
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -223,9 +204,7 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
+Achievements
 
 1.
 
@@ -233,7 +212,7 @@ Winner — HackAthena'25 Cybersecurity Track
 
 2.
 
-Solved 150+ CTF challenges
+Solved 200+ CTF challenges
 
 ---
 
@@ -252,11 +231,8 @@ CGPA 8.57
 High Priority
 
 - CI/CD
-- Jenkins
 - Azure DevOps
-- Azure Pipelines
-- YAML
-- Pipeline-as-Code
+- ADO Pipelines
 - PowerShell
 - DevSecOps
 - Security Automation
@@ -273,17 +249,21 @@ High Priority
 
 # Validation Checklist
 
-✓ Mindpex VAPT in Experience section
+✓ No Summary section
 
-✓ Epicor in Experience section
+✓ Mindpex VAPT in Experience section (always)
 
-✓ Only 1 project slot used (VigiLynx)
+✓ Epicor in Experience section (always)
+
+✓ 2–3 dynamically selected project slots
+
+✓ Certifications & Achievements merged into single section
 
 ✓ Skills compressed to 12–15
 
-✓ Achievements capped at 2
+✓ ADO pipeline + VM cleanup script framing in Epicor bullets
 
-✓ CI/CD pipeline emphasis in Epicor bullets
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ DevSecOps framing in Mindpex bullets
 
@@ -292,6 +272,10 @@ High Priority
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
+
+✓ HackAthena Winner included
+
+✓ 200+ CTF challenges included
 
 ✓ Three bullets per section
 
@@ -303,19 +287,23 @@ High Priority
 
 # Reference Notes
 
-This is a two-experience-entry layout (Mindpex + Epicor both in Experience).
+Both Mindpex and Epicor are always in the Experience section for this role.
 
-Budget constraint: 1 project slot, max 2 achievements, 12–15 skills.
+Projects: VigiLynx is the primary project for this role.
+
+Agent selects 2–3 projects based on available page space.
 
 Emphasize
 
-- Pipeline-as-code authoring and migration
-- Security tooling integration into CI/CD
+- ADO pipeline creation and VM-level automation
+- PowerShell scripts executing within pipelines
+- Disk cleanup / storage exhaustion elimination
 - Full-scope VAPT with remediation delivery
 - Security automation scripting
 
 Suppress
 
+- Pipeline-as-code authoring as the primary Epicor narrative
 - Generic QA / software testing language
 - Frontend development details
 - Non-security engineering terminology

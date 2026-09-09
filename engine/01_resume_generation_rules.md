@@ -201,20 +201,17 @@ Always include. Never remove.
 
 Mindpex VAPT Freelance
 
-Include in Experience section when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering, AI/LLM Security, API Security, Offensive Security.
+Always include in the Experience section. There is no role-based switching.
 
-For all other roles: Mindpex occupies one project slot.
+Mindpex NEVER appears in Projects & Key Achievements — it is always in Experience.
 
-Never appear in both Experience and Projects simultaneously.
+Projects & Key Achievements
 
-Projects
+Dynamically select 2–3 entries from: VigiLynx / CipherCrack / Security Assessment / top achievements.
 
-Choose ONLY the number of project slots determined by the Experience Structure Decision:
+Score all options against the JD and select the best-fit combination.
 
-- 2 experience entries → 1 project slot
-- 1 experience entry → 2 project slots (one may be Mindpex)
-
-Never include all three projects (VigiLynx + CipherCrack + Security Assessment).
+Never include all three projects (VigiLynx + CipherCrack + Security Assessment) unless space and alignment both clearly justify it.
 
 ---
 
@@ -546,7 +543,7 @@ Examples
 
 50+ files
 
-150+ CTFs
+200+ CTFs
 
 1324 LOC
 
@@ -611,87 +608,11 @@ Assisted with
 
 # Summary Generation Rules
 
-The summary is optional.
+Do NOT generate a Summary section.
 
-Generate a summary ONLY IF
+The Summary section has been permanently removed from the resume format.
 
-- It increases alignment with the Job Description.
-- It fits within the one-page budget.
-- It does not replace stronger technical content.
-
-Otherwise
-
-Do not generate a summary.
-
----
-
-Summary Length
-
-2–3 lines
-
-Maximum
-
-60 words
-
----
-
-Summary Priority
-
-Every summary should communicate
-
-1
-
-Current career focus
-
-↓
-
-2
-
-Technical strengths
-
-↓
-
-3
-
-Certifications
-
-↓
-
-4
-
-Competitive cybersecurity experience
-
----
-
-Always Mention
-
-If a summary is generated,
-
-include
-
-- CompTIA Security+
-- ISC2 Certified in Cybersecurity (CC)
-
-unless explicitly irrelevant.
-
----
-
-Example Structure
-
-CompTIA Security+ and ISC2 Certified cybersecurity professional with hands-on experience in offensive security, phishing detection, and web application security. Developed practical security tooling, performed authorized security assessments, and solved 150+ CTF challenges while ranking in the Top 10% on TryHackMe.
-
----
-
-Never Mention
-
-- Passionate learner
-- Highly motivated
-- Fast learner
-- Hardworking
-- Team player
-- Excellent communication
-
-Demonstrate these through evidence.
+The space freed by removing the Summary is used to accommodate more project/achievement entries in the Projects & Key Achievements section.
 
 ---
 
@@ -857,15 +778,19 @@ Remove Useful skills first if space is limited.
 
 # Achievement Generation Rules
 
-Maximum
+Achievements appear in the **Certifications & Achievements** section (compact list, no sub-bullets).
 
-3 achievements
+Maximum 3 achievements.
 
-Never exceed.
+Dynamically order based on target role using priority tables in 05_achievements.md.
 
----
+Format: one line per achievement, including result and context.
 
-Choose achievements based on the target role.
+Example: `Winner — HackAthena'25 Cybersecurity Track (National Hackathon, 200+ teams)`
+
+Prefer measurable results (placements, rankings, participant counts).
+
+Never exceed 3 achievements regardless of role.
 
 Examples
 
@@ -873,7 +798,7 @@ Red Team
 
 - KJSSE CTF
 - TryHackMe
-- 150+ CTFs
+- 200+ CTFs
 
 ---
 
@@ -1117,7 +1042,7 @@ Examples
 
 1324 LOC
 
-150+ CTFs
+200+ CTFs
 
 Top 10%
 
@@ -1209,15 +1134,11 @@ Header
 
 ↓
 
-Summary (Optional)
-
-↓
-
 Experience
 
 ↓
 
-Projects / Security Assessment
+Projects
 
 ↓
 
@@ -1225,17 +1146,18 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
 
+No Summary section.
+
+No separate Achievements section — achievements are merged with Certifications into the compact 'Certifications & Achievements' section.
+
 No additional sections unless explicitly requested.
+
 ---
 
 # Truth Guard
@@ -1334,11 +1256,10 @@ Everything should align with that role.
 
 This includes
 
-- Summary
-- Internship
-- Projects
-- Skills
-- Achievements
+- Experience bullets (Mindpex + Epicor)
+- Projects & Key Achievements selection and framing
+- Skills ordering
+- Certifications ordering
 
 Never generate mixed-role resumes.
 
@@ -1597,33 +1518,27 @@ rewrite before returning.
 
 Validate
 
-Experience
+Experience Entry 1 (Mindpex)
 
 Exactly 3 bullets
 
-Project / Assessment 1
+Experience Entry 2 (Epicor)
 
 Exactly 3 bullets
 
-Project / Assessment 2
+Projects & Key Achievements
 
-Exactly 3 bullets
+2–3 entries, each with exactly 3 bullets
 
 Skills
 
-12–18
-
-Achievements
-
-≤3
+12–15
 
 Certifications
 
 Exactly 2
 
-Summary
-
-Optional
+No Summary section
 
 Resume
 
@@ -1715,17 +1630,19 @@ Every bullet should read like an engineering accomplishment rather than a job re
 Before producing the final resume, verify that:
 
 - The resume targets a single cybersecurity role.
-- Epicor experience is included.
-- Exactly two projects/assessments are selected (Layout B) or exactly one project is selected (Layout A).
-- Bullet counts match the resume budget.
-- Skills are tailored to the JD.
+- Mindpex VAPT is in the Experience section (not in Projects).
+- Epicor is in the Experience section.
+- Each experience has exactly 3 bullets.
+- Projects & Key Achievements has 2–3 entries, each with exactly 3 bullets.
+- No Summary section is present.
+- Skills are tailored to the JD (12–15 items).
 - CompTIA Security+ and ISC2 CC are included.
-- Achievements are reordered for the role.
 - ATS keywords are naturally integrated.
 - No unsupported claims exist.
-- No confidential information is disclosed.
+- No confidential information is disclosed (Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform").
 - The resume fits on one page.
 - Every statement is backed by the knowledge base.
+- Epicor VM cleanup PowerShell script bullet is present unless a stronger JD-aligned bullet replaces it.
 
 If any check fails, regenerate the affected section before returning the resume.
 

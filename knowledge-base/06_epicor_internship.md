@@ -36,15 +36,18 @@ Bengaluru, India
 
 # Experience Summary
 
-Worked within an enterprise software product development organization on CI/CD pipeline automation, build workflow engineering, and environment provisioning automation.
+Worked within an enterprise software product development organization on CI/CD pipeline automation, DevOps scripting, environment reliability engineering, UI automation, and load testing.
 
 Core work:
 
-- Authoring and maintaining CI/CD pipeline-as-code definitions (Jenkins Jenkinsfile + Azure Pipelines YAML)
-- Developing PowerShell and Batch automation scripts for build environment and test environment provisioning
-- Migrating the CI/CD pipeline infrastructure from Jenkins to Azure DevOps following an enterprise framework migration
-- Performing log-based root cause analysis for pipeline and script execution failures across Linux environments
-- Working within Agile delivery cycles using Azure DevOps boards and JIRA
+- Creating and maintaining Azure DevOps (ADO) pipelines for CI/CD orchestration, where each pipeline runs against agent VMs executing PowerShell scripts
+- Writing PowerShell scripts that execute on agent VMs within ADO pipelines (build, provisioning, automation tasks)
+- Authored a PowerShell cleanup script deployed across 5 agent VMs via an ADO pipeline — auto-triggered weekly, clearing ~15 GB of logs and temp data per run, significantly reducing pipeline failures caused by storage exhaustion
+- UI automation of an enterprise application using TypeScript (click interactions, app navigation, workflow automation)
+- Wrote and executed a Python/Locust load testing script that opened multiple parallel Chrome instances and performed UI interactions against the application URL under load
+- SQL querying and data retrieval using Microsoft SSMS; performed database backup and restoration
+- Log analysis and root cause analysis for pipeline and script execution failures (storage exhaustion, network issues, execution errors)
+- Worked within Agile delivery cycles using Azure DevOps Boards and JIRA
 
 Although the role is a product development position, the skills directly map to DevSecOps, Security Automation, Security Engineering, and Detection Engineering.
 
@@ -52,31 +55,30 @@ Although the role is a product development position, the skills directly map to 
 
 # Primary Responsibilities
 
-- CI/CD pipeline definition authoring and maintenance (Jenkins)
-- Azure Pipelines YAML authoring (post-migration)
-- Jenkins to Azure DevOps pipeline migration
-- Build environment provisioning automation
-- Test environment provisioning automation
-- PowerShell scripting for build and deployment workflow automation
-- Batch scripting for environment setup
-- Linux-based script execution
-- SQL database record updates
-- Pipeline and script execution log analysis
-- Root cause analysis of pipeline failures
-- Agile delivery (JIRA, Azure DevOps boards)
+- Azure DevOps (ADO) CI/CD pipeline creation and management
+- PowerShell scripting for pipeline automation and agent VM task execution
+- VM cleanup automation — authored script deployed across 5 VMs, auto-triggered via ADO pipeline
+- UI automation using TypeScript (enterprise application click/navigation automation)
+- Python/Locust load testing script development and execution
+- SQL querying and data retrieval (Microsoft SSMS)
+- Database backup and restoration (Microsoft SSMS)
+- Log analysis and root cause analysis of pipeline and script failures
+- Agile delivery (JIRA, Azure DevOps Boards)
 
 ---
 
 # Technical Responsibilities
 
-## CI/CD Pipeline — Jenkins
+## Azure DevOps (ADO) CI/CD Pipelines
 
 Performed
 
-- Authored Jenkinsfile pipeline definitions (pipeline-as-code)
-- Configured build stages, parameters, and job dependencies
-- Triggered and monitored enterprise CI/CD pipeline runs
-- Debugged pipeline failures via log inspection and execution tracing
+- Created ADO pipelines for CI/CD orchestration
+- Each pipeline uses agent VMs running PowerShell scripts as the execution layer
+- Created Jenkins pipelines with PowerShell scripts (pre-migration)
+- Migrated pipelines from Jenkins to Azure DevOps
+- Monitored and debugged pipeline runs
+- Performed root cause analysis on pipeline failures
 
 Security Relevance
 
@@ -84,36 +86,9 @@ High
 
 Concepts
 
-- CI/CD pipeline-as-code
-- Build pipeline orchestration
-- Enterprise build workflow management
-- Integration point for security tooling (SAST/DAST/secrets scanning)
-
-Applicable Roles
-
-- DevSecOps
-- Security Engineering
-- Security Automation
-
----
-
-## CI/CD Pipeline — Azure DevOps (Post-Migration)
-
-Performed
-
-- Authored Azure Pipelines YAML definitions after enterprise framework migration
-- Replicated and enhanced Jenkins pipeline logic in Azure Pipelines
-- Maintained build and deployment workflows in Azure DevOps
-
-Security Relevance
-
-High
-
-Concepts
-
-- Azure Pipelines as-code (YAML)
-- Enterprise DevOps toolchain management
-- Pipeline migration and workflow continuity
+- CI/CD pipeline orchestration
+- Agent-based pipeline execution architecture
+- Pipeline reliability and failure investigation
 - DevSecOps tooling integration layer
 
 Applicable Roles
@@ -124,38 +99,13 @@ Applicable Roles
 
 ---
 
-## Jenkins to Azure DevOps Migration
-
-Performed
-
-- Migrated complete CI/CD pipeline definitions from Jenkins (Jenkinsfile/Groovy) to Azure DevOps (Azure Pipelines YAML)
-- Mapped build stages, triggers, parameters, and execution logic across toolchains
-- Ensured build workflow continuity and integrity during enterprise framework transition
-
-Security Relevance
-
-Medium
-
-Concepts
-
-- Enterprise DevOps toolchain migration
-- Pipeline-as-code portability
-- Build system security posture transition
-
-Applicable Roles
-
-- DevSecOps
-- Security Engineering
-
----
-
-## PowerShell and Batch Scripting
+## PowerShell Scripting (Pipeline Automation)
 
 Developed
 
-- PowerShell scripts for automated build environment provisioning (compiler setup, dependency installation, tool configuration)
-- PowerShell scripts for deployment workflow automation
-- Batch scripts for environment setup and pipeline helper tasks
+- PowerShell scripts that execute as the core task layer inside ADO agent VMs
+- Each script performs a specific automation task triggered by the pipeline
+- Authored VM cleanup script (see below for full detail)
 
 Security Relevance
 
@@ -164,8 +114,8 @@ High
 Concepts
 
 - Security automation scripting
-- Repeatable, script-driven environment provisioning (eliminates manual misconfiguration)
-- Workflow automation transferable to security tooling (log collectors, scanners, alert scripts)
+- Repeatable, script-driven task execution
+- Workflow automation transferable to security tooling (log collectors, alert scripts)
 
 Applicable Roles
 
@@ -176,17 +126,61 @@ Applicable Roles
 
 ---
 
-## Build and Test Environment Provisioning
+## VM Cleanup PowerShell Script — Star Achievement
+
+This is the single most impactful individual contribution from this internship.
+
+Written
+
+- From scratch — no prior script existed
+
+Scope
+
+- Deployed across 5 agent VMs
+
+Trigger
+
+- Auto-triggered weekly via an ADO pipeline
+
+Function
+
+- Clears logs and temporary data that accumulate in agent VMs during pipeline runs
+
+Impact
+
+- Clears approximately 15 GB of junk data per weekly run
+- Directly reduced pipeline failures caused by storage exhaustion in VMs
+- Improved overall pipeline reliability and reduced manual intervention
+
+Security Relevance
+
+High
+
+Concepts
+
+- Automated log management and cleanup
+- Scripted environment hygiene — reduces configuration drift and execution errors
+- Scheduled automation for operational reliability
+
+Applicable Roles
+
+- DevSecOps
+- Security Automation
+- Security Engineering
+- Detection Engineering
+
+Resume Priority
+
+HIGHEST — always include this in at least one bullet
+
+---
+
+## UI Automation (TypeScript)
 
 Performed
 
-- Automated provisioning of build environments: compiler setup, dependency installation, tool configuration
-- Automated provisioning of test environments: spinning up enterprise application for functional validation
-
-Tooling
-
-- PowerShell
-- Batch scripts
+- Automated clicking, interaction, and navigation of an enterprise application using TypeScript
+- Built automation workflows that launch, navigate, and interact with the application UI
 
 Security Relevance
 
@@ -194,14 +188,69 @@ Medium
 
 Concepts
 
-- Consistent, automated environment setup reduces configuration drift
-- Repeatable provisioning is foundational to secure DevOps workflows
-- Transferable to security lab environment setup
+- Automated application interaction (directly applicable to security test automation)
+- Client-side scripting and automation tooling
+- Enterprise application workflow automation
 
 Applicable Roles
 
+- Application Security
+- Product Security
 - DevSecOps
 - Security Engineering
+
+---
+
+## Python / Locust Load Testing
+
+Written and Executed
+
+- Developed a Python script using Locust that puts load on the enterprise application URL
+- Script opens multiple Chrome instances in parallel and performs UI interactions (click actions) under load
+- Executed the script personally — both wrote and ran the load tests
+
+Security Relevance
+
+Medium
+
+Concepts
+
+- Load and performance testing methodology
+- Multi-instance parallel execution
+- Stress testing application behavior under concurrent load (relevant to DoS resilience, API security)
+
+Applicable Roles
+
+- Application Security
+- API Security
+- Security Engineering
+- Product Security
+
+---
+
+## SQL and Database Management (Microsoft SSMS)
+
+Used SQL for
+
+- Querying results based on project requirements
+- Data retrieval and validation during pipeline and testing workflows
+- Performing database backup and restoration using Microsoft SSMS
+
+Do NOT claim
+
+- Database design or schema architecture
+- Query optimization or performance tuning
+- Database administration as a primary responsibility
+
+Tool
+
+- Microsoft SSMS (SQL Server Management Studio)
+
+Applicable Roles
+
+- Application Security
+- Security Engineering
+- Product Security
 
 ---
 
@@ -213,7 +262,14 @@ Analysis of:
 
 - PowerShell script execution logs
 - Pipeline execution output and failure traces
-- Build and deployment failure investigation
+- Storage-related failures in agent VMs
+- Network-related failures in pipeline execution environments
+
+Common failure types investigated
+
+- VM storage exhaustion (disk space issues causing script failures)
+- Network connectivity issues during pipeline execution
+- Script execution errors (timeouts, permission errors)
 
 Process
 
@@ -226,7 +282,7 @@ Security Concepts
 
 - Log-based investigation methodology
 - Execution tracing
-- Systematic root cause analysis (directly applicable to incident analysis)
+- Systematic root cause analysis (directly applicable to incident analysis and detection engineering)
 
 Applicable Roles
 
@@ -240,59 +296,34 @@ High
 
 ---
 
-## Linux-Based Execution
-
-Worked with
-
-- Linux-based CI/CD execution environments
-
-Activities
-
-- Script execution in Linux CLI environments
-- CLI-based debugging
-- Linux command-line tooling in pipeline context
-
-Applicable Roles
-
-- Red Team
-- Security Engineering
-- DevSecOps
-
----
-
-## SQL
-
-Used SQL for
-
-- Updating database records
-- Data modification as part of build and test workflows
-
-Do NOT claim
-
-- Database design
-- Query optimization
-- Database administration
-
-Applicable Roles
-
-- Application Security
-- Security Engineering
-
----
-
-## Azure DevOps
+## Azure DevOps (Platform)
 
 Usage
 
 - Source code repository management
-- CI/CD pipeline management and monitoring
-- Work item and sprint tracking
+- CI/CD pipeline creation, management, and monitoring
+- Work item and sprint tracking (Boards)
 - Agile team collaboration
 
 Applicable Roles
 
 - Security Engineering
 - DevSecOps
+
+---
+
+## Jenkins (Pre-Migration)
+
+Usage
+
+- Created Jenkins pipelines with PowerShell scripts as the execution layer
+- Ran and monitored existing Jenkins pipelines
+- Supported migration of Jenkins pipelines to Azure DevOps
+
+Applicable Roles
+
+- DevSecOps
+- Security Engineering
 
 ---
 
@@ -325,10 +356,10 @@ Evidence
 
 Concepts
 
-- CI/CD pipeline automation (Jenkins + Azure Pipelines YAML)
-- Pipeline-as-code authoring and maintenance
-- Enterprise DevOps toolchain migration (Jenkins → Azure DevOps)
-- Build and environment provisioning automation
+- ADO CI/CD pipeline creation and management
+- Agent-VM based pipeline execution architecture
+- VM cleanup automation (PowerShell, ADO-triggered)
+- Pipeline failure root cause analysis
 
 ---
 
@@ -340,9 +371,10 @@ Evidence
 
 Concepts
 
-- PowerShell scripting for build and deployment automation
-- Batch scripting for environment setup
-- Scripted, repeatable workflow execution
+- PowerShell scripting for pipeline task automation
+- VM cleanup script (5 VMs, 15GB/week, ADO-triggered)
+- Python/Locust load testing scripting
+- TypeScript UI automation
 
 Applicable Roles
 
@@ -360,7 +392,7 @@ Evidence
 Concepts
 
 - Log inspection for pipeline failure root cause
-- Execution tracing across Linux environments
+- Storage and network failure investigation
 - Systematic investigation methodology
 
 Applicable Roles
@@ -379,7 +411,7 @@ Evidence
 Exposure
 
 - Large-scale enterprise ERP software product
-- Enterprise CI/CD workflows with multiple environment targets
+- Enterprise CI/CD workflows with multiple agent VMs
 - Multi-team Agile delivery
 
 Applicable Roles
@@ -393,32 +425,33 @@ All
 High Priority
 
 - CI/CD
-- Jenkins
 - Azure DevOps
-- Azure Pipelines
-- YAML
-- Pipeline-as-Code
+- ADO
 - PowerShell
-- Batch Scripting
-- Linux
 - Automation
 - Pipeline Automation
 - Build Automation
-- Environment Provisioning
-- Root Cause Analysis
 - Log Analysis
+- Root Cause Analysis
 - Agile
 - JIRA
+- TypeScript
+- Python
+- Load Testing
+- SQL
+- SSMS
 
 Medium Priority
 
 - DevSecOps
 - Security Automation
 - Enterprise Software
-- CI/CD Migration
 - Scripting
-- SQL
-- Debugging
+- Jenkins
+- Database Management
+- UI Automation
+- Locust
+- Environment Reliability
 
 ---
 
@@ -432,14 +465,13 @@ Very High
 
 Emphasize
 
-- CI/CD pipeline authoring (Jenkinsfile + Azure Pipelines YAML)
-- Jenkins to Azure DevOps migration
-- Build automation scripting (PowerShell)
-- Linux execution environments
+- ADO CI/CD pipeline creation
+- VM cleanup PowerShell script (5 VMs, 15GB/week, ADO-triggered)
+- Pipeline failure root cause analysis
 
 Suppress
 
-- SQL database updates
+- SQL database queries
 - JIRA task tracking
 
 ---
@@ -454,9 +486,9 @@ Emphasize
 
 - Pipeline automation
 - PowerShell scripting
-- Linux
 - Azure DevOps
-- CI/CD definitions
+- VM cleanup automation
+- Log analysis
 
 Suppress
 
@@ -473,9 +505,9 @@ High
 Emphasize
 
 - PowerShell automation scripts
-- Batch scripting
-- Pipeline execution automation
-- Environment provisioning scripts
+- VM cleanup script
+- Python/Locust load testing
+- TypeScript UI automation
 
 ---
 
@@ -488,9 +520,9 @@ High
 Emphasize
 
 - Log analysis
-- Root cause analysis
+- Root cause analysis (storage/network failures)
 - PowerShell execution
-- Linux-based execution
+- Pipeline failure investigation
 
 ---
 
@@ -502,9 +534,10 @@ Medium
 
 Emphasize
 
+- TypeScript UI automation (enterprise app)
+- Python/Locust load testing
+- SQL and SSMS usage
 - CI/CD pipeline knowledge (integration point for security tooling)
-- Enterprise software architecture exposure
-- Build workflow familiarity
 
 Suppress
 
@@ -520,9 +553,9 @@ Medium
 
 Emphasize
 
-- Linux
-- Scripting (PowerShell, Batch)
-- Pipeline and automation knowledge
+- Scripting (PowerShell, Python, TypeScript)
+- Automation knowledge
+- Pipeline and environment knowledge
 
 Suppress
 
@@ -540,7 +573,7 @@ Emphasize
 
 - Log analysis
 - Execution tracing
-- Investigation methodology
+- Storage and network failure investigation methodology
 
 ---
 
@@ -554,27 +587,43 @@ Each bullet must follow:
 
 Action → Technical implementation → Cybersecurity relevance → Impact
 
-Preferred framings:
+## Preferred Bullet Framings (in order of priority)
 
-1. CI/CD pipeline authoring and the Jenkins → Azure DevOps migration
-2. PowerShell and Batch scripting for build and environment provisioning automation
-3. Log-based root cause analysis across Linux-based CI/CD execution environments
+Bullet 1 (Always — highest impact):
+The VM cleanup PowerShell script:
+- Action: Engineered / Developed / Authored
+- What: PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline
+- Impact: Clears ~15 GB of logs and temp data weekly, eliminating pipeline failures caused by storage exhaustion
 
-Always avoid
+Bullet 2 (Role-adaptive — DevSecOps / Security Engineering / Automation):
+- ADO pipeline creation and CI/CD automation
+- PowerShell scripting for pipeline task execution
+- Jenkins to Azure DevOps migration support
+
+Bullet 3 (Role-adaptive — choose the strongest match to JD):
+- AppSec / ProdSec: TypeScript UI automation of enterprise application
+- Detection / SOC: Log-based root cause analysis of pipeline failures (storage, network)
+- API Security / AppSec: Python/Locust load testing (parallel Chrome instances, UI interactions under load)
+- SQL/Data-adjacent: SQL querying and database backup/restoration using SSMS
+
+## Always Avoid
 
 - "Regression testing", "smoke testing", "test cases", "test execution"
 - "QA", "software quality assurance"
 - Generic testing language
+- Claiming to author Jenkinsfiles or Azure Pipelines YAML as the primary output
 
-Always use
+## Always Use
 
-- "Pipeline automation", "pipeline-as-code", "CI/CD definitions"
-- "Build workflow", "deployment workflow automation"
-- "Environment provisioning"
-- "PowerShell scripting", "Batch scripting"
+- "Pipeline automation", "CI/CD orchestration"
+- "Agent VM", "pipeline agent"
+- "PowerShell scripting", "automation script"
+- "VM cleanup automation"
 - "Log inspection", "root cause analysis"
-- "Linux-based execution environments"
-- "Azure Pipelines YAML", "Jenkinsfile"
+- "Azure DevOps", "ADO pipeline"
+- "TypeScript UI automation" (for relevant roles)
+- "Load testing" (for relevant roles)
+- "Database backup and restoration" (for relevant roles)
 
 ---
 
@@ -584,7 +633,7 @@ Never state
 
 - Security Analyst
 - Penetration Tester
-- Detection Engineer
+- Detection Engineer title
 - SOC Analyst
 - Incident Responder
 - Adversarial input testing or attack simulation
@@ -594,9 +643,9 @@ Never imply
 - Production security monitoring
 - SIEM administration
 - Vulnerability scanning from this role
-- Security tooling development
 - Docker or containerization
 - Kubernetes or infrastructure design
+- Authored Jenkinsfile or Azure Pipelines YAML as the primary deliverable
 
 ---
 
@@ -606,9 +655,9 @@ If JD is DevSecOps
 
 Focus on
 
-- CI/CD pipeline authoring (Jenkinsfile + Azure Pipelines YAML)
-- Jenkins to Azure DevOps migration
-- Build automation scripts (PowerShell)
+- ADO CI/CD pipeline creation and automation
+- VM cleanup PowerShell script (5 VMs, 15GB/week, auto-triggered)
+- Pipeline failure root cause analysis
 
 ---
 
@@ -616,9 +665,10 @@ If JD is Security Engineering
 
 Focus on
 
-- Automation scripting (PowerShell, Batch)
-- Linux execution environments
+- Automation scripting (PowerShell, Python, TypeScript)
 - Azure DevOps and CI/CD
+- VM cleanup automation
+- Log analysis
 
 ---
 
@@ -626,9 +676,9 @@ If JD is Detection Engineering
 
 Focus on
 
-- Log analysis and root cause analysis
+- Log analysis and root cause analysis (storage/network failures)
 - PowerShell automation
-- Linux-based script execution
+- Pipeline failure investigation
 
 ---
 
@@ -636,9 +686,20 @@ If JD is Application Security or Product Security
 
 Focus on
 
+- TypeScript UI automation (enterprise application)
+- Python/Locust load testing
+- SQL and SSMS (querying, backup/restoration)
 - CI/CD pipeline knowledge as integration point for security tooling
-- Enterprise software architecture exposure
-- Build automation
+
+---
+
+If JD is API Security
+
+Focus on
+
+- Python/Locust load testing (parallel Chrome instances under load)
+- CI/CD pipeline automation
+- ADO pipeline management
 
 ---
 
@@ -646,9 +707,9 @@ If JD is Red Team
 
 Focus on
 
-- Linux
-- Scripting and automation
+- Scripting and automation (PowerShell, Python, TypeScript)
 - CI/CD and pipeline knowledge
+- Automation tooling
 
 ---
 
@@ -661,3 +722,5 @@ Overall
 Reason
 
 All experience is directly performed by the candidate and verified. This experience should always be included in the resume and dynamically rewritten to maximize alignment with the target cybersecurity role while remaining factually accurate.
+
+The VM cleanup PowerShell script is the strongest quantifiable individual contribution from this role and should anchor the Epicor experience bullets whenever possible.

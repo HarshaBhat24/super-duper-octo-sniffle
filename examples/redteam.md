@@ -60,17 +60,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience
-
-(Mindpex VAPT Freelance, then Epicor)
-
-↓
-
-CipherCrack
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -78,39 +72,11 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
-
-Note: Layout A. Two experience entries, 1 project slot (CipherCrack). Security Assessment is covered by Mindpex in Experience.
-
----
-
-# Summary Style
-
-Characteristics
-
-- Technical
-- Offensive
-- Concise
-- Evidence-driven
-
-Good Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience in full-scope VAPT, offensive security, and security tooling development. Identified 9 Critical findings including SSRF, account takeover, and SQL wildcard injection across a multi-tenant SaaS platform; delivered attack chains with CVSS scoring, remediation, and 7 domain-specific audit reports.
-
-Avoid
-
-- Passionate
-- Motivated
-- Fast learner
-- Team player
 
 ---
 
@@ -142,14 +108,13 @@ Identified SQL wildcard injection in admin delete handler enabling full organiza
 
 ---
 
-## Epicor Software Internship
+## Epicor Software
 
 Focus
 
-- Adversarial testing
-- Boundary validation
-- Linux
-- PowerShell
+- PowerShell scripting and automation
+- ADO pipeline knowledge and environment familiarity
+- Linux systems
 - Automation
 
 Suppress
@@ -157,10 +122,19 @@ Suppress
 - QA
 - Regression
 - Smoke Testing
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Developed PowerShell and Batch automation scripts for build and environment provisioning across Linux-based CI/CD execution environments; performed log-based root cause analysis for pipeline failures.
+Developed PowerShell automation scripts for build environment provisioning across agent-VM ADO pipeline environments; applied scripting skills to automate repetitive operational tasks across Linux-based execution environments.
+
+Example Bullet
+
+Worked with ADO pipelines, Linux systems, and SQL-backed environments; gained practical understanding of enterprise build pipeline architecture and agent-VM execution models.
 
 ---
 
@@ -184,7 +158,7 @@ Suppress
 
 Example Bullet
 
-Developed an offline Python-based cryptanalysis toolkit implementing 9 classical ciphers with automated brute-force workflows; used across 10–20 CTF competitions to accelerate cryptanalysis.
+Developed an offline Python-based cryptanalysis toolkit implementing 9 classical ciphers with automated brute-force workflows; used across 10+ CTF competitions to accelerate cryptanalysis.
 
 Example Bullet
 
@@ -193,6 +167,29 @@ Implemented modular cryptographic algorithms including Hill, Affine, Vigenère, 
 Example Bullet
 
 Designed reusable CLI architecture enabling independent cipher invocation, reducing repetitive manual effort during offensive security competitions.
+
+---
+
+# Security Assessment
+
+Priority
+
+★★★★☆
+
+Focus
+
+- Black-box web application testing
+- Authentication and authorization validation
+- Enumeration and parameter manipulation
+- BOLA / access control testing
+
+Example Bullet
+
+Performed an authorized black-box assessment of a SaaS application targeting authentication, authorization, and API security; enumerated endpoints with ffuf and validated access-control weaknesses using Burp Suite.
+
+Example Bullet
+
+Identified Broken Object-Level Authorization through manual request manipulation and validated cross-user access control weaknesses via direct API calls.
 
 ---
 
@@ -227,11 +224,11 @@ Tools
 - Nmap
 - interactsh
 
-Note: Layout A — target 12–15 total skills.
-
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -241,19 +238,15 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
-
-Layout A cap: max 2
+Achievements
 
 1.
 
-Solved 150+ CTF challenges across web exploitation, cryptography, and digital forensics.
+Finalist — KJSSE CTF 2.0 (17th of 662 teams)
 
 2.
 
-Finalist — KJSSE CTF 2.0 (17th of 662 teams).
+Solved 200+ CTF challenges across web exploitation, cryptography, and digital forensics
 
 ---
 
@@ -283,6 +276,7 @@ High Priority
 - Web Application Security
 - OWASP
 - Python
+- PowerShell
 - Linux
 - Cryptography
 - Enumeration
@@ -293,23 +287,29 @@ High Priority
 
 # Validation Checklist
 
-✓ Mindpex VAPT in Experience section (Layout A)
+✓ No Summary section
 
-✓ Epicor in Experience section
+✓ Mindpex VAPT in Experience section (always)
 
-✓ CipherCrack as sole project slot
+✓ Epicor in Experience section (always)
 
-✓ Security Assessment excluded (covered by Mindpex in Experience)
+✓ 2–3 dynamically selected project slots
+
+✓ Certifications & Achievements merged into single section
+
+✓ PowerShell scripting + ADO pipeline knowledge framing in Epicor bullets
+
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ SSRF, account takeover, SQL wildcard injection mentioned in Mindpex bullets
-
-✓ 12–15 skills (Layout A cap)
-
-✓ Max 2 achievements (Layout A cap)
 
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
+
+✓ KJSSE CTF 17/662 included
+
+✓ 200+ CTF challenges included
 
 ✓ Three bullets per section
 

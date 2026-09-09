@@ -97,35 +97,27 @@ Experience Bullets (per entry)
 - Exactly 3 bullets
 - Maximum 2 lines per bullet
 
-Project / Security Assessment
+Project
 
-- Exactly 3 bullets
+- 2–3 entries, exactly 3 bullets each
 - Maximum 2 lines per bullet
+- Agent selects based on JD alignment and page space
 
-See 02_experience.md for one-page layout rules when two experience entries are present.
+See 02_experience.md for one-page layout rules.
 
 Skills
 
-- 12–18 skills (compress to 12–15 when two experience entries are on the page)
+- 12–15 skills
 - Group by category
 - Dynamically reorder based on JD
 
-Achievements
+Certifications & Achievements (merged section)
 
-- Maximum 3 (compress to 2 when two experience entries are on the page)
+- Certifications: exactly 2 (Security+, ISC2 CC)
+- Achievements: maximum 3 (dynamically selected)
+- Compact list format (no sub-bullets)
 
-Certifications
-
-- Maximum 2
-
-Summary
-
-Optional.
-
-Include only if:
-
-- It improves JD alignment.
-- It does not remove stronger technical content.
+No Summary section.
 
 ---
 
@@ -215,7 +207,7 @@ Tertiary
 
 Challenges Solved
 
-150+
+200+
 
 Platforms
 
@@ -325,13 +317,13 @@ PowerShell
 
 Confidence
 
-Beginner
+Intermediate
 
 Priority
 
-Medium
+High
 
-Used primarily during internship.
+Used extensively during internship: authored VM cleanup scripts, pipeline automation scripts, agent VM task scripts (all in ADO CI/CD context).
 
 ---
 
@@ -339,13 +331,13 @@ SQL
 
 Confidence
 
-Beginner
+Intermediate
 
 Priority
 
 Medium
 
-Used for database updates during internship.
+Used during internship for querying results based on requirements. Performed database backup and restoration using Microsoft SSMS.
 
 ---
 
@@ -499,6 +491,35 @@ Experience
 
 ---
 
+Microsoft SSMS
+
+Priority
+
+Medium
+
+Experience
+
+- SQL querying and data retrieval
+- Database backup and restoration
+
+---
+
+Locust
+
+Priority
+
+Medium
+
+Experience
+
+- Python-based load testing
+- Multi-instance parallel Chrome execution
+- Application URL stress testing
+
+Written and executed during Epicor internship.
+
+---
+
 # Operating Systems
 
 Linux
@@ -570,11 +591,12 @@ Automation
 
 - PowerShell
 - Bash
+- Locust (Python load testing)
 
-CI/CD Exposure
+CI/CD
 
 - Jenkins
-- Azure DevOps
+- Azure DevOps (ADO pipelines)
 
 ---
 
@@ -714,37 +736,29 @@ Determine target role.
 
 Rewrite:
 
-- Summary
 - Experience bullets
 - Skills
-- Achievements
+- Certifications & Achievements
 
 Experience Section Logic
 
 Always include Epicor Internship.
 
-Include Mindpex VAPT Freelance when JD targets:
+Always include Mindpex VAPT Freelance. It is always in the Experience section regardless of role.
 
-- Application Security
-- Product Security
-- Red Team
-- Penetration Testing
-- DevSecOps
-- Security Engineering
+Mindpex is NEVER in the Projects section.
 
-For all other roles, Mindpex may replace one project slot.
+Project Section Logic
 
-Project / Assessment Section Logic
-
-Select the two strongest from:
+Dynamically select 2–3 from:
 
 - VigiLynx
 - CipherCrack
 - Black-box Web Application Security Assessment
 
-Never include all three.
+Score all three against the JD and select the highest-scoring 2 or 3.
 
-When Mindpex is in the Experience section, the project slot drops to one item.
+Never include all three unless space and alignment both clearly justify it.
 
 ---
 

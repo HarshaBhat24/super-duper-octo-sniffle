@@ -16,7 +16,7 @@
 
 # Resume Selection Rules
 
-Candidate has two software projects.
+Candidate has two software projects:
 
 - VigiLynx
 - CipherCrack
@@ -25,39 +25,37 @@ A separate Security Assessment exists in:
 
 04_security_assessments.md
 
-Mindpex VAPT Freelance (07_mindpex_vapt.md) may also occupy a project slot.
+Mindpex VAPT Freelance is ALWAYS in the Experience section. It does NOT occupy a project slot under any circumstances.
 
-Do NOT automatically include both projects.
+## Dynamic Project Selection Rules
 
-The resume generator should choose based on the target role AND the layout determined by master_resume_prompt.md Step 9.
+Select 2–3 projects for the Projects section using the scoring rubric in engine/01_resume_generation_rules.md.
 
----
+Score all three candidates (VigiLynx, CipherCrack, Security Assessment) against the JD and select the top 2 or 3.
 
-## Layout A Roles (2 experience entries → 1 project slot)
+Page space determines whether 2 or 3 slots are used:
+- If the resume fits cleanly on one page with 3 slots → use 3
+- If 3 slots push past one page → use 2
 
-For these roles Mindpex is in Experience. Only Priority 1 applies.
+Never include all three automatically. Always score first.
 
-| Role | Priority 1 (sole project slot) |
-|---|---|
-| Application Security | Security Assessment |
-| Product Security | Security Assessment |
-| Red Team | CipherCrack |
-| Pentesting | CipherCrack |
-| DevSecOps | VigiLynx |
-| Security Engineering | VigiLynx |
+### Project Priority by Role (guidance for scoring)
 
----
-
-## Layout B Roles (1 experience entry → 2 project slots)
-
-For these roles Mindpex occupies Slot 1. Only Priority 2 must be chosen.
-
-| Role | Slot 1 (always) | Slot 2 |
-|---|---|---|
-| SOC | Mindpex VAPT | VigiLynx |
-| Detection Engineering | Mindpex VAPT | VigiLynx |
-| Threat Intelligence | Mindpex VAPT | VigiLynx |
-| Security Research | Mindpex VAPT | CipherCrack |
+| Role | Priority 1 | Priority 2 | Priority 3 |
+|---|---|---|---|
+| Application Security | Security Assessment | VigiLynx | CipherCrack |
+| Product Security | Security Assessment | VigiLynx | CipherCrack |
+| Red Team | Security Assessment | CipherCrack | VigiLynx |
+| Pentesting | Security Assessment | CipherCrack | VigiLynx |
+| DevSecOps | VigiLynx | Security Assessment | CipherCrack |
+| Security Engineering | VigiLynx | Security Assessment | CipherCrack |
+| Detection Engineering | VigiLynx | CipherCrack | Security Assessment |
+| SOC | VigiLynx | CipherCrack | Security Assessment |
+| Threat Intelligence | VigiLynx | CipherCrack | Security Assessment |
+| Security Research | CipherCrack | Security Assessment | VigiLynx |
+| AI / LLM Security | VigiLynx | Security Assessment | CipherCrack |
+| API Security | Security Assessment | VigiLynx | CipherCrack |
+| Offensive Security | CipherCrack | Security Assessment | VigiLynx |
 
 ---
 
@@ -696,7 +694,7 @@ Independent cipher implementations
 
 Used during
 
-10–20 CTF competitions
+10+ CTF competitions
 
 Purpose
 

@@ -40,7 +40,7 @@ Duration: October 2025 – Present
 
 Type: Full-time Internship
 
-Summary: CI/CD pipeline automation. Authored Jenkinsfiles and Azure Pipelines YAML. PowerShell/Batch scripting for build and environment provisioning. Jenkins to Azure DevOps migration.
+Summary: ADO CI/CD pipeline creation and management. PowerShell scripting for agent VM automation. Authored VM cleanup script deployed across 5 VMs (auto-triggered via ADO, clears ~15GB/week). TypeScript UI automation of enterprise application. Python/Locust load testing. SQL querying and DB backup/restoration via SSMS.
 
 ---
 
@@ -53,57 +53,49 @@ Note: Both are concurrent. List Mindpex first on resume.
 
 ---
 
-# Resume Selection Rules
+# Experience Section Rules
 
-Always include Epicor Software Internship.
+## Mandatory Inclusions
 
-Include Mindpex VAPT Freelance in Experience section when JD targets:
+**Mindpex VAPT Freelance — ALWAYS in the Experience section.**
 
-- Application Security
-- Product Security
-- Red Team
-- Penetration Testing
-- DevSecOps
-- Security Engineering
+**Epicor Software — ALWAYS in the Experience section.**
 
-For all other roles, Mindpex occupies one project slot.
+Both experience entries appear on every resume, regardless of target role.
+
+There is no Layout A / Layout B. The layout is always the same:
+
+- Experience section: Mindpex + Epicor (both, always)
+- Projects & Key Achievements section: dynamically selected based on JD alignment
 
 ---
 
 # One-Page Constraint Logic
 
-Both experience entries on resume:
+Both experience entries always on resume:
 
 - Each experience: 3 bullets, max 2 lines each
-- Projects: 1 entry (3 bullets)
+- Projects & Key Achievements: 2–3 entries dynamically selected
 - Skills: 12–15 items
-- Achievements: max 2
-- Certifications: max 2
-
-Only Epicor in Experience section:
-
-- Experience: 3 bullets
-- Projects: 2 entries (3 bullets each)
-- Mindpex in one project slot
-- Skills: 12–18 items
-- Achievements: max 3
+- Certifications: 2
+- Education: max 2 lines
+- No Summary section
 
 ---
 
-# Role-Based Pairing
+# Project Slot Rules
 
-| Target Role | Layout | Experience | Slot 1 (Project) | Slot 2 (Project) |
-|---|---|---|---|---|
-| AppSec / ProdSec | A | Mindpex + Epicor | VigiLynx or Security Assessment | — |
-| Red Team / Pentesting | A | Mindpex + Epicor | CipherCrack or Security Assessment | — |
-| DevSecOps | A | Mindpex + Epicor | VigiLynx | — |
-| Security Engineering | A | Mindpex + Epicor | VigiLynx | — |
-| AI / LLM Security | A | Mindpex + Epicor | VigiLynx or Security Assessment | — |
-| API Security | A | Mindpex + Epicor | Security Assessment | — |
-| Offensive Security | A | Mindpex + Epicor | CipherCrack | — |
-| Detection Engineering | B | Epicor only | Mindpex VAPT | VigiLynx |
-| SOC | B | Epicor only | Mindpex VAPT | VigiLynx |
-| Threat Intelligence | B | Epicor only | Mindpex VAPT | VigiLynx |
-| Security Research | B | Epicor only | Mindpex VAPT | CipherCrack |
+Since both experiences are always in the Experience section, the Projects & Key Achievements section gets 2–3 dynamic slots.
 
-Note: Layout A has 1 project slot. Layout B has 2 project slots: Slot 1 is always Mindpex VAPT; Slot 2 is chosen by the scoring rubric.
+Slots are filled by scoring all available entries against the JD:
+
+- VigiLynx
+- CipherCrack
+- Black-box Security Assessment
+- Top achievements (HackAthena, CTFs, TryHackMe rankings)
+
+The agent selects 2–3 entries that maximize JD alignment using the project scoring rubric.
+
+Never include all three projects simultaneously unless space and alignment both justify it.
+
+Mindpex does NOT appear in the Projects section — it is always in Experience.

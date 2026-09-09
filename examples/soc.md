@@ -56,19 +56,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience (Epicor only)
-
-↓
-
-Mindpex VAPT (Slot 1 — described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
-
-↓
-
-VigiLynx (Slot 2)
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -76,69 +68,68 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
 
-Note: Layout B. Epicor only in Experience. Mindpex VAPT is always Slot 1. VigiLynx is Slot 2. CipherCrack may replace VigiLynx as Slot 2 only if JD explicitly requests web application security or additional tooling breadth.
-
----
-
-# Summary Style
-
-Characteristics
-
-- Security Operations focused
-- Technical
-- Evidence driven
-- Concise
-
-Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience developing threat detection systems, analyzing malicious URLs, automating security workflows, and performing practical cybersecurity assessments. Built detection tooling, solved 150+ CTF challenges, and ranked in the Top 10% on TryHackMe.
-
 ---
 
 # Experience
 
-Epicor
+## Mindpex VAPT Freelance
 
-Priority
-
-★★★★★
+Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
 
 Focus
 
-- PowerShell
-- Linux
-- Log Analysis
-- Root Cause Analysis
-- Automation
-- CI/CD
+- Multi-domain assessment coverage (API, Auth, RLS, LLM, Rate Limiting, Audit Logging)
+- Log and audit trail gap identification
+- Code-level remediation delivery (TypeScript, Python, SQL)
+- Static and dynamic testing methodology
+
+Example Bullet
+
+Conducted a full-scope VAPT across 7 security domains on a Next.js + FastAPI SaaS platform, identifying 9 Critical and 15 High severity findings including SSRF, account takeover, and authentication bypass.
+
+Example Bullet
+
+Audited 47 PostgreSQL RLS migration files identifying two Critical misconfigurations granting unauthenticated write access to security-critical tables; documented findings with CVSS scoring.
+
+Example Bullet
+
+Delivered code-level remediation in TypeScript, Python, and SQL across 30+ CVSS-scored findings with prioritized remediation roadmap and 7 domain-specific audit reports.
+
+---
+
+## Epicor Software
+
+Focus
+
+- Log-based root cause analysis on pipeline and script failures (storage exhaustion, network issues)
+- PowerShell scripting deployed within ADO pipelines
+- ADO CI/CD pipelines (agent-VM architecture)
+- Systematic execution tracing
 
 Suppress
 
 - QA terminology
 - Regression Testing
 - Functional Testing
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Developed PowerShell automation supporting enterprise CI/CD workflows while investigating execution failures through structured log analysis and debugging.
+Performed log-based root cause analysis on pipeline and script failures — tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs; applied structured investigation methodology to recurring production failures.
 
 Example Bullet
 
-Performed adversarial input validation and boundary testing across enterprise software workflows to improve reliability and identify unexpected application behavior.
-
-Example Bullet
-
-Worked with Linux systems, Azure DevOps repositories, SQL-backed applications, and Jenkins pipelines while supporting enterprise software delivery.
+Created ADO CI/CD pipelines using agent-VM architecture; authored PowerShell scripts executing within those pipelines for environment automation and maintenance across Windows and Linux systems.
 
 ---
 
@@ -229,6 +220,7 @@ Security
 - IOC Validation
 - Security Monitoring
 - Authentication
+- Log Analysis
 
 Operating Systems
 
@@ -245,7 +237,7 @@ Security Tools
 - VirusTotal API
 - Wireshark
 - Burp Suite
-- Git
+- Azure DevOps
 
 Development
 
@@ -254,7 +246,9 @@ Development
 
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -264,9 +258,7 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
+Achievements
 
 1.
 
@@ -274,7 +266,7 @@ Winner — HackAthena'25 Cybersecurity Track
 
 2.
 
-Solved 150+ CTF Challenges
+Solved 200+ CTF Challenges
 
 3.
 
@@ -301,6 +293,7 @@ Highest Priority
 - TCP/IP
 - DNS
 - Security Automation
+- Azure DevOps
 
 Medium Priority
 
@@ -308,8 +301,6 @@ Medium Priority
 - URL Analysis
 - Browser Security
 - Detection Pipeline
-- Jenkins
-- Azure DevOps
 
 ---
 
@@ -340,7 +331,8 @@ Avoid
 
 Always Include
 
-- Epicor
+- Mindpex VAPT (in Experience)
+- Epicor (in Experience)
 
 Primary Project
 
@@ -360,11 +352,19 @@ Replace CipherCrack with the Security Assessment only if the Job Description hea
 
 # Validation Checklist
 
-✓ Epicor in Experience section (Layout B)
+✓ No Summary section
 
-✓ Mindpex VAPT as Slot 1 project (described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
+✓ Mindpex VAPT in Experience section (always)
 
-✓ VigiLynx as Slot 2 project
+✓ Epicor in Experience section (always)
+
+✓ 2–3 dynamically selected project slots
+
+✓ Certifications & Achievements merged into single section
+
+✓ Log analysis / RCA framing in Epicor bullets (storage exhaustion, network failures)
+
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ Threat Detection emphasized
 
@@ -378,13 +378,15 @@ Replace CipherCrack with the Security Assessment only if the Job Description hea
 
 ✓ Log Analysis emphasized
 
-✓ Skills 12–18 (Layout B cap)
-
-✓ Max 3 achievements (Layout B cap)
-
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
+
+✓ HackAthena Winner included
+
+✓ 200+ CTF Challenges included
+
+✓ TryHackMe Top 10% included
 
 ✓ Exactly three bullets per section
 

@@ -2,7 +2,7 @@
 
 Version
 
-1.0
+2.0
 
 Purpose
 
@@ -32,9 +32,31 @@ remove low-impact information rather than compressing everything.
 
 ---
 
-# Section Budget
+# Layout — Unified (All Roles)
 
-Header
+There is ONE layout. It applies to all roles.
+
+Both experience entries (Mindpex + Epicor) are always in the Experience section.
+
+There is no Layout A or Layout B.
+
+```
+[Header]
+[Experience]
+  1. Mindpex Security Consulting — Freelance VAPT Engagement — Enterprise SaaS Platform
+  2. Epicor Software — Product Development Intern
+[Projects & Key Achievements]
+  2–3 entries dynamically selected based on JD alignment
+[Skills]
+[Certifications]
+[Education]
+```
+
+There is NO Summary section.
+
+---
+
+# Header Budget
 
 Maximum
 
@@ -54,44 +76,7 @@ Never include additional links.
 
 ---
 
-# Summary
-
-Optional
-
-Maximum
-
-3 lines
-
-Maximum
-
-60 words
-
-Only include if
-
-- It improves JD alignment.
-- It does not remove stronger technical content.
-
-Otherwise omit.
-
----
-
-# Layout Selection
-
-Before applying any budget, determine the layout from the Experience Structure Decision (master_resume_prompt.md Step 9).
-
-**Layout A** — Mindpex VAPT + Epicor both in Experience section
-
-Applies when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering
-
-**Layout B** — Epicor only in Experience section
-
-Applies when JD targets: Detection Engineering, SOC, Threat Intelligence, Security Research
-
----
-
 # Experience Budget
-
-## Layout A (Two Experience Entries)
 
 Entry 1: Mindpex VAPT Freelance
 
@@ -105,43 +90,29 @@ Entry 2: Epicor Software Internship
 - Max 2 lines per bullet
 - Preferred length: 28–36 words
 
-## Layout B (One Experience Entry)
-
-Entry 1: Epicor Software Internship
-
-- Bullets: exactly 3
-- Max 2 lines per bullet
-- Preferred length: 28–36 words
-
 ---
 
 # Projects Budget
 
-## Layout A (Two Experience Entries)
+## Slot Count Decision Rule
 
-Project slots: exactly 1
+Default: 2 slots.
+
+Upgrade to 3 slots ONLY IF:
+- All 3 available projects score high on JD alignment, AND
+- 3 project entries + both experience entries + Skills + Certifications & Achievements + Education all fit on one page without compression
+
+Never use 3 slots just to fill space. Use 3 only when all 3 are genuinely high-alignment.
+
+## Per Slot
 
 Choose from: VigiLynx / CipherCrack / Security Assessment
-
-- Bullets: exactly 3
-- Max 2 lines per bullet
-- Preferred length: 28–36 words
-
-Note: Mindpex is in Experience, not here.
-
-## Layout B (One Experience Entry)
-
-Project slots: exactly 2
-
-Slot 1: Mindpex VAPT (always, described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
-
-Slot 2: choose from VigiLynx / CipherCrack / Security Assessment per Role Intelligence Matrix
 
 - Bullets: exactly 3 per slot
 - Max 2 lines per bullet
 - Preferred length: 28–36 words
 
-Never include all three of VigiLynx + CipherCrack + Security Assessment.
+Mindpex is NEVER in the Projects section — it is always in Experience.
 
 ---
 
@@ -149,43 +120,25 @@ Never include all three of VigiLynx + CipherCrack + Security Assessment.
 
 Categories: 4–6
 
-Layout A (two experience entries): 12–15 total skills
-
-Layout B (one experience entry): 12–18 total skills
+Total skills: 12–15
 
 Prioritize security concepts before technologies.
 
 ---
 
-# Certifications
+# Certifications & Achievements Budget
 
-Maximum
+Section Name: **Certifications & Achievements** (merged, compact list)
 
-2
+Format: Compact list. No sub-bullets. One line per entry.
 
-Always
+Certifications (always first, always both):
+1. CompTIA Security+ (SY0-701) — June 2026
+2. ISC2 Certified in Cybersecurity (CC)
 
-1.
-
-CompTIA Security+
-
-2.
-
-ISC2 Certified in Cybersecurity (CC)
-
-Never exceed two certifications unless explicitly requested.
-
----
-
-# Achievements Budget
-
-Layout A (two experience entries): max 2
-
-Layout B (one experience entry): max 3
-
-Order dynamically by target role.
-
-Prefer measurable achievements.
+Achievements (follow certifications, max 3, dynamically ordered by role):
+- Choose from: HackAthena Winner, KJSSE CTF 17/662, Smart India Hackathon Finalist, CTF 200+, TryHackMe Top 10%
+- Order per role using priority tables in 05_achievements.md
 
 ---
 
@@ -234,25 +187,13 @@ Volunteer Experience
 
 2
 
-Summary
+Low-priority skills
 
 ↓
 
 3
 
-Low-priority skills
-
-↓
-
-4
-
-Lower-ranked achievement
-
-↓
-
-5
-
-Less relevant project
+Lower-ranked achievement or project entry
 
 Never reduce
 
@@ -288,11 +229,12 @@ Examples
 
 - 1000+ URLs
 - 50+ Files
-- 1324+ LOC
-- 150+ CTFs
+- 1500+ LOC
+- 200+ CTFs
 - Top 10%
 - 17/662 Teams
 - 200+ Participants
+- 5 VMs / 15 GB / weekly (Epicor VM cleanup script)
 
 Never invent or estimate metrics.
 
@@ -328,51 +270,35 @@ Avoid generic software engineering wording when a security-specific equivalent e
 
 Before returning the resume, verify
 
-## Layout A (Two Experience Entries)
-
 ✓ One page
 
-✓ Exactly 3 bullets for Mindpex experience
+✓ No Summary section
 
-✓ Exactly 3 bullets for Epicor experience
+✓ Mindpex VAPT in Experience section (described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
 
-✓ Exactly 3 bullets for the single project slot
+✓ Epicor in Experience section
+
+✓ Each experience has exactly 3 bullets
+
+✓ Projects: 2–3 entries, each with exactly 3 bullets
 
 ✓ 12–15 skills
 
-✓ Maximum 2 achievements
+✓ Certifications & Achievements section present (compact list format)
 
-✓ Exactly 2 certifications
+✓ Exactly 2 certifications (Security+ first, ISC2 CC second)
 
-✓ Education within 2 lines
-
-✓ No fabricated information
-
-✓ JD-specific terminology applied
-
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform" (no client name)
-
-## Layout B (One Experience Entry)
-
-✓ One page
-
-✓ Exactly 3 bullets for Epicor experience
-
-✓ Exactly 3 bullets for Mindpex project slot
-
-✓ Exactly 3 bullets for second project slot
-
-✓ 12–18 skills
-
-✓ Maximum 3 achievements
-
-✓ Exactly 2 certifications
+✓ Maximum 3 achievements (dynamically ordered by role)
 
 ✓ Education within 2 lines
 
 ✓ No fabricated information
 
 ✓ JD-specific terminology applied
+
+✓ Mindpex not named (described as Freelance VAPT Engagement)
+
+✓ Epicor VM cleanup PowerShell script bullet present
 
 If any validation fails, regenerate the affected section.
 

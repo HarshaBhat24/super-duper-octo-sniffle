@@ -60,15 +60,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience (Mindpex + Epicor — both in Experience section)
-
-↓
-
-CipherCrack
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -76,31 +72,11 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
-
-Note: Layout A. Two experience entries, 1 project slot (CipherCrack). CipherCrack anchors offensive tooling credibility.
-
----
-
-# Summary Style
-
-Characteristics
-
-- Tool-building and exploitation focused
-- Technical and evidence-driven
-- Concise
-
-Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) offensive security professional with hands-on experience exploiting SSRF, account takeover, SQL wildcard injection, and prompt injection across a multi-tenant SaaS platform. Developed a Python-based cryptanalysis toolkit used across 10–20 CTF competitions, solved 150+ CTF challenges, and ranked Top 10% on TryHackMe through consistent offensive security practice.
 
 ---
 
@@ -134,31 +110,32 @@ Identified SQL wildcard injection in admin delete handler enabling full organiza
 
 ---
 
-## Epicor Software Internship
+## Epicor Software
 
 Focus
 
-- Linux
-- Scripting (PowerShell, Bash)
+- PowerShell scripting and automation
+- VM environment knowledge (agent-VM ADO pipelines)
+- Linux systems
 - Automation
-- CI/CD pipeline knowledge
 
 Suppress
 
 - QA terminology
 - Regression
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Developed PowerShell and Batch automation scripts for build and environment provisioning across Linux-based CI/CD execution environments; performed log-based root cause analysis for pipeline failures.
+Developed PowerShell automation scripts for agent-VM environment provisioning within ADO pipelines; applied scripting and automation skills across Linux-based enterprise execution environments.
 
 Example Bullet
 
-Authored Jenkinsfile and Azure Pipelines YAML definitions for enterprise CI/CD pipelines; led Jenkins to Azure DevOps migration mapping build stages, triggers, and environment parameters.
-
-Example Bullet
-
-Worked with Linux systems, Azure DevOps, SQL-backed environments, and Jenkins pipelines across enterprise software delivery cycles.
+Worked with ADO pipelines, Linux systems, and SQL-backed environments across enterprise delivery cycles; gained practical understanding of agent-VM architecture and pipeline execution models.
 
 ---
 
@@ -182,7 +159,7 @@ Suppress
 
 Example Bullet
 
-Developed an offline Python-based cryptanalysis toolkit implementing 9 classical cipher algorithms with automated brute-force workflows; used across 10–20 CTF competitions to accelerate cryptanalysis (1,324+ LOC).
+Developed an offline Python-based cryptanalysis toolkit implementing 9 classical cipher algorithms with automated brute-force workflows; used across 10+ CTF competitions to accelerate cryptanalysis (1,324+ LOC).
 
 Example Bullet
 
@@ -191,6 +168,29 @@ Implemented modular cryptographic algorithms including Hill, Affine, Vigenère, 
 Example Bullet
 
 Designed reusable CLI architecture enabling independent cipher invocation, reducing repetitive manual effort during offensive security competitions.
+
+---
+
+# Security Assessment
+
+Priority
+
+★★★★☆
+
+Focus
+
+- Black-box web application testing
+- Authentication and authorization validation
+- Enumeration and parameter manipulation
+- Exploitation of BOLA / access control weaknesses
+
+Example Bullet
+
+Performed an authorized black-box assessment of a SaaS application targeting authentication, authorization, and API security; enumerated endpoints with ffuf and validated access-control weaknesses using Burp Suite.
+
+Example Bullet
+
+Identified Broken Object-Level Authorization through manual request manipulation and validated cross-user access control weaknesses via direct API calls.
 
 ---
 
@@ -226,11 +226,11 @@ Tools
 - Metasploit
 - CyberChef
 
-Note: Layout A — target 12–15 total skills.
-
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -240,19 +240,19 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
-
-Layout A cap: max 2
+Achievements
 
 1.
 
-Solved 150+ CTF challenges across web exploitation, cryptography, and digital forensics
+Finalist — KJSSE CTF 2.0 (17th of 662 teams)
 
 2.
 
-Finalist — KJSSE CTF 2.0 (17th of 662 teams)
+Solved 200+ CTF challenges across web exploitation, cryptography, and digital forensics
+
+3.
+
+Top 10% TryHackMe
 
 ---
 
@@ -280,6 +280,7 @@ Highest Priority
 - Enumeration
 - Burp Suite
 - Python
+- PowerShell
 - Linux
 - SSRF
 - OWASP
@@ -289,25 +290,31 @@ Highest Priority
 
 # Validation Checklist
 
-✓ Mindpex VAPT in Experience section (Layout A)
+✓ No Summary section
+
+✓ Mindpex VAPT in Experience section (always)
 
 ✓ Exploitation chain (SSRF, account takeover, SQL wildcard) explicitly covered
 
-✓ Epicor in Experience section (Linux, scripting, automation framing)
+✓ Epicor in Experience section (always)
 
-✓ CipherCrack as sole project slot
+✓ 2–3 dynamically selected project slots
 
-✓ Security Assessment excluded (covered by Mindpex in Experience)
+✓ Certifications & Achievements merged into single section
+
+✓ PowerShell scripting + VM environment knowledge framing in Epicor bullets
+
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ Offensive tooling framing in CipherCrack bullets
 
 ✓ Tool-building language used (Developed, Implemented, Designed)
 
-✓ 12–15 skills (Layout A cap)
+✓ CTF experience prioritized — KJSSE CTF 17/662 included
 
-✓ Max 2 achievements (Layout A cap)
+✓ 200+ CTF challenges included
 
-✓ CTF experience prioritized over HackAthena for this role
+✓ TryHackMe Top 10% included
 
 ✓ CompTIA Security+ included
 

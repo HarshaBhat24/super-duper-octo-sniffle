@@ -57,15 +57,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience (Mindpex + Epicor — both in Experience section)
-
-↓
-
-Security Assessment
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -73,31 +69,11 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
-
-Note: Layout A. Two experience entries, 1 project slot (Security Assessment). Mindpex Domain 1 (API Security — 61+ routes) is the primary evidence anchor.
-
----
-
-# Summary Style
-
-Characteristics
-
-- API-focused, offensive methodology
-- Technical and tool-precise
-- Concise
-
-Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience enumerating 61+ API routes and identifying SSRF, BOLA, SQL wildcard injection, and authentication bypass vulnerabilities across a multi-tenant SaaS platform. Conducted an authorized black-box assessment using Burp Suite, ffuf, interactsh, and sqlmap; delivered code-level remediation in TypeScript, Python, and SQL.
 
 ---
 
@@ -131,25 +107,31 @@ Identified dead rate-limiting middleware misconfiguration in Next.js middleware 
 
 ---
 
-## Epicor Software Internship
+## Epicor Software
 
 Focus
 
-- CI/CD pipeline as API security integration layer
-- Automation scripting
-- Linux execution environments
+- Python/Locust load testing across multiple parallel Chrome instances
+- ADO CI/CD pipelines (agent-VM architecture)
+- SQL/SSMS queries for data validation
+- Boundary testing and input validation under load
+
+Suppress
+
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+- Azure Pipelines YAML authoring as primary framing
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Authored Jenkinsfile and Azure Pipelines YAML definitions for enterprise CI/CD pipelines, providing the integration layer for security tooling including SAST, DAST, and API vulnerability scanning.
+Authored Python/Locust load testing scripts exercising application API flows across multiple parallel Chrome instances under concurrent load, validating application behavior under sustained traffic.
 
 Example Bullet
 
-Developed PowerShell automation for build and test environment provisioning; performed log-based root cause analysis for pipeline failures across Linux environments.
-
-Example Bullet
-
-Led Jenkins to Azure DevOps pipeline migration, mapping build stages, triggers, and execution parameters while maintaining workflow continuity.
+Created ADO CI/CD pipelines using agent-VM architecture; wrote SQL queries against SSMS-backed databases for test data validation and application state inspection under load test conditions.
 
 ---
 
@@ -177,6 +159,28 @@ Identified Broken Object-Level Authorization through manual request manipulation
 Example Bullet
 
 Produced remediation guidance covering API authentication enforcement, BOLA prevention, rate limiting architecture, and secure CORS configuration.
+
+---
+
+# VigiLynx
+
+Priority
+
+★★★★☆
+
+Focus
+
+- API-based threat intelligence integration (VirusTotal)
+- Security automation
+- Browser-based threat detection
+
+Example Bullet
+
+Engineered a phishing detection pipeline integrating VirusTotal API analysis for real-time URL threat classification across 1,000+ analyzed URLs via a Chrome extension.
+
+Example Bullet
+
+Developed authenticated backend API services and dashboards for persistent threat logging, malware scan history, and user-specific security event monitoring.
 
 ---
 
@@ -210,12 +214,15 @@ Tools
 - Nmap
 - interactsh
 - sqlmap
-
-Note: Layout A — target 12–15 total skills.
+- Locust
+- SSMS
+- Azure DevOps
 
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -225,11 +232,7 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
-
-Layout A cap: max 2
+Achievements
 
 1.
 
@@ -237,7 +240,7 @@ Winner — HackAthena'25 Cybersecurity Track
 
 2.
 
-Solved 150+ CTF challenges
+Solved 200+ CTF challenges
 
 ---
 
@@ -268,6 +271,8 @@ Highest Priority
 - Burp Suite
 - ffuf
 - interactsh
+- Locust
+- SSMS
 - Python
 - Linux
 - Penetration Testing
@@ -276,13 +281,21 @@ Highest Priority
 
 # Validation Checklist
 
-✓ Mindpex VAPT in Experience section (Layout A)
+✓ No Summary section
+
+✓ Mindpex VAPT in Experience section (always)
 
 ✓ Domain 1 (API Security — 61 routes) is the primary focus of Mindpex bullets
 
-✓ Epicor in Experience section
+✓ Epicor in Experience section (always)
 
-✓ Security Assessment as sole project slot
+✓ 2–3 dynamically selected project slots
+
+✓ Certifications & Achievements merged into single section
+
+✓ Locust load testing (parallel Chrome instances under load) framing in Epicor bullets
+
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ SSRF finding explicitly covered
 
@@ -292,13 +305,13 @@ Highest Priority
 
 ✓ SQL wildcard injection covered
 
-✓ 12–15 skills (Layout A cap)
-
-✓ Max 2 achievements (Layout A cap)
-
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
+
+✓ HackAthena Winner included
+
+✓ 200+ CTF challenges included
 
 ✓ Three bullets per section
 

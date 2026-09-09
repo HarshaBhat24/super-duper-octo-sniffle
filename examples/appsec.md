@@ -53,17 +53,11 @@ Header
 
 ↓
 
-Summary
+Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Experience
-
-(Mindpex VAPT Freelance, then Epicor)
-
-↓
-
-Security Assessment
+Projects (2–3 dynamically selected)
 
 ↓
 
@@ -71,32 +65,11 @@ Skills
 
 ↓
 
-Certifications
-
-↓
-
-Achievements
+Certifications & Achievements
 
 ↓
 
 Education
-
-Note: Layout A. Two experience entries, 1 project slot (Security Assessment). VigiLynx excluded from this layout.
-
----
-
-# Summary Style
-
-Characteristics
-
-- Technical
-- Secure Development focused
-- Concise
-- Engineering-oriented
-
-Example
-
-CompTIA Security+ and ISC2 Certified in Cybersecurity (CC) professional with hands-on experience conducting a full-scope VAPT across 7 security domains, CI/CD pipeline automation, and secure web application development. Identified 30+ CVSS-scored findings including SSRF, authentication bypass, and SQL injection; delivered code-level remediation in TypeScript, Python, and SQL.
 
 ---
 
@@ -128,32 +101,31 @@ Delivered a 7-domain security audit with 30+ CVSS-scored findings and code-level
 
 ---
 
-## Epicor Software Internship
+## Epicor Software
 
 Focus
 
-- Boundary testing
-- Input validation
-- Automation
-- CI/CD
-- Linux
-- SQL
+- TypeScript UI automation of enterprise application
+- Python/Locust load testing across multiple parallel Chrome instances
+- SQL/SSMS queries for validation and data inspection
+- Boundary testing and input validation
 
 Suppress
 
 - QA terminology
+- Pipeline-as-code / Jenkinsfile authoring as primary framing
+
+Star Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Authored Jenkinsfile and Azure Pipelines YAML definitions for enterprise CI/CD pipelines, providing the integration layer for security tooling (SAST/DAST/secrets scanning).
+Developed TypeScript UI automation of the enterprise application and authored Python/Locust load testing scripts exercising application flows across multiple parallel Chrome instances under concurrent load.
 
 Example Bullet
 
-Developed PowerShell automation for build and test environment provisioning; performed log-based root cause analysis for pipeline failures across Linux execution environments.
-
-Example Bullet
-
-Led Jenkins to Azure DevOps pipeline migration, mapping build stages, triggers, and execution parameters across toolchains while maintaining workflow continuity.
+Wrote SQL queries against SSMS-backed databases for test data validation and application state inspection; performed boundary testing and input validation across enterprise application workflows.
 
 ---
 
@@ -186,6 +158,29 @@ Produced remediation guidance covering secure authentication design, IAM redesig
 
 ---
 
+# VigiLynx
+
+Priority
+
+★★★★☆
+
+Focus
+
+- Security automation
+- ML-based threat detection
+- Browser security tooling
+- API-based threat intelligence
+
+Example Bullet
+
+Engineered a phishing detection pipeline integrating a Random Forest classifier with VirusTotal API analysis, achieving real-time URL threat classification across 1,000+ analyzed URLs via a Chrome extension.
+
+Example Bullet
+
+Developed authenticated backend services for persistent threat logging, malware scan history, and user-specific security event monitoring.
+
+---
+
 # Skills
 
 Security
@@ -215,12 +210,14 @@ Tools
 - Nmap
 - ffuf
 - interactsh
-
-Note: Layout A — target 12–15 total skills. Do not exceed.
+- SSMS
+- Locust
 
 ---
 
-# Certifications
+# Certifications & Achievements
+
+Certifications
 
 1.
 
@@ -230,11 +227,7 @@ CompTIA Security+
 
 ISC2 Certified in Cybersecurity (CC)
 
----
-
-# Achievements
-
-Layout A cap: max 2
+Achievements
 
 1.
 
@@ -242,7 +235,7 @@ Winner — HackAthena'25 Cybersecurity Track
 
 2.
 
-Solved 150+ CTF challenges
+Solved 200+ CTF challenges
 
 ---
 
@@ -272,22 +265,30 @@ High Priority
 - Product Security
 - Burp Suite
 - Python
+- TypeScript
 - Linux
-- Node.js
 - SQL
+- SSMS
+- Locust
 - Threat Detection
 
 ---
 
 # Validation Checklist
 
-✓ Mindpex VAPT in Experience section (Layout A)
+✓ No Summary section
 
-✓ Epicor in Experience section
+✓ Mindpex VAPT in Experience section (always)
 
-✓ Security Assessment as sole project slot
+✓ Epicor in Experience section (always)
 
-✓ VigiLynx excluded (one-slot layout)
+✓ 2–3 dynamically selected project slots
+
+✓ Certifications & Achievements merged into single section
+
+✓ TypeScript UI automation + Locust load testing framing in Epicor bullets
+
+✓ No 'Jenkinsfile authoring' or 'pipeline-as-code' as primary Epicor framing
 
 ✓ Authentication emphasized
 
@@ -297,13 +298,13 @@ High Priority
 
 ✓ SSRF and BOLA mentioned in Mindpex bullets
 
-✓ 12–15 skills (Layout A cap)
-
-✓ Max 2 achievements (Layout A cap)
-
 ✓ CompTIA Security+ included
 
 ✓ ISC2 CC included
+
+✓ HackAthena Winner included
+
+✓ 200+ CTF challenges included
 
 ✓ Three bullets per section
 

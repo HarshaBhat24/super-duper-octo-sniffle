@@ -587,33 +587,10 @@ Mention only when JD requests
 
 Treat this assessment as professional security experience.
 
-It may replace a software project depending on the target role and layout.
+It occupies one of the 3 project slots, ordered by JD alignment score.
 
-## Layout A Roles (1 project slot — Mindpex in Experience)
-
-For these roles the Security Assessment KB (this file) is used as the sole project slot when the role calls for it.
-
-| Role | Use Security Assessment? |
-|---|---|
-| Application Security | Yes — primary project slot |
-| Product Security | Yes — primary project slot |
-| Red Team | No — CipherCrack is primary (Security Assessment covered by Mindpex in Experience) |
-| Pentesting | No — CipherCrack is primary (Security Assessment covered by Mindpex in Experience) |
-| DevSecOps | No — VigiLynx is primary |
-| Security Engineering | No — VigiLynx is primary |
-
-## Layout B Roles (2 project slots — Mindpex in Slot 1)
-
-Security Assessment occupies Slot 2 for roles where it adds value. Otherwise use VigiLynx or CipherCrack.
-
-| Role | Slot 1 | Slot 2 |
-|---|---|---|
-| SOC | Mindpex VAPT | VigiLynx |
-| Detection Engineering | Mindpex VAPT | VigiLynx |
-| Threat Intelligence | Mindpex VAPT | VigiLynx |
-| Security Research | Mindpex VAPT | CipherCrack |
-
-Note: For Layout B roles, this KB file (Security Assessment) is generally not used as a project slot because Mindpex VAPT (07_mindpex_vapt.md) provides stronger security assessment signal in Slot 1.
+- If this project scores highest or second: it gets 3 bullets.
+- If this project scores lowest: it gets 2 bullets.
 
 
 # Never Mention
@@ -635,7 +612,9 @@ Instead describe the work using generalized, professional terminology.
 
 # Resume Bullet Rules
 
-Generate exactly 3 bullets.
+Bullet count depends on slot assignment:
+- If this project is in Slot 1 or Slot 2 (highest JD scores): generate exactly 3 bullets.
+- If this project is in Slot 3 (lowest JD score): generate exactly 2 bullets.
 
 Maximum 2 lines per bullet.
 

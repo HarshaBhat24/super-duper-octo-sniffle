@@ -22,6 +22,16 @@ Reason: [why — new skill, completed project, new cert, etc.]
 
 ## Log
 
+## 2026-09-12
+
+Files updated: engine/01_resume_generation_rules.md, engine/02_role_intelligence_matrix.md, prompts/master_resume_prompt.md, README.md
+Change: Comprehensive purge of all Layout A / Layout B language from every active engine file. Removed all "1 slot only", "2 project slots", "Mindpex in project Slot 1" logic. Updated every role entry in the role intelligence matrix to use "Score order for [Role]" language with all 3 projects listed. Rewrote Project Selection Algorithm section. Fixed all Final Validation Checklists across 3 files. Updated README Supported Roles, Layout Rules, and Resume Constraints tables to reflect unified single layout.
+Reason: Layout A/B was a legacy two-tier system that contradicted the confirmed single-layout model. All 14 roles now use the same structure: 2 experiences in Experience, all 3 projects in Projects (3/3/2 bullet split by JD score).
+
+Files updated: engine/01_resume_generation_rules.md, engine/03_resume_budget.md, knowledge-base/01_candidate_profile.md, knowledge-base/02_experience.md, knowledge-base/03_projects.md, knowledge-base/04_security_assessments.md
+Change: Fixed resume layout to always use 3 project slots with a 3/3/2 bullet split. Slot 1 (highest JD score) gets 3 bullets, Slot 2 gets 3 bullets, Slot 3 (lowest score) gets 2 bullets. Removed the old 2-3 dynamic slot logic. Removed Layout A / Layout B distinction from 04_security_assessments.md.
+Reason: Actual one-page space confirms 3 projects always fit. The 2-bullet slot on the lowest-aligned project reclaims space that was previously lost to dynamic slot decision overhead.
+
 ## 2026-08-19
 
 File updated: 07_mindpex_vapt.md

@@ -97,8 +97,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -137,19 +135,15 @@ Suppress
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for Red Team (highest → lowest JD alignment):
 
-1
+1. Security Assessment
+2. CipherCrack
+3. VigiLynx
 
-CipherCrack
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Note: Security Assessment may replace CipherCrack if JD emphasizes methodology over tooling.
-
-Exclude
-
-VigiLynx unless phishing or browser security appears in the JD.
+VigiLynx drops to last unless phishing or browser security appears in the JD.
 
 ---
 
@@ -258,8 +252,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -289,19 +281,15 @@ Emphasize
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for Product Security (highest → lowest JD alignment):
 
-1.
+1. Security Assessment
+2. VigiLynx
+3. CipherCrack
 
-VigiLynx
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Note: Security Assessment may replace VigiLynx if JD emphasizes assessment work over tooling.
-
-Exclude
-
-CipherCrack unless cryptography is explicitly requested.
+CipherCrack drops to last unless cryptography is explicitly requested.
 
 ---
 
@@ -397,8 +385,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -427,19 +413,15 @@ Focus
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for Application Security (highest → lowest JD alignment):
 
-1.
+1. Security Assessment
+2. VigiLynx
+3. CipherCrack
 
-Security Assessment
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Note: VigiLynx may replace Security Assessment if JD emphasizes threat detection alongside AppSec.
-
-Exclude
-
-CipherCrack unless cryptography appears in the JD.
+CipherCrack drops to last unless cryptography appears in the JD.
 
 Technical Skills
 
@@ -900,8 +882,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -931,15 +911,15 @@ Focus
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for Security Engineer (highest → lowest JD alignment):
 
-1.
+1. VigiLynx
+2. Security Assessment
+3. CipherCrack
 
-VigiLynx
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Note: Security Assessment may replace VigiLynx if JD emphasizes web app security over tooling.
+Note: Security Assessment may move to Slot 1 if JD emphasizes web app security over tooling.
 
 ---
 
@@ -1026,8 +1006,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -1064,15 +1042,15 @@ Suppress
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for DevSecOps (highest → lowest JD alignment):
 
-1.
+1. VigiLynx
+2. Security Assessment
+3. CipherCrack
 
-VigiLynx
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Emphasize: security automation pipeline, threat detection integration, VirusTotal API
+Emphasize VigiLynx's security automation pipeline, threat detection integration, VirusTotal API.
 
 ---
 
@@ -1282,8 +1260,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -1310,19 +1286,15 @@ Focus
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for Penetration Tester (highest → lowest JD alignment):
 
-1.
+1. Security Assessment
+2. CipherCrack
+3. VigiLynx
 
-CipherCrack
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Note: Security Assessment is already covered by Mindpex; CipherCrack adds offensive tooling depth.
-
-Exclude
-
-VigiLynx unless browser security or phishing is requested.
+Note: CipherCrack adds offensive tooling depth. VigiLynx only moves up if browser security or phishing is explicitly requested.
 
 ---
 
@@ -1507,8 +1479,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -1541,15 +1511,16 @@ Emphasize
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for AI / LLM Security (highest → lowest JD alignment):
 
-1.
+1. VigiLynx
+2. Security Assessment
+3. CipherCrack
 
-VigiLynx
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★☆
-
-Note: VigiLynx demonstrates ML-based detection (Random Forest, VirusTotal API) which signals AI/security tooling capability adjacent to LLM security work. Security Assessment may replace VigiLynx if JD emphasizes traditional web assessment methodology alongside LLM security.
+VigiLynx is primary — demonstrates ML-based detection (Random Forest, VirusTotal API) adjacent to AI/security tooling.
+Security Assessment may move to Slot 1 if JD emphasizes traditional web assessment methodology alongside LLM security.
 
 ---
 
@@ -1654,8 +1625,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -1690,15 +1659,16 @@ Emphasize
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for API Security (highest → lowest JD alignment):
 
-1.
+1. Security Assessment
+2. VigiLynx
+3. CipherCrack
 
-Security Assessment
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Note: Security Assessment provides additional API security evidence beyond Mindpex — Burp Suite-based API request manipulation, parameter injection, authorization testing, and remediation design. VigiLynx may replace if JD emphasizes detection-side API monitoring.
+Security Assessment provides additional API security evidence — Burp Suite-based API request manipulation, parameter injection, authorization testing, and remediation design.
+VigiLynx moves to Slot 1 only if JD emphasizes detection-side API monitoring.
 
 ---
 
@@ -1809,10 +1779,6 @@ Role Score
 
 Experience
 
-Note: Layout A applies. Both experience entries appear in the Experience section.
-
-This role is distinct from Red Team in framing: it emphasizes **security tool building** and **automated offensive workflows** alongside exploitation, rather than simulation or adversary emulation. CipherCrack is the primary anchor for tool-building credibility.
-
 Entry 1 — Mindpex VAPT Freelance
 
 ★★★★★
@@ -1852,15 +1818,16 @@ Suppress
 
 Project Selection
 
-Layout A: 1 slot only (Mindpex is in Experience)
+Score order for Offensive Security Engineer (highest → lowest JD alignment):
 
-1.
+1. CipherCrack
+2. Security Assessment
+3. VigiLynx
 
-CipherCrack
+Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
 
-★★★★★
-
-Note: CipherCrack is the primary slot — it demonstrates offensive tooling development and cryptanalysis automation. Security Assessment may replace if JD explicitly emphasizes methodology and reporting over tooling.
+CipherCrack is primary — demonstrates offensive tooling development and cryptanalysis automation.
+Security Assessment may move to Slot 1 if JD explicitly emphasizes methodology and reporting over tooling.
 
 ---
 
@@ -1994,13 +1961,22 @@ High Priority (never remove unless irrelevant)
 
 # Project Selection Algorithm
 
-First, determine the number of project slots from the Experience Structure Decision (master_resume_prompt.md Step 9):
+The layout is fixed. There is ONE layout for ALL roles.
 
-**Layout A roles** (AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering): 1 project slot
+Experience section: always Mindpex VAPT Freelance + Epicor Software (both, always).
 
-**Layout B roles** (Detection Engineering, SOC, Threat Intelligence, Security Research): 2 project slots (Slot 1 is always Mindpex VAPT)
+Projects section: always all 3 projects — VigiLynx, CipherCrack, and Black-box Security Assessment.
 
-Then score available projects against these criteria:
+Step 1: Score all 3 projects against the JD using the evaluation criteria below.
+
+Step 2: Order them highest to lowest score.
+
+Step 3: Assign bullets:
+- Slot 1 (highest score): 3 bullets
+- Slot 2 (second score):  3 bullets
+- Slot 3 (lowest score):  2 bullets
+
+Use the "Score order" guidance in each role's Project Selection block as the default starting rank. Override it if JD keywords shift the scores.
 
 Evaluation Criteria
 
@@ -2024,13 +2000,9 @@ Metrics
 
 5%
 
-For Layout A: select the single highest-scoring project from VigiLynx / CipherCrack / Security Assessment.
-
-For Layout B: Slot 1 = Mindpex VAPT (fixed). Slot 2 = highest-scoring from VigiLynx / CipherCrack / Security Assessment.
-
 Epicor is always in Experience. Never place Epicor in a project slot.
 
-Never include Mindpex in both Experience and Projects simultaneously.
+Mindpex is always in Experience. Never place Mindpex in a project slot.
 
 ---
 

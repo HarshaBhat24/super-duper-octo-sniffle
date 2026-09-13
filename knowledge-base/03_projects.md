@@ -27,19 +27,21 @@ A separate Security Assessment exists in:
 
 Mindpex VAPT Freelance is ALWAYS in the Experience section. It does NOT occupy a project slot under any circumstances.
 
-## Dynamic Project Selection Rules
+## Project Slot Rules
 
-Select 2–3 projects for the Projects section using the scoring rubric in engine/01_resume_generation_rules.md.
+The Projects section always contains exactly 3 slots.
 
-Score all three candidates (VigiLynx, CipherCrack, Security Assessment) against the JD and select the top 2 or 3.
+All three projects are always included: VigiLynx, CipherCrack, and Black-box Security Assessment.
 
-Page space determines whether 2 or 3 slots are used:
-- If the resume fits cleanly on one page with 3 slots → use 3
-- If 3 slots push past one page → use 2
+Score all three against the JD using the rubric in engine/01_resume_generation_rules.md.
+Order slots from highest to lowest JD alignment score.
 
-Never include all three automatically. Always score first.
+Bullet allocation by slot:
+- Slot 1 (highest JD score): 3 bullets
+- Slot 2 (second JD score):  3 bullets
+- Slot 3 (lowest JD score):  2 bullets
 
-### Project Priority by Role (guidance for scoring)
+Mindpex VAPT Freelance is ALWAYS in the Experience section. It does NOT occupy a project slot under any circumstances.
 
 | Role | Priority 1 | Priority 2 | Priority 3 |
 |---|---|---|---|
@@ -359,10 +361,6 @@ URLs Tested
 Files Scanned
 
 50+
-
-Users
-
-~10
 
 Hackathon
 
@@ -704,13 +702,13 @@ Rapid cryptanalysis.
 
 # Metrics
 
-Codebase
-
-1324+ LOC
-
 Supported Algorithms
 
 9
+
+Real-world usage
+
+10+ CTF competitions
 
 ---
 
@@ -876,7 +874,9 @@ Instead emphasize
 
 # Resume Generation Rules
 
-Exactly three bullets.
+Slot 1 and Slot 2 (highest JD scores): exactly three bullets each.
+
+Slot 3 (lowest JD score): exactly two bullets.
 
 Maximum two lines per bullet.
 

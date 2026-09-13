@@ -46,9 +46,12 @@ There is no Layout A or Layout B.
   1. Mindpex Security Consulting — Freelance VAPT Engagement — Enterprise SaaS Platform
   2. Epicor Software — Product Development Intern
 [Projects & Key Achievements]
-  2–3 entries dynamically selected based on JD alignment
+  Always 3 entries — all three projects (scored and ordered by JD alignment)
+  Slot 1 (highest JD score): 3 bullets
+  Slot 2 (second score):     3 bullets
+  Slot 3 (lowest score):     2 bullets
 [Skills]
-[Certifications]
+[Certifications & Achievements]
 [Education]
 ```
 
@@ -94,23 +97,22 @@ Entry 2: Epicor Software Internship
 
 # Projects Budget
 
-## Slot Count Decision Rule
+## Slot Count
 
-Default: 2 slots.
+Fixed: always 3 slots.
 
-Upgrade to 3 slots ONLY IF:
-- All 3 available projects score high on JD alignment, AND
-- 3 project entries + both experience entries + Skills + Certifications & Achievements + Education all fit on one page without compression
+All three available projects are always included: VigiLynx, CipherCrack, and Black-box Security Assessment.
 
-Never use 3 slots just to fill space. Use 3 only when all 3 are genuinely high-alignment.
+Score all three against the JD and rank them by alignment. The ranking determines order and bullet allocation:
 
-## Per Slot
+| Slot | Rank | Bullets |
+|------|------|--------|
+| Slot 1 | Highest JD score | 3 |
+| Slot 2 | Second JD score  | 3 |
+| Slot 3 | Lowest JD score  | 2 |
 
-Choose from: VigiLynx / CipherCrack / Security Assessment
-
-- Bullets: exactly 3 per slot
-- Max 2 lines per bullet
-- Preferred length: 28–36 words
+The 2-bullet slot always goes to the project with the lowest JD alignment score.
+Never arbitrarily assign the 2-bullet slot — it must follow the scoring rubric.
 
 Mindpex is NEVER in the Projects section — it is always in Experience.
 
@@ -229,7 +231,7 @@ Examples
 
 - 1000+ URLs
 - 50+ Files
-- 1500+ LOC
+- 9 algorithms / 10+ CTF competitions (CipherCrack)
 - 200+ CTFs
 - Top 10%
 - 17/662 Teams
@@ -280,7 +282,10 @@ Before returning the resume, verify
 
 ✓ Each experience has exactly 3 bullets
 
-✓ Projects: 2–3 entries, each with exactly 3 bullets
+✓ Projects: exactly 3 entries scored and ranked by JD alignment
+  - Slot 1 (highest score): exactly 3 bullets
+  - Slot 2 (second score):  exactly 3 bullets
+  - Slot 3 (lowest score):  exactly 2 bullets
 
 ✓ 12–15 skills
 

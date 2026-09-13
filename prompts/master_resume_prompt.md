@@ -88,7 +88,10 @@ There is ONE fixed resume structure. It applies to ALL roles with no exceptions.
   1. Mindpex Security Consulting — Freelance VAPT Engagement — Enterprise SaaS Platform
   2. Epicor Software — Product Development Intern
 [Projects]
-  2–3 dynamically selected entries (score against JD; 3 only if all score high AND page fits)
+  Always 3 entries, ordered by JD alignment score:
+    Slot 1 (highest score): 3 bullets
+    Slot 2 (second score):  3 bullets
+    Slot 3 (lowest score):  2 bullets
 [Skills]
 [Certifications & Achievements]
   Compact list: Security+ | ISC2 CC | achievements in role-priority order
@@ -273,21 +276,18 @@ Databases
 
 Step 7
 
-Score every project and achievement against the JD.
+Score every project against the JD to determine ordering.
 
 Experience Entries (always included — no scoring required)
 
 - Mindpex VAPT Freelance (07_mindpex_vapt.md)
 - Epicor Software Internship (06_epicor_internship.md)
 
-Projects & Achievements to Score
+Projects to Score (all 3 are always included)
 
 - VigiLynx
 - CipherCrack
 - Black-box Web Application Security Assessment
-- HackAthena
-- CTF Experience
-- TryHackMe Ranking
 
 Scoring weights (see engine/01_resume_generation_rules.md):
 
@@ -297,7 +297,12 @@ Scoring weights (see engine/01_resume_generation_rules.md):
 - ATS coverage: 10%
 - Verified metrics: 5%
 
-Select 2–3 highest-scoring entries for the Projects & Key Achievements section.
+Score all three, rank them highest to lowest. This rank determines bullet allocation:
+- Slot 1 (highest score): 3 bullets
+- Slot 2 (second score):  3 bullets
+- Slot 3 (lowest score):  2 bullets
+
+Achievements are NOT scored for the Projects section. They appear only in the Certifications & Achievements section.
 
 ↓
 
@@ -314,8 +319,10 @@ Experience
 
 Projects
 
-  - 2–3 dynamically selected entries (3 bullets each)
-  - Default 2 slots; use 3 only if all 3 score high AND resume fits on one page
+  - All 3 projects always included, ordered by JD alignment score
+  - Slot 1 (highest score): 3 bullets
+  - Slot 2 (second score):  3 bullets
+  - Slot 3 (lowest score):  2 bullets
 
 Skills
 
@@ -452,11 +459,14 @@ Never guess.
 
 # Resume Constraints
 
-Both Experience Entries Always Present
+- Both Experience Entries Always Present
 
 - Mindpex: exactly 3 bullets, max 2 lines each
 - Epicor: exactly 3 bullets, max 2 lines each
-- Projects: 2–3 entries, exactly 3 bullets each (default 2; use 3 only if all score high and resume fits)
+- Projects: always 3 entries ordered by JD score
+  - Slot 1 (highest): exactly 3 bullets
+  - Slot 2 (second):  exactly 3 bullets
+  - Slot 3 (lowest):  exactly 2 bullets
 - Skills: 12–15 items
 - Certifications & Achievements: compact list — exactly 2 certs + max 3 achievements
 - No Summary section
@@ -492,17 +502,18 @@ Never appears in the Projects section.
 
 # Projects Section Rules
 
-Select 2–3 entries from: VigiLynx / CipherCrack / Security Assessment.
+Always include all 3 projects: VigiLynx, CipherCrack, and Black-box Security Assessment.
 
-Score all entries against the JD using the project scoring rubric.
+Score all 3 against the JD using the project scoring rubric.
 
-Default: select the 2 highest-scoring entries.
+Order highest to lowest JD alignment score.
 
-Upgrade to 3 only if all three score high on alignment AND the resume fits on one page.
+Bullet allocation:
+- Slot 1 (highest score): 3 bullets
+- Slot 2 (second score):  3 bullets
+- Slot 3 (lowest score):  2 bullets
 
-See engine/02_role_intelligence_matrix.md for role-based project priority guidance.
-
-See engine/03_resume_budget.md for the 2-vs-3 slot decision rule.
+See engine/02_role_intelligence_matrix.md for role-based default ordering guidance.
 
 ---
 
@@ -638,7 +649,10 @@ Before returning the resume, verify
 
 ✓ Each experience has exactly 3 bullets
 
-✓ Projects section has 2–3 dynamically selected entries, each with exactly 3 bullets
+✓ Projects section has exactly 3 entries ordered by JD alignment score
+  - Slot 1 (highest score): exactly 3 bullets
+  - Slot 2 (second score):  exactly 3 bullets
+  - Slot 3 (lowest score):  exactly 2 bullets
 
 ✓ Skills: 12–15 items
 

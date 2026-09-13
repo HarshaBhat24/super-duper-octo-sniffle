@@ -178,26 +178,29 @@ Priority
 
 Description
 
-Selected as a finalist in India's Smart India Hackathon after competing against more than 500 teams.
+Selected as a finalist (Top 1%) in India's Smart India Hackathon, competing against 500+ teams — demonstrating national-level technical competition standing.
 
 Demonstrated
 
-- Software Engineering
-- Team Collaboration
-- Problem Solving
-- Solution Design
+- Competitive problem-solving at national scale
+- Solution design under constraints
+- Cross-disciplinary team delivery
+
+Note
+
+This achievement is not security-specific. Its value on the resume is purely the competitive scale and ranking. Only include when the JD explicitly values leadership, breadth, or national competition context.
 
 Applicable Roles
 
-★★★★☆
+★★★☆☆
 
-All
+All (low priority — use only when achievements 1–4 are not a strong enough fit)
 
 ATS Keywords
 
 - National Hackathon
-- Innovation
-- Software Engineering
+- Finalist
+- Top 1%
 
 ---
 

@@ -162,7 +162,7 @@ Developed an offline Python-based cryptanalysis toolkit implementing 9 classical
 
 Example Bullet
 
-Implemented modular cryptographic algorithms including Hill, Affine, Vigenère, and Four-Square ciphers using modular arithmetic and matrix operations (1,324+ LOC).
+Implemented modular cryptographic algorithms including Hill, Affine, Vigenère, and Four-Square ciphers using modular arithmetic and matrix operations, enabling rapid offline cryptanalysis during offensive competitions.
 
 Example Bullet
 

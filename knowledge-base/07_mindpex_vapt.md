@@ -434,18 +434,13 @@ Applicable Roles
 
 Treat this engagement as primary professional security experience.
 
-For AppSec / ProdSec / Red Team / DevSecOps JDs:
+For all roles:
 
-- Always include in Experience section
-- Describe as "Freelance VAPT Engagement — Enterprise SaaS Platform"
-- Emphasize finding severity, tool usage, and remediation produced
-
-For Detection Engineering / SOC JDs:
-
-- Emphasize audit logging gap findings
-- May appear in project slot instead of experience
-
-Never include all three of: Mindpex Freelance + both projects.
+- Always include in the Experience section.
+- Describe as "Freelance VAPT Engagement — Enterprise SaaS Platform".
+- Emphasize finding severity, tool usage, and remediation produced.
+- Mindpex is NEVER placed in the Projects section under any circumstances.
+- The Projects section always contains: VigiLynx, CipherCrack, and Black-box Security Assessment.
 
 ---
 

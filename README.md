@@ -16,7 +16,7 @@ career-engine/
 ├── knowledge-base/
 │   ├── 00_changelog.md               # KB update log — track new skills, certs, projects
 │   ├── 01_candidate_profile.md       # Master profile, skills, tools, Truth Guard
-│   ├── 02_experience.md              # Experience index, Layout A/B decision, role pairing table
+│   ├── 02_experience.md              # Experience index, project slot rules
 │   ├── 03_projects.md                # VigiLynx + CipherCrack project KB
 │   ├── 04_security_assessments.md    # Black-box web app security assessment KB
 │   ├── 05_achievements.md            # Achievements, certifications, role-ordered priority
@@ -26,23 +26,23 @@ career-engine/
 ├── engine/
 │   ├── 01_resume_generation_rules.md # Scoring, bullet rules, ATS, Truth Guard, validation
 │   ├── 02_role_intelligence_matrix.md# Per-role emphasis, skills ordering, terminology
-│   ├── 03_resume_budget.md           # Layout A/B budgets, bullet counts, space constraints
+│   ├── 03_resume_budget.md           # Bullet counts, space constraints
 │   └── 04_company_intelligence.md    # Company type classification and tone modifiers
 │
 ├── prompts/
 │   └── master_resume_prompt.md       # Orchestration prompt — the 17-step generation pipeline
 │
 ├── examples/
-│   ├── appsec.md                     # Layout A — Application Security Engineer
-│   ├── product_security.md           # Layout A — Product Security Engineer
-│   ├── redteam.md                    # Layout A — Red Team Engineer
-│   ├── devsecops.md                  # Layout A — DevSecOps Engineer
-│   ├── security_engineering.md       # Layout A — Security Engineer
-│   ├── ai_llm_security.md            # Layout A — AI / LLM Security Engineer
-│   ├── api_security.md               # Layout A — API Security Engineer
-│   ├── offensive_security.md         # Layout A — Offensive Security Engineer
-│   ├── detection_engineer.md         # Layout B — Detection Engineer
-│   └── soc.md                        # Layout B — SOC Analyst
+│   ├── appsec.md                     # Application Security Engineer
+│   ├── product_security.md           # Product Security Engineer
+│   ├── redteam.md                    # Red Team Engineer
+│   ├── devsecops.md                  # DevSecOps Engineer
+│   ├── security_engineering.md       # Security Engineer
+│   ├── ai_llm_security.md            # AI / LLM Security Engineer
+│   ├── api_security.md               # API Security Engineer
+│   ├── offensive_security.md         # Offensive Security Engineer
+│   ├── detection_engineer.md         # Detection Engineer
+│   └── soc.md                        # SOC Analyst
 │
 ├── outputs/
 │   └── log.md                        # Resume version tracking log
@@ -193,7 +193,7 @@ Role Classification Report — Score all 14 roles; output top 3 with confidence 
 
 ↓
 
-Experience Structure Decision — Determine Layout A or Layout B from confirmed role
+Experience Structure Decision — single unified layout for all roles
 
 ↓
 
@@ -201,11 +201,7 @@ Extract ATS Keywords
 
 ↓
 
-Score Experiences and Projects
-
-↓
-
-Select Experiences and Projects per Layout Decision
+Score and Rank All 3 Projects by JD alignment
 
 ↓
 
@@ -213,11 +209,11 @@ Rewrite Experience Bullets (3 per entry, max 2 lines each)
 
 ↓
 
-Generate Skills (12–15 for Layout A; 12–18 for Layout B)
+Generate Skills (12–15 items, reordered by role and company modifier)
 
 ↓
 
-Generate Achievements (max 2 for Layout A; max 3 for Layout B)
+Generate Achievements (max 3, dynamically ordered by role)
 
 ↓
 
@@ -254,59 +250,45 @@ Never skip any step.
 
 # Supported Roles
 
-The engine currently supports **14 roles** across two layout types.
+The engine supports **14 roles**. All roles use the same single layout.
 
-## Layout A — Two Experience Entries (Mindpex + Epicor in Experience; 1 project slot)
-
-| Role | Primary Evidence Anchor | Default Project |
+| Role | Primary Evidence Anchor | Default Project Order (Slot 1 → 2 → 3) |
 |---|---|---|
-| Application Security Engineer | Mindpex Domain 1–7 (full-scope VAPT) | Security Assessment |
-| Product Security Engineer | Mindpex Domain 1–7 + RLS analysis | Security Assessment |
-| Red Team Engineer | Mindpex exploitation chain + CTFs | CipherCrack |
-| Penetration Tester | Mindpex SSRF, ATO, wildcard injection | CipherCrack or Security Assessment |
-| DevSecOps Engineer | Epicor CI/CD + Mindpex VAPT as security gate | VigiLynx |
-| Security Engineer | Mindpex multi-domain + Epicor automation | VigiLynx |
-| AI / LLM Security Engineer | Mindpex Domain 2 (prompt injection, memory poisoning, LLM trust boundaries) | VigiLynx |
-| API Security Engineer | Mindpex Domain 1 (61 API routes, SSRF, BOLA, rate limiting, zero-auth FastAPI) | Security Assessment |
-| Offensive Security Engineer | CipherCrack (9-cipher toolkit, 1,324+ LOC) + Mindpex exploitation chain | CipherCrack |
+| Application Security Engineer | Mindpex Domain 1–7 (full-scope VAPT) | Security Assessment → VigiLynx → CipherCrack |
+| Product Security Engineer | Mindpex Domain 1–7 + RLS analysis | Security Assessment → VigiLynx → CipherCrack |
+| Red Team Engineer | Mindpex exploitation chain + CTFs | Security Assessment → CipherCrack → VigiLynx |
+| Penetration Tester | Mindpex SSRF, ATO, wildcard injection | Security Assessment → CipherCrack → VigiLynx |
+| DevSecOps Engineer | Epicor CI/CD + Mindpex VAPT as security gate | VigiLynx → Security Assessment → CipherCrack |
+| Security Engineer | Mindpex multi-domain + Epicor automation | VigiLynx → Security Assessment → CipherCrack |
+| AI / LLM Security Engineer | Mindpex Domain 2 (prompt injection, memory poisoning) | VigiLynx → Security Assessment → CipherCrack |
+| API Security Engineer | Mindpex Domain 1 (61 API routes, SSRF, BOLA) | Security Assessment → VigiLynx → CipherCrack |
+| Offensive Security Engineer | CipherCrack (9-cipher toolkit) + Mindpex exploitation | CipherCrack → Security Assessment → VigiLynx |
+| Detection Engineer | Mindpex VAPT + Epicor automation | VigiLynx → CipherCrack → Security Assessment |
+| SOC Analyst | Mindpex VAPT + Epicor log analysis | VigiLynx → CipherCrack → Security Assessment |
+| Threat Intelligence Analyst | VirusTotal pipeline + IOC analysis | VigiLynx → CipherCrack → Security Assessment |
+| Security Research Engineer | CipherCrack cryptanalysis + Mindpex research | CipherCrack → Security Assessment → VigiLynx |
+| Purple Team | Mindpex + VigiLynx detection layer | Security Assessment → VigiLynx → CipherCrack |
 
-## Layout B — One Experience Entry (Epicor only in Experience; 2 project slots)
-
-| Role | Slot 1 (Fixed) | Slot 2 |
-|---|---|---|
-| Detection Engineer | Mindpex VAPT | VigiLynx |
-| SOC Analyst | Mindpex VAPT | VigiLynx |
-| Threat Intelligence Analyst | Mindpex VAPT | VigiLynx |
-| Security Research Engineer | Mindpex VAPT | CipherCrack |
-| Purple Team | Mindpex VAPT | VigiLynx or Security Assessment |
+Project order is the default scoring rank. Always override with actual JD keyword scoring.
 
 The generator automatically determines the closest role from the supplied Job Description.
 
 ---
 
-# Layout Rules
+# Layout Rules (All Roles — Unified)
 
-## Layout A (9 roles)
+There is ONE layout. It applies to ALL roles with no exceptions.
 
-Triggers when JD targets: AppSec, ProdSec, Red Team, Pentesting, DevSecOps, Security Engineering, AI/LLM Security, API Security, Offensive Security
-
-- Experience: Mindpex VAPT + Epicor (both in Experience section)
-- Projects: 1 slot (choose from VigiLynx / CipherCrack / Security Assessment per role matrix)
-- Skills: 12–15 items
-- Achievements: max 2
+- Experience: always Mindpex VAPT Freelance + Epicor Software (both, always)
+- Projects: always all 3 entries (VigiLynx, CipherCrack, Security Assessment)
+- Skills: 12–15 items, reordered dynamically by role
+- Achievements: max 3, dynamically ordered by role
 - Certifications: exactly 2 (CompTIA Security+, ISC2 CC)
 
-## Layout B (5 roles)
-
-Triggers when JD targets: Detection Engineering, SOC, Threat Intelligence, Security Research, Purple Team
-
-- Experience: Epicor only (in Experience section)
-- Projects: 2 slots — Slot 1 is always Mindpex VAPT; Slot 2 chosen by scoring rubric
-- Skills: 12–18 items
-- Achievements: max 3
-- Certifications: exactly 2 (CompTIA Security+, ISC2 CC)
-
-**Rule:** Mindpex VAPT never appears in both Experience and Projects simultaneously.
+Bullet allocation for Projects is determined by JD alignment score:
+- Slot 1 (highest score): 3 bullets
+- Slot 2 (second score):  3 bullets
+- Slot 3 (lowest score):  2 bullets
 
 ---
 
@@ -387,29 +369,17 @@ Mindpex must always be described as **"Freelance VAPT Engagement — Enterprise 
 
 ---
 
-# Resume Constraints
-
-## Layout A (Two Experience Entries)
+# Resume Constraints (All Roles — Unified)
 
 | Section | Constraint |
 |---|---|
-| Experience Entry 1 (Mindpex VAPT) | Exactly 3 bullets, max 2 lines each |
-| Experience Entry 2 (Epicor) | Exactly 3 bullets, max 2 lines each |
-| Project (1 slot) | Exactly 3 bullets, max 2 lines each |
+| Experience Entry 1 (Epicor) | Exactly 3 bullets, max 2 lines each |
+| Experience Entry 2 (Mindpex VAPT) | Exactly 3 bullets, max 2 lines each |
+| Project Slot 1 (highest JD score) | Exactly 3 bullets, max 2 lines each |
+| Project Slot 2 (second JD score) | Exactly 3 bullets, max 2 lines each |
+| Project Slot 3 (lowest JD score) | Exactly 2 bullets, max 2 lines each |
 | Skills | 12–15 items |
-| Achievements | Max 2 |
-| Certifications | Exactly 2 |
-| Resume Length | One page |
-
-## Layout B (One Experience Entry)
-
-| Section | Constraint |
-|---|---|
-| Experience Entry (Epicor) | Exactly 3 bullets, max 2 lines each |
-| Project Slot 1 (Mindpex VAPT) | Exactly 3 bullets, max 2 lines each |
-| Project Slot 2 | Exactly 3 bullets, max 2 lines each |
-| Skills | 12–18 items |
-| Achievements | Max 3 |
+| Achievements | Max 4 |
 | Certifications | Exactly 2 |
 | Resume Length | One page |
 

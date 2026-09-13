@@ -207,11 +207,16 @@ Mindpex NEVER appears in Projects & Key Achievements — it is always in Experie
 
 Projects & Key Achievements
 
-Dynamically select 2–3 entries from: VigiLynx / CipherCrack / Security Assessment / top achievements.
+Always include all 3 projects: VigiLynx, CipherCrack, and Black-box Security Assessment.
 
-Score all options against the JD and select the best-fit combination.
+Score all three against the JD and rank them. Order them highest to lowest JD alignment score.
 
-Never include all three projects (VigiLynx + CipherCrack + Security Assessment) unless space and alignment both clearly justify it.
+Bullet allocation:
+- Slot 1 (highest score): 3 bullets
+- Slot 2 (second score):  3 bullets
+- Slot 3 (lowest score):  2 bullets
+
+Never drop a project or swap in achievements as a project substitute.
 
 ---
 
@@ -387,11 +392,7 @@ Use these weights when choosing which projects to include.
 
 Score all three candidates (VigiLynx, CipherCrack, Security Assessment) against this rubric.
 
-Select the top-scoring entries up to the project slot limit.
-
-Never select based on personal preference or default habits.
-
-Note: When Mindpex is in the project slot (non-AppSec/ProdSec/RedTeam roles), it automatically occupies one slot and is scored as primary. The second slot is chosen from the remaining two projects using the rubric above.
+Order them highest to lowest. Assign bullets: Slot 1 → 3, Slot 2 → 3, Slot 3 → 2.
 
 # Experience Rewriting Rules
 
@@ -487,17 +488,21 @@ Technology names should never be the primary focus.
 
 Exactly
 
-Experience
+Experience (per entry)
 
 3 bullets
 
-Project 1
+Project Slot 1 (highest JD score)
 
 3 bullets
 
-Project 2
+Project Slot 2 (second JD score)
 
 3 bullets
+
+Project Slot 3 (lowest JD score)
+
+2 bullets
 
 Maximum
 
@@ -545,7 +550,9 @@ Examples
 
 200+ CTFs
 
-1324 LOC
+9 algorithms (CipherCrack)
+
+10+ CTF competitions (CipherCrack)
 
 17 / 662
 
@@ -1040,7 +1047,9 @@ Examples
 
 50+ Files
 
-1324 LOC
+9 algorithms (CipherCrack)
+
+10+ CTF competitions (CipherCrack)
 
 200+ CTFs
 
@@ -1528,7 +1537,10 @@ Exactly 3 bullets
 
 Projects & Key Achievements
 
-2–3 entries, each with exactly 3 bullets
+Exactly 3 entries, ordered by JD alignment score
+- Slot 1 (highest): exactly 3 bullets
+- Slot 2 (second):  exactly 3 bullets
+- Slot 3 (lowest):  exactly 2 bullets
 
 Skills
 
@@ -1633,7 +1645,10 @@ Before producing the final resume, verify that:
 - Mindpex VAPT is in the Experience section (not in Projects).
 - Epicor is in the Experience section.
 - Each experience has exactly 3 bullets.
-- Projects & Key Achievements has 2–3 entries, each with exactly 3 bullets.
+- Projects & Key Achievements has exactly 3 entries, ordered by JD alignment score.
+  - Slot 1 (highest): exactly 3 bullets.
+  - Slot 2 (second):  exactly 3 bullets.
+  - Slot 3 (lowest):  exactly 2 bullets.
 - No Summary section is present.
 - Skills are tailored to the JD (12–15 items).
 - CompTIA Security+ and ISC2 CC are included.

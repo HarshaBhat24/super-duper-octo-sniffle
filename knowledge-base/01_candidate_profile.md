@@ -99,9 +99,11 @@ Experience Bullets (per entry)
 
 Project
 
-- 2–3 entries, exactly 3 bullets each
+- Always 3 entries
+- Top 2 JD-aligned projects: exactly 3 bullets each
+- 3rd project (lowest JD alignment): exactly 2 bullets
 - Maximum 2 lines per bullet
-- Agent selects based on JD alignment and page space
+- Scored and ordered by JD alignment using the scoring rubric
 
 See 02_experience.md for one-page layout rules.
 
@@ -750,15 +752,20 @@ Mindpex is NEVER in the Projects section.
 
 Project Section Logic
 
-Dynamically select 2–3 from:
+Always include all three projects:
 
 - VigiLynx
 - CipherCrack
 - Black-box Web Application Security Assessment
 
-Score all three against the JD and select the highest-scoring 2 or 3.
+Score all three against the JD using the scoring rubric in engine/01_resume_generation_rules.md.
 
-Never include all three unless space and alignment both clearly justify it.
+Order projects highest to lowest JD alignment score.
+
+Bullet allocation:
+- Slot 1 (highest score): 3 bullets
+- Slot 2 (second score):  3 bullets
+- Slot 3 (lowest score):  2 bullets
 
 ---
 

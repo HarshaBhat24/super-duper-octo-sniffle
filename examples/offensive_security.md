@@ -159,7 +159,7 @@ Suppress
 
 Example Bullet
 
-Developed an offline Python-based cryptanalysis toolkit implementing 9 classical cipher algorithms with automated brute-force workflows; used across 10+ CTF competitions to accelerate cryptanalysis (1,324+ LOC).
+Developed an offline Python-based cryptanalysis toolkit implementing 9 classical cipher algorithms with automated brute-force workflows; used across 10+ CTF competitions to accelerate cryptanalysis.
 
 Example Bullet
 

@@ -75,7 +75,9 @@ There is no Layout A / Layout B. The layout is always the same:
 Both experience entries always on resume:
 
 - Each experience: 3 bullets, max 2 lines each
-- Projects & Key Achievements: 2–3 entries dynamically selected
+- Projects: always 3 entries, scored and ranked by JD alignment
+  - Top 2 slots: 3 bullets each
+  - Bottom slot: 2 bullets
 - Skills: 12–15 items
 - Certifications: 2
 - Education: max 2 lines
@@ -85,17 +87,17 @@ Both experience entries always on resume:
 
 # Project Slot Rules
 
-Since both experiences are always in the Experience section, the Projects & Key Achievements section gets 2–3 dynamic slots.
+The Projects & Key Achievements section always uses 3 slots.
 
-Slots are filled by scoring all available entries against the JD:
+All three projects are always included: VigiLynx, CipherCrack, and Black-box Security Assessment.
 
-- VigiLynx
-- CipherCrack
-- Black-box Security Assessment
-- Top achievements (HackAthena, CTFs, TryHackMe rankings)
+Score all three against the JD using the rubric in engine/01_resume_generation_rules.md.
 
-The agent selects 2–3 entries that maximize JD alignment using the project scoring rubric.
+Order slots highest to lowest JD alignment score.
 
-Never include all three projects simultaneously unless space and alignment both justify it.
+Bullet allocation:
+- Slot 1 (highest score): 3 bullets
+- Slot 2 (second score):  3 bullets
+- Slot 3 (lowest score):  2 bullets
 
 Mindpex does NOT appear in the Projects section — it is always in Experience.

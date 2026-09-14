@@ -57,7 +57,7 @@ Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
 
 ↓
 
@@ -81,18 +81,18 @@ Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
 
 Focus
 
-- Multi-domain assessment coverage (API, Auth, RLS, LLM, Headers, Rate Limiting, Audit Logging)
-- Code-level remediation delivery (TypeScript, Python, SQL)
-- Static and dynamic testing methodology
-- Secure architecture recommendations
+- Full-scope VAPT across 7 security domains (API, Auth, RLS, LLM, Rate Limiting, Audit Logging)
+- Static code analysis + dynamic testing methodology
+- 30+ CVSS-scored findings with code-level remediation
+- Perimeter security controls and audit logging gaps
 
 Example Bullet
 
-Performed a full-scope VAPT across 7 security domains on a Next.js + FastAPI multi-tenant SaaS platform, identifying 9 Critical and 15 High severity findings including SSRF, account takeover, and SQL wildcard injection.
+Conducted a full-scope VAPT across 7 security domains on a Next.js + FastAPI SaaS platform, identifying 9 Critical and 15 High severity findings including SSRF, account takeover, and authentication bypass.
 
 Example Bullet
 
-Audited 47 PostgreSQL RLS migration files identifying two Critical misconfigurations granting unauthenticated access to security-critical tables; delivered SQL migration scripts for remediation.
+Audited 47 PostgreSQL RLS migration files identifying two Critical misconfigurations granting unauthenticated write access to security-critical tables; delivered SQL migration scripts for remediation.
 
 Example Bullet
 
@@ -104,15 +104,16 @@ Delivered code-level remediation in TypeScript, Python, and SQL across 30+ CVSS-
 
 Focus
 
+- PowerShell automation deployed within ADO pipelines
+- Log-based root cause analysis across Linux execution environments
 - ADO CI/CD pipelines (agent-VM architecture)
-- PowerShell scripting deployed within those pipelines
-- VM disk cleanup automation
-- Log-based root cause analysis on pipeline failures
+- Environment maintenance automation
 
 Suppress
 
+- Regression Testing
+- QA Terminology
 - Pipeline-as-code / Jenkinsfile authoring as primary framing
-- Generic QA / testing terminology
 
 Star Bullet
 
@@ -120,11 +121,11 @@ Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated
 
 Example Bullet
 
-Created ADO CI/CD pipelines using agent-VM architecture to automate enterprise build workflows; authored PowerShell scripts executing within those pipelines for environment provisioning and maintenance.
+Developed PowerShell automation scripts for build environment provisioning across agent-VM ADO pipeline environments; applied scripting skills to automate repetitive operational tasks across Linux-based execution environments.
 
 Example Bullet
 
-Performed log-based root cause analysis for pipeline and script execution failures across Linux environments, applying systematic investigation methodology to recurring production build issues.
+Worked with ADO pipelines, Linux systems, and SQL-backed environments; gained practical understanding of enterprise build pipeline architecture and agent-VM execution models.
 
 ---
 
@@ -176,6 +177,37 @@ Performed an authorized black-box assessment of a SaaS application evaluating au
 Example Bullet
 
 Validated business-logic flaws including Broken Object-Level Authorization and delivered remediation recommendations covering IAM, least-privilege enforcement, and secure middleware architecture.
+
+Example Bullet
+
+Delivered actionable technical remediation guidance covering IAM redesign, CORS hardening, and least-privilege access enforcement.
+
+---
+
+# CipherCrack
+
+Priority
+
+★★★☆☆
+
+Focus
+
+- Security Tooling
+- Cryptography
+- Automation
+- Python
+
+Suppress
+
+- Educational language
+
+Example Bullet
+
+Developed an offline Python security toolkit implementing classical cryptographic algorithms with modular CLI execution.
+
+Example Bullet
+
+Automated cryptanalysis workflows and script execution supporting rapid cryptographic experimentation.
 
 ---
 
@@ -286,7 +318,7 @@ High Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 2–3 dynamically selected project slots
+✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
 
 ✓ Certifications & Achievements merged into single section
 

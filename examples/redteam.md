@@ -64,7 +64,7 @@ Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
 
 ↓
 
@@ -138,11 +138,38 @@ Worked with ADO pipelines, Linux systems, and SQL-backed environments; gained pr
 
 ---
 
-# CipherCrack
+# Security Assessment
 
 Priority
 
 ★★★★★
+
+Focus
+
+- Black-box web application testing
+- Authentication and authorization validation
+- Enumeration and parameter manipulation
+- BOLA / access control testing
+
+Example Bullet
+
+Performed an authorized black-box assessment of a SaaS application targeting authentication, authorization, and API security; enumerated endpoints with ffuf and validated access-control weaknesses using Burp Suite.
+
+Example Bullet
+
+Identified Broken Object-Level Authorization through manual request manipulation and validated cross-user access control weaknesses via direct API calls.
+
+Example Bullet
+
+Documented multi-stage attack chains with CVSS v3 scoring and delivered actionable code-level remediation guidance to eliminate security vulnerabilities.
+
+---
+
+# CipherCrack
+
+Priority
+
+★★★★☆
 
 Focus
 
@@ -170,26 +197,30 @@ Designed reusable CLI architecture enabling independent cipher invocation, reduc
 
 ---
 
-# Security Assessment
+# VigiLynx
 
 Priority
 
-★★★★☆
+★★★☆☆
 
 Focus
 
-- Black-box web application testing
-- Authentication and authorization validation
-- Enumeration and parameter manipulation
-- BOLA / access control testing
+- Threat Detection Tooling
+- VirusTotal API Integration
+- Python & Machine Learning
+
+Suppress
+
+- Frontend UI
+- Styling
 
 Example Bullet
 
-Performed an authorized black-box assessment of a SaaS application targeting authentication, authorization, and API security; enumerated endpoints with ffuf and validated access-control weaknesses using Burp Suite.
+Engineered browser-based security tooling using a Random Forest model to analyze URL features and flag malicious phishing patterns.
 
 Example Bullet
 
-Identified Broken Object-Level Authorization through manual request manipulation and validated cross-user access control weaknesses via direct API calls.
+Integrated VirusTotal threat intelligence APIs to automate payload analysis and enrich real-time URL risk classification.
 
 ---
 
@@ -293,7 +324,7 @@ High Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 2–3 dynamically selected project slots
+✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
 
 ✓ Certifications & Achievements merged into single section
 

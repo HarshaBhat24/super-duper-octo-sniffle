@@ -61,6 +61,10 @@ examples/
 - ai_llm_security.md
 - api_security.md
 - offensive_security.md
+- penetration_tester.md
+- threat_intel.md
+- security_research.md
+- purple_team.md
 
 Read the example matching the classified role BEFORE generating any bullets.
 
@@ -232,11 +236,67 @@ Rationale: [1–2 sentences explaining why the primary role was chosen]
 Company Modifier Applied: [yes/no — which modifier]
 ```
 
-Do NOT ask the candidate to confirm the role. Proceed directly.
+After outputting the report, ask:
+
+> "Proceeding with [Primary Role] — reply with a different role name to override, or anything else to continue."
+
+Wait one turn for the candidate's response before proceeding to Step 6.
 
 ↓
 
 Step 6
+
+Gap Analysis (MCQ Format).
+
+This step is **mandatory**. Do NOT proceed to keyword extraction or bullet writing until the candidate has responded.
+
+### 6a — Compare JD Against Knowledge Base
+
+Compare every requirement, skill, and tool listed in the Job Description against the knowledge base.
+
+Tag each JD requirement as one of:
+
+- **COVERED** — clearly evidenced in the knowledge base
+- **PARTIAL** — partially evidenced or tangentially related
+- **MISSING** — no evidence in the knowledge base
+
+### 6b — Generate MCQ Questions
+
+For each gap, generate the appropriate MCQ:
+
+**MISSING tools/technologies:**
+Present an MCQ with the exact JD tool + 2–3 close alternatives + a "None" option.
+
+Example:
+> The JD requires Splunk. Do you have experience with:
+> A) Splunk  B) ELK Stack  C) Azure Sentinel  D) None
+
+**MISSING concepts/processes:**
+Present an MCQ:
+> A) Yes (describe below)  B) No
+
+**PARTIAL experience:**
+Present a granularity MCQ.
+
+Example:
+> The JD mentions Terraform. Your experience level:
+> A) Custom module writing  B) Ad-hoc usage  C) Conceptual familiarity
+
+### 6c — Consolidate and Send
+
+Consolidate ALL questions into a **single message**.
+
+The candidate replies with **letters only** (e.g., "1-A, 2-B, 3-D").
+
+Wait for the candidate's response before proceeding.
+
+### 6d — Incorporate Answers
+
+Incorporate the candidate's answers into the knowledge base context before continuing to Step 7.
+
+↓
+
+Step 7
 
 Extract important keywords from the JD.
 
@@ -274,7 +334,7 @@ Databases
 
 ↓
 
-Step 7
+Step 8
 
 Score every project against the JD to determine ordering.
 
@@ -306,7 +366,7 @@ Achievements are NOT scored for the Projects section. They appear only in the Ce
 
 ↓
 
-Step 8
+Step 9
 
 Rewrite every section.
 
@@ -338,25 +398,25 @@ Education
 
 ↓
 
-Step 9
+Step 10
 
 Apply ATS optimization.
 
 ↓
 
-Step 10
+Step 11
 
 Validate against resume budget (engine/03_resume_budget.md).
 
 ↓
 
-Step 11
+Step 12
 
 Validate truthfulness.
 
 ↓
 
-Step 12
+Step 13
 
 Generate draft resume.
 
@@ -372,13 +432,13 @@ Wait for the candidate's response before proceeding.
 
 ↓
 
-Step 13
+Step 14
 
 Iterative Refinement Loop.
 
 This step is **mandatory** unless the candidate types 'approve' immediately.
 
-### 13a — Handle Feedback
+### 14a — Handle Feedback
 
 For each piece of feedback received:
 
@@ -387,13 +447,13 @@ For each piece of feedback received:
 - Present the rewritten section in isolation.
 - Ask: "Does this look better, or would you like further changes?"
 
-### 13b — Constraints During Refinement
+### 14b — Constraints During Refinement
 
 - Do NOT relax the Truth Guard. Never introduce fabricated information during refinement.
 - Do NOT violate the resume budget. If a rewrite is too long, compress before presenting.
 - Do NOT change the primary role unless the candidate explicitly requests it.
 
-### 13c — Repeat Until Approved
+### 14c — Repeat Until Approved
 
 Continue the refinement loop until the candidate types **'approve'**.
 
@@ -405,7 +465,7 @@ After 3 rounds, ask:
 
 ↓
 
-Step 14
+Step 15
 
 Generate final resume.
 
@@ -639,7 +699,9 @@ Before returning the resume, verify
 
 ✓ Role Classification Report was generated
 
-✓ Correct target role selected (no candidate confirmation required)
+✓ Gap Analysis MCQ step was completed before bullet generation
+
+✓ Correct target role selected (candidate was given one turn to override)
 
 ✓ No Summary section present
 

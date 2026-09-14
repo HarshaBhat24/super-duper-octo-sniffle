@@ -59,7 +59,7 @@ Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
 
 ↓
 
@@ -135,7 +135,7 @@ Developed TypeScript UI automation of the enterprise application, supporting aut
 
 Priority
 
-★★★★☆
+★★★★★
 
 Focus
 
@@ -178,6 +178,37 @@ Performed an authorized black-box assessment of a SaaS application evaluating au
 Example Bullet
 
 Validated business-logic flaws including Broken Object-Level Authorization and delivered remediation recommendations covering IAM improvements and least-privilege enforcement.
+
+Example Bullet
+
+Produced technical remediation reports recommending IAM redesign, CORS hardening, and rate-limiting middleware enforcement.
+
+---
+
+# CipherCrack
+
+Priority
+
+★★★☆☆
+
+Focus
+
+- Security Tooling
+- Cryptography
+- Automation
+- Python
+
+Suppress
+
+- Educational language
+
+Example Bullet
+
+Developed an offline Python security toolkit implementing classical cryptographic algorithms with modular CLI architecture.
+
+Example Bullet
+
+Built reusable script execution workflows to automate cryptanalysis during Capture The Flag competitions.
 
 ---
 
@@ -282,7 +313,7 @@ Highest Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 2–3 dynamically selected project slots
+✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
 
 ✓ Certifications & Achievements merged into single section
 

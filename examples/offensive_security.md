@@ -64,7 +64,7 @@ Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
 
 ↓
 
@@ -89,24 +89,29 @@ Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
 Focus
 
 - SSRF exploitation via unvalidated webhook URL with OOB confirmation (interactsh)
-- Account takeover via invitation flow forced password override — full privilege escalation chain documented
-- SQL wildcard injection enabling full organization data wipe in a single authenticated request
+- Account takeover via invitation flow forced password override — full privilege escalation chain
+- SQL wildcard injection enabling mass-deletion in a single authenticated request
 - Prompt injection on open LLM endpoint — raw input passed verbatim to model
 - Cross-tenant deletion via foreign UUID injection
 - Attack chain documentation with CVSS scoring
-- Manual testing methodology (OWASP WSTG)
+- Full-scope manual testing methodology (OWASP WSTG)
+
+Suppress
+
+- Audit logging gaps (save for Detection Engineering)
+- RLS detail (save for Product Security)
 
 Example Bullet
 
-Exploited SSRF via unvalidated webhook URL to demonstrate internal network access; confirmed OOB callback using interactsh and delivered full attack chain with CVSS-scored findings and TypeScript remediation.
+Exploited SSRF via unvalidated webhook URL to demonstrate internal network access; confirmed out-of-band interaction using interactsh and documented attack chain with CVSS scoring.
 
 Example Bullet
 
-Discovered privilege escalation via invitation flow forced password override, tracing attack path from low-privilege invite to full account takeover on any target email; identified cross-tenant deletion via foreign UUID injection.
+Discovered account takeover via invitation flow forced password override; traced privilege escalation path from low-privilege invite token to full administrative account takeover.
 
 Example Bullet
 
-Identified SQL wildcard injection in admin delete handler enabling full organization data wipe in a single authenticated request; crafted and validated mass-deletion payload and delivered SQL-level remediation.
+Identified SQL wildcard injection in admin delete handler enabling full organization data wipe in a single authenticated request; validated mass-deletion impact and delivered remediation.
 
 ---
 
@@ -114,16 +119,15 @@ Identified SQL wildcard injection in admin delete handler enabling full organiza
 
 Focus
 
-- PowerShell scripting and automation
-- VM environment knowledge (agent-VM ADO pipelines)
-- Linux systems
+- Linux
+- Scripting (PowerShell, Bash)
 - Automation
+- CI/CD pipeline knowledge
 
 Suppress
 
 - QA terminology
 - Regression
-- Pipeline-as-code / Jenkinsfile authoring as primary framing
 
 Star Bullet
 
@@ -191,6 +195,37 @@ Performed an authorized black-box assessment of a SaaS application targeting aut
 Example Bullet
 
 Identified Broken Object-Level Authorization through manual request manipulation and validated cross-user access control weaknesses via direct API calls.
+
+Example Bullet
+
+Documented full multi-stage attack chains with CVSS scoring and delivered actionable code-level remediation to address identified vulnerabilities.
+
+---
+
+# VigiLynx
+
+Priority
+
+★★★☆☆
+
+Focus
+
+- Threat Detection Tooling
+- VirusTotal API Integration
+- Python & Machine Learning
+
+Suppress
+
+- Frontend UI
+- Styling
+
+Example Bullet
+
+Engineered browser-based security tooling using a Random Forest model to analyze URL features and flag phishing threats.
+
+Example Bullet
+
+Integrated VirusTotal API threat intelligence for automated payload analysis and real-time threat detection.
 
 ---
 
@@ -298,7 +333,7 @@ Highest Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 2–3 dynamically selected project slots
+✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
 
 ✓ Certifications & Achievements merged into single section
 

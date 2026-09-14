@@ -30,7 +30,7 @@ career-engine/
 │   └── 04_company_intelligence.md    # Company type classification and tone modifiers
 │
 ├── prompts/
-│   └── master_resume_prompt.md       # Orchestration prompt — the 17-step generation pipeline
+│   └── master_resume_prompt.md       # Orchestration prompt — the 15-step generation pipeline
 │
 ├── examples/
 │   ├── appsec.md                     # Application Security Engineer
@@ -42,7 +42,11 @@ career-engine/
 │   ├── api_security.md               # API Security Engineer
 │   ├── offensive_security.md         # Offensive Security Engineer
 │   ├── detection_engineer.md         # Detection Engineer
-│   └── soc.md                        # SOC Analyst
+│   ├── soc.md                        # SOC Analyst
+│   ├── penetration_tester.md         # Penetration Tester
+│   ├── threat_intel.md               # Threat Intelligence Analyst
+│   ├── security_research.md          # Security Research Engineer
+│   └── purple_team.md                # Purple Team
 │
 ├── outputs/
 │   └── log.md                        # Resume version tracking log
@@ -189,7 +193,7 @@ Incorporate Candidate Answers
 
 ↓
 
-Role Classification Report — Score all 14 roles; output top 3 with confidence %; ask candidate to confirm
+Role Classification Report — Score all 14 roles; output top 3 with confidence %; ask "Proceeding with [Primary Role] — reply with a different role name to override, or anything else to continue." Wait one turn before proceeding.
 
 ↓
 
@@ -379,7 +383,7 @@ Mindpex must always be described as **"Freelance VAPT Engagement — Enterprise 
 | Project Slot 2 (second JD score) | Exactly 3 bullets, max 2 lines each |
 | Project Slot 3 (lowest JD score) | Exactly 2 bullets, max 2 lines each |
 | Skills | 12–15 items |
-| Achievements | Max 4 |
+| Achievements | Max 3 |
 | Certifications | Exactly 2 |
 | Resume Length | One page |
 

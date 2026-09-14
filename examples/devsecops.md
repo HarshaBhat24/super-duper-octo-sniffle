@@ -57,7 +57,7 @@ Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
 
 ↓
 
@@ -152,6 +152,58 @@ Automated malware detection and alert generation workflows, integrating browser-
 Example Bullet
 
 Implemented a security dashboard for visualizing phishing detections, malware scan history, and URL risk scores with Supabase-backed storage.
+
+---
+
+# Security Assessment
+
+Priority
+
+★★★★☆
+
+Focus
+
+- Black-box security testing
+- API & Auth validation
+- Security gates & remediation design
+
+Example Bullet
+
+Performed an authorized black-box assessment evaluating authentication, authorization, and API security across an enterprise SaaS platform.
+
+Example Bullet
+
+Identified access-control and configuration weaknesses including Broken Object-Level Authorization (BOLA) using Burp Suite and ffuf.
+
+Example Bullet
+
+Delivered automated security verification procedures and remediation guidance to establish security gates within development pipelines.
+
+---
+
+# CipherCrack
+
+Priority
+
+★★★☆☆
+
+Focus
+
+- Security Tooling
+- Automation
+- Python
+
+Suppress
+
+- Educational language
+
+Example Bullet
+
+Developed an offline Python security toolkit implementing 9 classical ciphers with modular CLI architecture and automated execution.
+
+Example Bullet
+
+Automated cryptanalysis workflows to support rapid vulnerability verification and offline security tool development.
 
 ---
 
@@ -255,7 +307,7 @@ High Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 2–3 dynamically selected project slots
+✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
 
 ✓ Certifications & Achievements merged into single section
 

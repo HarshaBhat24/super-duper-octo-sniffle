@@ -61,7 +61,7 @@ Experience (Mindpex + Epicor — both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
 
 ↓
 
@@ -182,6 +182,37 @@ Example Bullet
 
 Developed authenticated backend API services and dashboards for persistent threat logging, malware scan history, and user-specific security event monitoring.
 
+Example Bullet
+
+Implemented secure REST API endpoints and Supabase backend services for threat log aggregation and real-time security statistics.
+
+---
+
+# CipherCrack
+
+Priority
+
+★★★☆☆
+
+Focus
+
+- Security Tooling
+- Cryptography
+- Automation
+- Python
+
+Suppress
+
+- Educational language
+
+Example Bullet
+
+Developed an offline Python cryptanalysis toolkit implementing classical cryptographic algorithms with modular CLI architecture.
+
+Example Bullet
+
+Automated brute-force workflows and cryptanalysis scripts to accelerate security challenge resolution.
+
 ---
 
 # Skills
@@ -289,7 +320,7 @@ Highest Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 2–3 dynamically selected project slots
+✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
 
 ✓ Certifications & Achievements merged into single section
 

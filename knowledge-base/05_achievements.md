@@ -25,10 +25,10 @@ Compact list format. All entries on consecutive lines, no sub-bullets.
 Example:
 ```
 Certifications & Achievements
-- CompTIA Security+ (SY0-701) — June 2026
-- ISC2 Certified in Cybersecurity (CC)
-- Winner — HackAthena'25 Cybersecurity Track (National Hackathon)
-- 17th / 662 Teams — KJSSE CTF 2.0 (National CTF)
+- CompTIA Security+ (SY0-701) - June 2026
+- ISC2 Certified in Cybersecurity (CC) - Feb 2026
+- Winner - HackAthena'25 Cybersecurity Track (National Hackathon)
+- 17th / 662 Teams - KJSSE CTF 2.0 (National CTF)
 - Solved 200+ CTF Challenges | Top 10% TryHackMe
 ```
 
@@ -178,7 +178,7 @@ Priority
 
 Description
 
-Selected as a finalist (Top 1%) in India's Smart India Hackathon, competing against 500+ teams — demonstrating national-level technical competition standing.
+Selected as a finalist (Top 1%) in India's Smart India Hackathon, competing against 500+ teams - demonstrating national-level technical competition standing.
 
 Demonstrated
 
@@ -194,7 +194,7 @@ Applicable Roles
 
 ★★★☆☆
 
-All (low priority — use only when achievements 1–4 are not a strong enough fit)
+All (low priority - use only when achievements 1–4 are not a strong enough fit)
 
 ATS Keywords
 
@@ -385,7 +385,7 @@ ATS Keywords
 
 Completed
 
-2025
+Feb 2026
 
 Priority
 
@@ -601,15 +601,33 @@ Order
 
 1.
 
-CompTIA Security+
+HackAthena
 
 2.
 
-HackAthena
+CTF Experience (200+)
 
 3.
 
-CTF Experience
+TryHackMe Top 10%
+
+---
+
+## Purple Team
+
+Order
+
+1.
+
+HackAthena
+
+2.
+
+CTF Experience (200+)
+
+3.
+
+TryHackMe Top 10%
 
 ---
 
@@ -642,7 +660,7 @@ Order
 1. HackAthena Winner
 2. CTF Experience (200+)
 
-Rationale: HackAthena demonstrates practical security tooling and web-security thinking. CTF experience shows web exploitation and reconnaissance skill — core to API security assessment.
+Rationale: HackAthena demonstrates practical security tooling and web-security thinking. CTF experience shows web exploitation and reconnaissance skill - core to API security assessment.
 
 ---
 

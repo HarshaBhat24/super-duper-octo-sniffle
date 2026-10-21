@@ -58,11 +58,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (Agent should select 2)
 
 ↓
 
@@ -82,7 +82,8 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
@@ -107,6 +108,10 @@ Applied static analysis methodologies to evaluate PostgreSQL Row-Level Security 
 
 ## Epicor Software
 
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
+
 Focus
 
 - Root cause analysis
@@ -123,7 +128,7 @@ Suppress
 
 Star Bullet
 
-Spearheaded root cause analysis of persistent pipeline failures; engineered a PowerShell automation script deployed across 5 VMs via ADO pipelines to process and clear ~15 GB of logs weekly, restoring stability.
+Spearheaded root cause analysis of persistent pipeline failures; engineered a PowerShell automation script deployed across 5 VMs via ADO pipelines to process and clear ~ 50 GB of logs weekly, restoring stability.
 
 Example Bullet
 
@@ -189,6 +194,10 @@ Example Bullet
 
 Analyzed authentication and authorization mechanisms, identifying critical Broken Object-Level Authorization (BOLA) vulnerabilities through methodical request manipulation and cross-user testing.
 
+Example Bullet
+
+Formulated comprehensive vulnerability reproduction procedures and remediation documentation addressing authorization bypass and access-control misconfigurations.
+
 ---
 
 # VigiLynx
@@ -210,11 +219,15 @@ Suppress
 
 Example Bullet
 
-Researched and developed a browser extension utilizing Random Forest machine learning for malicious URL detection, achieving 97% accuracy based on comprehensive feature extraction.
+Researched and developed a browser extension utilizing Random Forest machine learning for malicious URL detection based on comprehensive feature extraction.
 
 Example Bullet
 
 Integrated the VirusTotal API to enrich threat intelligence and validate analytical models, demonstrating practical application of detection research in web environments.
+
+Example Bullet
+
+Architected an automated threat-classification pipeline correlating multi-engine antivirus verdicts with client-side heuristic features to detect zero-hour phishing domains.
 
 ---
 
@@ -258,13 +271,15 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
+
+*(Can adjust based on available page space; select 2-3)*
 
 1.
 
@@ -276,23 +291,21 @@ Top 10% TryHackMe
 
 3.
 
-Finalist — KJSSE CTF 2.0 (17th of 662 teams)
+Finalist - KJSSE CTF 2.0 (17th of 662 teams)
 
 4.
 
-Winner — HackAthena
+Winner - HackAthena'25 Cybersecurity Track
 
 ---
 
 # Education
 
-Bachelor of Engineering
+New Horizon College of Engineering, Bengaluru
 
-Information Science and Engineering
+Nov 2022 - July 2026
 
-CGPA
-
-8.57
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -323,7 +336,7 @@ High Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 3 dynamically selected project slots in priority order
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
@@ -333,9 +346,9 @@ High Priority
 
 ✓ SSRF, prompt injection, SQL wildcard injection mentioned in Mindpex bullets
 
-✓ CompTIA Security+ included
+✓ CompTIA Security+ (June 2026) included
 
-✓ ISC2 CC included
+✓ ISC2 CC (Feb 2026) included
 
 ✓ KJSSE CTF 17/662 included
 
@@ -343,13 +356,17 @@ High Priority
 
 ✓ TryHackMe Top 10% included
 
-✓ Two to three bullets per section
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
+
+✓ Three bullets per section
+
+✓ One page
 
 ✓ ATS optimized
 
 ✓ No fabricated information
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
+✓ Mindpex described as "Security Consultant (Freelancer) - Mindpex"
 
 ---
 

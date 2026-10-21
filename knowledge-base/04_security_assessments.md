@@ -587,11 +587,9 @@ Mention only when JD requests
 
 Treat this assessment as professional security experience.
 
-It occupies one of the 3 project slots, ordered by JD alignment score.
+It occupies one of the 2 project slots when selected based on target JD alignment.
 
-- If this project scores highest or second: it gets 3 bullets.
-- If this project scores lowest: it gets 2 bullets.
-
+When selected, it receives exactly 3 bullets.
 
 # Never Mention
 
@@ -612,9 +610,7 @@ Instead describe the work using generalized, professional terminology.
 
 # Resume Bullet Rules
 
-Bullet count depends on slot assignment:
-- If this project is in Slot 1 or Slot 2 (highest JD scores): generate exactly 3 bullets.
-- If this project is in Slot 3 (lowest JD score): generate exactly 2 bullets.
+When selected as one of the 2 projects, generate exactly 3 bullets.
 
 Maximum 2 lines per bullet.
 

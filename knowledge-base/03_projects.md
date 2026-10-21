@@ -27,19 +27,16 @@ A separate Security Assessment exists in:
 
 Mindpex VAPT Freelance is ALWAYS in the Experience section. It does NOT occupy a project slot under any circumstances.
 
-## Project Slot Rules
+## Project Selection Rules
 
-The Projects section always contains exactly 3 slots.
+The candidate has three available projects:
+- VigiLynx (Phishing/Malware detection, Chrome Extension, ML, VirusTotal)
+- CipherCrack (Python cryptanalysis toolkit, 9 classical ciphers, CTF automation)
+- Authorized Black-box Web Application Security Assessment (WSTG, Burp Suite, ffuf, BOLA, OAuth)
 
-All three projects are always included: VigiLynx, CipherCrack, and Black-box Security Assessment.
+The generator selects exactly **2 of the 3 projects** based on the target Job Description alignment.
 
-Score all three against the JD using the rubric in engine/01_resume_generation_rules.md.
-Order slots from highest to lowest JD alignment score.
-
-Bullet allocation by slot:
-- Slot 1 (highest JD score): 3 bullets
-- Slot 2 (second JD score):  3 bullets
-- Slot 3 (lowest JD score):  2 bullets
+Both selected projects receive **exactly 3 bullets each** (6 project bullets total).
 
 Mindpex VAPT Freelance is ALWAYS in the Experience section. It does NOT occupy a project slot under any circumstances.
 
@@ -55,6 +52,7 @@ Mindpex VAPT Freelance is ALWAYS in the Experience section. It does NOT occupy a
 | SOC | VigiLynx | CipherCrack | Security Assessment |
 | Threat Intelligence | VigiLynx | CipherCrack | Security Assessment |
 | Security Research | CipherCrack | Security Assessment | VigiLynx |
+| Purple Team | Security Assessment | VigiLynx | CipherCrack |
 | AI / LLM Security | VigiLynx | Security Assessment | CipherCrack |
 | API Security | Security Assessment | VigiLynx | CipherCrack |
 | Offensive Security | CipherCrack | Security Assessment | VigiLynx |
@@ -68,6 +66,14 @@ Mindpex VAPT Freelance is ALWAYS in the Experience section. It does NOT occupy a
 Project Type
 
 Hackathon Project
+
+Live Web Application URL
+
+https://vigilynx-web.vercel.app/
+
+GitHub Repository
+
+https://github.com/Harshabhat24/VigiLynx
 
 Duration
 
@@ -874,9 +880,7 @@ Instead emphasize
 
 # Resume Generation Rules
 
-Slot 1 and Slot 2 (highest JD scores): exactly three bullets each.
-
-Slot 3 (lowest JD score): exactly two bullets.
+Both selected projects receive exactly three bullets each (6 project bullets total).
 
 Maximum two lines per bullet.
 

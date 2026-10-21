@@ -55,11 +55,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
+Projects (Agent should select 2)
 
 ↓
 
@@ -79,15 +79,16 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
-- Direct prompt injection on open `/groq/query` FastAPI endpoint — raw user input passed verbatim to LLM with no input sanitization
-- Indirect prompt injection via persistent employee memory poisoning — attacker-controlled transcript stored in long-term memory, influencing future LLM outputs
-- LLM context store with zero tenant isolation — any caller could read/write any employee memory by UUID
-- Unvalidated LLM context field on recommendation endpoint — no provenance or trust boundary enforcement
-- Raw LLM exception messages returned in API response — infrastructure disclosure
+- Direct prompt injection on open `/groq/query` FastAPI endpoint - raw user input passed verbatim to LLM with no input sanitization
+- Indirect prompt injection via persistent employee memory poisoning - attacker-controlled transcript stored in long-term memory, influencing future LLM outputs
+- LLM context store with zero tenant isolation - any caller could read/write any employee memory by UUID
+- Unvalidated LLM context field on recommendation endpoint - no provenance or trust boundary enforcement
+- Raw LLM exception messages returned in API response - infrastructure disclosure
 
 Example Bullet
 
@@ -95,7 +96,7 @@ Exploited direct prompt injection on an unauthenticated FastAPI LLM endpoint, de
 
 Example Bullet
 
-Identified indirect prompt injection via persistent employee memory poisoning — attacker-controlled transcripts stored in long-term LLM memory flowed into subsequent model prompts, enabling persistent influence over AI-generated outputs.
+Identified indirect prompt injection via persistent employee memory poisoning - attacker-controlled transcripts stored in long-term LLM memory flowed into subsequent model prompts, enabling persistent influence over AI-generated outputs.
 
 Example Bullet
 
@@ -104,6 +105,10 @@ Discovered in-memory LLM context store with zero tenant isolation; any authentic
 ---
 
 ## Epicor Software
+
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
 
 Focus
 
@@ -119,7 +124,7 @@ Suppress
 
 Star Bullet
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
@@ -210,6 +215,10 @@ Example Bullet
 
 Built reusable script execution workflows to automate cryptanalysis during Capture The Flag competitions.
 
+Example Bullet
+
+Applied automated frequency analysis and key-space reduction algorithms to decrypt encrypted artifacts across multiple cipher implementations.
+
 ---
 
 # Skills
@@ -252,17 +261,17 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
 
 1.
 
-Winner — HackAthena'25 Cybersecurity Track
+Winner - HackAthena'25 Cybersecurity Track
 
 2.
 
@@ -272,13 +281,11 @@ Solved 200+ CTF challenges
 
 # Education
 
-Bachelor of Engineering
+New Horizon College of Engineering, Bengaluru
 
-Information Science and Engineering
+Nov 2022 - July 2026
 
-CGPA
-
-8.57
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -313,7 +320,7 @@ Highest Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
@@ -327,21 +334,23 @@ Highest Priority
 
 ✓ Zero tenant isolation finding covered
 
-✓ CompTIA Security+ included
+✓ CompTIA Security+ (June 2026) included
 
-✓ ISC2 CC included
+✓ ISC2 CC (Feb 2026) included
 
 ✓ HackAthena Winner included
 
 ✓ 200+ CTF challenges included
 
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
+
 ✓ Three bullets per section
 
 ✓ One-page resume
 
-✓ No fabricated information
+✓ Mindpex described as "Security Consultant (Freelancer) - Mindpex"
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
+✓ No fabricated information
 
 ---
 
@@ -354,6 +363,6 @@ AI/LLM Security resumes should communicate the ability to
 - Test AI-augmented applications with offensive methodology
 - Understand multi-tenant isolation risks in AI systems
 
-This role is distinct from AppSec in that the primary attack surface is the LLM itself — not just traditional web application vulnerabilities.
+This role is distinct from AppSec in that the primary attack surface is the LLM itself - not just traditional web application vulnerabilities.
 
 Security concepts should always precede implementation technologies.

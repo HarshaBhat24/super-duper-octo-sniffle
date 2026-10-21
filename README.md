@@ -14,7 +14,7 @@ The objective is to generate truthful, role-specific resumes while maximizing al
 career-engine/
 │
 ├── knowledge-base/
-│   ├── 00_changelog.md               # KB update log — track new skills, certs, projects
+│   ├── 00_changelog.md               # KB update log - track new skills, certs, projects
 │   ├── 01_candidate_profile.md       # Master profile, skills, tools, Truth Guard
 │   ├── 02_experience.md              # Experience index, project slot rules
 │   ├── 03_projects.md                # VigiLynx + CipherCrack project KB
@@ -30,7 +30,7 @@ career-engine/
 │   └── 04_company_intelligence.md    # Company type classification and tone modifiers
 │
 ├── prompts/
-│   └── master_resume_prompt.md       # Orchestration prompt — the 15-step generation pipeline
+│   └── master_resume_prompt.md       # Orchestration prompt - the 15-step generation pipeline
 │
 ├── examples/
 │   ├── appsec.md                     # Application Security Engineer
@@ -173,79 +173,39 @@ Read Job Description
 
 ↓
 
-Company Intelligence — Classify company type; apply tone modifier; output Company Intelligence Report
+Apply Company Intelligence (tone & verb preference from 04_company_intelligence.md)
 
 ↓
 
-Gap Analysis — Tag each JD requirement as COVERED / PARTIAL / MISSING
+Direct JD & Skills Alignment (silently cross-reference under Truth Guard; no interactive MCQ questionnaire, no role classification report wait, no phantom steps)
 
 ↓
 
-Consolidated MCQ Q&A:
-  — MISSING tool/tech: present MCQ with exact JD tool + 2–3 alternatives + None option
-  — MISSING concept: A) Yes (describe below) / B) No
-  — PARTIAL depth: MCQ with granularity levels
-  Wait for candidate response before proceeding.
+Select 2 of 3 Projects based on target JD (3 bullets each)
 
 ↓
 
-Incorporate Candidate Answers
+Rewrite Experience Bullets (Epicor: 2 bullets for Associate Product Developer, 2 bullets for Intern; Mindpex: 3 bullets)
 
 ↓
 
-Role Classification Report — Score all 14 roles; output top 3 with confidence %; ask "Proceeding with [Primary Role] — reply with a different role name to override, or anything else to continue." Wait one turn before proceeding.
+Generate Dynamic Skills (all matching candidate + JD skills, plus valuable verified additions)
 
 ↓
 
-Experience Structure Decision — single unified layout for all roles
+Generate Achievements & Certifications (CompTIA Security+ June 2026, ISC2 CC Feb 2026, max 3 achievements)
 
 ↓
 
-Extract ATS Keywords
+Validate Resume Budget (strict 1-page fit, bullet constraints) and Truth Guard
 
 ↓
 
-Score and Rank All 3 Projects by JD alignment
+Direct Document Generation - Produce final resume directly matching reference PDF layout (Clean Markdown + Self-contained Print-Ready HTML)
 
 ↓
 
-Rewrite Experience Bullets (3 per entry, max 2 lines each)
-
-↓
-
-Generate Skills (12–15 items, reordered by role and company modifier)
-
-↓
-
-Generate Achievements (max 3, dynamically ordered by role)
-
-↓
-
-Validate Resume Budget (one page, all counts verified)
-
-↓
-
-Perform Truth Validation (no invented claims)
-
-↓
-
-Generate Draft Resume — present to candidate
-
-↓
-
-Iterative Refinement Loop — targeted section rewrites; repeat until 'approve' (max 3 rounds)
-
-↓
-
-Generate Final Resume
-
-↓
-
-ATS Analysis
-
-↓
-
-Competing Candidate Benchmark — 5 items tagged YOU HAVE IT / YOU'RE CLOSE / GAP TO BUILD + Priority Gap advice
+ATS Analysis & Competing Candidate Benchmark (5 items tagged + Priority Gap advice)
 ```
 
 Never skip any step.
@@ -279,20 +239,18 @@ The generator automatically determines the closest role from the supplied Job De
 
 ---
 
-# Layout Rules (All Roles — Unified)
+# Layout Rules (All Roles - Unified)
 
 There is ONE layout. It applies to ALL roles with no exceptions.
 
-- Experience: always Mindpex VAPT Freelance + Epicor Software (both, always)
-- Projects: always all 3 entries (VigiLynx, CipherCrack, Security Assessment)
-- Skills: 12–15 items, reordered dynamically by role
+- Experience: always Epicor Software + Mindpex (both, always)
+- Projects: exactly 2 entries selected out of 3 (VigiLynx, CipherCrack, Security Assessment) based on target JD alignment
+- Skills: dynamic list matching JD requirements + verified candidate skills
 - Achievements: max 3, dynamically ordered by role
-- Certifications: exactly 2 (CompTIA Security+, ISC2 CC)
+- Certifications: exactly 2 (CompTIA Security+ - June 2026, ISC2 CC - Feb 2026)
 
-Bullet allocation for Projects is determined by JD alignment score:
-- Slot 1 (highest score): 3 bullets
-- Slot 2 (second score):  3 bullets
-- Slot 3 (lowest score):  2 bullets
+Bullet allocation:
+- Exactly 3 bullets per project for both selected projects (6 project bullets total)
 
 ---
 
@@ -369,22 +327,21 @@ Instead, generalize while preserving
 - demonstrated skills
 - engineering depth
 
-Mindpex must always be described as **"Freelance VAPT Engagement — Enterprise SaaS Platform"** on the resume.
+Mindpex is titled **"Security Consultant (Freelancer) - Mindpex"** on the resume (or **"Freelance VAPT Engagement - Enterprise SaaS Platform"** if client confidentiality is explicitly requested).
 
 ---
 
-# Resume Constraints (All Roles — Unified)
+# Resume Constraints (All Roles - Unified)
 
 | Section | Constraint |
 |---|---|
-| Experience Entry 1 (Epicor) | Exactly 3 bullets, max 2 lines each |
-| Experience Entry 2 (Mindpex VAPT) | Exactly 3 bullets, max 2 lines each |
-| Project Slot 1 (highest JD score) | Exactly 3 bullets, max 2 lines each |
-| Project Slot 2 (second JD score) | Exactly 3 bullets, max 2 lines each |
-| Project Slot 3 (lowest JD score) | Exactly 2 bullets, max 2 lines each |
-| Skills | 12–15 items |
+| Experience Entry 1 (Epicor) | Exactly 4 bullets total (2 for Associate Product Developer, 2 for Intern) |
+| Experience Entry 2 (Mindpex) | Exactly 3 bullets, max 2 lines each (Security Consultant (Freelancer) - Mindpex) |
+| Project Slot 1 (highest JD match) | Exactly 3 bullets, max 2 lines each |
+| Project Slot 2 (second JD match) | Exactly 3 bullets, max 2 lines each |
+| Skills | Dynamic list (matching candidate + JD skills + valuable additions) |
 | Achievements | Max 3 |
-| Certifications | Exactly 2 |
+| Certifications | Exactly 2 (CompTIA Security+ - June 2026, ISC2 CC - Feb 2026) |
 | Resume Length | One page |
 
 ---
@@ -431,20 +388,30 @@ Using this repository, an LLM should be capable of generating
 - Project Rewriting
 - Experience Rewriting
 - Skills Optimization
-- Summary Generation
 - Achievement Selection
 
 ---
 
-# Gap Analysis — MCQ Format
+# Zero-Pause Direct Generation & PDF Layout Specification
 
-During Step 5b of the pipeline, the AI conducts interactive gap analysis using **Multiple Choice Questions** rather than open-ended questions.
+The engine operates on a **zero-pause direct generation pipeline**. It does NOT pause to question or verify unknown or missing tools with multiple-choice questionnaires before generating the resume.
 
-- **Missing tool/technology:** Presents the exact JD tool + 2–3 close alternatives + "None" option. Candidate replies with a letter. That exact tool is used in the resume.
-- **Missing concept/process:** A) Yes (describe it) / B) No
-- **Partial experience:** Granularity MCQ — e.g., A) Custom rule writing / B) Ad-hoc usage / C) Conceptual familiarity
+### Handling Unknowns & Gaps
+- The engine cross-references the target JD with the Knowledge Base internally.
+- If a tool or technology mentioned in the JD is missing from the Knowledge Base, the **Truth Guard** strictly forbids inventing or claiming experience with it.
+- The engine dynamically emphasizes the candidate's verified, relevant skills and transferrable security engineering achievements from the Knowledge Base.
 
-All questions are consolidated into a **single message**. Candidate replies with letters only. Answers are incorporated before any resume bullets are written.
+### Direct Document Generation (PDF-Matched Output)
+The LLM outputs the finalized resume immediately, formatted to match the reference PDF layout:
+- **Header:** Centered candidate name (`S HARSHA BHAT`) in bold uppercase, with a centered single contact line featuring live hyperlinks separated by pipes (`|`):
+  `harshabhat666@gmail.com | www.linkedin.com/in/s-harsha-bhat/ | github.com/Harshabhat24 | harsha-bhat.vercel.app/ | 9483022191 | Bengaluru`
+- **Section Headings:** Clean headings (`Experience`, `Projects`, `Skills`, `Certifications and Achievements`, `Education`) with full-width horizontal divider rules beneath each heading.
+- **Experience Entries:** Two-column rows (`Associate Product Developer - Epicor Software, Bengaluru` [Sep 2026 - Present, 2 bullets], `Product Development Intern - Epicor Software, Bengaluru` [Oct 2025 - Sep 2026, 2 bullets], and `Security Consultant (Freelancer) - Mindpex` [July - Aug 2026, 3 bullets]).
+- **Projects Entries:** Two-column rows with project names and clickable repo/live links on left; date ranges on right (exactly 2 projects selected out of 3, 3 bullets each, e.g. VigiLynx with live web app `https://vigilynx-web.vercel.app/`).
+- **Skills:** Bulleted list categorized into bold headings: `● Security: ...`, `● Programming: ...`, `● Operating Systems: ...`, `● Networking: ...`, `● Tools: ...`.
+- **Certifications and Achievements:** Compact bulleted list.
+- **Education:** Institution and dates on line 1, degree and CGPA on line 2.
+- **Output Formats:** Delivered simultaneously in formatted Markdown and standalone print-ready HTML/CSS designed for exact 1-page PDF export via `engine/export_pdf.py` (which disables browser print headers/footers automatically).
 
 ---
 

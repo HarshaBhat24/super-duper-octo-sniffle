@@ -16,7 +16,7 @@ Apply BEFORE selecting the target role.
 
 # Company Type Classification
 
-## Step 1 — Extract Company Signals
+## Step 1 - Extract Company Signals
 
 From the Job Description, identify:
 
@@ -28,7 +28,7 @@ From the Job Description, identify:
 
 ---
 
-## Step 2 — Classify Company Type
+## Step 2 - Classify Company Type
 
 Map signals to ONE primary company type:
 
@@ -147,19 +147,9 @@ Tone
 
 ---
 
-## Step 3 — Apply Company Type Modifier
+## Step 3 - Apply Company Type Modifier
 
 After classifying the company type, apply the following to the resume:
-
-### Summary
-
-Adjust framing to match company type:
-
-- Startup → *"built and owned"*, *"designed from scratch"*
-- Enterprise → *"implemented within established workflows"*, *"scaled existing practices"*
-- Big Tech → *"automated at scale"*, *"embedded in SDLC"*
-- Consultancy → *"delivered findings across"*, *"assessed and documented"*
-- Government → *"applied frameworks"*, *"maintained compliance"*
 
 ### Bullet Tone
 
@@ -181,7 +171,7 @@ Adjust action verb preference by company type:
 
 ---
 
-## Step 4 — Unknown Company
+## Step 4 - Unknown Company
 
 If company type cannot be determined from signals:
 
@@ -197,9 +187,9 @@ Do not invent company details.
 
 ---
 
-## Step 5 — Output Company Intelligence Report
+## Step 5 - Output Company Intelligence Report
 
-Before proceeding to Gap Analysis, output:
+Before proceeding to Role Classification and Keyword Extraction, output:
 
 ```
 Company Intelligence Report
@@ -212,7 +202,7 @@ Applied Modifier: [summary of tone/emphasis changes]
 
 Do NOT ask the candidate to confirm this unless confidence is Low.
 
-If confidence is Low, ask: "I classified this as [type] — does that sound right?"
+If confidence is Low, ask: "I classified this as [type] - does that sound right?"
 
 ---
 

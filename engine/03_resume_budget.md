@@ -32,7 +32,7 @@ remove low-impact information rather than compressing everything.
 
 ---
 
-# Layout — Unified (All Roles)
+# Layout - Unified (All Roles)
 
 There is ONE layout. It applies to all roles.
 
@@ -43,13 +43,13 @@ There is no Layout A or Layout B.
 ```
 [Header]
 [Experience]
-  1. Mindpex Security Consulting — Freelance VAPT Engagement — Enterprise SaaS Platform
-  2. Epicor Software — Product Development Intern
-[Projects & Key Achievements]
-  Always 3 entries — all three projects (scored and ordered by JD alignment)
-  Slot 1 (highest JD score): 3 bullets
-  Slot 2 (second score):     3 bullets
-  Slot 3 (lowest score):     2 bullets
+  1. Associate Product Developer - Epicor Software, Bengaluru (2 bullets)
+     Product Development Intern - Epicor Software, Bengaluru (2 bullets)
+  2. Security Consultant (Freelancer) - Mindpex (3 bullets)
+[Projects]
+  Exactly 2 entries selected out of 3 based on target JD alignment:
+  Slot 1: 3 bullets
+  Slot 2: 3 bullets
 [Skills]
 [Certifications & Achievements]
 [Education]
@@ -87,11 +87,12 @@ Entry 1: Mindpex VAPT Freelance
 - Max 2 lines per bullet
 - Preferred length: 28–36 words
 
-Entry 2: Epicor Software Internship
+Entry 2: Epicor Software (Associate Product Developer & Intern)
 
-- Bullets: exactly 3
+- Associate Product Developer (Sep 2026 – Present): exactly 2 bullets
+- Product Development Intern (Oct 2025 – Sep 2026): exactly 2 bullets
 - Max 2 lines per bullet
-- Preferred length: 28–36 words
+- Preferred length: 26–34 words
 
 ---
 
@@ -99,22 +100,11 @@ Entry 2: Epicor Software Internship
 
 ## Slot Count
 
-Fixed: always 3 slots.
+Fixed: exactly 2 projects selected out of 3 (VigiLynx, CipherCrack, Security Assessment) based on target JD alignment.
 
-All three available projects are always included: VigiLynx, CipherCrack, and Black-box Security Assessment.
+Both selected projects receive exactly 3 bullets each (6 project bullets total).
 
-Score all three against the JD and rank them by alignment. The ranking determines order and bullet allocation:
-
-| Slot | Rank | Bullets |
-|------|------|--------|
-| Slot 1 | Highest JD score | 3 |
-| Slot 2 | Second JD score  | 3 |
-| Slot 3 | Lowest JD score  | 2 |
-
-The 2-bullet slot always goes to the project with the lowest JD alignment score.
-Never arbitrarily assign the 2-bullet slot — it must follow the scoring rubric.
-
-Mindpex is NEVER in the Projects section — it is always in Experience.
+Mindpex is NEVER in the Projects section - it is always in Experience.
 
 ---
 
@@ -122,7 +112,7 @@ Mindpex is NEVER in the Projects section — it is always in Experience.
 
 Categories: 4–6
 
-Total skills: 12–15
+Total skills: Dynamic (include all candidate skills matching JD + valuable verified candidate additions; no rigid numerical limits).
 
 Prioritize security concepts before technologies.
 
@@ -135,8 +125,8 @@ Section Name: **Certifications & Achievements** (merged, compact list)
 Format: Compact list. No sub-bullets. One line per entry.
 
 Certifications (always first, always both):
-1. CompTIA Security+ (SY0-701) — June 2026
-2. ISC2 Certified in Cybersecurity (CC)
+1. CompTIA Security+ (SY0-701) - June 2026
+2. ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements (follow certifications, max 3, dynamically ordered by role):
 - Choose from: HackAthena Winner, KJSSE CTF 17/662, Smart India Hackathon Finalist, CTF 200+, TryHackMe Top 10%
@@ -236,7 +226,7 @@ Examples
 - Top 10%
 - 17/662 Teams
 - 200+ Participants
-- 5 VMs / 15 GB / weekly (Epicor VM cleanup script)
+- 5 VMs /  50 GB / weekly (Epicor VM cleanup script)
 
 Never invent or estimate metrics.
 
@@ -276,22 +266,19 @@ Before returning the resume, verify
 
 ✓ No Summary section
 
-✓ Mindpex VAPT in Experience section (described as "Freelance VAPT Engagement — Enterprise SaaS Platform")
+✓ Epicor in Experience section (Associate Product Developer: Sep 2026 – Present; Product Development Intern: Oct 2025 – Sep 2026)
 
-✓ Epicor in Experience section
+✓ Mindpex in Experience section (titled "Security Consultant (Freelancer) - Mindpex" or "Freelance VAPT Engagement - Enterprise SaaS Platform")
 
-✓ Each experience has exactly 3 bullets
+✓ Experience: Epicor has 4 bullets (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets
 
-✓ Projects: exactly 3 entries scored and ranked by JD alignment
-  - Slot 1 (highest score): exactly 3 bullets
-  - Slot 2 (second score):  exactly 3 bullets
-  - Slot 3 (lowest score):  exactly 2 bullets
+✓ Projects: exactly 2 entries selected based on JD alignment (3 bullets each)
 
-✓ 12–15 skills
+✓ Dynamic skills list tailored to JD (matching skills candidate has + valuable additions)
 
 ✓ Certifications & Achievements section present (compact list format)
 
-✓ Exactly 2 certifications (Security+ first, ISC2 CC second)
+✓ Exactly 2 certifications (CompTIA Security+ first - June 2026, ISC2 CC second - Feb 2026)
 
 ✓ Maximum 3 achievements (dynamically ordered by role)
 
@@ -300,8 +287,6 @@ Before returning the resume, verify
 ✓ No fabricated information
 
 ✓ JD-specific terminology applied
-
-✓ Mindpex not named (described as Freelance VAPT Engagement)
 
 ✓ Epicor VM cleanup PowerShell script bullet present
 

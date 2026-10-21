@@ -53,11 +53,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
+Projects (Agent should select 2)
 
 ↓
 
@@ -77,7 +77,8 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
@@ -102,6 +103,10 @@ Performed static analysis of 47 PostgreSQL migration files identifying unauthent
 
 ## Epicor Software
 
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
+
 Focus
 
 - ADO CI/CD pipeline creation (agent-VM architecture)
@@ -116,7 +121,7 @@ Suppress
 
 Star Bullet
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
@@ -124,7 +129,7 @@ Created ADO CI/CD pipelines using agent-VM architecture to automate enterprise b
 
 Example Bullet
 
-Performed log-based root cause analysis on pipeline and script failures — tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs.
+Performed log-based root cause analysis on pipeline and script failures - tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs.
 
 ---
 
@@ -205,6 +210,10 @@ Example Bullet
 
 Automated cryptanalysis workflows to support rapid vulnerability verification and offline security tool development.
 
+Example Bullet
+
+Applied automated frequency analysis and key-space reduction algorithms to decrypt encrypted artifacts across multiple cipher implementations.
+
 ---
 
 # Skills
@@ -250,17 +259,17 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
 
 1.
 
-Winner — HackAthena'25 Cybersecurity Track
+Winner - HackAthena'25 Cybersecurity Track
 
 2.
 
@@ -270,11 +279,11 @@ Solved 200+ CTF challenges
 
 # Education
 
-Bachelor of Engineering
+New Horizon College of Engineering, Bengaluru
 
-Information Science and Engineering
+Nov 2022 - July 2026
 
-CGPA 8.57
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -307,11 +316,11 @@ High Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
-✓ Skills compressed to 12–15
+✓ Skills dynamically aligned with JD without rigid count caps
 
 ✓ ADO pipeline + VM cleanup script framing in Epicor bullets
 
@@ -321,17 +330,21 @@ High Priority
 
 ✓ No QA terminology
 
-✓ CompTIA Security+ included
+✓ CompTIA Security+ (June 2026) included
 
-✓ ISC2 CC included
+✓ ISC2 CC (Feb 2026) included
 
 ✓ HackAthena Winner included
 
 ✓ 200+ CTF challenges included
 
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
+
 ✓ Three bullets per section
 
 ✓ One-page resume
+
+✓ Mindpex described as "Security Consultant (Freelancer) - Mindpex"
 
 ✓ No fabricated information
 
@@ -343,7 +356,7 @@ Both Mindpex and Epicor are always in the Experience section for this role.
 
 Projects: VigiLynx is the primary project for this role.
 
-Agent selects 2–3 projects based on available page space.
+Agent selects 2 projects based on JD alignment (3 bullets each).
 
 Emphasize
 

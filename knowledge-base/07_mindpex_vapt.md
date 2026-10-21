@@ -6,14 +6,11 @@
 >
 > Resume bullets must always be generated from this document after analyzing the target Job Description.
 >
-> Never disclose:
-> - Client name (Mindpex)
-> - Product name
-> - Internal environment details
-> - Specific finding details verbatim from reports
+> Standard Resume Title:
+> "Security Consultant (Freelancer) - Mindpex"
 >
-> Always describe this engagement generically as:
-> "Freelance VAPT Engagement — Enterprise SaaS Platform"
+> If client confidentiality is explicitly requested, describe generically as:
+> "Freelance VAPT Engagement - Enterprise SaaS Platform"
 
 ---
 
@@ -25,7 +22,7 @@ Vulnerability Assessment and Penetration Testing (VAPT)
 
 Client
 
-Confidential — Enterprise SaaS Platform
+Confidential - Enterprise SaaS Platform
 
 Duration
 
@@ -37,7 +34,7 @@ Individual (Freelance)
 
 Methodology
 
-Mixed — Static Code Analysis + Dynamic Testing + Black-box Enumeration
+Mixed - Static Code Analysis + Dynamic Testing + Black-box Enumeration
 
 Primary Standard
 
@@ -59,23 +56,23 @@ Multi-tenant enterprise SaaS web application
 
 Primary
 
-- Burp Suite — Request interception, auth bypass testing, parameter manipulation, injection payload delivery
-- Nmap — Port scanning, service enumeration, FastAPI port exposure verification
-- ffuf — Endpoint and directory enumeration across 61+ API routes and FastAPI endpoints
-- interactsh — SSRF out-of-band detection, OAST callback server for blind vulnerability confirmation
-- nikto — Web server scanning, HTTP misconfiguration discovery, security header enumeration
-- sqlmap — SQL injection testing, ilike-based wildcard injection validation
-- curl — Unauthenticated API testing, direct FastAPI endpoint probing
+- Burp Suite - Request interception, auth bypass testing, parameter manipulation, injection payload delivery
+- Nmap - Port scanning, service enumeration, FastAPI port exposure verification
+- ffuf - Endpoint and directory enumeration across 61+ API routes and FastAPI endpoints
+- interactsh - SSRF out-of-band detection, OAST callback server for blind vulnerability confirmation
+- nikto - Web server scanning, HTTP misconfiguration discovery, security header enumeration
+- sqlmap - SQL injection testing, ilike-based wildcard injection validation
+- curl - Unauthenticated API testing, direct FastAPI endpoint probing
 
 Supporting
 
-- Browser Developer Tools — CSP analysis, cookie security inspection (HttpOnly, Secure, SameSite), security header review
+- Browser Developer Tools - CSP analysis, cookie security inspection (HttpOnly, Secure, SameSite), security header review
 
 ---
 
 # Audit Domains
 
-## Domain 1 — API Security
+## Domain 1 - API Security
 
 Scope
 
@@ -105,6 +102,10 @@ High Findings
 - Cascading delete logic with soft name-match bypassing UUID-only deletion
 - Auto-provisioning middleware inserting org memberships without explicit invite acceptance
 
+Informational Findings
+
+- Internal API routes lack OpenAPI/Swagger specification, relying solely on inline TypeScript route handlers
+
 Security Concepts
 
 - SSRF
@@ -126,7 +127,7 @@ Applicable Roles
 
 ---
 
-## Domain 2 — AI / LLM Endpoint Security
+## Domain 2 - AI / LLM Endpoint Security
 
 Scope
 
@@ -142,14 +143,18 @@ Activities
 
 Critical Findings
 
-- Direct prompt injection on open `/groq/query` endpoint — raw user input passed verbatim to LLM
-- Indirect prompt injection via persistent employee memory poisoning — attacker-controlled transcript stored in long-term memory, flowing into future LLM prompts
+- Direct prompt injection on open `/groq/query` endpoint - raw user input passed verbatim to LLM
+- Indirect prompt injection via persistent employee memory poisoning - attacker-controlled transcript stored in long-term memory, flowing into future LLM prompts
 
 High Findings
 
-- Unvalidated LLM context field accepted on recommendation endpoint — no provenance enforcement
-- In-memory LLM context store had zero tenant isolation — any caller could read/write any employee memory by UUID
-- Raw exception messages from failed LLM calls returned in API response — infrastructure disclosure
+- Unvalidated LLM context field accepted on recommendation endpoint - no provenance enforcement
+- In-memory LLM context store had zero tenant isolation - any caller could read/write any employee memory by UUID
+- Raw exception messages from failed LLM calls returned in API response - infrastructure disclosure
+
+Informational Findings
+
+- LLM response latency and token consumption metrics are not tracked or logged at the API gateway layer
 
 Security Concepts
 
@@ -172,7 +177,7 @@ Applicable Roles
 
 ---
 
-## Domain 3 — Authentication and Authorization
+## Domain 3 - Authentication and Authorization
 
 Scope
 
@@ -187,10 +192,13 @@ Activities
 - Token-based authorization testing
 - Privilege escalation path analysis
 
-Critical / High Findings
+Critical Findings
 
 - Account takeover via forced password override in org invitation acceptance flow
 - Account takeover via same forced password override pattern in support portal invite flow
+
+High Findings
+
 - First organization member auto-assigned `admin` role regardless of intended role in invitation
 - Unverified account login bypass (code fix existed but not deployed to staging)
 
@@ -219,7 +227,7 @@ Applicable Roles
 
 ---
 
-## Domain 4 — PostgreSQL RLS Policy Review
+## Domain 4 - PostgreSQL RLS Policy Review
 
 Scope
 
@@ -234,19 +242,23 @@ Activities
 
 Critical Findings
 
-- `mindpex_platform_settings` — `USING (true)` with `anon` role granted — unauthenticated read/write of global security configuration (SMTP, MFA enforcement, webhook URLs, lockout durations)
-- `mindpex_sales_partners` — `USING (true)` with no role restriction — any authenticated user could read/write/delete partner bank details and commit payment fraud
+- `mindpex_platform_settings` - `USING (true)` with `anon` role granted - unauthenticated read/write of global security configuration (SMTP, MFA enforcement, webhook URLs, lockout durations)
+- `mindpex_sales_partners` - `USING (true)` with no role restriction - any authenticated user could read/write/delete partner bank details and commit payment fraud
 
 High Findings
 
-- `organization_invitations` — RLS enabled in V47 with zero policies defined — deny-all state breaking invitation acceptance flow
-- `mindpex_support_agents` — Policy missing `TO` clause defaulting to `PUBLIC` — all authenticated users could enumerate support staff PII
-- `support_tickets` — Blanket `USING (true)` policy without `TO` clause overriding tenant-scoped policies via PostgreSQL OR logic — cross-tenant ticket leakage
+- `organization_invitations` - RLS enabled in V47 with zero policies defined - deny-all state breaking invitation acceptance flow
+- `mindpex_support_agents` - Policy missing `TO` clause defaulting to `PUBLIC` - all authenticated users could enumerate support staff PII
+- `support_tickets` - Blanket `USING (true)` policy without `TO` clause overriding tenant-scoped policies via PostgreSQL OR logic - cross-tenant ticket leakage
 
 Medium Findings
 
-- `assign_workspace_slug()` SECURITY DEFINER function granted EXECUTE to any authenticated user — cross-tenant slug assignment possible
-- `profiles` table — no INSERT policy; creation relying silently on SECURITY DEFINER bypass
+- `assign_workspace_slug()` SECURITY DEFINER function granted EXECUTE to any authenticated user - cross-tenant slug assignment possible
+- `profiles` table - no INSERT policy; creation relying silently on SECURITY DEFINER bypass
+
+Informational Findings
+
+- RLS policies configured directly via raw SQL migrations rather than an automated schema management ORM
 
 Security Concepts
 
@@ -269,7 +281,7 @@ Applicable Roles
 
 ---
 
-## Domain 5 — Audit Logging and Audit Trail
+## Domain 5 - Audit Logging and Audit Trail
 
 Scope
 
@@ -285,12 +297,16 @@ Activities
 
 Critical Findings
 
-- `auditAuth()` is an unfinished stub — login, logout, and password reset events never persisted to any storage
+- `auditAuth()` is an unfinished stub - login, logout, and password reset events never persisted to any storage
 - 14+ sensitive admin/employee write operations (employee deletion, org creation, partner management) produced zero audit records
 
 High Findings
 
-- `ip_address` column present in `audit_logs` schema but never populated in any insert — no IP traceability for any audit event
+- `ip_address` column present in `audit_logs` schema but never populated in any insert - no IP traceability for any audit event
+
+Informational Findings
+
+- Audit log table lacks log retention rules and automated archival policies for long-term compliance storage
 
 Security Concepts
 
@@ -310,7 +326,7 @@ Applicable Roles
 
 ---
 
-## Domain 6 — HTTP Security Headers and CSP
+## Domain 6 - HTTP Security Headers and CSP
 
 Scope
 
@@ -326,11 +342,11 @@ Activities
 
 High Findings
 
-- `'unsafe-inline'` present in production `script-src` — neutralizes CSP XSS protection entirely; any injected script executes
+- `'unsafe-inline'` present in production `script-src` - neutralizes CSP XSS protection entirely; any injected script executes
 
 Medium Findings
 
-- No CSP `report-uri` / `report-to` directive — violations invisible to operators
+- No CSP `report-uri` / `report-to` directive - violations invisible to operators
 - `Cross-Origin-Opener-Policy` (COOP) not set
 - `Cross-Origin-Resource-Policy` (CORP) not set
 
@@ -340,7 +356,7 @@ Low Findings
 - `Permissions-Policy` inconsistency between two header layers
 - No explicit session JWT expiry / rotation policy configured
 
-Confirmed Positive
+Informational Findings
 
 - No `dangerouslySetInnerHTML` / XSS sinks found in application code
 - Supabase SSR cookies correctly set HttpOnly, Secure, SameSite:Lax
@@ -364,7 +380,7 @@ Applicable Roles
 
 ---
 
-## Domain 7 — Rate Limiting and File Upload Security
+## Domain 7 - Rate Limiting and File Upload Security
 
 Scope
 
@@ -380,13 +396,13 @@ Activities
 
 Critical Findings
 
-- Rate limiting middleware wired to `proxy.ts` instead of `middleware.ts` — Next.js never executes it; ALL perimeter controls (rate limiting, body size guard, method guard, suspicious path blocking, security headers) are completely inactive
+- Rate limiting middleware wired to `proxy.ts` instead of `middleware.ts` - Next.js never executes it; ALL perimeter controls (rate limiting, body size guard, method guard, suspicious path blocking, security headers) are completely inactive
 
 High Findings
 
-- FastAPI LLM endpoints have zero rate limiting — unlimited prompt injection attempts, API cost abuse possible
-- In-memory rate limit store resets on cold start — serverless bypass possible
-- Audio processing accepts raw file paths from caller — path traversal risk when HTTP-exposed
+- FastAPI LLM endpoints have zero rate limiting - unlimited prompt injection attempts, API cost abuse possible
+- In-memory rate limit store resets on cold start - serverless bypass possible
+- Audio processing accepts raw file paths from caller - path traversal risk when HTTP-exposed
 
 Security Concepts
 
@@ -411,11 +427,11 @@ Applicable Roles
 
 | Severity | Count | Example Classes |
 |---|---|---|
-| Critical | 9 | SSRF, account takeover, mass-deletion bug, prompt injection, anon RLS access, dead middleware |
-| High | 15 | Auth bypass, wildcard SQL injection, FastAPI zero auth, LLM memory poisoning, privilege escalation |
-| Medium | 12 | Auto-heal race condition, RBAC localStorage default, missing COOP/CORP, invite token in URL, audit log gaps |
-| Low | 7 | Import error disclosure, path traversal risk, unbounded pagination, missing COEP |
-| Informational | 6 | Good patterns identified, design observations |
+| Critical | 14 | SSRF, account takeover, mass-deletion bug, prompt injection, anon RLS access, dead middleware |
+| High | 17 | Auth bypass, wildcard SQL injection, FastAPI zero auth, LLM memory poisoning, privilege escalation |
+| Medium | 8 | Auto-heal race condition, RBAC localStorage default, missing COOP/CORP, invite token in URL, SECURITY DEFINER functions |
+| Low | 3 | FastAPI missing security headers, Permissions-Policy header inconsistency, unconfigured JWT session expiry |
+| Informational | 6 | Good security hygiene (secure cookies, no XSS sinks), missing internal API specs, unconfigured log retention |
 
 ---
 
@@ -437,10 +453,10 @@ Treat this engagement as primary professional security experience.
 For all roles:
 
 - Always include in the Experience section.
-- Describe as "Freelance VAPT Engagement — Enterprise SaaS Platform".
+- Standard title: "Security Consultant (Freelancer) - Mindpex" (or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested).
 - Emphasize finding severity, tool usage, and remediation produced.
 - Mindpex is NEVER placed in the Projects section under any circumstances.
-- The Projects section always contains: VigiLynx, CipherCrack, and Black-box Security Assessment.
+- The Projects section contains exactly 2 projects selected out of 3 (VigiLynx, CipherCrack, Security Assessment) based on JD alignment, with 3 bullets each.
 
 ---
 
@@ -454,7 +470,7 @@ Each bullet must follow:
 
 Action → Technical implementation → Security relevance → Impact
 
-Example high-quality bullets (DO NOT copy verbatim — generate fresh from JD analysis):
+Example high-quality bullets (DO NOT copy verbatim - generate fresh from JD analysis):
 
 AppSec / ProdSec:
 

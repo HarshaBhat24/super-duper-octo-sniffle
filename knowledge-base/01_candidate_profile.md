@@ -12,7 +12,22 @@
 # Candidate Identity
 
 Name:
-Harsha Bhat
+S Harsha Bhat
+
+Email:
+harshabhat666@gmail.com
+
+Phone:
+9483022191
+
+GitHub:
+https://github.com/Harshabhat24
+
+LinkedIn:
+https://www.linkedin.com/in/s-harsha-bhat/
+
+Portfolio:
+https://harsha-bhat.vercel.app/
 
 Location:
 Bengaluru, India
@@ -20,11 +35,17 @@ Bengaluru, India
 Education:
 B.E. Information Science and Engineering
 
+College:
+New Horizon College of Engineering, Bengaluru
+
+Education Duration:
+Nov 2022 - July 2026
+
 Current Status:
-Final-year undergraduate student
+Associate Product Developer at Epicor Software (promoted from Product Development Intern)
 
 Career Stage:
-Entry-level cybersecurity professional
+Cybersecurity professional / Product Developer
 
 ---
 
@@ -62,15 +83,18 @@ Priority Tier 1
 Priority Tier 2
 
 - Detection Engineer
-- Threat Intelligence Engineer
+- Threat Intelligence Analyst
 - Security Research Engineer
 - Security Analyst (SOC)
 - Purple Team
 
 Priority Tier 3
 
-- Cybersecurity Engineer
+- AI / LLM Security Engineer
+- API Security Engineer
 - Offensive Security Engineer
+
+Note: Generation directly aligns candidate experience and technical skills with the target Job Description in a zero-pause pipeline without halting for interactive role classification or gap analysis.
 
 ---
 
@@ -97,26 +121,24 @@ Experience Bullets (per entry)
 - Exactly 3 bullets
 - Maximum 2 lines per bullet
 
-Project
+Projects
 
-- Always 3 entries
-- Top 2 JD-aligned projects: exactly 3 bullets each
-- 3rd project (lowest JD alignment): exactly 2 bullets
+- Agent selects exactly 2 of the 3 available projects based on target JD alignment
+- Exactly 3 bullets per selected project
 - Maximum 2 lines per bullet
-- Scored and ordered by JD alignment using the scoring rubric
-
-See 02_experience.md for one-page layout rules.
+- See 02_experience.md and 03_projects.md for selection rules
 
 Skills
 
-- 12–15 skills
-- Group by category
-- Dynamically reorder based on JD
+- Group by category: Security, Programming, Operating Systems, Networking, Tools
+- Include all skills matching the candidate's verified background and JD requirements
+- Add high-value verified candidate skills that are not explicitly stated in the JD but strengthen the profile
+- No rigid artificial count range; maintain clean formatting to preserve 1-page fit
 
 Certifications & Achievements (merged section)
 
-- Certifications: exactly 2 (Security+, ISC2 CC)
-- Achievements: maximum 3 (dynamically selected)
+- Certifications: exactly 2 (CompTIA Security+ - June 2026, ISC2 CC - Feb 2026)
+- Achievements: maximum 3 (dynamically selected based on JD alignment)
 - Compact list format (no sub-bullets)
 
 No Summary section.
@@ -127,7 +149,7 @@ No Summary section.
 
 Degree
 
-Bachelor of Engineering
+Bachelor of Engineering (B.E.)
 
 Branch
 
@@ -139,7 +161,11 @@ CGPA
 
 College
 
-New Horizon College of Engineering
+New Horizon College of Engineering, Bengaluru
+
+Duration
+
+Nov 2022 - July 2026
 
 ---
 
@@ -172,6 +198,10 @@ ALL
 2.
 
 ISC2 Certified in Cybersecurity (CC)
+
+Completed
+
+Feb 2026
 
 Always Mention
 
@@ -522,6 +552,34 @@ Written and executed during Epicor internship.
 
 ---
 
+Semgrep
+
+Priority
+
+High
+
+Experience
+
+- Static Application Security Testing (SAST)
+- Codebase vulnerability analysis
+- Rule-based security linting
+
+---
+
+Jira
+
+Priority
+
+High
+
+Experience
+
+- Security defect tracking and reproduction lifecycle
+- Vulnerability management and re-test workflow
+- Documenting PoCs and moving defect tickets back to development
+
+---
+
 # Operating Systems
 
 Linux
@@ -689,10 +747,10 @@ Never claim:
 - Kubernetes administration
 - Reverse Engineering expertise
 - Malware Development
-- Bug bounty experience — the Mindpex engagement was authorized freelance VAPT, not a bug bounty program
-- Penetration testing firm — this was individual freelance work, not employment at a security firm
-- Red team operator — CTF and VAPT experience does not equal a red team role in an organization
-- CVE publication — no CVEs have been assigned or published
+- Bug bounty experience - the Mindpex engagement was authorized freelance VAPT, not a bug bounty program
+- Penetration testing firm - this was individual freelance work, not employment at a security firm
+- Red team operator - CTF and VAPT experience does not equal a red team role in an organization
+- CVE publication - no CVEs have been assigned or published
 
 Never fabricate:
 
@@ -710,8 +768,8 @@ Only optimize wording.
 
 Highest
 
-- Mindpex VAPT Freelance
-- Epicor Internship
+- Epicor Software (Associate Product Developer & Product Development Intern)
+- Security Consultant (Freelancer) - Mindpex
 - Black-box Security Assessment
 - VigiLynx
 - CipherCrack
@@ -730,42 +788,37 @@ Lowest
 
 # Dynamic Resume Rules
 
-Every resume must:
+Every resume generation:
 
-Analyze the JD.
-
-Determine target role.
-
-Rewrite:
-
-- Experience bullets
-- Skills
-- Certifications & Achievements
+1. Analyzes the target JD directly (zero-pause; no interactive role classification or gap analysis halts).
+2. Aligns candidate experience, verified skills, and project highlights directly to JD requirements.
+3. Rewrites Experience bullets (Epicor and Mindpex, 3 bullets each).
+4. Selects the 2 most relevant projects (3 bullets each).
+5. Generates categorized skills and compact Certifications & Achievements.
 
 Experience Section Logic
 
-Always include Epicor Internship.
+Always include Epicor Software:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
+Exactly 3 bullets covering impact.
 
-Always include Mindpex VAPT Freelance. It is always in the Experience section regardless of role.
+Always include Mindpex:
+- Security Consultant (Freelancer) - Mindpex (July 2026 – August 2026)
+(Or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested).
+Exactly 3 bullets covering VAPT findings and code-level remediation.
 
 Mindpex is NEVER in the Projects section.
 
 Project Section Logic
 
-Always include all three projects:
-
+The candidate has 3 authoritative projects:
 - VigiLynx
 - CipherCrack
 - Black-box Web Application Security Assessment
 
-Score all three against the JD using the scoring rubric in engine/01_resume_generation_rules.md.
-
-Order projects highest to lowest JD alignment score.
-
-Bullet allocation:
-- Slot 1 (highest score): 3 bullets
-- Slot 2 (second score):  3 bullets
-- Slot 3 (lowest score):  2 bullets
+The agent selects exactly 2 of the 3 projects based on direct alignment with the target JD.
+Both selected projects receive exactly 3 bullets each.
 
 ---
 
@@ -774,9 +827,9 @@ Bullet allocation:
 The generated resume must:
 
 - Fit on one page
+- Be delivered as formatted Markdown AND print-ready HTML/CSS matching the reference layout
 - Be ATS friendly
-- Be technically accurate
-- Be optimized for the target role
-- Avoid unnecessary frontend emphasis
-- Avoid generic software engineering terminology when a security equivalent exists
-- Highlight security concepts before implementation details
+- Be technically accurate with zero hallucinations (Truth Guard strictly enforced)
+- Emphasize security concepts, architecture, and measurable impact
+- Avoid generic software engineering or QA terminology when a security equivalent exists
+- Follow the two-column date/title layout with clean divider rules

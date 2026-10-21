@@ -66,7 +66,7 @@ examples/
 - security_research.md
 - purple_team.md
 
-Read the example matching the classified role BEFORE generating any bullets.
+Read the example matching the target role context BEFORE generating bullets.
 
 Use examples to determine: section order, terminology, bullet framing, and skills ordering.
 
@@ -82,23 +82,23 @@ Every section should maximize alignment while remaining completely truthful.
 
 ---
 
-# Resume Structure (All Roles — Unified Layout)
+# Resume Structure (All Roles - Unified Layout)
 
 There is ONE fixed resume structure. It applies to ALL roles with no exceptions.
 
 ```
 [Header]
 [Experience]
-  1. Mindpex Security Consulting — Freelance VAPT Engagement — Enterprise SaaS Platform
-  2. Epicor Software — Product Development Intern
+  1. Associate Product Developer / Product Development Intern - Epicor Software, Bengaluru
+  2. Security Consultant (Freelancer) - Mindpex
 [Projects]
-  Always 3 entries, ordered by JD alignment score:
-    Slot 1 (highest score): 3 bullets
-    Slot 2 (second score):  3 bullets
-    Slot 3 (lowest score):  2 bullets
+  Exactly 2 entries selected out of 3 based on target JD alignment:
+    Slot 1 (highest JD match): 3 bullets
+    Slot 2 (second JD match):  3 bullets
 [Skills]
-[Certifications & Achievements]
-  Compact list: Security+ | ISC2 CC | achievements in role-priority order
+  Category-based bulleted list: Security, Programming, Operating Systems, Networking, Tools
+[Certifications and Achievements]
+  Compact bullet list: Security+ (June 2026) | ISC2 CC (Feb 2026) | achievements in role-priority order
 [Education]
 ```
 
@@ -112,423 +112,146 @@ There is ONE fixed resume structure. It applies to ALL roles with no exceptions.
 
 # Inputs
 
-Input 1
-
-Job Description
-
-Input 2
-
-Knowledge Base
-
-Input 3
-
-Generation Rules
+Input 1: Job Description
+Input 2: Knowledge Base
+Input 3: Generation Rules
 
 ---
 
-# Resume Generation Pipeline
+# Resume Generation Pipeline (Direct Zero-Pause Alignment)
 
-Step 1
-
-Read all knowledge-base files.
+Step 1: Read all knowledge-base files.
 
 ↓
 
-Step 2
-
-Read every engine file.
+Step 2: Read every engine file.
 
 ↓
 
-Step 3
-
-Analyze the Job Description.
+Step 3: Analyze the Job Description (Extract key requirements, tools, concepts, and company scale/maturity signals).
 
 ↓
 
-Step 4
-
-Run Company Intelligence.
-
-This step is **mandatory**. Read engine/04_company_intelligence.md before proceeding.
-
-### 4a — Extract Company Signals
-
-From the JD, identify:
-
-- Company name (if stated)
-- Scale signals (startup, enterprise, FAANG, consultancy, government)
-- Security maturity signals (team size, CISO org, embedded security, etc.)
-- Role context signals (founding member, IC, part of large team, etc.)
-
-### 4b — Classify Company Type
-
-Map signals to ONE of:
-
-- Startup
-- Enterprise / Large Corporation
-- Big Tech / Product Company
-- Consultancy / MSSP
-- Government / Defense
-
-If unknown, default to Enterprise.
-
-### 4c — Apply Modifier
-
-Apply the tone, bullet verb preference, and skills ordering modifier defined in engine/04_company_intelligence.md for the classified type.
-
-### 4d — Output Company Intelligence Report
-
-Output the following before proceeding:
-
-```
-Company Intelligence Report
-Company Name: [name or "unknown"]
-Company Type: [classified type]
-Confidence: [High / Medium / Low]
-Key Signals: [signals detected]
-Applied Modifier: [summary of tone/emphasis changes]
-```
+Step 4: Apply Company Intelligence (Extract tone modifier, verb preference, and skills ordering from `engine/04_company_intelligence.md`).
 
 ↓
 
-Step 5
-
-Classify the target role and generate a Role Classification Report.
-
-### 5a — Classify Role
-
-Score the JD against every supported role using keyword density.
-
-Possible roles
-
-- Red Team
-- Penetration Tester
-- Product Security
-- Application Security
-- Security Engineer
-- DevSecOps
-- Detection Engineer
-- Threat Intelligence
-- Security Research
-- SOC
-- Purple Team
-- AI / LLM Security Engineer
-- API Security Engineer
-- Offensive Security Engineer
-
-Assign a confidence percentage to every role.
-
-Choose the role with the highest confidence as the primary role.
-
-Never generate hybrid resumes unless explicitly requested.
-
-### 5b — Output Role Classification Report
-
-Output the following before proceeding:
-
-```
-Role Classification Report
-Primary Role: [role] ([confidence]%)
-Secondary: [role] ([confidence]%)
-Tertiary: [role] ([confidence]%)
-Rationale: [1–2 sentences explaining why the primary role was chosen]
-Company Modifier Applied: [yes/no — which modifier]
-```
-
-After outputting the report, ask:
-
-> "Proceeding with [Primary Role] — reply with a different role name to override, or anything else to continue."
-
-Wait one turn for the candidate's response before proceeding to Step 6.
+Step 5: Direct JD & Skills Alignment (Zero-Pause Direct Processing).
+- Cross-reference JD requirements directly against the candidate Knowledge Base under the Truth Guard.
+- Silently align candidate's verified skills, tools, and transferrable security capabilities with the JD.
+- No role classification report wait, no interactive gap analysis questionnaire, and no phantom steps.
+- If a tool or technology in the JD is NOT in the knowledge base, do NOT fabricate it and do NOT ask the candidate about it. Emphasize verified adjacent security competencies.
 
 ↓
 
-Step 6
-
-Gap Analysis (MCQ Format).
-
-This step is **mandatory**. Do NOT proceed to keyword extraction or bullet writing until the candidate has responded.
-
-### 6a — Compare JD Against Knowledge Base
-
-Compare every requirement, skill, and tool listed in the Job Description against the knowledge base.
-
-Tag each JD requirement as one of:
-
-- **COVERED** — clearly evidenced in the knowledge base
-- **PARTIAL** — partially evidenced or tangentially related
-- **MISSING** — no evidence in the knowledge base
-
-### 6b — Generate MCQ Questions
-
-For each gap, generate the appropriate MCQ:
-
-**MISSING tools/technologies:**
-Present an MCQ with the exact JD tool + 2–3 close alternatives + a "None" option.
-
-Example:
-> The JD requires Splunk. Do you have experience with:
-> A) Splunk  B) ELK Stack  C) Azure Sentinel  D) None
-
-**MISSING concepts/processes:**
-Present an MCQ:
-> A) Yes (describe below)  B) No
-
-**PARTIAL experience:**
-Present a granularity MCQ.
-
-Example:
-> The JD mentions Terraform. Your experience level:
-> A) Custom module writing  B) Ad-hoc usage  C) Conceptual familiarity
-
-### 6c — Consolidate and Send
-
-Consolidate ALL questions into a **single message**.
-
-The candidate replies with **letters only** (e.g., "1-A, 2-B, 3-D").
-
-Wait for the candidate's response before proceeding.
-
-### 6d — Incorporate Answers
-
-Incorporate the candidate's answers into the knowledge base context before continuing to Step 7.
+Step 6: Project Selection (Select 2 of 3).
+- Candidate has 3 available projects: VigiLynx, CipherCrack, Black-box Security Assessment.
+- Score all 3 against the target JD requirements.
+- Select the top 2 projects with the highest JD alignment.
+- Assign exactly 3 bullets to each of the 2 selected projects (6 project bullets total).
 
 ↓
 
-Step 7
-
-Extract important keywords from the JD.
-
-Categorize
-
-Programming Languages
-
-Security Tools
-
-Security Concepts
-
-Operating Systems
-
-Networking
-
-Authentication
-
-Authorization
-
-Threat Detection
-
-OWASP
-
-Automation
-
-CI/CD
-
-Frameworks
-
-Cloud
-
-APIs
-
-Databases
+Step 7: Direct Document Generation (Unified Print-Ready Document Output).
+- Directly output the final, complete resume document matching the reference PDF layout (Clean Markdown + Standalone Print-Ready HTML).
+- No intermediate drafts or approval pauses.
 
 ↓
 
-Step 8
+Step 8: ATS Analysis & Competing Candidate Benchmark.
 
-Score every project against the JD to determine ordering.
+---
 
-Experience Entries (always included — no scoring required)
+# Document Format Specification (Matches Reference PDF Layout)
 
-- Mindpex VAPT Freelance (07_mindpex_vapt.md)
-- Epicor Software Internship (06_epicor_internship.md)
+The resume must strictly follow the visual layout of the reference PDF:
 
-Projects to Score (all 3 are always included)
+1. **Header (Centered):**
+   - **Name:** Large, bold uppercase: `S HARSHA BHAT`
+   - **Contact Row:** Centered single line with pipe separators and live hyperlinks:
+     `harshabhat666@gmail.com | www.linkedin.com/in/s-harsha-bhat/ | github.com/Harshabhat24 | harsha-bhat.vercel.app/ | 9483022191 | Bengaluru`
 
-- VigiLynx
-- CipherCrack
-- Black-box Web Application Security Assessment
+2. **Section Headings:**
+   - Bold uppercase/title case headings (`Experience`, `Projects`, `Skills`, `Certifications and Achievements`, `Education`).
+   - A full-width horizontal divider line directly beneath each section heading.
 
-Scoring weights (see engine/01_resume_generation_rules.md):
+3. **Experience Section:**
+   - Two-column header line with Title, Company & Location on left, Date range on right:
+     - `Associate Product Developer - Epicor Software, Bengaluru` | `Sep 2026 - Present` (2 bullets)
+     - `Product Development Intern - Epicor Software, Bengaluru` | `Oct 2025 - Sep 2026` (2 bullets)
+     - `Security Consultant (Freelancer) - Mindpex` | `July - Aug 2026` (3 bullets)
+   - Round bullets (`●`), concise 1-2 line technical accomplishments.
 
-- Security relevance: 40%
-- Technical depth: 25%
-- JD keyword match: 20%
-- ATS coverage: 10%
-- Verified metrics: 5%
+4. **Projects Section:**
+   - Section heading strictly **Projects**.
+   - Two-column header line with Project Title and clickable links on left, Date on right:
+     - E.g.: `Black-Box Web Pentest - Powerdialer (Github Repository)` | `Jun 2026`
+     - E.g.: `CipherCrack (Github Repository)` | `June 2025 - Present`
+     - E.g.: `VigiLynx - Winner, HackAthena'25 Cybersecurity Track (Live Web App | Github)` | `Apr - June 2025`
+   - Exactly 2 projects selected out of 3, with 3 bullets each.
 
-Score all three, rank them highest to lowest. This rank determines bullet allocation:
-- Slot 1 (highest score): 3 bullets
-- Slot 2 (second score):  3 bullets
-- Slot 3 (lowest score):  2 bullets
+5. **Skills Section:**
+   - Bulleted list organized by bold category names:
+     - `● Security: ...`
+     - `● Programming: ...`
+     - `● Operating Systems: ...`
+     - `● Networking: ...`
+     - `● Tools: ...`
+   - Include all verified skills matching JD requirements, plus valuable verified candidate additions.
 
-Achievements are NOT scored for the Projects section. They appear only in the Certifications & Achievements section.
+6. **Certifications and Achievements:**
+   - Bulleted list:
+     - `● CompTIA Security+ (SY0-701) - June 2026`
+     - `● ISC2 Certified in Cybersecurity (CC) - Feb 2026`
+     - Achievements in role-priority order (max 3 bullets):
+       - `● Winner - HackAthena'25 Cybersecurity Track (National Hackathon)`
+       - `● Finalist - KJSSE CTF 2.0 (Ranked 17th out of 662 teams)`
+       - `● Solved 200+ CTF Challenges | Top 10% Ranking on TryHackMe`
 
-↓
+7. **Education Section:**
+   - Line 1: `New Horizon College of Engineering, Bengaluru` on left, `Nov 2022 - July 2026` on right.
+   - Line 2: `B.E. in Information Science and Engineering, CGPA: 8.57`.
 
-Step 9
-
-Rewrite every section.
-
-Generate
-
-Experience
-
-  - Mindpex VAPT Freelance (always, 3 bullets, role-adapted framing)
-  - Epicor Software Internship (always, 3 bullets, role-adapted framing)
-
-Projects
-
-  - All 3 projects always included, ordered by JD alignment score
-  - Slot 1 (highest score): 3 bullets
-  - Slot 2 (second score):  3 bullets
-  - Slot 3 (lowest score):  2 bullets
-
-Skills
-
-Certifications & Achievements
-
-  - Compact list format (no sub-bullets)
-  - Certifications first: Security+ then ISC2 CC
-  - Then achievements in role-priority order (max 3)
-
-Education
-
-**Do NOT generate a Summary section.**
-
-↓
-
-Step 10
-
-Apply ATS optimization.
-
-↓
-
-Step 11
-
-Validate against resume budget (engine/03_resume_budget.md).
-
-↓
-
-Step 12
-
-Validate truthfulness.
-
-↓
-
-Step 13
-
-Generate draft resume.
-
-Present the full draft resume to the candidate.
-
-Do NOT call it "final".
-
-After presenting, ask:
-
-> "Here is your draft resume. Would you like to refine any section — for example: Experience bullets, Skills, or Projects? Type the section name and your feedback, or type **'approve'** to finalize."
-
-Wait for the candidate's response before proceeding.
-
-↓
-
-Step 14
-
-Iterative Refinement Loop.
-
-This step is **mandatory** unless the candidate types 'approve' immediately.
-
-### 14a — Handle Feedback
-
-For each piece of feedback received:
-
-- Identify the specific section and bullet(s) referenced.
-- Rewrite ONLY that section. Do not regenerate the full resume.
-- Present the rewritten section in isolation.
-- Ask: "Does this look better, or would you like further changes?"
-
-### 14b — Constraints During Refinement
-
-- Do NOT relax the Truth Guard. Never introduce fabricated information during refinement.
-- Do NOT violate the resume budget. If a rewrite is too long, compress before presenting.
-- Do NOT change the primary role unless the candidate explicitly requests it.
-
-### 14c — Repeat Until Approved
-
-Continue the refinement loop until the candidate types **'approve'**.
-
-Maximum refinement rounds: **3**
-
-After 3 rounds, ask:
-
-> "We've done 3 refinement rounds. Would you like one final pass or shall I finalize the resume as-is?"
-
-↓
-
-Step 15
-
-Generate final resume.
-
-Present the complete, approved resume.
-
-Label it clearly as the **Final Resume**.
+### Output Deliverables (In the same response)
+1. **Formatted Resume Document:** Clean Markdown representation matching the layout.
+2. **Self-Contained Print-Ready HTML Document:** A standalone `<!DOCTYPE html>` block with clean, embedded CSS (`@page { size: letter; margin: 0.38in 0.45in; }`, sans-serif ATS font, flex row spacing, horizontal rules) that renders the exact 1-page PDF upon "Print to PDF".
+3. **ATS Analysis & Competing Candidate Benchmark:**
+   - ATS Analysis (keywords found, covered, missing, strengths, suggestions)
+   - Competing Candidate Benchmark (5 benchmark items + Priority Gap to Close)
 
 ---
 
 # Truth Guard
 
-Never invent
+Never invent:
+- Experience
+- Responsibilities
+- Technologies
+- Metrics (do not invent 97% accuracy or unverified numbers)
+- Certifications
+- Projects
+- Security findings
+- Team size
+- Leadership
+- Cloud experience
+- Security operations / SIEM / EDR
+- Incident response
+- Bug bounty
+- CVE research
+- Production ownership
 
-Experience
-
-Responsibilities
-
-Technologies
-
-Metrics
-
-Certifications
-
-Projects
-
-Security findings
-
-Team size
-
-Leadership
-
-Cloud experience
-
-Security operations
-
-Incident response
-
-Bug bounty
-
-CVE research
-
-Production ownership
-
-If evidence is unavailable,
-
-omit the information.
-
-Never guess.
+If evidence is unavailable, omit the information. Never guess.
 
 ---
 
 # Resume Constraints
 
 - Both Experience Entries Always Present
-
 - Mindpex: exactly 3 bullets, max 2 lines each
 - Epicor: exactly 3 bullets, max 2 lines each
-- Projects: always 3 entries ordered by JD score
-  - Slot 1 (highest): exactly 3 bullets
-  - Slot 2 (second):  exactly 3 bullets
-  - Slot 3 (lowest):  exactly 2 bullets
-- Skills: 12–15 items
-- Certifications & Achievements: compact list — exactly 2 certs + max 3 achievements
+- Projects: exactly 2 entries selected based on JD alignment (3 bullets each)
+- Skills: dynamic list matching JD requirements + verified candidate skills
+- Certifications & Achievements: compact list - exactly 2 certs + max 3 achievements
 - No Summary section
 - Resume: one page
 
@@ -538,224 +261,99 @@ These constraints are mandatory.
 
 # Experience Rules
 
-Epicor
+Epicor Software:
+- Always include.
+- Reflects Associate Product Developer (Sep 2026 – Present) and Product Development Intern (Oct 2025 – Sep 2026).
+- Rewrite dynamically according to target JD.
+- Never use QA-heavy language when a security-oriented interpretation is supported by the knowledge base.
+- For AppSec, Product Security, API Security, and Pentesting roles, prioritize the FTE vulnerability verification work: Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation, identifying 3 incomplete remediations (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and documenting reproduction steps in Jira.
+- The VM cleanup PowerShell script (5 VMs, ~ 50 GB/week, ADO-triggered) is the primary automation/reliability achievement at Epicor.
+- Application certificate renewal and CA certificate creation available for security lifecycle framing.
 
-Always include.
-
-Rewrite dynamically according to the selected role.
-
-Never use QA-heavy language when a security-oriented interpretation is supported by the knowledge base.
-
-The VM cleanup PowerShell script (5 VMs, ~15 GB/week, ADO-triggered) is the strongest verifiable achievement at Epicor. Include it in at least one bullet unless a stronger JD-aligned topic takes its place.
-
-Mindpex VAPT Freelance
-
-Always included in the Experience section for ALL roles.
-
-Always described as: "Freelance VAPT Engagement — Enterprise SaaS Platform"
-
-Never disclose the client name (Mindpex) in the resume.
-
-Never appears in the Projects section.
+Mindpex VAPT Freelance:
+- Always included in the Experience section for ALL roles.
+- Standard entry title: "Security Consultant (Freelancer) - Mindpex" (or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is explicitly requested).
+- Never appears in the Projects section.
 
 ---
 
 # Projects Section Rules
 
-Always include all 3 projects: VigiLynx, CipherCrack, and Black-box Security Assessment.
-
-Score all 3 against the JD using the project scoring rubric.
-
-Order highest to lowest JD alignment score.
-
-Bullet allocation:
-- Slot 1 (highest score): 3 bullets
-- Slot 2 (second score):  3 bullets
-- Slot 3 (lowest score):  2 bullets
-
-See engine/02_role_intelligence_matrix.md for role-based default ordering guidance.
+- Candidate has 3 projects: VigiLynx, CipherCrack, and Black-box Security Assessment.
+- Select exactly 2 projects based on JD requirements.
+- Both selected projects receive exactly 3 bullets each (6 project bullets total).
+- Section heading is strictly **Projects**.
 
 ---
 
 # Bullet Rules
 
-Every bullet must contain
-
-Action
-
-↓
-
-Implementation
-
-↓
-
-Security Concept
-
-↓
-
-Impact
+Every bullet must contain:
+Action → Implementation → Security Concept → Impact
 
 Include verified metrics whenever possible.
 
-Avoid
-
-Worked on
-
-Responsible for
-
-Helped
-
-Participated
-
-Use
-
-Engineered
-
-Implemented
-
-Integrated
-
-Validated
-
-Assessed
-
-Automated
-
-Designed
-
-Analyzed
-
-Documented
+Avoid: Worked on, Responsible for, Helped, Participated.
+Use: Engineered, Implemented, Integrated, Validated, Assessed, Automated, Designed, Analyzed, Documented.
 
 ---
 
 # Skills Rules
 
-Generate dynamically.
-
-Never copy the static skills list.
-
-Prioritize
-
-Security Concepts
-
-↓
-
-Security Tools
-
-↓
-
-Programming Languages
-
-↓
-
-Operating Systems
-
-↓
-
-Supporting Technologies
-
-Total: 12–15 items
+- Generate dynamically.
+- Never copy a rigid static count.
+- Include all skills candidate has that match the JD, plus a few valuable verified candidate skills that add technical value.
+- Group by bold category names (Security, Programming, Operating Systems, Networking, Tools).
 
 ---
 
 # ATS Rules
 
-Use important JD keywords naturally.
-
-Do not keyword stuff.
-
-Avoid repeating identical keywords.
-
-Prefer cybersecurity terminology over generic software terminology.
+- Use important JD keywords naturally.
+- Do not keyword stuff.
+- Avoid repeating identical keywords.
+- Prefer cybersecurity terminology over generic software terminology.
 
 ---
 
 # Resume Style
 
-Professional
-
-Technical
-
-Evidence-based
-
-Concise
-
-No fluff.
-
-No filler.
-
-No subjective claims.
-
-Every statement must be supported by evidence.
+- Professional, technical, evidence-based, concise.
+- No fluff, no filler, no subjective claims.
+- Every statement must be supported by evidence.
 
 ---
 
 # Final Validation Checklist
 
-Before returning the resume, verify
-
-✓ Company Intelligence Report was generated
-
-✓ Role Classification Report was generated
-
-✓ Gap Analysis MCQ step was completed before bullet generation
-
-✓ Correct target role selected (candidate was given one turn to override)
-
+Before returning the resume, verify:
+✓ Zero-pause direct alignment applied (no role classification wait or gap analysis MCQ pause)
 ✓ No Summary section present
-
-✓ Mindpex VAPT in Experience section — described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
-
-✓ Epicor in Experience section
-
+✓ Epicor in Experience section (Associate Product Developer: Sep 2026 – Present; Intern: Oct 2025 – Sep 2026)
+✓ Mindpex in Experience section - titled "Security Consultant (Freelancer) - Mindpex" (or "Freelance VAPT Engagement - Enterprise SaaS Platform")
 ✓ Each experience has exactly 3 bullets
-
-✓ Projects section has exactly 3 entries ordered by JD alignment score
-  - Slot 1 (highest score): exactly 3 bullets
-  - Slot 2 (second score):  exactly 3 bullets
-  - Slot 3 (lowest score):  exactly 2 bullets
-
-✓ Skills: 12–15 items
-
-✓ Certifications & Achievements section present (compact list format)
-
-✓ Exactly 2 certifications (CompTIA Security+ first, ISC2 CC second)
-
+✓ Projects section has exactly 2 entries selected based on target JD alignment (3 bullets each)
+✓ Skills: dynamic list matching candidate + JD skills, formatted by bold categories
+✓ Certifications & Achievements section present (compact bullet list format)
+✓ Exactly 2 certifications (CompTIA Security+ - June 2026, ISC2 CC - Feb 2026)
 ✓ Maximum 3 achievements in role-priority order
-
-✓ Education: max 2 lines
-
-✓ Refinement loop offered to candidate
-
-✓ Skills reordered per role and company modifier
-
-✓ Resume fits one page
-
+✓ Education: New Horizon College of Engineering, B.E. in Information Science and Engineering, CGPA: 8.57, Nov 2022 - July 2026
+✓ Resume fits one page (margins, line heights, bullet budget)
+✓ Complete document generated directly matching reference PDF layout (Markdown + Print-ready HTML)
 ✓ ATS keywords covered
-
-✓ No fabricated information
-
-✓ No confidential information (Mindpex not named)
-
+✓ No fabricated information (no unverified 97% accuracy metric)
 ✓ Epicor VM cleanup PowerShell script bullet present (unless overridden by stronger JD-aligned bullet)
 
-If any check fails,
-
-regenerate the affected section.
+If any check fails, regenerate the affected section.
 
 ---
 
 # Additional Output
 
-After the resume, provide
+After the resume, provide:
 
 ## ATS Analysis
-
-Include
-
-- Target Role
-- Company Type Modifier Applied
+- Target Role Context
 - Important Keywords Found
 - Keywords Successfully Covered
 - Missing Keywords
@@ -763,38 +361,20 @@ Include
 - Weaknesses
 - Suggestions for Improvement
 
----
-
 ## Competing Candidate Benchmark
-
-Simulate what a strong competing candidate for this specific role and company type typically has.
-
-For each item in the benchmark, tag it as:
-
-- ✅ YOU HAVE IT — clearly evidenced in the resume
-- 🟡 YOU'RE CLOSE — partially evidenced, could be stronger
-- ❌ GAP TO BUILD — not present; a strong competitor likely has this
-
-Output exactly 5 benchmark items.
-
-After the benchmark, provide:
+Simulate what a strong competing candidate for this specific role typically has.
+Tag exactly 5 benchmark items:
+- ✅ YOU HAVE IT - clearly evidenced in the resume
+- 🟡 YOU'RE CLOSE - partially evidenced, could be stronger
+- ❌ GAP TO BUILD - not present; a strong competitor likely has this
 
 ### Priority Gap to Close
-
-Identify the single most impactful GAP TO BUILD item.
-
-Suggest ONE concrete, actionable way to close it within 30–60 days.
-
-Be specific. Be actionable. Never suggest fabricating experience.
-
-Only suggest building real, verifiable skills.
+Identify the single most impactful GAP TO BUILD item and suggest ONE concrete, actionable way to close it within 30–60 days without fabricating experience.
 
 ---
 
 # Final Rule
 
 Accuracy is more important than optimization.
-
 Never sacrifice truthfulness for ATS optimization.
-
 The strongest resume is the one that is technically accurate, tailored to the role, and demonstrates measurable cybersecurity capability through verified experience.

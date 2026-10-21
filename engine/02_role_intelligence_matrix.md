@@ -97,7 +97,7 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
@@ -114,7 +114,7 @@ Suppress
 - Audit logging gaps (use for Detection Engineering roles)
 - RLS analysis detail (save for Product Security roles)
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software Internship
 
 ★★★★☆
 
@@ -141,7 +141,7 @@ Score order for Red Team (highest → lowest JD alignment):
 2. CipherCrack
 3. VigiLynx
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
 VigiLynx drops to last unless phishing or browser security appears in the JD.
 
@@ -212,15 +212,6 @@ KJSSE CTF Finalist
 
 ---
 
-Summary Focus
-
-- Offensive Security
-- Web Application Security
-- Cryptography
-- Practical Security Assessments
-
----
-
 Preferred Terminology
 
 Use
@@ -252,7 +243,7 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
@@ -264,18 +255,18 @@ Emphasize
 - 30+ CVSS-scored findings with code-level remediation (TypeScript, Python, SQL)
 - Multi-tenant isolation violations
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★★
 
 Emphasize
 
-- Input validation
-- Secure workflows
-- CI/CD
-- Automation
-- SQL
-- Linux
+- Re-testing penetration testing vulnerabilities using Burp Suite and manual API request manipulation
+- Identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user extraction, JWT invalidation failure)
+- Documented reproduction steps and moved defect tickets back to development in Jira
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Application certificate renewal and CA certificate creation
+- Python/Locust load testing exercising application workflows under concurrent load
 
 ---
 
@@ -287,7 +278,7 @@ Score order for Product Security (highest → lowest JD alignment):
 2. VigiLynx
 3. CipherCrack
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
 CipherCrack drops to last unless cryptography is explicitly requested.
 
@@ -348,15 +339,6 @@ CTF Experience
 
 ---
 
-Summary Focus
-
-- Product Security
-- Secure Design
-- Secure Applications
-- Authentication
-
----
-
 Preferred Terminology
 
 Use
@@ -385,7 +367,7 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
@@ -397,17 +379,18 @@ Emphasize
 - Prompt injection and LLM memory poisoning
 - Code-level remediation in TypeScript, Python, SQL
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★★
 
 Focus
 
-- Boundary testing
-- Edge cases
-- Automation
-- Linux
-- SQL
+- Re-testing 5 penetration testing defect tickets using Burp Suite and manual API manipulation
+- Identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA / user extraction, and JWT post-logout invalidation failure)
+- Documented reproduction steps and moved defect tickets back in Jira
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Application certificate renewal and CA certificate creation
+- Python/Locust load testing exercising application workflows under concurrent load
 
 ---
 
@@ -419,7 +402,7 @@ Score order for Application Security (highest → lowest JD alignment):
 2. VigiLynx
 3. CipherCrack
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
 CipherCrack drops to last unless cryptography appears in the JD.
 
@@ -477,15 +460,6 @@ Smart India Hackathon
 
 ---
 
-Summary Focus
-
-- Secure Software
-- Web Application Security
-- Authorization
-- Product Security
-
----
-
 Preferred Terminology
 
 Use
@@ -521,9 +495,20 @@ Focus
 - Jenkins
 - Azure DevOps
 
+Mindpex
+
+★★★★☆
+
+Focus
+
+- Audit logging gaps
+- Rate limiting middleware review
+- API security testing
+- Remediation scripts
+
 ---
 
-Project Selection
+Project Selection (Select 2 based on JD)
 
 1.
 
@@ -537,9 +522,11 @@ CipherCrack
 
 ★★★★☆
 
-Exclude
+3.
 
-Security Assessment unless detection engineering is mentioned alongside AppSec.
+Security Assessment
+
+★★★☆☆ (include if web/API detection or appsec testing is requested)
 
 ---
 
@@ -595,15 +582,6 @@ Top 10% TryHackMe
 
 ---
 
-Summary Focus
-
-- Detection Engineering
-- Security Automation
-- Threat Detection
-- Malware Analysis
-
----
-
 Preferred Terminology
 
 Use
@@ -644,6 +622,17 @@ Focus
 - Root cause analysis
 - Automation
 
+Mindpex
+
+★★★★☆
+
+Focus
+
+- Web application security assessment
+- Attack surface enumeration
+- Audit logging analysis
+- Finding validation and remediation
+
 Suppress
 
 - Regression testing
@@ -651,7 +640,7 @@ Suppress
 
 ---
 
-Project Selection
+Project Selection (Select 2 based on JD)
 
 1.
 
@@ -665,9 +654,11 @@ CipherCrack
 
 ★★★☆☆
 
-Exclude
+3.
 
-Security Assessment unless web application security is explicitly requested.
+Security Assessment
+
+★★★☆☆ (include if application threat monitoring or vulnerability analysis is requested)
 
 ---
 
@@ -725,16 +716,7 @@ HackAthena
 
 3.
 
-CompTIA Security+
-
----
-
-Summary Focus
-
-- Threat Detection
-- Security Monitoring
-- Malware Analysis
-- Security Operations Fundamentals
+Top 10% TryHackMe
 
 ---
 
@@ -775,9 +757,20 @@ Focus
 - Log analysis
 - Automation
 
+Mindpex
+
+★★★★☆
+
+Focus
+
+- Threat surface mapping
+- Vulnerability intelligence
+- SSRF attack vector validation
+- CVSS scoring
+
 ---
 
-Project Selection
+Project Selection (Select 2 based on JD)
 
 1.
 
@@ -791,9 +784,11 @@ CipherCrack
 
 ★★★★☆
 
-Exclude
+3.
 
-Security Assessment unless vulnerability intelligence is requested.
+Security Assessment
+
+★★★☆☆ (include if vulnerability intelligence is requested)
 
 ---
 
@@ -845,15 +840,6 @@ TryHackMe
 
 ---
 
-Summary Focus
-
-- Threat Intelligence
-- Malware Analysis
-- Detection Engineering
-- Security Automation
-
----
-
 Preferred Terminology
 
 Use
@@ -882,7 +868,7 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
@@ -894,7 +880,7 @@ Emphasize
 - Dead middleware (rate limiting bypass), audit logging gaps
 - Multi-tenant SaaS security architecture findings
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software Internship
 
 ★★★★★
 
@@ -917,7 +903,7 @@ Score order for Security Engineer (highest → lowest JD alignment):
 2. Security Assessment
 3. CipherCrack
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
 Note: Security Assessment may move to Slot 1 if JD emphasizes web app security over tooling.
 
@@ -973,15 +959,6 @@ CTF Experience
 
 ---
 
-Summary Focus
-
-- Security Engineering
-- Automation
-- Secure Systems
-- Application Security
-
----
-
 Preferred Terminology
 
 Use
@@ -1006,7 +983,7 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
@@ -1022,7 +999,7 @@ Suppress
 
 - Prompt injection detail (save for AI Security roles)
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software Internship
 
 ★★★★★
 
@@ -1048,7 +1025,7 @@ Score order for DevSecOps (highest → lowest JD alignment):
 2. Security Assessment
 3. CipherCrack
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
 Emphasize VigiLynx's security automation pipeline, threat detection integration, VirusTotal API.
 
@@ -1122,15 +1099,6 @@ HackAthena Winner
 
 ---
 
-Summary Focus
-
-- DevSecOps
-- CI/CD Security
-- Security Automation
-- Full-Scope VAPT
-
----
-
 Preferred Terminology
 
 Use
@@ -1170,9 +1138,21 @@ Focus
 - Root Cause Analysis
 - Automation
 
+Mindpex
+
+★★★★★
+
+Focus
+
+- Vulnerability research
+- Root cause analysis
+- Prompt injection analysis
+- PostgreSQL RLS policy audit
+- Code-level remediation
+
 ---
 
-Project Selection
+Project Selection (Select 2 based on JD)
 
 1.
 
@@ -1186,9 +1166,11 @@ Security Assessment
 
 ★★★★★
 
-Exclude
+3.
 
-VigiLynx unless detection research is requested.
+VigiLynx
+
+★★★★☆ (include if ML or detection research is requested)
 
 ---
 
@@ -1239,15 +1221,6 @@ KJSSE CTF
 
 ---
 
-Summary Focus
-
-- Security Research
-- Offensive Security
-- Cryptography
-- Practical Security Tooling
-
----
-
 # ROLE
 
 ## Penetration Tester
@@ -1260,7 +1233,7 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
@@ -1272,15 +1245,17 @@ Emphasize
 - Attack chain documentation with CVSS scoring
 - Full-scope manual penetration testing methodology (OWASP WSTG)
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★☆
 
 Focus
 
-- Edge-case validation
-- Linux
-- PowerShell
+- Re-testing 5 penetration testing defect tickets using Burp Suite and manual API testing
+- Identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA / user extraction, and JWT post-logout invalidation failure)
+- Documented PoC reproduction steps and moved defect tickets back in Jira
+- PowerShell environment automation & VM cleanup script (~ 50 GB/wk cleared)
+- Linux execution environments
 
 ---
 
@@ -1292,7 +1267,7 @@ Score order for Penetration Tester (highest → lowest JD alignment):
 2. CipherCrack
 3. VigiLynx
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
 Note: CipherCrack adds offensive tooling depth. VigiLynx only moves up if browser security or phishing is explicitly requested.
 
@@ -1352,15 +1327,6 @@ KJSSE CTF
 
 ---
 
-Summary Focus
-
-- Penetration Testing
-- Offensive Security
-- Web Application Security
-- Practical Security Assessments
-
----
-
 # ROLE
 
 ## Purple Team
@@ -1383,9 +1349,21 @@ Focus
 - Linux
 - Log Analysis
 
+Mindpex
+
+★★★★★
+
+Focus
+
+- Full-scope offensive findings
+- Defense analysis
+- RLS policies
+- Rate limiting and logging gap identification
+- Code-level remediation
+
 ---
 
-Project Selection
+Project Selection (Select 2 based on JD)
 
 1.
 
@@ -1399,9 +1377,11 @@ VigiLynx
 
 ★★★★★
 
-Exclude
+3.
 
-CipherCrack unless cryptography appears in the JD.
+CipherCrack
+
+★★★☆☆ (include if cryptography appears in the JD)
 
 ---
 
@@ -1451,22 +1431,6 @@ TryHackMe
 
 ---
 
-Summary Focus
-
-- Offensive and Defensive Security
-- Detection Engineering
-- Application Security
-
----
-
-Summary Focus
-
-- Offensive and Defensive Security
-- Detection Engineering
-- Application Security
-
----
-
 # ROLE
 
 ## AI / LLM Security Engineer
@@ -1479,16 +1443,16 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
 Emphasize
 
-- Direct prompt injection on open FastAPI `/groq/query` endpoint — raw user input passed verbatim to LLM with no sanitization
-- Indirect prompt injection via persistent employee memory poisoning — attacker-controlled transcript stored in long-term memory, influencing future LLM outputs
-- In-memory LLM context store with zero tenant isolation — any caller could read/write any employee memory by UUID
-- Unvalidated LLM context field on recommendation endpoint — no provenance or input trust boundary enforcement
+- Direct prompt injection on open FastAPI `/groq/query` endpoint - raw user input passed verbatim to LLM with no sanitization
+- Indirect prompt injection via persistent employee memory poisoning - attacker-controlled transcript stored in long-term memory, influencing future LLM outputs
+- In-memory LLM context store with zero tenant isolation - any caller could read/write any employee memory by UUID
+- Unvalidated LLM context field on recommendation endpoint - no provenance or input trust boundary enforcement
 - Raw exception messages from failed LLM calls returned in API response (infrastructure disclosure)
 - Domain 2 (AI/LLM Endpoint Security) is the primary evidence anchor for this role
 
@@ -1497,7 +1461,7 @@ Suppress
 - RLS policy detail (save for Product Security roles)
 - Rate limiting misconfiguration (save for DevSecOps)
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software Internship
 
 ★★★★☆
 
@@ -1517,9 +1481,9 @@ Score order for AI / LLM Security (highest → lowest JD alignment):
 2. Security Assessment
 3. CipherCrack
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
-VigiLynx is primary — demonstrates ML-based detection (Random Forest, VirusTotal API) adjacent to AI/security tooling.
+VigiLynx is primary - demonstrates ML-based detection (Random Forest, VirusTotal API) adjacent to AI/security tooling.
 Security Assessment may move to Slot 1 if JD emphasizes traditional web assessment methodology alongside LLM security.
 
 ---
@@ -1586,15 +1550,6 @@ HackAthena Winner
 
 ---
 
-Summary Focus
-
-- AI / LLM Security
-- Prompt Injection
-- Offensive Security Research
-- Multi-tenant SaaS Security
-
----
-
 Preferred Terminology
 
 Use
@@ -1625,7 +1580,7 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
@@ -1637,7 +1592,7 @@ Emphasize
 - SQL wildcard injection in admin delete handler enabling mass-deletion in a single authenticated request
 - FastAPI services with zero authentication on all routes (confirmed via curl + Nmap port scan)
 - Cross-tenant deletion possible by supplying foreign organization UUID
-- Dead rate-limiting middleware finding — all perimeter controls completely inactive
+- Dead rate-limiting middleware finding - all perimeter controls completely inactive
 - ilike wildcard enabling bulk employee record update (sqlmap parameter injection)
 
 Suppress
@@ -1645,15 +1600,19 @@ Suppress
 - LLM/AI security detail (save for AI Security roles)
 - RLS policy detail (save for Product Security roles)
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
-★★★★☆
+★★★★★
 
 Emphasize
 
-- CI/CD pipeline knowledge as integration layer for API security tooling
-- Automation scripting
-- Linux execution environments
+- Re-testing API penetration testing defect tickets using Burp Suite and manual HTTP request manipulation
+- Discovered incomplete BOLA remediation (non-admin users querying restricted form endpoints and extracting all user details)
+- Discovered JWT token invalidation failure post-logout (tokens active and returning data across sessions)
+- Discovered forced browsing / URL route access control weaknesses
+- Moving defect tickets back in Jira with reproduction PoCs
+- Python/Locust load testing exercising application workflows under concurrent load
+- PowerShell VM cleanup automation script (~ 50 GB/wk cleared)
 
 ---
 
@@ -1665,9 +1624,9 @@ Score order for API Security (highest → lowest JD alignment):
 2. VigiLynx
 3. CipherCrack
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
-Security Assessment provides additional API security evidence — Burp Suite-based API request manipulation, parameter injection, authorization testing, and remediation design.
+Security Assessment provides additional API security evidence - Burp Suite-based API request manipulation, parameter injection, authorization testing, and remediation design.
 VigiLynx moves to Slot 1 only if JD emphasizes detection-side API monitoring.
 
 ---
@@ -1739,15 +1698,6 @@ HackAthena Winner
 
 ---
 
-Summary Focus
-
-- API Security
-- Offensive Testing
-- OWASP API Top 10
-- Multi-tenant SaaS Vulnerability Research
-
----
-
 Preferred Terminology
 
 Use
@@ -1779,16 +1729,16 @@ Role Score
 
 Experience
 
-Entry 1 — Mindpex VAPT Freelance
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
 Emphasize
 
 - SSRF exploitation via unvalidated webhook URL with OOB confirmation (interactsh)
-- Account takeover via invitation flow forced password override — full privilege escalation chain
+- Account takeover via invitation flow forced password override - full privilege escalation chain
 - SQL wildcard injection enabling mass-deletion in a single authenticated request
-- Prompt injection on open LLM endpoint — raw input passed verbatim to model
+- Prompt injection on open LLM endpoint - raw input passed verbatim to model
 - Cross-tenant deletion via foreign UUID injection
 - Attack chain documentation with CVSS scoring
 - Full-scope manual testing methodology (OWASP WSTG)
@@ -1798,7 +1748,7 @@ Suppress
 - Audit logging gaps (save for Detection Engineering)
 - RLS detail (save for Product Security)
 
-Entry 2 — Epicor Software Internship
+Entry 2 - Epicor Software Internship
 
 ★★★★☆
 
@@ -1824,9 +1774,9 @@ Score order for Offensive Security Engineer (highest → lowest JD alignment):
 2. Security Assessment
 3. VigiLynx
 
-Slot 1 and Slot 2 get 3 bullets each. Slot 3 gets 2 bullets.
+Agent selects exactly 2 of the 3 projects based on target JD alignment (3 bullets each).
 
-CipherCrack is primary — demonstrates offensive tooling development and cryptanalysis automation.
+CipherCrack is primary - demonstrates offensive tooling development and cryptanalysis automation.
 Security Assessment may move to Slot 1 if JD explicitly emphasizes methodology and reporting over tooling.
 
 ---
@@ -1901,15 +1851,6 @@ Top 10% TryHackMe
 
 ---
 
-Summary Focus
-
-- Offensive Security Engineering
-- Security Tooling Development
-- Exploitation and Cryptanalysis
-- Practical Security Assessments
-
----
-
 Preferred Terminology
 
 Use
@@ -1965,16 +1906,16 @@ The layout is fixed. There is ONE layout for ALL roles.
 
 Experience section: always Mindpex VAPT Freelance + Epicor Software (both, always).
 
-Projects section: always all 3 projects — VigiLynx, CipherCrack, and Black-box Security Assessment.
+Projects section: exactly 2 projects selected out of 3 (VigiLynx, CipherCrack, and Black-box Security Assessment) based on target JD alignment.
 
-Step 1: Score all 3 projects against the JD using the evaluation criteria below.
+Step 1: Score all 3 candidate projects against the JD using the evaluation criteria below.
 
-Step 2: Order them highest to lowest score.
+Step 2: Select the top 2 projects with the highest JD alignment scores.
 
 Step 3: Assign bullets:
 - Slot 1 (highest score): 3 bullets
 - Slot 2 (second score):  3 bullets
-- Slot 3 (lowest score):  2 bullets
+(Both selected projects receive exactly 3 bullets each, totaling 6 project bullets).
 
 Use the "Score order" guidance in each role's Project Selection block as the default starting rank. Override it if JD keywords shift the scores.
 

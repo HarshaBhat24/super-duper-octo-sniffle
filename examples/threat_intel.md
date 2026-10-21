@@ -1,129 +1,386 @@
 # Example Resume
-
 ## Target Role
+
 Threat Intelligence Analyst
 
+---
+
 # Purpose
-This example provides a structural reference for **Threat Intelligence Analyst**, **Malware Analyst**, and **Detection Engineer** roles. Use it to understand the desired tone, terminology, and emphasis for these specific positions.
+
+Reference resume for
+
+- Threat Intelligence Analyst
+- Cyber Threat Intelligence (CTI) Specialist
+- Threat Researcher
+- Threat Detection & Intelligence Analyst
+
+This example demonstrates how the resume should emphasize threat intelligence, IOC validation, malware analysis, attack surface mapping, vulnerability intelligence, and threat detection pipelines while remaining 100% factually accurate.
+
+Never copy bullets verbatim.
+
+Always regenerate bullets from the knowledge base.
+
+---
 
 # Target Priorities
-- **Highest Priority:** IOC Analysis, Threat Intelligence, Malware Analysis, URL Intelligence, Threat Classification, Automation.
-- **Medium Priority:** Vulnerability Analysis, Log Analysis.
-- **Lowest Priority (Suppress):** Frontend development, general IT support, unrelated backend features.
+
+Highest Priority
+
+- Threat Intelligence
+- IOC Validation
+- Malware Analysis
+- URL Intelligence
+- Threat Detection Pipelines
+- VirusTotal API
+- Attack Surface Mapping
+- Vulnerability Intelligence
+
+Medium Priority
+
+- Log Analysis
+- Root Cause Analysis
+- Python Automation
+- Linux
+- Network Telemetry
+
+Low Priority
+
+- Frontend Development
+- UI / React Components
+- General IT Support
+- Classical Cryptography implementation details
+
+---
 
 # Section Order
-1. **Header:** Name, Contact, LinkedIn, GitHub, Portfolio.
-2. **Experience:** Emphasize threat intelligence, attack surface mapping, vulnerability intelligence, and automation.
-3. **Projects:** VigiLynx (critical), CipherCrack.
-4. **Skills:** Grouped by Security, Programming, Operating Systems, and Tools.
-5. **Certifications & Achievements:** Emphasize security certifications and CTF/hackathon achievements related to threat intel.
-6. **Education:** Brief, standard format.
+
+Header
+
+↓
+
+Experience (Epicor Software + Mindpex - both always in Experience section)
+
+↓
+
+Projects (Agent should select 2 based on JD alignment)
+
+↓
+
+Skills
+
+↓
+
+Certifications & Achievements
+
+↓
+
+Education
 
 ---
 
 # Experience
 
-### Freelance VAPT Engagement — Enterprise SaaS Platform
-*October 2024*
+## Mindpex VAPT Freelance
 
-**Focus:** Threat landscape mapping, attack surface enumeration, and vulnerability intelligence gathering. Frame the penetration testing experience as proactive threat intelligence and threat modeling.
-**Suppress:** Basic IT support or unrelated development tasks.
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
-**Example Bullets:**
-- Mapped external attack surface of an enterprise SaaS platform across 7 domains, enumerating 61+ API endpoints to identify potential threat vectors.
-- Gathered vulnerability intelligence by documenting complete attack chains and providing CVSS scoring for 30+ identified security flaws.
-- Analyzed out-of-band (OOB) interactions and validated Server-Side Request Forgery (SSRF) threats via unvalidated webhook URLs using interactsh.
+Focus
 
-### Epicor Software (Internship)
-*March 2024 – September 2024*
+- External attack surface mapping across 7 security domains
+- Vulnerability intelligence gathering and CVSS scoring across 30+ findings
+- Threat validation using out-of-band (OOB) callback infrastructure (interactsh) for blind SSRF confirmation
+- Multi-tenant data isolation and authorization analysis (BOLA, privilege escalation)
 
-**Focus:** Log analysis, automation, and root-cause analysis.
-**Suppress:** General software development lifecycle tasks, non-security infrastructure tasks.
+Example Bullet
 
-**Example Bullets:**
-- Developed PowerShell automation scripts deployed via ADO pipelines to sanitize 15+ GB of diagnostic logs weekly across 5 virtual machines.
-- Conducted root cause analysis on system logs within Linux execution environments to support internal technical teams.
-- **STAR Bullet:** Automated log cleanup and diagnostic data processing via PowerShell and ADO pipelines across 5 enterprise VMs, streamlining root-cause analysis workflows.
+Mapped the external attack surface of a multi-tenant enterprise SaaS platform across 7 security domains; discovered 14 Critical and 17 High severity findings including SSRF, account takeover, and unauthenticated RLS data access.
+
+Example Bullet
+
+Conducted vulnerability intelligence analysis and threat chain validation using interactsh to confirm out-of-band SSRF callbacks through unvalidated webhook parameters; authored CVSS risk assessments and code-level remediation.
+
+Example Bullet
+
+Audited API authentication boundaries and PostgreSQL RLS policies; uncovered wildcard injection vulnerabilities enabling cross-tenant data destruction and delivered production SQL remediation patches.
+
+---
+
+## Epicor Software
+
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
+
+Focus
+
+- Log-based root cause analysis and investigation methodology
+- Automation of environment hygiene and diagnostic data processing via PowerShell and Azure DevOps
+- Enterprise reliability engineering and threat surface reduction in build infrastructure
+
+Example Bullet
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via weekly automated ADO pipelines, clearing ~ 50 GB of log data per run and eliminating pipeline failures caused by storage exhaustion.
+
+Example Bullet
+
+Investigated execution logs and system failure traces across Windows and Linux agent VMs, applying systematic root cause analysis to resolve network and script failures in enterprise build environments.
+
+Example Bullet
+
+Managed application security lifecycle requirements by renewing application certificates and generating CA certificates, integrating secure configuration practices into Azure DevOps CI/CD workflows.
 
 ---
 
 # Projects
 
-### VigiLynx (Threat Detection Extension)
-**Priority:** ★★★★★ (Critical Anchor)
-**Focus:** Real-time threat detection, VirusTotal integration, IOC validation, and ML-based threat classification.
-**Suppress:** Browser extension UI/UX, frontend aspects.
+The agent selects exactly 2 of the following 3 projects based on target Job Description alignment. Each selected project receives exactly 3 bullets.
 
-**Example Bullets:**
-- Architected a real-time threat detection pipeline leveraging the VirusTotal API to perform immediate IOC validation and URL intelligence gathering.
-- Developed a Random Forest machine learning classifier achieving 97% accuracy in automated threat classification based on URL feature extraction.
-- Engineered automated malware analysis and domain reputation tracking to proactively identify malicious indicators within browser sessions.
+## VigiLynx
 
-### CipherCrack (Cryptanalysis Toolkit)
-**Priority:** ★★★★☆ (Strong Supporting Evidence)
-**Focus:** Cryptanalysis, brute-force automation, scripting.
-**Suppress:** Basic Python syntax explanations.
+Priority
 
-**Example Bullets:**
-- Developed a Python-based cryptanalysis toolkit implementing 9 distinct ciphers, automating brute-force decryption workflows for CTF engagements.
-- Applied the toolkit across 10+ CTF competitions to streamline the identification and exploitation of cryptographic vulnerabilities.
-- Integrated automated signature detection and encoding analysis to rapidly classify unknown ciphertexts and extract actionable intelligence.
+★★★★★ (Primary Anchor for Threat Intelligence)
 
-### Black-Box Security Assessment
-**Priority:** ★★☆☆☆ (Include if vulnerability intelligence is heavily requested)
-**Focus:** Enumeration, authorized testing, vulnerability analysis.
-**Suppress:** Standard testing steps without outcome context.
+Focus
 
-**Example Bullets:**
-- Executed an authorized black-box security assessment against a SaaS application, utilizing Burp Suite and ffuf for comprehensive endpoint enumeration.
-- Analyzed authentication workflows and identified potential exploitation paths to contribute to actionable threat intelligence reports.
+- Real-time threat detection pipeline
+- VirusTotal threat intelligence integration
+- Multi-engine verdict analysis and IOC validation
+- Machine learning–based URL threat classification
+- Threat visibility and monitoring dashboards
+
+Suppress
+
+- React component details
+- Generic web development language
+
+Example Bullet
+
+Architected an automated threat detection pipeline leveraging the VirusTotal API to perform real-time IOC validation, domain reputation queries, and multi-engine malware verdict parsing.
+
+Example Bullet
+
+Implemented a machine learning–based URL threat classification pipeline using feature extraction and Random Forest algorithms to analyze 1,000+ suspicious URLs and trigger browser-based alerts.
+
+Example Bullet
+
+Engineered authenticated monitoring dashboards to visualize threat telemetry, malware scan histories, and phishing trends across 50+ analyzed file samples and 1,000+ URLs.
+
+---
+
+## CipherCrack
+
+Priority
+
+★★★★☆ (Supporting Tooling / Security Automation)
+
+Focus
+
+- Security tooling development in Python
+- Cryptanalysis and cipher identification workflows
+- Scripting and automation for CTF intelligence operations
+
+Suppress
+
+- Basic Python syntax explanations
+- Elementary mathematical concepts
+
+Example Bullet
+
+Developed an offline Python cryptanalysis toolkit implementing 9 classical ciphers with automated brute-force workflows to rapidly identify and decode obfuscated ciphertext during CTF competitions.
+
+Example Bullet
+
+Integrated modular algorithm suites (Hill, Vigenère, Affine) with automated key validation and error handling, accelerating cryptographic vulnerability analysis across 10+ CTF competitions.
+
+Example Bullet
+
+Designed a menu-driven command-line interface with automated cryptanalytic routines, reducing repetitive manual analysis and streamlining challenge intelligence workflows.
+
+---
+
+## Black-Box Security Assessment
+
+Priority
+
+★★★★☆ (Include if vulnerability intelligence or threat assessment is emphasized)
+
+Focus
+
+- Authorized reconnaissance and attack surface enumeration
+- Endpoint discovery and hidden route analysis
+- Vulnerability verification and threat reporting
+
+Suppress
+
+- Uncontextualized testing activities
+- Generic compliance phrasing
+
+Example Bullet
+
+Executed an authorized black-box security assessment of a modern SaaS web application, utilizing Burp Suite, ffuf, and Gobuster to enumerate hidden API routes and map exposed attack surfaces.
+
+Example Bullet
+
+Identified BOLA vulnerabilities, client-side OAuth secret exposures, and CORS misconfigurations; scored findings with CVSS and documented exploit chains with remediation guidance.
+
+Example Bullet
+
+Authored a comprehensive technical assessment report delivering threat analysis, attack paths, and secure architecture recommendations based on OWASP Web Security Testing Guide standards.
 
 ---
 
 # Skills
 
-*Categorize carefully. Lead with the most relevant skills for the target role.*
+Security
 
-- **Security & Threat Intel:** IOC Analysis, Threat Intelligence, Malware Analysis, Threat Classification, Vulnerability Intelligence, Detection Engineering.
-- **Programming:** Python, JavaScript, SQL, PowerShell.
-- **Operating Systems:** Linux, Windows.
-- **Tools:** VirusTotal, Wireshark, Burp Suite, ffuf.
+- Threat Intelligence
+- IOC Validation
+- Malware Analysis
+- URL Intelligence
+- Threat Detection Pipelines
+- Vulnerability Assessment
+- Attack Surface Mapping
+- OWASP WSTG
+- SSRF Testing
+- Authentication & Authorization
+
+Programming
+
+- Python
+- PowerShell
+- JavaScript
+- TypeScript
+- SQL
+- Bash
+
+Operating Systems
+
+- Linux
+- Windows
+
+Networking
+
+- TCP/IP
+- DNS
+- HTTP/S
+- Network Protocols
+
+Tools
+
+- VirusTotal API
+- Burp Suite
+- Wireshark
+- ffuf
+- interactsh
+- Nmap
+- Azure DevOps
+- SSMS
+- Semgrep
 
 ---
 
 # Certifications & Achievements
 
-**Focus:** Certifications that validate foundational security knowledge and achievements demonstrating practical threat analysis skills.
+Certifications
 
-- **Certifications:** CompTIA Security+, ISC2 Certified in Cybersecurity (CC).
-- **Achievements:** 
-  - Winner, HackAthena (Demonstrated rapid threat identification and problem-solving).
-  - Finalist, KJSSE CTF (Ranked 17th out of 662 participants).
-  - Completed 200+ challenges across TryHackMe (Top 10%) and CTF competitions, focusing on malware analysis and threat hunting.
+1. CompTIA Security+ (SY0-701) - June 2026
+2. ISC2 Certified in Cybersecurity (CC) - Feb 2026
+
+Achievements
+
+1. Winner - HackAthena'25 Cybersecurity Track (National Hackathon, 200+ teams)
+2. Finalist - KJSSE CTF 2.0 (Ranked 17th out of 662 teams)
+3. Solved 200+ CTF Challenges | Top 10% Ranking on TryHackMe
 
 ---
 
 # Education
 
-- **B.E. in Information Science and Engineering**, *CGPA: 8.57*
+New Horizon College of Engineering, Bengaluru
+
+Nov 2022 - July 2026
+
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
 # ATS Keywords
-*(Ensure these are naturally integrated into the bullets, not just listed)*
-`Threat Intelligence` `IOC Analysis` `Malware Analysis` `URL Intelligence` `Threat Classification` `VirusTotal` `Detection Pipeline` `Log Analysis` `Vulnerability Intelligence` `Automation` `Python` `Linux` `Wireshark`
+
+Highest Priority
+
+- Threat Intelligence
+- IOC Validation
+- Malware Analysis
+- Threat Detection
+- VirusTotal API
+- Detection Pipeline
+- Attack Surface
+- Log Analysis
+- Vulnerability Intelligence
+- Python
+- Linux
+- PowerShell
+- Wireshark
+- Burp Suite
+- Automation
+
+---
+
+# Preferred Terminology
+
+Use
+
+- Threat Intelligence
+- IOC Validation
+- Malware Analysis
+- Detection Pipeline
+- Attack Surface Mapping
+- Threat Visibility
+- Telemetry
+- Vulnerability Intelligence
+- Correlated
+- Analyzed
+
+Avoid
+
+- React Components
+- Frontend Styling
+- Generic Software Testing
+- Basic IT Support
 
 ---
 
 # Validation Checklist
-- [x] Are the sections in the correct order?
-- [x] Is the tone appropriate for a Threat Intelligence Analyst role?
-- [x] Are the "Suppress" items successfully avoided in the examples?
-- [x] Do the bullets focus on outcomes and impact?
-- [x] Are the key ATS words present and used correctly?
-- [x] Is the file exactly or close to ~300-340 lines in depth? (Ensure comprehensive detail).
+
+✓ No Summary section
+
+✓ Epicor in Experience section (Associate Product Developer & Intern)
+
+✓ Mindpex in Experience section (titled "Security Consultant (Freelancer) - Mindpex" or "Freelance VAPT Engagement - Enterprise SaaS Platform")
+
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
+
+✓ Certifications & Achievements merged into single compact section
+
+✓ CompTIA Security+ (June 2026) and ISC2 CC (Feb 2026) included
+
+✓ Education section included with CGPA 8.57
+
+✓ Unverified 97% accuracy metric purged
+
+✓ All bullets follow Action → Technical implementation → Security concept → Impact
+
+✓ One-page resume budget strictly maintained
+
+---
 
 # Reference Notes
-- **Do not copy bullets verbatim** when creating an actual resume. Use this as a structural and thematic guide.
-- Adapt the examples to fit the exact phrasing of the target job description.
-- Ensure all technical claims can be backed up during a technical interview.
+
+Threat Intelligence resumes should communicate the ability to:
+- Track and analyze threat actors, indicators of compromise, and malware behavior
+- Automate detection telemetry and threat intelligence feeds (VirusTotal API)
+- Map attack surfaces and gather vulnerability intelligence
+- Perform systematic root-cause and log-based investigations
+- Deliver clear technical threat intelligence reports with CVSS risk scores

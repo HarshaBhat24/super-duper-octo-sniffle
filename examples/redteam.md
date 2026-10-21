@@ -60,11 +60,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
+Projects (Agent should select 2)
 
 ↓
 
@@ -84,7 +84,8 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
@@ -110,6 +111,10 @@ Identified SQL wildcard injection in admin delete handler enabling full organiza
 
 ## Epicor Software
 
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
+
 Focus
 
 - PowerShell scripting and automation
@@ -126,7 +131,7 @@ Suppress
 
 Star Bullet
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
@@ -222,6 +227,10 @@ Example Bullet
 
 Integrated VirusTotal threat intelligence APIs to automate payload analysis and enrich real-time URL risk classification.
 
+Example Bullet
+
+Architected an automated threat-classification pipeline correlating multi-engine antivirus verdicts with client-side heuristic features to detect zero-hour phishing domains.
+
 ---
 
 # Skills
@@ -263,17 +272,17 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
 
 1.
 
-Finalist — KJSSE CTF 2.0 (17th of 662 teams)
+Finalist - KJSSE CTF 2.0 (17th of 662 teams)
 
 2.
 
@@ -283,13 +292,11 @@ Solved 200+ CTF challenges across web exploitation, cryptography, and digital fo
 
 # Education
 
-Bachelor of Engineering
+New Horizon College of Engineering, Bengaluru
 
-Information Science and Engineering
+Nov 2022 - July 2026
 
-CGPA
-
-8.57
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -324,7 +331,7 @@ High Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
@@ -334,13 +341,15 @@ High Priority
 
 ✓ SSRF, account takeover, SQL wildcard injection mentioned in Mindpex bullets
 
-✓ CompTIA Security+ included
+✓ CompTIA Security+ (June 2026) included
 
-✓ ISC2 CC included
+✓ ISC2 CC (Feb 2026) included
 
 ✓ KJSSE CTF 17/662 included
 
 ✓ 200+ CTF challenges included
+
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
 ✓ Three bullets per section
 
@@ -348,9 +357,9 @@ High Priority
 
 ✓ ATS optimized
 
-✓ No fabricated information
+✓ Mindpex described as "Security Consultant (Freelancer) - Mindpex"
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
+✓ No fabricated information
 
 ---
 

@@ -16,17 +16,10 @@ Company
 
 Epicor Software
 
-Role
+Roles
 
-Product Development Intern
-
-Duration
-
-October 2025 – Present
-
-Type
-
-Full-time Internship
+- Associate Product Developer (September 2026 – Present, Full-time)
+- Product Development Intern (October 2025 – September 2026, Internship)
 
 Location
 
@@ -36,28 +29,33 @@ Bengaluru, India
 
 # Experience Summary
 
-Worked within an enterprise software product development organization on CI/CD pipeline automation, DevOps scripting, environment reliability engineering, UI automation, and load testing.
+Worked within an enterprise software product development organization as Associate Product Developer (FTE) and Product Development Intern, focusing on application security vulnerability verification, penetration testing bug re-testing, CI/CD pipeline automation, DevOps scripting, environment reliability engineering, application certificate lifecycle, UI automation, and load testing.
 
 Core work:
 
+- Application Security & Penetration Testing Defect Verification (FTE): Re-tested 5 reported penetration testing bugs using Burp Suite, browser DevTools, and manual HTTP/API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA / unauthorized user-data extraction, and JWT post-logout invalidation failure) plus forced browsing path exposure; authored reproduction PoCs and moved defect tickets back in Jira with remediation guidance.
 - Creating and maintaining Azure DevOps (ADO) pipelines for CI/CD orchestration, where each pipeline runs against agent VMs executing PowerShell scripts
 - Writing PowerShell scripts that execute on agent VMs within ADO pipelines (build, provisioning, automation tasks)
-- Authored a PowerShell cleanup script deployed across 5 agent VMs via an ADO pipeline — auto-triggered weekly, clearing ~15 GB of logs and temp data per run, significantly reducing pipeline failures caused by storage exhaustion
+- Authored a PowerShell cleanup script deployed across 5 agent VMs via an ADO pipeline - auto-triggered weekly, clearing ~ 50 GB of logs and temp data per run, significantly reducing pipeline failures caused by storage exhaustion
+- Renewed application certificates and created CA certificates for the enterprise application, managing certificate lifecycle requirements
 - UI automation of an enterprise application using TypeScript (click interactions, app navigation, workflow automation)
 - Wrote and executed a Python/Locust load testing script that opened multiple parallel Chrome instances and performed UI interactions against the application URL under load
 - SQL querying and data retrieval using Microsoft SSMS; performed database backup and restoration
 - Log analysis and root cause analysis for pipeline and script execution failures (storage exhaustion, network issues, execution errors)
 - Worked within Agile delivery cycles using Azure DevOps Boards and JIRA
 
-Although the role is a product development position, the skills directly map to DevSecOps, Security Automation, Security Engineering, and Detection Engineering.
+The full-time role directly provides verified, enterprise-level Application Security (AppSec), Product Security, and Penetration Testing remediation verification capabilities, while the internship work provides verified DevSecOps, Security Automation, and Infrastructure Reliability evidence.
 
 ---
 
 # Primary Responsibilities
 
+- Penetration testing defect re-testing and remediation verification (Burp Suite, DevTools, manual API manipulation)
+- Security bug lifecycle tracking and reproduction PoC documentation in Jira
 - Azure DevOps (ADO) CI/CD pipeline creation and management
 - PowerShell scripting for pipeline automation and agent VM task execution
-- VM cleanup automation — authored script deployed across 5 VMs, auto-triggered via ADO pipeline
+- VM cleanup automation - authored script deployed across 5 VMs, auto-triggered via ADO pipeline
+- Application certificate renewal and CA certificate creation
 - UI automation using TypeScript (enterprise application click/navigation automation)
 - Python/Locust load testing script development and execution
 - SQL querying and data retrieval (Microsoft SSMS)
@@ -68,6 +66,47 @@ Although the role is a product development position, the skills directly map to 
 ---
 
 # Technical Responsibilities
+
+## Application Security & Penetration Testing Bug Re-Testing (FTE - Associate Product Developer)
+
+Performed:
+- Re-tested 5 reported penetration testing defect tickets against the enterprise web application and API endpoints.
+- Evaluated remediation implementations and discovered that remediations were **incomplete in 3 of the 5 bugs**, allowing persistent bypasses.
+- Discovered and verified 4 critical security vulnerability vectors:
+  1. **Content Security Policy (CSP) Incomplete Remediation (XSS Bypass)**: Tested developer's CSP fix intended to mitigate Cross-Site Scripting (XSS). Discovered that `'unsafe-inline'` script directive was still included in the CSP header, rendering the policy ineffective against inline script injection.
+  2. **API Broken Object/Function-Level Authorization (BOLA / BFLA)**: Re-tested non-administrative user permissions against form data endpoints. Identified that non-admin authenticated users could make direct API requests to access restricted forms and exfiltrate profile/sensitive data for all users across the organization without required privileges.
+  3. **Broken Authentication / Post-Logout JWT Invalidation Failure**: Re-tested session termination and token revocation. Discovered that JWT access tokens were not invalidated or blacklisted on the backend upon logout, allowing expired user sessions to remain active, replay API requests, and access protected resources across different login sessions.
+  4. **Forced Browsing / Client-Side Route Access Control**: Demonstrated that unprivileged users knowing restricted application URL paths could navigate directly to privileged views and components without server-side route authorization validation.
+  5. **Sensitive Data Exposure in API Responses**: Re-tested API error handling and payloads to ensure verbose traces, stack traces, and internal server parameters were properly sanitized.
+- Defect Workflow & Deliverable:
+  - Authored comprehensive re-test reports with step-by-step reproduction steps and proof-of-concept (PoC) payloads.
+  - Reopened and moved incomplete defect tickets back to development teams in Jira, specifying exact remediation requirements (removing 'unsafe-inline', implementing server-side RBAC checks on API handlers, enforcing server-side token invalidation).
+  - Tools utilized: Burp Suite, Browser DevTools, cURL, Jira.
+
+Security Relevance:
+HIGHEST (★★★★★)
+
+Concepts:
+- Vulnerability remediation verification & re-testing
+- Content Security Policy (CSP) enforcement & XSS prevention
+- Broken Object-Level Authorization (BOLA / OWASP API1)
+- Broken Function-Level Authorization (BFLA / OWASP API5)
+- Session lifecycle & JWT revocation/blacklisting
+- Forced Browsing & Missing Function-Level Access Control
+- Vulnerability management & defect tracking lifecycle in Jira
+
+Applicable Roles:
+- Application Security (AppSec) Engineer
+- Product Security Engineer
+- Penetration Tester / VAPT
+- API Security Engineer
+- Offensive Security / Red Team
+- Security Engineer
+
+Resume Priority:
+HIGHEST for AppSec, Product Security, API Security, and Pentesting roles. Combine with the VM cleanup automation bullet.
+
+---
 
 ## Azure DevOps (ADO) CI/CD Pipelines
 
@@ -126,13 +165,13 @@ Applicable Roles
 
 ---
 
-## VM Cleanup PowerShell Script — Star Achievement
+## VM Cleanup PowerShell Script - Star Achievement
 
 This is the single most impactful individual contribution from this internship.
 
 Written
 
-- From scratch — no prior script existed
+- From scratch - no prior script existed
 
 Scope
 
@@ -148,7 +187,7 @@ Function
 
 Impact
 
-- Clears approximately 15 GB of junk data per weekly run
+- Clears approximately  50 GB of junk data per weekly run
 - Directly reduced pipeline failures caused by storage exhaustion in VMs
 - Improved overall pipeline reliability and reduced manual intervention
 
@@ -159,7 +198,7 @@ High
 Concepts
 
 - Automated log management and cleanup
-- Scripted environment hygiene — reduces configuration drift and execution errors
+- Scripted environment hygiene - reduces configuration drift and execution errors
 - Scheduled automation for operational reliability
 
 Applicable Roles
@@ -171,7 +210,7 @@ Applicable Roles
 
 Resume Priority
 
-HIGHEST — always include this in at least one bullet
+HIGHEST - always include this in at least one bullet
 
 ---
 
@@ -207,7 +246,7 @@ Written and Executed
 
 - Developed a Python script using Locust that puts load on the enterprise application URL
 - Script opens multiple Chrome instances in parallel and performs UI interactions (click actions) under load
-- Executed the script personally — both wrote and ran the load tests
+- Executed the script personally - both wrote and ran the load tests
 
 Security Relevance
 
@@ -530,14 +569,16 @@ Emphasize
 
 Priority
 
-Medium
+★★★★★ (Highest)
 
 Emphasize
 
-- TypeScript UI automation (enterprise app)
-- Python/Locust load testing
-- SQL and SSMS usage
-- CI/CD pipeline knowledge (integration point for security tooling)
+- Penetration testing defect re-testing and remediation verification (Burp Suite, DevTools)
+- Incomplete fix discovery: CSP unsafe-inline bypass, API BOLA / unauthorized user extraction, JWT post-logout invalidation failure, forced browsing route access
+- Defect tracking and reproduction PoC documentation in Jira
+- Application certificate renewal and CA certificate creation
+- TypeScript UI automation and Python/Locust load testing under concurrent load
+- CI/CD pipeline security and environment automation
 
 Suppress
 
@@ -549,10 +590,12 @@ Suppress
 
 Priority
 
-Medium
+★★★★☆
 
 Emphasize
 
+- Vulnerability verification and exploitation bypass analysis
+- Manual API manipulation and authorization testing (BOLA, forced browsing)
 - Scripting (PowerShell, Python, TypeScript)
 - Automation knowledge
 - Pipeline and environment knowledge
@@ -589,22 +632,23 @@ Action → Technical implementation → Cybersecurity relevance → Impact
 
 ## Preferred Bullet Framings (in order of priority)
 
-Bullet 1 (Always — highest impact):
-The VM cleanup PowerShell script:
-- Action: Engineered / Developed / Authored
-- What: PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline
-- Impact: Clears ~15 GB of logs and temp data weekly, eliminating pipeline failures caused by storage exhaustion
+### For Application Security / Product Security / API Security / Pentest Roles:
+- **Bullet 1 (AppSec Star Bullet - Highest Priority)**:
+  Re-tested 5 penetration testing vulnerabilities using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA / user-data extraction, and JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+- **Bullet 2 (DevOps/Reliability Star Bullet)**:
+  Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
+- **Bullet 3 (Certificate / Infrastructure / Testing - Role-adaptive)**:
+  - Certificate Lifecycle: Renewed application certificates and created CA certificates for the enterprise application, ensuring secure communication and key lifecycle compliance.
+  - API / Stress Testing: Authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
+  - UI Automation: Developed TypeScript UI automation workflows to validate enterprise application functionality and input boundaries.
 
-Bullet 2 (Role-adaptive — DevSecOps / Security Engineering / Automation):
-- ADO pipeline creation and CI/CD automation
-- PowerShell scripting for pipeline task execution
-- Jenkins to Azure DevOps migration support
-
-Bullet 3 (Role-adaptive — choose the strongest match to JD):
-- AppSec / ProdSec: TypeScript UI automation of enterprise application
-- Detection / SOC: Log-based root cause analysis of pipeline failures (storage, network)
-- API Security / AppSec: Python/Locust load testing (parallel Chrome instances, UI interactions under load)
-- SQL/Data-adjacent: SQL querying and database backup/restoration using SSMS
+### For DevSecOps / Security Engineering / Detection / SOC Roles:
+- **Bullet 1 (DevOps Star Bullet - Highest Priority)**:
+  Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
+- **Bullet 2 (Vulnerability Re-Testing / Root Cause Analysis)**:
+  Re-tested 5 enterprise penetration testing defect tickets using Burp Suite and manual API testing; caught 3 incomplete remediations (BOLA, unrevoked JWTs, CSP bypasses) and documented reproduction steps in Jira. *(Or: Performed log-based root cause analysis on pipeline and script execution failures tracing storage exhaustion and network errors).*
+- **Bullet 3 (Pipeline & Infrastructure Security)**:
+  Renewed application certificates and created CA certificates for enterprise application components; created ADO CI/CD pipelines executing PowerShell scripts on agent VMs.
 
 ## Always Avoid
 
@@ -615,6 +659,13 @@ Bullet 3 (Role-adaptive — choose the strongest match to JD):
 
 ## Always Use
 
+- "Penetration testing defect re-testing", "Remediation verification"
+- "Burp Suite", "Browser DevTools", "Manual API request manipulation"
+- "Content Security Policy (CSP)", "unsafe-inline", "XSS mitigation"
+- "Broken Object-Level Authorization (BOLA)", "User data extraction"
+- "JWT invalidation", "Session revocation"
+- "Jira defect tracking", "PoC reproduction steps"
+- "Application certificate renewal", "CA certificate creation"
 - "Pipeline automation", "CI/CD orchestration"
 - "Agent VM", "pipeline agent"
 - "PowerShell scripting", "automation script"
@@ -631,25 +682,34 @@ Bullet 3 (Role-adaptive — choose the strongest match to JD):
 
 Never state
 
-- Security Analyst
-- Penetration Tester
-- Detection Engineer title
-- SOC Analyst
-- Incident Responder
-- Adversarial input testing or attack simulation
+- That the official job title at Epicor was Penetration Tester, Security Analyst, or Security Engineer (the titles are strictly Associate Product Developer and Product Development Intern)
+- SOC Analyst title
+- Incident Responder title
 
 Never imply
 
-- Production security monitoring
-- SIEM administration
-- Vulnerability scanning from this role
+- Production security monitoring or SOC operations
+- SIEM administration (Splunk, Sentinel, QRadar)
+- Production automated vulnerability scanning ownership
 - Docker or containerization
-- Kubernetes or infrastructure design
+- Kubernetes or cloud infrastructure architecture
 - Authored Jenkinsfile or Azure Pipelines YAML as the primary deliverable
 
 ---
 
 # Dynamic Resume Logic
+
+If JD is Application Security / Product Security / Penetration Testing / API Security
+
+Focus on
+
+- Re-testing 5 penetration testing defect tickets using Burp Suite; discovering 3 incomplete fixes (CSP unsafe-inline, BOLA user extraction, JWT invalidation failure) and returning tickets in Jira with reproduction PoCs
+- VM cleanup PowerShell script (5 VMs, ~ 50 GB/week cleared, eliminating storage exhaustion)
+- Application certificate renewal and CA certificate creation
+- Python/Locust load testing under concurrent load
+- TypeScript UI automation and input boundary validation
+
+---
 
 If JD is DevSecOps
 
@@ -658,6 +718,7 @@ Focus on
 - ADO CI/CD pipeline creation and automation
 - VM cleanup PowerShell script (5 VMs, 15GB/week, auto-triggered)
 - Pipeline failure root cause analysis
+- Re-testing penetration testing bugs (BOLA, JWT, CSP) and managing defect remediation lifecycle
 
 ---
 
@@ -665,10 +726,12 @@ If JD is Security Engineering
 
 Focus on
 
+- Penetration testing vulnerability re-testing and remediation validation
 - Automation scripting (PowerShell, Python, TypeScript)
-- Azure DevOps and CI/CD
+- Azure DevOps and CI/CD orchestration
+- Application certificate renewal and CA creation
 - VM cleanup automation
-- Log analysis
+- Log analysis and root cause investigation
 
 ---
 

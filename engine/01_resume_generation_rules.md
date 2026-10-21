@@ -32,11 +32,10 @@ Generate a one-page ATS-optimized cybersecurity resume that maximizes alignment 
 
 The generator must optimize
 
-- Summary
 - Experience
 - Projects
 - Skills
-- Achievements
+- Certifications & Achievements
 
 The generator must NEVER invent
 
@@ -174,8 +173,8 @@ Score every experience and project.
 
 Experience Entries
 
-- Mindpex VAPT Freelance — primary security experience (07_mindpex_vapt.md)
-- Epicor Software Internship — primary professional experience (06_epicor_internship.md)
+- Mindpex VAPT Freelance - primary security experience (07_mindpex_vapt.md)
+- Epicor Software Internship - primary professional experience (06_epicor_internship.md)
 
 Projects
 
@@ -203,20 +202,17 @@ Mindpex VAPT Freelance
 
 Always include in the Experience section. There is no role-based switching.
 
-Mindpex NEVER appears in Projects & Key Achievements — it is always in Experience.
+Mindpex NEVER appears in Projects - it is always in Experience.
 
-Projects & Key Achievements
+Projects
 
-Always include all 3 projects: VigiLynx, CipherCrack, and Black-box Security Assessment.
+The candidate has three available projects: VigiLynx, CipherCrack, and Black-box Security Assessment.
 
-Score all three against the JD and rank them. Order them highest to lowest JD alignment score.
+Select exactly 2 of the 3 projects based on target JD alignment.
 
-Bullet allocation:
-- Slot 1 (highest score): 3 bullets
-- Slot 2 (second score):  3 bullets
-- Slot 3 (lowest score):  2 bullets
+Both selected projects receive exactly 3 bullets each (6 project bullets total).
 
-Never drop a project or swap in achievements as a project substitute.
+Never drop a project below 2 total or swap in achievements as a project substitute.
 
 ---
 
@@ -366,6 +362,18 @@ VigiLynx
 
 ---
 
+Purple Team
+
+1
+
+Security Assessment
+
+2
+
+VigiLynx
+
+---
+
 Offensive Security
 
 1
@@ -390,9 +398,9 @@ Use these weights when choosing which projects to include.
 | ATS coverage potential | 10% |
 | Verified metrics present | 5% |
 
-Score all three candidates (VigiLynx, CipherCrack, Security Assessment) against this rubric.
+Score all three candidate projects (VigiLynx, CipherCrack, Security Assessment) against this rubric.
 
-Order them highest to lowest. Assign bullets: Slot 1 → 3, Slot 2 → 3, Slot 3 → 2.
+Select the top 2 projects with the highest JD alignment scores. Assign exactly 3 bullets to each of the 2 selected projects (6 project bullets total).
 
 # Experience Rewriting Rules
 
@@ -492,17 +500,13 @@ Experience (per entry)
 
 3 bullets
 
-Project Slot 1 (highest JD score)
+Selected Project 1 (highest JD alignment)
 
 3 bullets
 
-Project Slot 2 (second JD score)
+Selected Project 2 (second JD alignment)
 
 3 bullets
-
-Project Slot 3 (lowest JD score)
-
-2 bullets
 
 Maximum
 
@@ -619,7 +623,7 @@ Do NOT generate a Summary section.
 
 The Summary section has been permanently removed from the resume format.
 
-The space freed by removing the Summary is used to accommodate more project/achievement entries in the Projects & Key Achievements section.
+The space freed by removing the Summary is used to accommodate full technical depth across the two selected projects (3 bullets each) and experience entries.
 
 ---
 
@@ -631,22 +635,21 @@ Never copy the static skills list.
 
 Skills must be selected after analyzing
 
-- Role
-- Technologies
-- Security concepts
-- Required tools
+- Target Job Description requirements
+- Candidate verified technical capabilities
+- Security concepts and domain relevance
+- Required and adjacent security tools
 
 ---
 
-Skills Count
+Skills Count Rules
 
-Minimum
+Do not enforce a rigid numerical range (such as 12–15 or 12–18).
 
-12
-
-Maximum
-
-18
+Instead:
+- Include all verified skills that both the candidate possesses and the JD requests.
+- Add additional verified candidate skills that are not explicitly mentioned in the JD but add clear technical value for the target role.
+- Prioritize high-impact security concepts and primary tools over generic items.
 
 ---
 
@@ -793,7 +796,7 @@ Dynamically order based on target role using priority tables in 05_achievements.
 
 Format: one line per achievement, including result and context.
 
-Example: `Winner — HackAthena'25 Cybersecurity Track (National Hackathon, 200+ teams)`
+Example: `Winner - HackAthena'25 Cybersecurity Track (National Hackathon, 200+ teams)`
 
 Prefer measurable results (placements, rankings, participant counts).
 
@@ -827,9 +830,17 @@ Detection Engineering
 
 SOC
 
-- CompTIA Security+
 - HackAthena
 - CTF Experience
+- TryHackMe
+
+---
+
+Purple Team
+
+- HackAthena
+- CTF Experience
+- TryHackMe
 
 ---
 
@@ -1129,11 +1140,7 @@ Achievements
 
 Red Team
 
-Summary
-
-Red Team
-
-Do not generate a SOC summary with Red Team projects.
+No Summary section is generated.
 
 ---
 
@@ -1163,7 +1170,7 @@ Education
 
 No Summary section.
 
-No separate Achievements section — achievements are merged with Certifications into the compact 'Certifications & Achievements' section.
+No separate Achievements section - achievements are merged with Certifications into the compact 'Certifications & Achievements' section.
 
 No additional sections unless explicitly requested.
 
@@ -1266,7 +1273,7 @@ Everything should align with that role.
 This includes
 
 - Experience bullets (Mindpex + Epicor)
-- Projects & Key Achievements selection and framing
+- Projects selection and framing
 - Skills ordering
 - Certifications ordering
 
@@ -1533,22 +1540,21 @@ Exactly 3 bullets
 
 Experience Entry 2 (Epicor)
 
-Exactly 3 bullets
+Exactly 4 bullets (2 for Associate Product Developer, 2 for Intern)
 
-Projects & Key Achievements
+Projects
 
-Exactly 3 entries, ordered by JD alignment score
-- Slot 1 (highest): exactly 3 bullets
-- Slot 2 (second):  exactly 3 bullets
-- Slot 3 (lowest):  exactly 2 bullets
+Exactly 2 entries selected out of 3 based on target JD alignment
+- Slot 1: exactly 3 bullets
+- Slot 2: exactly 3 bullets
 
 Skills
 
-12–15
+Dynamic list: all candidate skills matching JD + valuable verified candidate additions
 
 Certifications
 
-Exactly 2
+Exactly 2 (CompTIA Security+ - June 2026, ISC2 CC - Feb 2026)
 
 No Summary section
 
@@ -1644,20 +1650,18 @@ Before producing the final resume, verify that:
 - The resume targets a single cybersecurity role.
 - Mindpex VAPT is in the Experience section (not in Projects).
 - Epicor is in the Experience section.
-- Each experience has exactly 3 bullets.
-- Projects & Key Achievements has exactly 3 entries, ordered by JD alignment score.
-  - Slot 1 (highest): exactly 3 bullets.
-  - Slot 2 (second):  exactly 3 bullets.
-  - Slot 3 (lowest):  exactly 2 bullets.
+- Experience: Epicor has 4 bullets (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets.
+- Projects has exactly 2 entries selected out of 3 based on target JD alignment (3 bullets each).
 - No Summary section is present.
-- Skills are tailored to the JD (12–15 items).
-- CompTIA Security+ and ISC2 CC are included.
+- Skills are tailored dynamically to the JD (all verified skills matching JD + valuable additions).
+- CompTIA Security+ (June 2026) and ISC2 CC (Feb 2026) are included.
 - ATS keywords are naturally integrated.
 - No unsupported claims exist.
-- No confidential information is disclosed (Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform").
+- Mindpex is in Experience, titled "Security Consultant (Freelancer) - Mindpex" (or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested).
+- Epicor is in Experience, reflecting Associate Product Developer (Sep 2026 – Present) and Product Development Intern (Oct 2025 – Sep 2026).
 - The resume fits on one page.
 - Every statement is backed by the knowledge base.
-- Epicor VM cleanup PowerShell script bullet is present unless a stronger JD-aligned bullet replaces it.
+- Epicor bullets highlight either the AppSec pentest bug verification work (5 bugs re-tested, 3 incomplete fixes caught: CSP unsafe-inline, BOLA, JWT) for AppSec/ProdSec/Pentest/API roles, or the VM cleanup PowerShell script (~ 50 GB/wk cleared) for DevSecOps/Infrastructure roles.
 
 If any check fails, regenerate the affected section before returning the resume.
 

@@ -2,9 +2,9 @@
 
 Track every update to the knowledge base here.
 
-When you gain a new skill, complete a project, earn a certification, or finish an engagement — update the relevant KB file and log it here.
+When you gain a new skill, complete a project, earn a certification, or finish an engagement - update the relevant KB file and log it here.
 
-This log is used during Gap Analysis to determine whether a MISSING item was actually recently added to the KB.
+This log tracks additions and modifications to candidate skills, engagements, certifications, and architectural decisions.
 
 ---
 
@@ -15,12 +15,31 @@ This log is used during Gap Analysis to determine whether a MISSING item was act
 
 File updated: [filename]
 Change: [what was added or modified]
-Reason: [why — new skill, completed project, new cert, etc.]
+Reason: [why - new skill, completed project, new cert, etc.]
 ```
 
 ---
 
 ## Log
+
+## 2026-10-21
+
+Files updated: knowledge-base/*, engine/*, prompts/master_resume_prompt.md, README.md, templates/resume_template.html, examples/*
+Change:
+- Experience Update: Epicor promoted from Intern (Oct 2025 – Sep 2026) to Associate Product Developer (Sep 2026 – Present). Added full-time AppSec defect verification work (re-tested 5 penetration testing defect tickets with Burp Suite, caught 3 incomplete fixes: CSP unsafe-inline, BOLA user extraction, JWT post-logout invalidation failure, and forced browsing; documented reproduction PoCs and moved tickets back in Jira). Mindpex titled "Security Consultant (Freelancer) - Mindpex" (July 2026 – August 2026). Both companies always in Experience section across all roles.
+- Project Selection Architecture: Changed to exactly 2 projects selected out of 3 (VigiLynx, CipherCrack, Security Assessment) based on target JD alignment. Both selected projects receive exactly 3 bullets each (6 project bullets total). Section heading strictly "Projects".
+- Certifications & Dates: CompTIA Security+ (SY0-701) set to June 2026. ISC2 Certified in Cybersecurity (CC) set to Feb 2026. Removed CompTIA Security+ from SOC achievements ranking (it is a certification).
+- Dynamic Skills: Removed rigid numerical bounds (12–15, 12–18). Now dynamically includes all verified candidate skills matching JD requirements plus high-value verified additions.
+- Pipeline Optimization: Direct JD alignment with zero pauses (no role classification wait/report, no MCQ gap analysis pause, no phantom steps).
+- Summary Section Purge: Completely removed all instructions to generate or tune summaries across all files.
+- Candidate Profile & Identity: Updated name to S Harsha Bhat, email, phone, GitHub, LinkedIn, Portfolio, Location Bengaluru, New Horizon College of Engineering (Nov 2022 - July 2026, CGPA: 8.57).
+- Truth Guard & Examples: Removed unverified 97% accuracy metric from threat_intel.md, purple_team.md, and security_research.md. Added missing Education and Security Assessment options to examples. Rewrote threat_intel.md to standard format and depth.
+
+## 2026-10-20
+
+Files updated: prompts/master_resume_prompt.md, README.md, engine/01_resume_generation_rules.md, engine/03_resume_budget.md, engine/04_company_intelligence.md
+Change: Removed interactive Gap Analysis / MCQ verification pause before generation. The generation pipeline is now zero-pause and directly produces the finalized resume. Added direct document generation specification matching the reference PDF layout (centered header with live hyperlinks, divider lines, flex row dates, categorized bold skills, compact certs & achievements, 1-page budget). Mindpex experience entry updated to standard display title "Security Consultant (Freelancer) - Mindpex".
+Reason: Streamlined pipeline for instant document generation matching user's preferred format.
 
 ## 2026-09-12
 
@@ -49,7 +68,7 @@ Reason: Gap analysis fix (project accuracy).
 ## 2026-08-22
 
 File updated: prompts/master_resume_prompt.md
-Change: Step 5b rewritten — Gap Analysis Q&A converted from open-ended questions to MCQ format. Tool/technology gaps now present labeled options (A/B/C/D) with the exact JD tool + close alternatives. Candidate replies with a letter; that specific tool is used in the resume. Conceptual gaps use A/Yes or B/No format. Partial gaps use depth-level MCQs.
+Change: Step 5b rewritten - Gap Analysis Q&A converted from open-ended questions to MCQ format. Tool/technology gaps now present labeled options (A/B/C/D) with the exact JD tool + close alternatives. Candidate replies with a letter; that specific tool is used in the resume. Conceptual gaps use A/Yes or B/No format. Partial gaps use depth-level MCQs.
 Reason: Faster, unambiguous gap resolution; eliminates free-text ambiguity on tool names.
 
 File updated: prompts/master_resume_prompt.md
@@ -57,11 +76,11 @@ Change: Step 9 layout table now includes a Layout column (A/B) and explicitly li
 Reason: Security Research was missing from the Step 9 table. Layout B project slot description was incomplete.
 
 File updated: engine/01_resume_generation_rules.md
-Change: Final Validation Checklist — corrected project count rule to be layout-conditional (1 for Layout A, 2 for Layout B) instead of incorrectly stating "exactly two".
+Change: Final Validation Checklist - corrected project count rule to be layout-conditional (1 for Layout A, 2 for Layout B) instead of incorrectly stating "exactly two".
 Reason: Layout A only has 1 project slot; the old rule was factually wrong.
 
 File updated: knowledge-base/02_experience.md
-Change: Role-Based Pairing table restructured — added Layout column (A/B), added Slot 1 / Slot 2 columns for Layout B, corrected Detection Eng/SOC/TI rows to show "Mindpex VAPT" as Slot 1 and "VigiLynx" as Slot 2 (not VigiLynx + CipherCrack as two free slots).
+Change: Role-Based Pairing table restructured - added Layout column (A/B), added Slot 1 / Slot 2 columns for Layout B, corrected Detection Eng/SOC/TI rows to show "Mindpex VAPT" as Slot 1 and "VigiLynx" as Slot 2 (not VigiLynx + CipherCrack as two free slots).
 Reason: Table was using pre-Mindpex Layout B model. After 07_mindpex_vapt.md was added, Mindpex became the fixed Slot 1 for all Layout B roles.
 
 File updated: examples/detection_engineer.md
@@ -70,25 +89,25 @@ Reason: Example file predated the Mindpex-as-Slot-1 rule. It showed VigiLynx + C
 
 File updated: examples/soc.md
 Change: Section Order updated to show Epicor (Experience) → Mindpex VAPT (Slot 1) → VigiLynx (Slot 2). Validation checklist updated to match Layout B model.
-Reason: Same as detection_engineer.md — predated Mindpex-as-Slot-1 rule.
+Reason: Same as detection_engineer.md - predated Mindpex-as-Slot-1 rule.
 
 File updated: knowledge-base/05_achievements.md
 Change: Added "Security Research" achievement priority section (CTF Experience → KJSSE CTF → TryHackMe) between the Security Engineering and SOC sections.
 Reason: Security Research was the only supported role without a dedicated achievement ordering section.
 
 File updated: engine/01_resume_generation_rules.md
-Change: Renamed "Experience Priority" section header to "Project Priority by Role" — the section defines project selection order per role, not experience entry priority.
+Change: Renamed "Experience Priority" section header to "Project Priority by Role" - the section defines project selection order per role, not experience entry priority.
 Reason: Misleading title could cause the model to confuse project selection logic with experience selection logic.
 
 ## 2026-08-23
 
 File updated: prompts/master_resume_prompt.md, engine/02_role_intelligence_matrix.md, knowledge-base/02_experience.md, knowledge-base/05_achievements.md, examples/
 Change: Added 3 new distinct target roles to the full pipeline:
-  1. AI / LLM Security Engineer — anchored on Mindpex Domain 2 (prompt injection, indirect memory poisoning, zero tenant isolation in LLM context store, infrastructure disclosure via LLM exception responses). Layout A. Project: VigiLynx.
-  2. API Security Engineer — anchored on Mindpex Domain 1 (61 Next.js routes + 3 FastAPI routers enumerated via ffuf/Nmap, SSRF, BOLA, SQL wildcard injection, dead rate-limiting middleware, zero-auth FastAPI services). Layout A. Project: Security Assessment.
-  3. Offensive Security Engineer — distinct from Red Team; tool-building framing anchored on CipherCrack (9-cipher cryptanalysis toolkit, 1,324+ LOC) + Mindpex full exploitation chain. Layout A. Project: CipherCrack.
+  1. AI / LLM Security Engineer - anchored on Mindpex Domain 2 (prompt injection, indirect memory poisoning, zero tenant isolation in LLM context store, infrastructure disclosure via LLM exception responses). Layout A. Project: VigiLynx.
+  2. API Security Engineer - anchored on Mindpex Domain 1 (61 Next.js routes + 3 FastAPI routers enumerated via ffuf/Nmap, SSRF, BOLA, SQL wildcard injection, dead rate-limiting middleware, zero-auth FastAPI services). Layout A. Project: Security Assessment.
+  3. Offensive Security Engineer - distinct from Red Team; tool-building framing anchored on CipherCrack (9-cipher cryptanalysis toolkit, 1,324+ LOC) + Mindpex full exploitation chain. Layout A. Project: CipherCrack.
 Each role was added to: Step 6a role list, Step 9 layout table, 02_experience.md pairing table, 02_role_intelligence_matrix.md (full entry), 05_achievements.md (priority section), examples/ (full example file).
-Reason: Existing role coverage was too shallow — API Security, AI/LLM Security, and Offensive Security are distinct JD categories that map to different emphasis profiles, skills ordering, and bullet framing despite overlapping evidence.
+Reason: Existing role coverage was too shallow - API Security, AI/LLM Security, and Offensive Security are distinct JD categories that map to different emphasis profiles, skills ordering, and bullet framing despite overlapping evidence.
 
 File updated: engine/01_resume_generation_rules.md
 Change: Added AI/LLM Security, API Security, Offensive Security, and DevSecOps to the JD Analysis categories list. Added project priority entries for all 4 in the Project Priority by Role section. Updated Experience Selection Rules to include the 3 new Layout A roles in the Mindpex-in-Experience trigger list.
@@ -96,4 +115,4 @@ Reason: The engine categories list and project priority section were not updated
 
 File updated: README.md
 Change: Full rewrite. Updated to reflect 14 supported roles (was 11), added Layout A/B role tables with evidence anchors and default projects, updated file tree to include all 10 example files, documented MCQ gap analysis format, replaced old budget text with structured tables, added Mindpex confidentiality rule explicitly, added changelog update instruction.
-Reason: README was outdated — did not reflect the Layout A/B architecture, new roles, MCQ format, or example file expansion.
+Reason: README was outdated - did not reflect the Layout A/B architecture, new roles, MCQ format, or example file expansion.

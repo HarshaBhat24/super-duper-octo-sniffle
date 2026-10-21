@@ -54,11 +54,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (3 dynamically selected)
+Projects (Agent should select 2)
 
 ↓
 
@@ -78,7 +78,8 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
@@ -104,6 +105,10 @@ Identified dead rate-limiting middleware by validating that all perimeter contro
 
 ## Epicor Software
 
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
+
 Focus
 
 - Log analysis
@@ -119,7 +124,7 @@ Suppress
 
 Star Bullet
 
-Engineered automated PowerShell scripts deployed via ADO pipelines across 5 agent VMs, analyzing logs and clearing ~15 GB of data weekly to ensure stable execution environments.
+Engineered automated PowerShell scripts deployed via ADO pipelines across 5 agent VMs, analyzing logs and clearing ~ 50 GB of data weekly to ensure stable execution environments.
 
 Example Bullet
 
@@ -157,6 +162,10 @@ Example Bullet
 
 Validated authentication and authorization mechanisms through manual request manipulation, simulating adversarial techniques to test the resilience of implemented security controls.
 
+Example Bullet
+
+Correlated exploitation findings with defensive gap analysis, providing prioritized remediation guidance covering IAM configuration, least-privilege enforcement, and audit logging.
+
 ---
 
 # VigiLynx
@@ -179,7 +188,7 @@ Suppress
 
 Example Bullet
 
-Engineered an automated threat detection tool utilizing a Random Forest classifier to achieve 97% accuracy in identifying malicious URLs, directly demonstrating capability in applied detection engineering.
+Engineered an automated threat detection tool utilizing a Random Forest classifier in identifying malicious URLs, directly demonstrating capability in applied detection engineering.
 
 Example Bullet
 
@@ -215,6 +224,10 @@ Developed a Python-based cryptanalysis toolkit implementing 9 classical ciphers;
 Example Bullet
 
 Built modular cryptographic and brute-force algorithms to accelerate offline cryptanalysis, demonstrating offensive capability in identifying flawed encryption implementations.
+
+Example Bullet
+
+Applied automated frequency analysis and dictionary attack routines to analyze cipher security boundaries and validate weak cryptographic designs.
 
 ---
 
@@ -254,33 +267,31 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
 
 1.
 
-Winner — HackAthena
+Winner - HackAthena'25 Cybersecurity Track
 
 2.
 
-Finalist — KJSSE CTF 2.0 (17th of 662 teams)
+Finalist - KJSSE CTF 2.0 (17th of 662 teams)
 
 ---
 
 # Education
 
-Bachelor of Engineering
+New Horizon College of Engineering, Bengaluru
 
-Information Science and Engineering
+Nov 2022 - July 2026
 
-CGPA
-
-8.57
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -314,7 +325,7 @@ High Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ 3 dynamically selected project slots
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
@@ -324,15 +335,17 @@ High Priority
 
 ✓ VigiLynx prioritized as detection engineering evidence
 
-✓ CompTIA Security+ included
+✓ CompTIA Security+ (June 2026) included
 
-✓ ISC2 CC included
+✓ ISC2 CC (Feb 2026) included
 
-✓ HackAthena included
+✓ HackAthena Winner included
 
 ✓ KJSSE CTF included
 
-✓ Three bullets per Experience section
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
+
+✓ Three bullets per section
 
 ✓ One page
 
@@ -340,7 +353,7 @@ High Priority
 
 ✓ No fabricated information
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
+✓ Mindpex described as "Security Consultant (Freelancer) - Mindpex"
 
 ---
 

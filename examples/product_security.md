@@ -58,11 +58,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
+Projects (Agent should select 2)
 
 ↓
 
@@ -82,7 +82,8 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
@@ -108,6 +109,10 @@ Delivered 7-domain security audit with 30+ CVSS-scored findings covering API sec
 
 ## Epicor Software
 
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
+
 Focus
 
 - TypeScript UI automation of enterprise application
@@ -123,7 +128,7 @@ Suppress
 
 Star Bullet
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
@@ -216,6 +221,10 @@ Example Bullet
 
 Built reusable cryptographic utilities supporting rapid cryptanalysis experimentation and offline security tool development.
 
+Example Bullet
+
+Applied automated frequency analysis and key-space reduction algorithms to decrypt encrypted artifacts across multiple cipher implementations.
+
 ---
 
 # Skills
@@ -258,21 +267,31 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
 
 1.
 
-Winner — HackAthena'25 Cybersecurity Track
+Winner - HackAthena'25 Cybersecurity Track
 
 2.
 
 Smart India Hackathon Finalist
+
+---
+
+# Education
+
+New Horizon College of Engineering, Bengaluru
+
+Nov 2022 - July 2026
+
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -305,7 +324,7 @@ Highest Priority
 
 ✓ Epicor in Experience section (always)
 
-✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
@@ -321,13 +340,17 @@ Highest Priority
 
 ✓ Secure Architecture emphasized
 
-✓ CompTIA Security+
+✓ CompTIA Security+ (June 2026) included
 
-✓ ISC2 CC
+✓ ISC2 CC (Feb 2026) included
 
 ✓ HackAthena Winner included
 
 ✓ SIH Finalist included
+
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
+
+✓ Three bullets per section
 
 ✓ One page
 
@@ -335,7 +358,7 @@ Highest Priority
 
 ✓ No fabricated information
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
+✓ Mindpex described as "Security Consultant (Freelancer) - Mindpex"
 
 ---
 

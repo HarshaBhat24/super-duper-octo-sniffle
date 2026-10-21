@@ -57,11 +57,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (All 3 projects always included, ordered by JD alignment score: Slot 1: 3 bullets, Slot 2: 3 bullets, Slot 3: 2 bullets)
+Projects (Agent should select 2)
 
 ↓
 
@@ -81,7 +81,8 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
@@ -91,7 +92,7 @@ Focus
 - SQL wildcard injection in admin delete handler enabling full organization data wipe in a single request
 - FastAPI services with zero authentication on all routes (confirmed via curl and Nmap port scan)
 - Cross-tenant deletion via foreign UUID injection
-- Dead rate-limiting middleware — all perimeter controls inactive
+- Dead rate-limiting middleware - all perimeter controls inactive
 
 Example Bullet
 
@@ -103,11 +104,15 @@ Discovered SQL wildcard injection in admin delete handler enabling full organiza
 
 Example Bullet
 
-Identified dead rate-limiting middleware misconfiguration in Next.js middleware chain — all perimeter controls (rate limiting, body size guard, suspicious path blocking) were completely inactive; FastAPI LLM endpoints also had zero rate limiting.
+Identified dead rate-limiting middleware misconfiguration in Next.js middleware chain - all perimeter controls (rate limiting, body size guard, suspicious path blocking) were completely inactive; FastAPI LLM endpoints also had zero rate limiting.
 
 ---
 
 ## Epicor Software
+
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
 
 Focus
 
@@ -123,7 +128,7 @@ Suppress
 
 Star Bullet
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
@@ -213,6 +218,10 @@ Example Bullet
 
 Automated brute-force workflows and cryptanalysis scripts to accelerate security challenge resolution.
 
+Example Bullet
+
+Applied automated frequency analysis and key-space reduction algorithms to decrypt encrypted artifacts across multiple cipher implementations.
+
 ---
 
 # Skills
@@ -257,17 +266,17 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
 
 1.
 
-Winner — HackAthena'25 Cybersecurity Track
+Winner - HackAthena'25 Cybersecurity Track
 
 2.
 
@@ -277,13 +286,11 @@ Solved 200+ CTF challenges
 
 # Education
 
-Bachelor of Engineering
+New Horizon College of Engineering, Bengaluru
 
-Information Science and Engineering
+Nov 2022 - July 2026
 
-CGPA
-
-8.57
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -316,11 +323,11 @@ Highest Priority
 
 ✓ Mindpex VAPT in Experience section (always)
 
-✓ Domain 1 (API Security — 61 routes) is the primary focus of Mindpex bullets
+✓ Domain 1 (API Security - 61 routes) is the primary focus of Mindpex bullets
 
 ✓ Epicor in Experience section (always)
 
-✓ Projects section has 3 entries ordered by JD alignment score (3/3/2 bullet split)
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
@@ -336,21 +343,23 @@ Highest Priority
 
 ✓ SQL wildcard injection covered
 
-✓ CompTIA Security+ included
+✓ CompTIA Security+ (June 2026) included
 
-✓ ISC2 CC included
+✓ ISC2 CC (Feb 2026) included
 
 ✓ HackAthena Winner included
 
 ✓ 200+ CTF challenges included
 
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
+
 ✓ Three bullets per section
 
 ✓ One-page resume
 
-✓ No fabricated information
+✓ Mindpex described as "Security Consultant (Freelancer) - Mindpex"
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
+✓ No fabricated information
 
 ---
 
@@ -364,6 +373,6 @@ API Security resumes should communicate the ability to
 - Reason about REST authentication and authorization models
 - Produce actionable remediation for API security findings
 
-This role is distinct from general AppSec — the emphasis is specifically on API attack surfaces, not broad web application security.
+This role is distinct from general AppSec - the emphasis is specifically on API attack surfaces, not broad web application security.
 
 Suppress generic software engineering terminology.

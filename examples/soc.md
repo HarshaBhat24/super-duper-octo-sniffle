@@ -56,11 +56,11 @@ Header
 
 ↓
 
-Experience (Mindpex + Epicor — both always in Experience section)
+Experience (Mindpex + Epicor - both always in Experience section)
 
 ↓
 
-Projects (2–3 dynamically selected)
+Projects (Agent should select 2)
 
 ↓
 
@@ -80,7 +80,8 @@ Education
 
 ## Mindpex VAPT Freelance
 
-Label on resume: Freelance VAPT Engagement — Enterprise SaaS Platform
+Label on resume: Security Consultant (Freelancer) - Mindpex
+*(or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)*
 
 Focus
 
@@ -91,7 +92,7 @@ Focus
 
 Example Bullet
 
-Conducted a full-scope VAPT across 7 security domains on a Next.js + FastAPI SaaS platform, identifying 9 Critical and 15 High severity findings including SSRF, account takeover, and authentication bypass.
+Conducted a full-scope VAPT across 7 security domains on a Next.js + FastAPI SaaS platform, identifying 14 Critical and 17 High severity findings including SSRF, account takeover, and authentication bypass.
 
 Example Bullet
 
@@ -104,6 +105,10 @@ Delivered code-level remediation in TypeScript, Python, and SQL across 30+ CVSS-
 ---
 
 ## Epicor Software
+
+Roles on resume:
+- Associate Product Developer (Sep 2026 – Present)
+- Product Development Intern (Oct 2025 – Sep 2026)
 
 Focus
 
@@ -121,11 +126,11 @@ Suppress
 
 Star Bullet
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~15 GB of logs and temp data weekly — eliminating pipeline failures caused by storage exhaustion.
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
 Example Bullet
 
-Performed log-based root cause analysis on pipeline and script failures — tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs; applied structured investigation methodology to recurring production failures.
+Performed log-based root cause analysis on pipeline and script failures - tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs; applied structured investigation methodology to recurring production failures.
 
 Example Bullet
 
@@ -202,6 +207,37 @@ Designed reusable CLI tooling supporting rapid cryptographic experimentation and
 
 ---
 
+# Black-Box Security Assessment
+
+Priority
+
+★★★☆☆ (Include if application threat monitoring, web security, or vulnerability assessment is requested)
+
+Focus
+
+- Web application security testing
+- Attack surface enumeration
+- Threat pattern analysis
+- Remediation design
+
+Suppress
+
+- Pure offensive exploitation without defensive context
+
+Example Bullet
+
+Conducted an authorized black-box security assessment of a SaaS platform using Burp Suite and ffuf, identifying attack vectors across authentication and multi-tenant authorization logic.
+
+Example Bullet
+
+Analyzed web application attack patterns and parameter manipulation vectors, producing CVSS risk ratings and secure configuration guidance to support application monitoring.
+
+Example Bullet
+
+Documented technical findings and attack chains to inform defensive controls, API rate-limiting rules, and detection logic for suspicious endpoint traffic.
+
+---
+
 # Skills
 
 Programming
@@ -252,17 +288,17 @@ Certifications
 
 1.
 
-CompTIA Security+
+CompTIA Security+ (SY0-701) - June 2026
 
 2.
 
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity (CC) - Feb 2026
 
 Achievements
 
 1.
 
-Winner — HackAthena'25 Cybersecurity Track
+Winner - HackAthena'25 Cybersecurity Track
 
 2.
 
@@ -271,6 +307,16 @@ Solved 200+ CTF Challenges
 3.
 
 Top 10% TryHackMe
+
+---
+
+# Education
+
+New Horizon College of Engineering, Bengaluru
+
+Nov 2022 - July 2026
+
+B.E. in Information Science and Engineering, CGPA: 8.57
 
 ---
 
@@ -358,7 +404,7 @@ Replace CipherCrack with the Security Assessment only if the Job Description hea
 
 ✓ Epicor in Experience section (always)
 
-✓ 2–3 dynamically selected project slots
+✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
 
 ✓ Certifications & Achievements merged into single section
 
@@ -388,6 +434,8 @@ Replace CipherCrack with the Security Assessment only if the Job Description hea
 
 ✓ TryHackMe Top 10% included
 
+✓ Education section with New Horizon College of Engineering, CGPA: 8.57
+
 ✓ Exactly three bullets per section
 
 ✓ One-page resume
@@ -396,7 +444,7 @@ Replace CipherCrack with the Security Assessment only if the Job Description hea
 
 ✓ No unsupported SOC claims
 
-✓ Mindpex described as "Freelance VAPT Engagement — Enterprise SaaS Platform"
+✓ Mindpex titled "Security Consultant (Freelancer) - Mindpex" (or "Freelance VAPT Engagement - Enterprise SaaS Platform" if client anonymity is requested)
 
 ---
 

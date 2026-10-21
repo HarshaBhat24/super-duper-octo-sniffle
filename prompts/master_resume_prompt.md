@@ -331,7 +331,7 @@ Before returning the resume, verify:
 ✓ No Summary section present
 ✓ Epicor in Experience section (Associate Product Developer: Sep 2026 – Present; Intern: Oct 2025 – Sep 2026)
 ✓ Mindpex in Experience section - titled "Security Consultant (Freelancer) - Mindpex" (or "Freelance VAPT Engagement - Enterprise SaaS Platform")
-✓ Each experience has exactly 3 bullets
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets
 ✓ Projects section has exactly 2 entries selected based on target JD alignment (3 bullets each)
 ✓ Skills: dynamic list matching candidate + JD skills, formatted by bold categories
 ✓ Certifications & Achievements section present (compact bullet list format)

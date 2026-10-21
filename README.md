@@ -20,17 +20,21 @@ career-engine/
 │   ├── 03_projects.md                # VigiLynx + CipherCrack project KB
 │   ├── 04_security_assessments.md    # Black-box web app security assessment KB
 │   ├── 05_achievements.md            # Achievements, certifications, role-ordered priority
-│   ├── 06_epicor_internship.md       # Epicor internship KB (CI/CD, automation, Linux)
+│   ├── 06_epicor_internship.md       # Epicor FTE & Internship KB (AppSec pentest verification, CI/CD, automation)
 │   └── 07_mindpex_vapt.md            # Mindpex VAPT freelance KB (7-domain security assessment)
 │
 ├── engine/
 │   ├── 01_resume_generation_rules.md # Scoring, bullet rules, ATS, Truth Guard, validation
 │   ├── 02_role_intelligence_matrix.md# Per-role emphasis, skills ordering, terminology
 │   ├── 03_resume_budget.md           # Bullet counts, space constraints
-│   └── 04_company_intelligence.md    # Company type classification and tone modifiers
+│   ├── 04_company_intelligence.md    # Company type classification and tone modifiers
+│   └── export_pdf.py                 # CLI utility compiling HTML to 1-page PDF (--no-pdf-header-footer)
+│
+├── templates/
+│   └── resume_template.html          # Reference HTML/CSS template matching 1-page PDF layout
 │
 ├── prompts/
-│   └── master_resume_prompt.md       # Orchestration prompt - the 15-step generation pipeline
+│   └── master_resume_prompt.md       # Orchestration prompt - 8-step zero-pause generation pipeline
 │
 ├── examples/
 │   ├── appsec.md                     # Application Security Engineer
@@ -49,7 +53,8 @@ career-engine/
 │   └── purple_team.md                # Purple Team
 │
 ├── outputs/
-│   └── log.md                        # Resume version tracking log
+│   ├── log.md                        # Resume version tracking log
+│   └── resume.pdf                    # Generated 1-page ATS resume PDF
 │
 └── README.md
 ```
@@ -60,7 +65,7 @@ career-engine/
 
 This repository is **not** a resume.
 
-It is a structured knowledge base that allows an LLM to generate resumes, summaries, and role-specific content dynamically.
+It is a structured knowledge base that allows an LLM to generate resumes and role-specific content dynamically.
 
 The repository separates
 
@@ -126,7 +131,7 @@ These files define
 
 ### Step 3
 
-Read the example file matching the classified role from
+Read the example file matching the target cybersecurity domain/role from
 
 ```
 examples/
@@ -216,7 +221,7 @@ Never skip any step.
 
 The engine supports **14 roles**. All roles use the same single layout.
 
-| Role | Primary Evidence Anchor | Default Project Order (Slot 1 → 2 → 3) |
+| Role | Primary Evidence Anchor | Default Project Rank (Top 2 Selected) |
 |---|---|---|
 | Application Security Engineer | Mindpex Domain 1–7 (full-scope VAPT) | Security Assessment → VigiLynx → CipherCrack |
 | Product Security Engineer | Mindpex Domain 1–7 + RLS analysis | Security Assessment → VigiLynx → CipherCrack |
@@ -233,9 +238,9 @@ The engine supports **14 roles**. All roles use the same single layout.
 | Security Research Engineer | CipherCrack cryptanalysis + Mindpex research | CipherCrack → Security Assessment → VigiLynx |
 | Purple Team | Mindpex + VigiLynx detection layer | Security Assessment → VigiLynx → CipherCrack |
 
-Project order is the default scoring rank. Always override with actual JD keyword scoring.
+Project rank is the default alignment order (agent selects the top 2). Always override with actual JD keyword scoring.
 
-The generator automatically determines the closest role from the supplied Job Description.
+The generator silently aligns the closest cybersecurity domain/role from the supplied Job Description under the Truth Guard.
 
 ---
 
@@ -243,14 +248,16 @@ The generator automatically determines the closest role from the supplied Job De
 
 There is ONE layout. It applies to ALL roles with no exceptions.
 
-- Experience: always Epicor Software + Mindpex (both, always)
-- Projects: exactly 2 entries selected out of 3 (VigiLynx, CipherCrack, Security Assessment) based on target JD alignment
+- Experience: always Epicor Software (4 bullets: 2 for Associate Product Developer, 2 for Intern) + Mindpex (3 bullets) (both, always)
+- Projects: exactly 2 entries selected out of 3 (VigiLynx, CipherCrack, Security Assessment) based on target JD alignment (3 bullets each, 6 project bullets total)
 - Skills: dynamic list matching JD requirements + verified candidate skills
 - Achievements: max 3, dynamically ordered by role
 - Certifications: exactly 2 (CompTIA Security+ - June 2026, ISC2 CC - Feb 2026)
 
 Bullet allocation:
-- Exactly 3 bullets per project for both selected projects (6 project bullets total)
+- Epicor Software: exactly 4 bullets total (2 for Associate Product Developer, 2 for Product Development Intern)
+- Mindpex: exactly 3 bullets
+- Projects: exactly 3 bullets per project for both selected projects (6 project bullets total)
 
 ---
 
@@ -380,15 +387,13 @@ Every generated resume should
 
 Using this repository, an LLM should be capable of generating
 
-- ATS Resume
-- Tailored Resume
-- Resume Analysis
-- ATS Score
-- Keyword Gap Analysis
-- Project Rewriting
-- Experience Rewriting
-- Skills Optimization
-- Achievement Selection
+- ATS-Optimized Tailored Resume (Clean Markdown + Standalone Print-Ready HTML)
+- Exact 1-Page PDF Generation (`engine/export_pdf.py` with `--no-pdf-header-footer`)
+- Direct JD & Skills Alignment (Under strict Truth Guard)
+- Experience & Project Rewriting (Role-specific framing)
+- Dynamic Skills Categorization
+- Achievement & Certification Prioritization
+- ATS Keyword Matching Analysis & Competing Candidate Benchmark
 
 ---
 

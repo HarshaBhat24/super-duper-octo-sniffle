@@ -420,6 +420,25 @@ The LLM outputs the finalized resume immediately, formatted to match the referen
 
 ---
 
+# Mobile / GitHub Actions Remote PDF Exporter
+
+Generate company-specific PDFs (`S-Harsha_Bhat_{company-name}.pdf`) directly from your phone without a laptop or local Git environment:
+
+### Method 1: Via GitHub Issues
+1. In the GitHub app or mobile browser, navigate to **Issues** -> **New Issue**.
+2. Select **Generate Resume PDF** (or create a blank issue).
+3. Set the **Target Company Name** (e.g., `Google`, `Amazon`, `Stripe`).
+4. Paste the complete resume HTML code into the description box.
+5. Tap **Submit new issue**.
+6. The GitHub Action will compile the PDF headlessly, commit it to `outputs/S-Harsha_Bhat_{company}.pdf`, upload it as a release asset, comment on the issue with a direct download link, and auto-close the issue within ~15 seconds.
+
+### Method 2: Via Actions Tab (`workflow_dispatch`)
+1. Go to the **Actions** tab on GitHub.
+2. Select **Generate Resume PDF** -> **Run workflow**.
+3. Enter the `company_name` and either paste raw HTML or specify a path to an existing HTML file in the repository.
+
+---
+
 # Future Expansion
 
 The repository is designed to grow over time.

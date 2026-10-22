@@ -1,0 +1,28 @@
+name: Generate Resume PDF
+description: Paste your resume HTML to automatically build and download your custom PDF.
+title: "[Resume] <Company Name>"
+labels: ["resume"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 📄 Mobile Resume Generator
+        Fill out the company name and paste your customized HTML below.
+        GitHub Actions will compile it into `S-Harsha_Bhat_{company-name}.pdf` and reply with a direct download link!
+  - type: input
+    id: company_name
+    attributes:
+      label: Target Company Name
+      description: Name of the company or role (used in the PDF filename).
+      placeholder: "e.g., Google, Amazon, Stripe"
+    validations:
+      required: true
+  - type: textarea
+    id: resume_html
+    attributes:
+      label: Resume HTML Code
+      description: Paste the complete HTML resume code here.
+      placeholder: "<!DOCTYPE html><html>...</html>"
+      render: html
+    validations:
+      required: true

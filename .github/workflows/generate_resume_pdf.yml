@@ -1,0 +1,116 @@
+name: Generate Resume PDF
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+    inputs:
+      company_name:
+        description: 'Target Company Name'
+        required: true
+        default: 'General'
+        type: string
+      raw_html:
+        description: 'Raw HTML string (or leave blank to use repo file)'
+        required: false
+        type: string
+      html_file_path:
+        description: 'Path to HTML file in repo (if raw_html is blank)'
+        required: false
+        default: 'S-Harsha-Bhat.html'
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Process Input & Generate PDF
+        id: generator
+        run: |
+          python3 engine/issue_resume_generator.py
+
+      - name: Handle Error on Issue
+        if: steps.generator.outputs.status == 'error' && steps.generator.outputs.issue_number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_NUM="${{ steps.generator.outputs.issue_number }}"
+          ERR_MSG="${{ steps.generator.outputs.error_message }}"
+          gh issue comment "$ISSUE_NUM" --body "⚠️ **Resume generation failed:** $ERR_MSG"
+
+      - name: Commit Generated Files to Repo
+        if: steps.generator.outputs.status == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add outputs/
+          git commit -m "chore(resume): add ${{ steps.generator.outputs.pdf_filename }}" || echo "No changes to commit"
+          git push
+
+      - name: Create GitHub Release with PDF
+        if: steps.generator.outputs.status == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME="resume-${{ steps.generator.outputs.company_slug }}-${{ github.run_number }}"
+          PDF_PATH="${{ steps.generator.outputs.pdf_path }}"
+          COMPANY="${{ steps.generator.outputs.company_name }}"
+          gh release create "$TAG_NAME" "$PDF_PATH" \
+            --title "Resume: S-Harsha_Bhat_${{ steps.generator.outputs.company_slug }}.pdf" \
+            --notes "Generated for ${COMPANY} via GitHub Actions." || echo "Release creation skipped or failed"
+
+      - name: Upload PDF Artifact
+        if: steps.generator.outputs.status == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.generator.outputs.company_slug }}
+          path: ${{ steps.generator.outputs.pdf_path }}
+          retention-days: 30
+
+      - name: Reply to Issue & Close
+        if: steps.generator.outputs.status == 'success' && steps.generator.outputs.issue_number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_NUM="${{ steps.generator.outputs.issue_number }}"
+          REPO="${{ github.repository }}"
+          TAG_NAME="resume-${{ steps.generator.outputs.company_slug }}-${{ github.run_number }}"
+          PDF_FILE="${{ steps.generator.outputs.pdf_filename }}"
+          PDF_PATH="${{ steps.generator.outputs.pdf_path }}"
+          COMPANY="${{ steps.generator.outputs.company_name }}"
+
+          DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${TAG_NAME}/${PDF_FILE}"
+          RAW_URL="https://github.com/${REPO}/raw/main/${PDF_PATH}"
+          VIEW_URL="https://github.com/${REPO}/blob/main/${PDF_PATH}"
+
+          cat << EOF > /tmp/issue_comment.md
+          ### 📄 Resume PDF Generated Successfully!
+
+          Your customized 1-page resume for **${COMPANY}** is ready:
+
+          - 📲 **[Direct Download PDF](${DOWNLOAD_URL})** *(Tap to download immediately on mobile)*
+          - 📄 **[Alternate Raw Link](${RAW_URL})**
+          - 📂 **[View in Repository](${VIEW_URL})**
+
+          ***
+          *Generated: \`${PDF_FILE}\` • Issue closed automatically.*
+          EOF
+
+          gh issue comment "$ISSUE_NUM" --body-file /tmp/issue_comment.md
+          gh issue close "$ISSUE_NUM"

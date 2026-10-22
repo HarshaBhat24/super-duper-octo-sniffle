@@ -8,8 +8,24 @@ Usage:
 """
 
 import sys
+import shutil
 import subprocess
 from pathlib import Path
+
+def find_browser() -> str:
+    """Finds an available Chromium or Chrome executable."""
+    candidates = [
+        "chromium",
+        "google-chrome",
+        "google-chrome-stable",
+        "chromium-browser",
+        "chrome",
+    ]
+    for c in candidates:
+        path = shutil.which(c)
+        if path:
+            return path
+    return "chromium"
 
 def export_to_pdf(input_html: str, output_pdf: str = None) -> bool:
     input_path = Path(input_html).resolve()
@@ -22,11 +38,17 @@ def export_to_pdf(input_html: str, output_pdf: str = None) -> bool:
     else:
         output_path = Path(output_pdf).resolve()
 
+    # Ensure output directory exists
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    browser_bin = find_browser()
+
     cmd = [
-        "chromium",
+        browser_bin,
         "--headless",
         "--no-sandbox",
         "--disable-gpu",
+        "--disable-dev-shm-usage",
         "--no-pdf-header-footer",
         "--user-data-dir=/tmp/chromium-profile",
         f"--print-to-pdf={output_path}",

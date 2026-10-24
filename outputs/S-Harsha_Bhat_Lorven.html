@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>S Harsha Bhat - Resume</title>
+<style>
+  @page { size: letter; margin: 0.38in 0.45in 0.35in 0.45in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 9.3pt; line-height: 1.22; color: #000; background: #fff; }
+  a { color: #0000ee; text-decoration: underline; }
+  header { text-align: center; margin-bottom: 5px; }
+  h1 { font-size: 18.5pt; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 2px; text-transform: uppercase; }
+  .contact-line { font-size: 8.8pt; line-height: 1.28; color: #222; }
+  .contact-line span { margin: 0 2px; color: #333; }
+  section { margin-top: 5px; }
+  h2 { font-size: 11pt; font-weight: 700; border-bottom: 1.2px solid #000; padding-bottom: 1px; margin-bottom: 3px; }
+  .entry { margin-bottom: 3px; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+  .entry-title { font-weight: 700; font-size: 9.3pt; }
+  .entry-date { font-size: 9.1pt; white-space: nowrap; text-align: right; }
+  .entry-subtitle { font-size: 9pt; color: #111; }
+  ul { list-style-type: disc; padding-left: 16px; }
+  li { margin-bottom: 1.5px; font-size: 9.1pt; text-align: left; }
+  .skills-category { font-weight: 700; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>S Harsha Bhat</h1>
+  <div class="contact-line">
+    <a href="mailto:harshabhat666@gmail.com">harshabhat666@gmail.com</a>
+    <span>|</span>
+    <a href="https://www.linkedin.com/in/s-harsha-bhat/">www.linkedin.com/in/s-harsha-bhat/</a>
+    <span>|</span>
+    <a href="https://github.com/Harshabhat24">github.com/Harshabhat24</a>
+    <br>
+    <a href="https://harsha-bhat.vercel.app/">harsha-bhat.vercel.app/</a>
+    <span>|</span>
+    <span>9483022191</span>
+    <span>|</span>
+    <span>Bengaluru</span>
+  </div>
+</header>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Associate Product Developer - Epicor Software, Bengaluru</span>
+      <span class="entry-date">Sep 2026 - Present</span>
+    </div>
+    <ul>
+      <li>Re-tested 5 penetration testing defect tickets with Burp Suite and manual API manipulation to validate remediation; identified 3 incomplete fixes (CSP unsafe-inline bypass, BOLA user-data extraction, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.</li>
+      <li>Renewed an application certificate and created a CA certificate, managing certificate lifecycle requirements alongside Azure DevOps pipeline and Agile delivery work.</li>
+    </ul>
+    <div class="entry-header" style="margin-top: 3px;">
+      <span class="entry-title">Product Development Intern - Epicor Software, Bengaluru</span>
+      <span class="entry-date">Oct 2025 - Sep 2026</span>
+    </div>
+    <ul>
+      <li>Engineered a PowerShell cleanup script deployed across 5 agent VMs via a weekly automated ADO pipeline, clearing ~50 GB of logs and temp data per run and eliminating pipeline failures caused by storage exhaustion.</li>
+      <li>Automated test environments with TypeScript UI automation and Python/Locust load-testing scripts that drove enterprise application workflows across parallel Chrome instances under concurrent load.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Security Consultant (Freelancer) - Mindpex</span>
+      <span class="entry-date">July - Aug 2026</span>
+    </div>
+    <ul>
+      <li>Exploited direct prompt injection on an unauthenticated FastAPI LLM endpoint that passed raw input to the model, and demonstrated indirect prompt injection via persistent employee-memory poisoning that shaped future LLM outputs.</li>
+      <li>Identified AI trust-boundary failures: an LLM context store with zero tenant isolation, an unvalidated context field with no provenance checks, and raw LLM exceptions leaking infrastructure details; delivered remediation.</li>
+      <li>Assessed the multi-tenant SaaS platform across 7 security domains using OWASP WSTG; documented 30+ CVSS-scored findings (14 Critical, 17 High), incl. SSRF confirmed OOB via interactsh, with code-level fixes in TypeScript, Python, and SQL.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">VigiLynx - Winner, HackAthena'25 Cybersecurity Track (<a href="https://vigilynx-web.vercel.app/">Live Web App</a> | <a href="https://github.com/Harshabhat24/VigiLynx">Github</a>)</span>
+      <span class="entry-date">Apr - June 2025</span>
+    </div>
+    <ul>
+      <li>Engineered a working phishing-detection prototype in 48 hours: a Random Forest classifier on extracted URL features, analyzing 1,000+ URLs and raising real-time alerts through a Chrome extension.</li>
+      <li>Integrated VirusTotal threat-intelligence APIs to automate multi-engine malware verdict parsing across 50+ scanned files, enriching ML detections with external intelligence.</li>
+      <li>Developed authenticated backend services and a monitoring dashboard logging detections, scan history, and per-user security events for threat visibility.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Black-Box Web Pentest - Powerdialer (<a href="https://github.com/Harshabhat24">Github Repository</a>)</span>
+      <span class="entry-date">Jun 2026</span>
+    </div>
+    <ul>
+      <li>Performed an authorized OWASP WSTG-based assessment validating authentication, authorization, API, and WebSocket controls using Burp Suite, ffuf, and Gobuster.</li>
+      <li>Identified and manually validated

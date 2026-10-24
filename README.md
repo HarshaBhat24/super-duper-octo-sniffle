@@ -430,7 +430,7 @@ Generate company-specific PDFs (`S-Harsha_Bhat_{company-name}.pdf`) directly fro
 3. Set the **Target Company Name** (e.g., `Google`, `Amazon`, `Stripe`).
 4. Paste the complete resume HTML code into the description box.
 5. Tap **Submit new issue**.
-6. The GitHub Action will compile the PDF headlessly, commit it to `outputs/S-Harsha_Bhat_{company}.pdf`, upload it as a release asset, comment on the issue with a direct download link, and auto-close the issue within ~15 seconds.
+6. The GitHub Action will compile the PDF headlessly, publish it as a GitHub Release asset, comment on the issue with a direct download link, and auto-close the issue within ~15 seconds.
 
 ### Method 2: Via Actions Tab (`workflow_dispatch`)
 1. Go to the **Actions** tab on GitHub.

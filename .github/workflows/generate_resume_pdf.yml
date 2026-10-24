@@ -53,16 +53,6 @@ jobs:
           ERR_MSG="${{ steps.generator.outputs.error_message }}"
           gh issue comment "$ISSUE_NUM" --body "⚠️ **Resume generation failed:** $ERR_MSG"
 
-      - name: Commit Generated Files to Repo
-        if: steps.generator.outputs.status == 'success'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main || true
-          git add outputs/
-          git commit -m "chore(resume): add ${{ steps.generator.outputs.pdf_filename }}" || echo "No changes to commit"
-          git push
-
       - name: Create GitHub Release with PDF
         if: steps.generator.outputs.status == 'success'
         env:
@@ -96,17 +86,15 @@ jobs:
           COMPANY="${{ steps.generator.outputs.company_name }}"
 
           DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${TAG_NAME}/${PDF_FILE}"
-          RAW_URL="https://github.com/${REPO}/raw/main/${PDF_PATH}"
-          VIEW_URL="https://github.com/${REPO}/blob/main/${PDF_PATH}"
+          RELEASE_URL="https://github.com/${REPO}/releases/tag/${TAG_NAME}"
 
           cat << EOF > /tmp/issue_comment.md
           ### 📄 Resume PDF Generated Successfully!
 
           Your customized 1-page resume for **${COMPANY}** is ready:
 
-          - 📲 **[Direct Download PDF](${DOWNLOAD_URL})** *(Tap to download immediately on mobile)*
-          - 📄 **[Alternate Raw Link](${RAW_URL})**
-          - 📂 **[View in Repository](${VIEW_URL})**
+          - 📲 **[Direct Download PDF](${DOWNLOAD_URL})** 
+          - 🏷️ **[View GitHub Release](${RELEASE_URL})**
 
           ***
           *Generated: \`${PDF_FILE}\` • Issue closed automatically.*

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>S Harsha Bhat - AI Developer Resume</title>
+<style>
+  @page { size: letter; margin: 0.38in 0.45in 0.35in 0.45in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 9.3pt; line-height: 1.22; color: #000; background: #fff; }
+  a { color: #0000ee; text-decoration: underline; }
+  header { text-align: center; margin-bottom: 0px; }
+  h1 { font-size: 18.5pt; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 0px; text-transform: uppercase; }
+  .tagline { font-size: 10pt; font-weight: 700; margin-bottom: 2px; }
+  .contact-line { font-size: 8.8pt; line-height: 1.28; color: #222; }
+  .contact-line span { margin: 0 2px; color: #333; }
+  section { margin-top: 0; }
+  h2 { font-size: 11pt; font-weight: 700; border-bottom: 1.2px solid #000; padding-bottom: 1px; margin-bottom: 3px; }
+  .entry { margin-bottom: 3px; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+  .entry-title { font-weight: 700; font-size: 9.3pt; }
+  .entry-date { font-size: 9.1pt; white-space: nowrap; text-align: right; }
+  .entry-subtitle { font-size: 9pt; color: #111; }
+  ul { list-style-type: disc; padding-left: 16px; }
+  li { margin-bottom: 1.5px; font-size: 9.1pt; text-align: left; }
+  .skills-category { font-weight: 700; }
+  @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>S Harsha Bhat</h1>
+    <div class="contact-line">
+    <a href="mailto:harshabhat666@gmail.com">harshabhat666@gmail.com</a>
+    <span>|</span>
+    <a href="https://www.linkedin.com/in/s-harsha-bhat/">www.linkedin.com/in/s-harsha-bhat/</a>
+    <span>|</span>
+    <a href="https://github.com/Harshabhat24">github.com/Harshabhat24</a>
+    <br>
+    <a href="https://harsha-bhat.vercel.app/">harsha-bhat.vercel.app/</a>
+    <span>|</span>
+    <span>9483022191</span>
+    <span>|</span>
+    <span>Bengaluru</span>
+  </div>
+</header>
+
+<section>
+  <h2>Services</h2>
+  <ul>
+    <li>LLM-powered applications and API integrations, from prototype to deployment.</li>
+    <li>AI agents, scheduled pipelines and workflow automation, with security review (prompt injection, data isolation) built in before launch.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">cron-engine - Automated Candidate-Matching Pipeline (<a href="https://github.com/HarshaBhat24/cron-engine">Github</a>)</span>
+      <span class="entry-date">Sep 2026 - Present</span>
+    </div>
+    <ul>
+      <li>Architected an automated candidate-matching engine using Groqs to screen unstructured job descriptions on a scheduled cron run.</li>
+      <li>Applied batch prompt engineering to classify multiple job descriptions per request, with strict JSON schema enforcement so every response is machine-parseable.</li>
+      <li>Set model temperature to zero for consistent experience-level classification across runs.</li>
+      <li>Engineered a fault-tolerant multi-model fallback chain across open-source models, so a failing or rate-limited model hands off to the next instead of stopping the run.</li>
+      <li>Implemented automated HTTP 429 retry with backoff to handle API rate limits without manual intervention.</li>
+      <li>Added hybrid rule-based pre-filtering ahead of the LLM, cutting redundant API token consumption and keeping scheduled runs reliable.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Career Engine - LLM Resume Generation System</span>
+      <span class="entry-date">July 2026 - Present</span>
+    </div>
+    <ul>
+      <li>Architected an end-to-end LLM application, designed to run on Claude models, that generates role-tailored, ATS-optimized technical resumes from raw job descriptions.</li>
+      <li>Built structured context injection across 7 specialized knowledge-base modules, so each resume is grounded in verified candidate data rather than model guesswork.</li>
+      <li>Implemented an 8-stage agentic generation pipeline that runs end to end without manual intervention.</li>
+      <li>Enforced strict Truth Guard anti-hallucination constraints to stop the model from fabricating metrics or experience.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">VigiLynx - Winner, HackAthena'25 (<a href="https://vigilynx-web.vercel.app/">Live Web App</a> | <a href="https://github.com/Harshabhat24/VigiLynx">Github</a>)</span>
+      <span class="entry-date">Apr - June 2025</span>
+    </div>
+    <ul>
+      <li>Built and deployed an ML-driven phishing and malware detection platform (Chrome extension, web app, Node.js backend) that won the HackAthena'25 Cybersecurity Track.</li>
+      <li>Implemented a Random Forest URL-classification pipeline with feature extraction, analyzing 1,000+ URLs and generating real-time browser alerts.</li>
+      <li>Integrated the VirusTotal API to automate malware verdicts across 50+ files, with an authenticated dashboard logging detections and scan history.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Security Consultant (Freelancer) - Mindpex</span>
+      <span class="entry-date">July - Aug 2026</span>
+    </div>
+    <ul>
+      <li>Security-tested the AI/LLM layer of a multi-tenant SaaS platform, exploiting direct prompt injection on an unauthenticated LLM endpoint and indirect injection via persistent memory poisoning.</li>
+      <li>Found an LLM context store with no tenant isolation and raw LLM errors leaking infrastructure details; delivered code-level remediation.</li>
+      <li>Assessed the full platform across 7 security domains, documenting 30+ CVSS-scored findings (14 Critical, 17 High) with a prioritized remediation roadmap.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Associate Product Developer - Epicor Software, Bengaluru</span>
+      <span class="entry-date">Sep 2026 - Present</span>
+    </div>
+    <ul>
+      <li>Re-tested 5 penetration testing defects with Burp Suite and manual API requests, uncovering 3 incomplete fixes (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure).</li>
+    </ul>
+
+    <div class="entry-header" style="margin-top: 3px;">
+      <span class="entry-title">Product Development Intern - Epicor Software, Bengaluru</span>
+      <span class="entry-date">Oct 2025 - Sep 2026</span>
+    </div>
+    <ul>
+      <li>Engineered a PowerShell cleanup script deployed across 5 agent VMs via a weekly ADO pipeline, clearing ~50 GB of logs and temp data per run and eliminating pipeline failures from storage exhaustion.</li>
+      <li>Developed TypeScript UI automation and Python/Locust load-testing scripts running parallel Chrome instances against an enterprise application.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <ul>
+    <li><span class="skills-category">AI &amp; Automation:</span> LLM API Integration, Prompt Engineering, Structured JSON Output, Multi-Model Fallback, Rate-Limit Handling, AI Agents and Pipelines, Anti-Hallucination Design, Machine Learning (Random Forest), Prompt Injection Testing</li>
+    <li><span class="skills-category">Programming:</span> Python, JavaScript, TypeScript, Node.js, React, PowerShell, Bash, SQL</li>
+    <li><span class="skills-category">Platforms &amp; Tools:</span> Groq, Claude, Supabase, Chrome Extension APIs, VirusTotal API, Headless Chromium, Azure DevOps, Git, Jira</li>
+    <li><span class="skills-category">Security:</span> OWASP LLM Top 10, API Security, Authentication, Authorization, Burp Suite, Semgrep</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Certifications and Achievements</h2>
+  <ul>
+    <li>CompTIA Security+ (SY0-701) - June 2026</li>
+    <li>ISC2 Certified in Cybersecurity (CC) - Feb 2026</li>
+    <li>Winner - HackAthena'25 Cybersecurity Track (National Hackathon)</li>
+    <li>Solved 200+ CTF Challenges | Top 10% Ranking on TryHackMe</li>
+  </ul>
+</section>
+</body>
+</html>

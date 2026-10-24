@@ -3,3 +3,9 @@ __pycache__/
 *$py.class
 .DS_Store
 *.tmp
+
+# Generated outputs & PDFs
+outputs/*
+!outputs/log.md
+!outputs/.gitkeep
+*.pdf

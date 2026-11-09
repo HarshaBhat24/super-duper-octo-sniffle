@@ -202,15 +202,15 @@ Generate Achievements & Certifications (CompTIA Security+ June 2026, ISC2 CC Feb
 
 ↓
 
+Internal Reasoning: Company Intelligence, ATS Keyword Optimization, Competing Candidate Benchmarking & Priority Gap Strategy (evaluated internally; zero output tokens)
+
+↓
+
 Validate Resume Budget (strict 1-page fit, bullet constraints) and Truth Guard
 
 ↓
 
-Direct Document Generation - Produce final resume directly matching reference PDF layout (Clean Markdown + Self-contained Print-Ready HTML)
-
-↓
-
-ATS Analysis & Competing Candidate Benchmark (5 items tagged + Priority Gap advice)
+Direct Document Generation - Produce final resume strictly as Standalone Print-Ready HTML (No Markdown resume, no ATS report, no competitor benchmark, no company intelligence report, no notes — saving AI tokens)
 ```
 
 Never skip any step.
@@ -385,15 +385,14 @@ Every generated resume should
 
 # Supported Outputs
 
-Using this repository, an LLM should be capable of generating
+Using this repository, an LLM generates:
 
-- ATS-Optimized Tailored Resume (Clean Markdown + Standalone Print-Ready HTML)
-- Exact 1-Page PDF Generation (`engine/export_pdf.py` with `--no-pdf-header-footer`)
+- ATS-Optimized Tailored Resume in Standalone Print-Ready HTML (token-efficient single deliverable; directly exportable to 1-page PDF via `engine/export_pdf.py` or GitHub Actions)
+- Internalized ATS Keyword Optimization & Competing Candidate Benchmarking (evaluated internally during generation to maximize impact, without wasting output tokens on text reports)
 - Direct JD & Skills Alignment (Under strict Truth Guard)
-- Experience & Project Rewriting (Role-specific framing)
+- Role-Specific Experience & Project Rewriting
 - Dynamic Skills Categorization
 - Achievement & Certification Prioritization
-- ATS Keyword Matching Analysis & Competing Candidate Benchmark
 
 ---
 
@@ -416,7 +415,7 @@ The LLM outputs the finalized resume immediately, formatted to match the referen
 - **Skills:** Bulleted list categorized into bold headings: `● Security: ...`, `● Programming: ...`, `● Operating Systems: ...`, `● Networking: ...`, `● Tools: ...`.
 - **Certifications and Achievements:** Compact bulleted list.
 - **Education:** Institution and dates on line 1, degree and CGPA on line 2.
-- **Output Formats:** Delivered simultaneously in formatted Markdown and standalone print-ready HTML/CSS designed for exact 1-page PDF export via `engine/export_pdf.py` (which disables browser print headers/footers automatically).
+- **Output Format:** Delivered strictly as standalone print-ready HTML/CSS designed for exact 1-page PDF export via `engine/export_pdf.py` (which disables browser print headers/footers automatically). To conserve AI tokens, the model does NOT output markdown duplicates, ATS analysis reports, competitor benchmarks, company intelligence reports, or notes.
 
 ---
 

@@ -1662,6 +1662,8 @@ Before producing the final resume, verify that:
 - The resume fits on one page.
 - Every statement is backed by the knowledge base.
 - Epicor bullets highlight either the AppSec pentest bug verification work (5 bugs re-tested, 3 incomplete fixes caught: CSP unsafe-inline, BOLA, JWT) for AppSec/ProdSec/Pentest/API roles, or the VM cleanup PowerShell script (~ 50 GB/wk cleared) for DevSecOps/Infrastructure roles.
+- The output contains strictly and exclusively the standalone print-ready HTML resume (no Markdown duplicate, no ATS analysis text, no competitor benchmark text, no company intelligence report, no notes/filler).
+- ATS keyword optimization, competitor benchmarking, priority gap closing strategies, and company intelligence modifiers were evaluated internally in thinking and embedded directly into the HTML resume design.
 
 If any check fails, regenerate the affected section before returning the resume.
 

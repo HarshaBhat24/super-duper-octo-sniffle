@@ -80,6 +80,11 @@ Generate a one-page ATS-optimized cybersecurity resume tailored specifically for
 
 Every section should maximize alignment while remaining completely truthful.
 
+**Deliverable & Token Optimization Rule:**
+Output strictly and exclusively the **standalone print-ready HTML document**.
+To conserve AI tokens, all critical strategic steps — including ATS keyword analysis, competing candidate benchmarking, priority gap analysis, and company intelligence adaptation — must be executed **internally in your reasoning/thinking** and reflected directly in the generated HTML.
+**DO NOT output** Markdown resumes, ATS Analysis sections, Competing Candidate Benchmarks, Priority Gap advice, Company Intelligence Reports, or conversational filler ("Notes for you", preambles, or postscripts).
+
 ---
 
 # Resume Structure (All Roles - Unified Layout)
@@ -132,7 +137,7 @@ Step 3: Analyze the Job Description (Extract key requirements, tools, concepts, 
 
 ↓
 
-Step 4: Apply Company Intelligence (Extract tone modifier, verb preference, and skills ordering from `engine/04_company_intelligence.md`).
+Step 4: Apply Company Intelligence Internally (Extract tone modifier, verb preference, and skills ordering from `engine/04_company_intelligence.md` — silently adopt these in your thinking; DO NOT output a Company Intelligence Report).
 
 ↓
 
@@ -152,13 +157,17 @@ Step 6: Project Selection (Select 2 of 3).
 
 ↓
 
-Step 7: Direct Document Generation (Unified Print-Ready Document Output).
-- Directly output the final, complete resume document matching the reference PDF layout (Clean Markdown + Standalone Print-Ready HTML).
-- No intermediate drafts or approval pauses.
+Step 7: Internal ATS Optimization & Competitor Benchmarking (Internal Reasoning — Zero Output Tokens).
+- Conduct internal ATS keyword analysis: extract JD keywords, verify candidate matches, and weave them naturally across bullets and skills.
+- Conduct internal Competing Candidate Benchmark: simulate competitor profiles, identify differentiators to highlight, and devise internal strategies to close priority gaps with verified capabilities.
+- Keep all strategic insights in mind while formulating the resume.
+- STRICTLY DO NOT output any ATS analysis, benchmark tables, gap reports, or notes.
 
 ↓
 
-Step 8: ATS Analysis & Competing Candidate Benchmark.
+Step 8: Direct HTML Document Generation (Strictly HTML Output Only).
+- Output ONLY the final, complete, standalone print-ready HTML document matching the reference PDF layout (`<!DOCTYPE html>...</html>`).
+- No intermediate drafts, no approval pauses, no markdown duplicates, and no commentary.
 
 ---
 
@@ -212,12 +221,17 @@ The resume must strictly follow the visual layout of the reference PDF:
    - Line 1: `New Horizon College of Engineering, Bengaluru` on left, `Nov 2022 - July 2026` on right.
    - Line 2: `B.E. in Information Science and Engineering, CGPA: 8.57`.
 
-### Output Deliverables (In the same response)
-1. **Formatted Resume Document:** Clean Markdown representation matching the layout.
-2. **Self-Contained Print-Ready HTML Document:** A standalone `<!DOCTYPE html>` block with clean, embedded CSS (`@page { size: letter; margin: 0.38in 0.45in; }`, sans-serif ATS font, flex row spacing, horizontal rules) that renders the exact 1-page PDF upon "Print to PDF".
-3. **ATS Analysis & Competing Candidate Benchmark:**
-   - ATS Analysis (keywords found, covered, missing, strengths, suggestions)
-   - Competing Candidate Benchmark (5 benchmark items + Priority Gap to Close)
+### Output Deliverable (Strictly HTML Only - Zero Token Overhead)
+Output **strictly and exclusively ONE deliverable**:
+1. **Self-Contained Print-Ready HTML Document:** A standalone `<!DOCTYPE html>` block with clean, embedded CSS (`@page { size: letter; margin: 0.38in 0.45in; }`, sans-serif ATS font, flex row spacing, horizontal rules) that renders the exact 1-page PDF upon "Print to PDF".
+
+**STRICT TOKEN CONSERVATION RULES (Do NOT Output):**
+- **DO NOT** output a Markdown version of the resume.
+- **DO NOT** output an ATS Analysis report.
+- **DO NOT** output a Competing Candidate Benchmark or Priority Gap to Close.
+- **DO NOT** output a Company Intelligence Report.
+- **DO NOT** output "Notes for you", commentary, introductions, or closing remarks.
+- The entire response must contain **ONLY the complete HTML document** (or inside a single ```html code block) and absolutely nothing else.
 
 ---
 
@@ -339,8 +353,10 @@ Before returning the resume, verify:
 ✓ Maximum 3 achievements in role-priority order
 ✓ Education: New Horizon College of Engineering, B.E. in Information Science and Engineering, CGPA: 8.57, Nov 2022 - July 2026
 ✓ Resume fits one page (margins, line heights, bullet budget)
-✓ Complete document generated directly matching reference PDF layout (Markdown + Print-ready HTML)
-✓ ATS keywords covered
+✓ Complete document generated directly matching reference PDF layout as a standalone print-ready HTML document
+✓ Output contains strictly and exclusively HTML (zero Markdown resume, zero ATS report, zero competitor benchmark, zero company intelligence report, zero notes/filler)
+✓ ATS keywords, competitor benchmarking, priority gap strategies, and company intelligence modifiers were evaluated internally and embedded into the HTML resume design
+✓ ATS keywords covered naturally without keyword stuffing
 ✓ No fabricated information (no unverified 97% accuracy metric)
 ✓ Epicor VM cleanup PowerShell script bullet present (unless overridden by stronger JD-aligned bullet)
 
@@ -348,28 +364,31 @@ If any check fails, regenerate the affected section.
 
 ---
 
-# Additional Output
+# Internal Cognitive Requirements (Think, Do NOT Output)
 
-After the resume, provide:
+To minimize token usage while producing the strongest possible resume, you must **internally consider and mentally calculate** all of the following in your chain of thought, but **NEVER output any of them as visible text**:
 
-## ATS Analysis
-- Target Role Context
-- Important Keywords Found
-- Keywords Successfully Covered
-- Missing Keywords
-- Resume Strengths
-- Weaknesses
-- Suggestions for Improvement
+## 1. Internal ATS Keyword Matching & Optimization
+- Extract key technical requirements, concepts, and security tools from the JD.
+- Map them silently against verified candidate experience and projects.
+- Integrate critical keywords naturally into the HTML resume bullets and dynamic skills categories without stuffing.
+- **Do NOT output** an "ATS Analysis" section.
 
-## Competing Candidate Benchmark
-Simulate what a strong competing candidate for this specific role typically has.
-Tag exactly 5 benchmark items:
-- ✅ YOU HAVE IT - clearly evidenced in the resume
-- 🟡 YOU'RE CLOSE - partially evidenced, could be stronger
-- ❌ GAP TO BUILD - not present; a strong competitor likely has this
+## 2. Internal Competing Candidate Benchmark & Priority Gap Strategy
+- Mentally simulate what a top competing candidate for this specific role possesses.
+- Benchmark the candidate's profile against those expectations (identify what is solid, what is close, and what the key gaps are).
+- Use this benchmark to highlight the candidate's strongest verified differentiators (e.g., real-world multi-tenant VAPT, code-level remediation in TypeScript/Python/SQL, verified pentest defect re-testing at Epicor, 1st place HackAthena) to outshine competitor profiles.
+- Formulate bullets to bridge priority gaps using verified adjacent engineering and security capabilities.
+- **Do NOT output** a "Competing Candidate Benchmark" or "Priority Gap to Close" section.
 
-### Priority Gap to Close
-Identify the single most impactful GAP TO BUILD item and suggest ONE concrete, actionable way to close it within 30–60 days without fabricating experience.
+## 3. Internal Company Intelligence & Tone Alignment
+- Mentally analyze company scale, type, and tone per `engine/04_company_intelligence.md`.
+- Adjust verb preferences (e.g., Engineered/Automated for Big Tech vs Assessed/Reported for Consultancy) and skills ordering internally.
+- **Do NOT output** a "Company Intelligence Report".
+
+## 4. Zero Explanatory Notes ("Notes for you", Preamble, Postscript)
+- **Do NOT output** "Notes for you", advice, tips, explanations, or conversational pleasantries.
+- Output **ONLY the print-ready HTML resume**.
 
 ---
 

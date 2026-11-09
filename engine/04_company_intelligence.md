@@ -187,22 +187,20 @@ Do not invent company details.
 
 ---
 
-## Step 5 - Output Company Intelligence Report
+## Step 5 - Internal Company Intelligence Analysis (Zero-Token Output)
 
-Before proceeding to Role Classification and Keyword Extraction, output:
+Perform this step **strictly within internal reasoning/thinking**. Do NOT output this report in the response.
 
-```
-Company Intelligence Report
-Company Name: [name or "unknown"]
-Company Type: [classified type]
-Confidence: [High / Medium / Low]
-Key Signals: [list of signals detected]
-Applied Modifier: [summary of tone/emphasis changes]
-```
+Silently evaluate:
+- Company Name: [name or "unknown"]
+- Company Type: [Startup / Scale-up / Enterprise / Big Tech / Consultancy / Government]
+- Key Signals detected from JD
+- Applied Modifier: Apply tone modifier, action verb preferences, and skills ordering directly to the HTML resume.
 
-Do NOT ask the candidate to confirm this unless confidence is Low.
-
-If confidence is Low, ask: "I classified this as [type] - does that sound right?"
+**CRITICAL (Token Conservation):**
+- **Do NOT output** a "Company Intelligence Report".
+- **Do NOT pause** or ask the candidate to confirm company classification.
+- Keep the company profile and modifiers in mind to guide bullet wording and skills ordering directly in the HTML resume.
 
 ---
 

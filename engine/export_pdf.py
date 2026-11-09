@@ -24,9 +24,9 @@ def find_browser() -> Optional[str]:
             return str(path)
 
     candidates = [
-        "chromium",
         "google-chrome",
         "google-chrome-stable",
+        "chromium",
         "chromium-browser",
         "chrome",
         "msedge",
@@ -38,7 +38,7 @@ def find_browser() -> Optional[str]:
             return path
     return None
 
-def export_to_pdf(input_html: str, output_pdf: str = None) -> bool:
+def export_to_pdf(input_html: str, output_pdf: str = None, timeout: int = 60) -> bool:
     input_path = Path(input_html).resolve()
     if not input_path.exists():
         print(f"Error: Input file '{input_html}' does not exist.")
@@ -64,28 +64,35 @@ def export_to_pdf(input_html: str, output_pdf: str = None) -> bool:
             "--no-sandbox",
             "--disable-gpu",
             "--disable-dev-shm-usage",
+            "--disable-software-rasterizer",
             "--no-pdf-header-footer",
             f"--user-data-dir={tmp_profile}",
             f"--print-to-pdf={output_path}",
-            str(input_path),
+            input_path.as_uri(),
         ]
 
-        try:
-            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, timeout=30)
-            print(f"Successfully generated PDF: {output_path}")
-            return True
-        except subprocess.TimeoutExpired:
-            print("Error: Headless browser timed out after 30 seconds.")
-            return False
-        except FileNotFoundError as e:
-            print(f"Error: Browser binary '{browser_bin}' could not be executed: {e}")
-            return False
-        except subprocess.CalledProcessError as e:
-            print(f"Error exporting PDF: {e.stderr.decode('utf-8', errors='ignore')}")
-            return False
-        except Exception as e:
-            print(f"Unexpected error exporting PDF: {e}")
-            return False
+        # Allow 2 attempts in case the browser hits a transient cold-start timeout in CI
+        for attempt in range(2):
+            try:
+                res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, timeout=timeout)
+                print(f"Successfully generated PDF: {output_path}")
+                return True
+            except subprocess.TimeoutExpired:
+                if attempt == 0:
+                    print(f"Warning: Browser launch timed out after {timeout}s on cold start. Retrying once...")
+                    continue
+                print(f"Error: Headless browser timed out after {timeout} seconds.")
+                return False
+            except FileNotFoundError as e:
+                print(f"Error: Browser binary '{browser_bin}' could not be executed: {e}")
+                return False
+            except subprocess.CalledProcessError as e:
+                print(f"Error exporting PDF: {e.stderr.decode('utf-8', errors='ignore')}")
+                return False
+            except Exception as e:
+                print(f"Unexpected error exporting PDF: {e}")
+                return False
+    return False
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

@@ -36,15 +36,12 @@ class TestExportPdf(unittest.TestCase):
 
     def test_export_pdf_success(self):
         template = REPO_ROOT / "templates" / "resume_template.html"
-        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
-            out_pdf = f.name
-        try:
-            res = export_to_pdf(str(template), out_pdf)
-            self.assertTrue(res)
-            self.assertTrue(Path(out_pdf).exists())
-            self.assertGreater(Path(out_pdf).stat().st_size, 1000)
-        finally:
-            Path(out_pdf).unlink(missing_ok=True)
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            out_pdf = Path(tmp_dir) / "output.pdf"
+            res = export_to_pdf(str(template), str(out_pdf))
+            self.assertTrue(res, "export_to_pdf should return True on success")
+            self.assertTrue(out_pdf.exists(), "Generated PDF should exist")
+            self.assertGreater(out_pdf.stat().st_size, 1000, "Generated PDF should be non-empty")
 
 class TestIssueResumeGenerator(unittest.TestCase):
     def test_module_import_and_cli_execution(self):

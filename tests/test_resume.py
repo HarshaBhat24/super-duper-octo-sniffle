@@ -48,8 +48,9 @@ class TestExportPdf(unittest.TestCase):
 
 class TestIssueResumeGenerator(unittest.TestCase):
     def test_module_import_and_cli_execution(self):
+        clean_env = {k: v for k, v in os.environ.items() if k != "GITHUB_EVENT_PATH"}
         cmd = [sys.executable, "-m", "engine.issue_resume_generator", "UnitTestCompany"]
-        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=str(REPO_ROOT))
+        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=str(REPO_ROOT), env=clean_env)
         self.assertEqual(res.returncode, 0, f"Module execution failed: {res.stderr.decode()}")
         # Clean up generated files
         (REPO_ROOT / "outputs" / "S-Harsha_Bhat_UnitTestCompany.html").unlink(missing_ok=True)
@@ -60,6 +61,7 @@ class TestIssueResumeGenerator(unittest.TestCase):
         self.assertNotIn("UnitTestCompany", log_content, "outputs/log.md should not be polluted with test companies")
 
     def test_validation_failure_exits_with_error(self):
+        clean_env = {k: v for k, v in os.environ.items() if k != "GITHUB_EVENT_PATH"}
         # Create a temporary HTML file violating truth guard
         bad_html = "<html><body><h1>S Harsha Bhat</h1><p>Kubernetes AWS Splunk</p></body></html>"
         with tempfile.NamedTemporaryFile(mode="w", suffix=".html", delete=False, encoding="utf-8") as f:
@@ -67,7 +69,7 @@ class TestIssueResumeGenerator(unittest.TestCase):
             tmp_path = f.name
         try:
             cmd = [sys.executable, "-m", "engine.issue_resume_generator", "UnitTestBad", tmp_path]
-            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=str(REPO_ROOT))
+            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=str(REPO_ROOT), env=clean_env)
             self.assertEqual(res.returncode, 1, "issue_resume_generator should exit 1 on validation failure")
             self.assertIn("Resume validation failed", res.stdout.decode() + res.stderr.decode())
         finally:

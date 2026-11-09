@@ -92,7 +92,22 @@ def main():
     html_content = None
     issue_number = ""
 
-    if event_path and os.path.exists(event_path):
+    # Check CLI arguments first (allows manual testing or programmatic subprocessing)
+    if len(sys.argv) > 1:
+        print("Running in CLI standalone mode...")
+        company_name = sys.argv[1]
+        company_slug = sanitize_company_name(company_name)
+        if len(sys.argv) > 2:
+            html_file = Path(sys.argv[2])
+            if html_file.exists():
+                html_content = html_file.read_text(encoding="utf-8")
+        if not html_content:
+            default_template = repo_root / "templates" / "resume_template.html"
+            if default_template.exists():
+                html_content = default_template.read_text(encoding="utf-8")
+
+    # If no CLI arguments provided, check GitHub Actions event
+    elif event_path and os.path.exists(event_path):
         with open(event_path, "r", encoding="utf-8") as f:
             event = json.load(f)
         
@@ -140,20 +155,18 @@ def main():
                 set_github_output("status", "error")
                 set_github_output("error_message", err)
                 return 0
-    else:
-        # CLI fallback for manual testing
-        print("Running in CLI standalone mode...")
-        if len(sys.argv) > 1:
-            company_name = sys.argv[1]
-            company_slug = sanitize_company_name(company_name)
-        if len(sys.argv) > 2:
-            html_file = Path(sys.argv[2])
-            if html_file.exists():
-                html_content = html_file.read_text(encoding="utf-8")
-        if not html_content:
+        else:
+            # Running in CI on push/PR where GITHUB_EVENT_PATH exists but isn't an issue or dispatch
+            print("Running in non-issue event environment without CLI arguments. Loading default template...")
             default_template = repo_root / "templates" / "resume_template.html"
             if default_template.exists():
                 html_content = default_template.read_text(encoding="utf-8")
+    else:
+        # CLI fallback for manual testing without arguments
+        print("Running in CLI standalone mode without arguments...")
+        default_template = repo_root / "templates" / "resume_template.html"
+        if default_template.exists():
+            html_content = default_template.read_text(encoding="utf-8")
 
     if not html_content:
         err = "Could not resolve HTML content."

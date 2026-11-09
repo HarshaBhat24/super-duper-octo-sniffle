@@ -11,7 +11,12 @@ import json
 import re
 import uuid
 from pathlib import Path
-from export_pdf import export_to_pdf
+try:
+    from engine.export_pdf import export_to_pdf
+    from engine.validate_resume import validate_resume
+except ImportError:
+    from export_pdf import export_to_pdf
+    from validate_resume import validate_resume
 
 def set_github_output(name: str, value: str):
     """Writes an output parameter to GITHUB_OUTPUT for GitHub Actions."""
@@ -87,7 +92,22 @@ def main():
     html_content = None
     issue_number = ""
 
-    if event_path and os.path.exists(event_path):
+    # Check CLI arguments first (allows manual testing or programmatic subprocessing)
+    if len(sys.argv) > 1:
+        print("Running in CLI standalone mode...")
+        company_name = sys.argv[1]
+        company_slug = sanitize_company_name(company_name)
+        if len(sys.argv) > 2:
+            html_file = Path(sys.argv[2])
+            if html_file.exists():
+                html_content = html_file.read_text(encoding="utf-8")
+        if not html_content:
+            default_template = repo_root / "templates" / "resume_template.html"
+            if default_template.exists():
+                html_content = default_template.read_text(encoding="utf-8")
+
+    # If no CLI arguments provided, check GitHub Actions event
+    elif event_path and os.path.exists(event_path):
         with open(event_path, "r", encoding="utf-8") as f:
             event = json.load(f)
         
@@ -135,20 +155,18 @@ def main():
                 set_github_output("status", "error")
                 set_github_output("error_message", err)
                 return 0
-    else:
-        # CLI fallback for manual testing
-        print("Running in CLI standalone mode...")
-        if len(sys.argv) > 1:
-            company_name = sys.argv[1]
-            company_slug = sanitize_company_name(company_name)
-        if len(sys.argv) > 2:
-            html_file = Path(sys.argv[2])
-            if html_file.exists():
-                html_content = html_file.read_text(encoding="utf-8")
-        if not html_content:
+        else:
+            # Running in CI on push/PR where GITHUB_EVENT_PATH exists but isn't an issue or dispatch
+            print("Running in non-issue event environment without CLI arguments. Loading default template...")
             default_template = repo_root / "templates" / "resume_template.html"
             if default_template.exists():
                 html_content = default_template.read_text(encoding="utf-8")
+    else:
+        # CLI fallback for manual testing without arguments
+        print("Running in CLI standalone mode without arguments...")
+        default_template = repo_root / "templates" / "resume_template.html"
+        if default_template.exists():
+            html_content = default_template.read_text(encoding="utf-8")
 
     if not html_content:
         err = "Could not resolve HTML content."
@@ -180,6 +198,17 @@ def main():
             set_github_output("issue_number", issue_number)
         return 1
 
+    # Validate generated resume (Truth Guard, bullet budget, 1-page fit)
+    is_valid, val_errors, _ = validate_resume(str(target_html_path), str(target_pdf_path))
+    if not is_valid:
+        err = "Resume validation failed:\n• " + "\n• ".join(val_errors)
+        print(f"Error: {err}")
+        set_github_output("status", "error")
+        set_github_output("error_message", err)
+        if issue_number:
+            set_github_output("issue_number", issue_number)
+        return 1
+
     print(f"Successfully generated: {target_pdf_path}")
     set_github_output("status", "success")
     set_github_output("company_name", company_name)
@@ -189,6 +218,21 @@ def main():
     set_github_output("html_path", f"outputs/{html_filename}")
     if issue_number:
         set_github_output("issue_number", issue_number)
+
+    # Optional: Append record to outputs/log.md Markdown table
+    log_file = repo_root / "outputs" / "log.md"
+    if log_file.exists() and not company_name.startswith("UnitTest"):
+        try:
+            import datetime
+            today = datetime.date.today().isoformat()
+            log_entry = f"| {today} | {company_name} | Customized Resume | GitHub Actions / Issue | Epicor + Mindpex | Dynamic Selection (2 of 3) | {pdf_filename} |\n"
+            content = log_file.read_text(encoding="utf-8")
+            if log_entry not in content and "\n---\n" in content:
+                parts = content.split("\n---\n", 1)
+                new_content = parts[0].rstrip() + "\n" + log_entry + "\n---\n" + parts[1]
+                log_file.write_text(new_content, encoding="utf-8")
+        except Exception as e:
+            print(f"Warning: Could not update log.md: {e}")
 
     return 0
 

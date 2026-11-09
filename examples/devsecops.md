@@ -104,32 +104,42 @@ Performed static analysis of 47 PostgreSQL migration files identifying unauthent
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
-- ADO CI/CD pipeline creation (agent-VM architecture)
-- PowerShell scripting deployed within those pipelines
-- VM disk cleanup automation
-- Log-based root cause analysis on pipeline failures
+- ADO CI/CD pipeline automation with PowerShell execution across agent VMs
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Re-testing penetration testing defect tickets using Burp Suite (BOLA, JWT, CSP bypasses)
+- Application certificate renewal and CA certificate creation
+- Log-based root cause analysis across Linux execution environments
 
 Suppress
 
+- QA terminology
+- Regression Testing
 - Pipeline-as-code / Jenkinsfile authoring as primary framing
-- Azure Pipelines YAML authoring as primary framing
 
-Star Bullet
+### Associate Product Developer (2 bullets)
+
+Star Bullet (AppSec Defect Verification)
+
+Renewed application certificates and created CA certificates for enterprise application components, applying certificate lifecycle management alongside Azure DevOps pipeline orchestration and Agile delivery.
+
+Example Bullet (Certificate Lifecycle & Infrastructure)
+
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
 
 Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
-Example Bullet
+Example Bullet (Automation & Testing)
 
-Created ADO CI/CD pipelines using agent-VM architecture to automate enterprise build and deployment workflows; authored PowerShell scripts executing within those pipelines for environment provisioning and maintenance.
-
-Example Bullet
-
-Performed log-based root cause analysis on pipeline and script failures - tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs.
+Developed TypeScript UI automation of the enterprise application and authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
 
 ---
 
@@ -340,7 +350,7 @@ High Priority
 
 ✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
-✓ Three bullets per section
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ One-page resume
 

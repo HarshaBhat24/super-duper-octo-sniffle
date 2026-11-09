@@ -111,32 +111,40 @@ Identified dead rate-limiting middleware misconfiguration in Next.js middleware 
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
-- Python/Locust load testing across multiple parallel Chrome instances
-- ADO CI/CD pipelines (agent-VM architecture)
-- SQL/SSMS queries for data validation
-- Boundary testing and input validation under load
+- Re-testing penetration testing defect tickets using Burp Suite and manual API testing
+- Identifying incomplete fixes across BOLA user-data extraction and JWT post-logout invalidation
+- Python/Locust load testing across multiple parallel Chrome instances under load
+- PowerShell VM cleanup automation (~ 50 GB/wk cleared)
 
 Suppress
 
 - Pipeline-as-code / Jenkinsfile authoring as primary framing
 - Azure Pipelines YAML authoring as primary framing
 
-Star Bullet
+### Associate Product Developer (2 bullets)
+
+Star Bullet (AppSec Defect Verification)
+
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+
+Example Bullet (Certificate Lifecycle & Infrastructure)
+
+Renewed application certificates and created CA certificates for enterprise application components, applying certificate lifecycle management alongside Azure DevOps pipeline orchestration and Agile delivery.
+
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
 
 Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
-Example Bullet
+Example Bullet (Automation & Testing)
 
-Authored Python/Locust load testing scripts exercising application API flows across multiple parallel Chrome instances under concurrent load, validating application behavior under sustained traffic.
-
-Example Bullet
-
-Created ADO CI/CD pipelines using agent-VM architecture; wrote SQL queries against SSMS-backed databases for test data validation and application state inspection under load test conditions.
+Developed TypeScript UI automation of the enterprise application and authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
 
 ---
 
@@ -353,7 +361,7 @@ Highest Priority
 
 ✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
-✓ Three bullets per section
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ One-page resume
 

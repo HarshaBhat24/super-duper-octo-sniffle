@@ -110,34 +110,41 @@ Discovered critical authorization bypasses, including an account takeover via in
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
-- Edge-case validation
-- Linux
-- PowerShell
-- Boundary testing
+- Re-testing 5 penetration testing defect tickets using Burp Suite and manual API testing
+- Verifying incomplete fixes: CSP unsafe-inline bypass, BOLA user extraction, JWT invalidation failure
+- Documenting reproduction PoCs and moving defect tickets back in Jira
+- PowerShell environment automation & VM cleanup script (~ 50 GB/wk cleared)
 
 Suppress
 
-- QA
-- Regression
-- Smoke Testing
+- QA terminology
+- Regression testing
 - Pipeline-as-code / Jenkinsfile authoring as primary framing
 
-Star Bullet
+### Associate Product Developer (2 bullets)
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs weekly while performing boundary testing in Linux-based execution environments.
+Star Bullet (AppSec Defect Verification)
 
-Example Bullet
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
 
-Validated complex execution paths and edge cases within enterprise build pipeline architectures, ensuring consistent operational stability and robustness across varied deployment scenarios.
+Example Bullet (Certificate Lifecycle & Infrastructure)
 
-Example Bullet
+Renewed application certificates and created CA certificates for enterprise application components, applying certificate lifecycle management alongside Azure DevOps pipeline orchestration and Agile delivery.
 
-Gained practical experience with enterprise continuous integration systems, interacting directly with ADO pipelines and Linux environments to support automated provisioning workflows.
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
+
+Example Bullet (Automation & Testing)
+
+Developed TypeScript UI automation of the enterprise application and authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
 
 ---
 
@@ -347,7 +354,7 @@ High Priority
 
 ✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
-✓ Three bullets per section
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ One page
 

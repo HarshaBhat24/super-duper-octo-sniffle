@@ -116,9 +116,10 @@ Resume Length
 
 - One page only
 
-Experience Bullets (per entry)
+Experience Bullets
 
-- Exactly 3 bullets
+- Epicor: exactly 4 bullets total (2 for Associate Product Developer, 2 for Intern)
+- Mindpex: exactly 3 bullets
 - Maximum 2 lines per bullet
 
 Projects
@@ -792,16 +793,16 @@ Every resume generation:
 
 1. Analyzes the target JD directly (zero-pause; no interactive role classification or gap analysis halts).
 2. Aligns candidate experience, verified skills, and project highlights directly to JD requirements.
-3. Rewrites Experience bullets (Epicor and Mindpex, 3 bullets each).
+3. Rewrites Experience bullets (Epicor: 2 bullets for APD, 2 bullets for Intern; Mindpex: 3 bullets).
 4. Selects the 2 most relevant projects (3 bullets each).
 5. Generates categorized skills and compact Certifications & Achievements.
 
 Experience Section Logic
 
 Always include Epicor Software:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
-Exactly 3 bullets covering impact.
+- Associate Product Developer (Sep 2026 – Present): exactly 2 bullets
+- Product Development Intern (Oct 2025 – Sep 2026): exactly 2 bullets
+Exactly 4 bullets total covering AppSec defect re-testing and DevOps/reliability automation.
 
 Always include Mindpex:
 - Security Consultant (Freelancer) - Mindpex (July 2026 – August 2026)
@@ -827,7 +828,7 @@ Both selected projects receive exactly 3 bullets each.
 The generated resume must:
 
 - Fit on one page
-- Be delivered as formatted Markdown AND print-ready HTML/CSS matching the reference layout
+- Be delivered as a standalone, print-ready HTML/CSS document matching the reference layout (strictly HTML only, zero Markdown)
 - Be ATS friendly
 - Be technically accurate with zero hallucinations (Truth Guard strictly enforced)
 - Emphasize security concepts, architecture, and measurable impact

@@ -109,15 +109,15 @@ Applied static analysis methodologies to evaluate PostgreSQL Row-Level Security 
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
-- Root cause analysis
-- Automation scripting
-- Linux execution environments
-- Technical analysis
+- Re-testing penetration testing defect tickets using Burp Suite (incomplete fixes: CSP, BOLA, JWT)
+- Root cause analysis and technical investigation of execution failures across VMs
+- PowerShell automation script clearing ~ 50 GB of logs weekly across 5 VMs via ADO
+- Application certificate renewal and CA certificate creation
 
 Suppress
 
@@ -126,17 +126,25 @@ Suppress
 - Smoke Testing
 - Basic IT support
 
-Star Bullet
+### Associate Product Developer (2 bullets)
 
-Spearheaded root cause analysis of persistent pipeline failures; engineered a PowerShell automation script deployed across 5 VMs via ADO pipelines to process and clear ~ 50 GB of logs weekly, restoring stability.
+Star Bullet (AppSec Defect Verification)
 
-Example Bullet
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
 
-Authored automation scripts to optimize repetitive operational tasks across Linux execution environments, reducing manual overhead and ensuring consistent execution of technical processes.
+Example Bullet (Certificate Lifecycle & Infrastructure)
 
-Example Bullet
+Performed log-based root cause analysis on recurring CI/CD pipeline and script execution failures across agent VMs, tracing storage exhaustion, certificate expirations, and network timeouts to restore automated build stability.
 
-Conducted deep technical investigation and root cause analysis within enterprise pipeline infrastructure, directly applying automation to maintain reliable execution states.
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
+
+Example Bullet (Automation & Testing)
+
+Developed TypeScript UI automation of the enterprise application and authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
 
 ---
 
@@ -358,7 +366,7 @@ High Priority
 
 ✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
-✓ Three bullets per section
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ One page
 

@@ -496,9 +496,9 @@ Technology names should never be the primary focus.
 
 Exactly
 
-Experience (per entry)
-
-3 bullets
+Experience
+- Mindpex: 3 bullets
+- Epicor: 4 bullets total (2 for Associate Product Developer, 2 for Intern)
 
 Selected Project 1 (highest JD alignment)
 

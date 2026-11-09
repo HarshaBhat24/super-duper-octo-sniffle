@@ -107,15 +107,15 @@ Delivered code-level remediation in TypeScript, Python, and SQL across 30+ CVSS-
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
 - Log-based root cause analysis on pipeline and script failures (storage exhaustion, network issues)
-- PowerShell scripting deployed within ADO pipelines
-- ADO CI/CD pipelines (agent-VM architecture)
-- Systematic execution tracing
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Re-testing penetration testing defect tickets using Burp Suite (BOLA, JWT, CSP bypasses)
+- Application certificate renewal and CA certificate creation
 
 Suppress
 
@@ -124,17 +124,25 @@ Suppress
 - Functional Testing
 - Pipeline-as-code / Jenkinsfile authoring as primary framing
 
-Star Bullet
+### Associate Product Developer (2 bullets)
+
+Star Bullet (AppSec Defect Verification)
+
+Performed log-based root cause analysis on recurring CI/CD pipeline and script execution failures across agent VMs, tracing storage exhaustion, certificate expirations, and network timeouts to restore automated build stability.
+
+Example Bullet (Certificate Lifecycle & Infrastructure)
+
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
 
 Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
-Example Bullet
+Example Bullet (Automation & Testing)
 
-Performed log-based root cause analysis on pipeline and script failures - tracing storage exhaustion and network-related execution errors through systematic pipeline execution logs; applied structured investigation methodology to recurring production failures.
-
-Example Bullet
-
-Created ADO CI/CD pipelines using agent-VM architecture; authored PowerShell scripts executing within those pipelines for environment automation and maintenance across Windows and Linux systems.
+Wrote SQL queries against SSMS-backed databases for test data validation and application state inspection; performed boundary testing and input validation across enterprise application workflows.
 
 ---
 
@@ -436,7 +444,7 @@ Replace CipherCrack with the Security Assessment only if the Job Description hea
 
 ✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
-✓ Exactly three bullets per section
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ One-page resume
 

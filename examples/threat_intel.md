@@ -109,26 +109,41 @@ Audited API authentication boundaries and PostgreSQL RLS policies; uncovered wil
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
-- Log-based root cause analysis and investigation methodology
-- Automation of environment hygiene and diagnostic data processing via PowerShell and Azure DevOps
-- Enterprise reliability engineering and threat surface reduction in build infrastructure
+- Log-based root cause analysis and investigation methodology across agent VMs
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared across 5 VMs via ADO)
+- Re-testing penetration testing defect tickets using Burp Suite (BOLA, JWT, CSP)
+- Application certificate lifecycle management and CA certificate generation
 
-Example Bullet
+Suppress
 
-Engineered a PowerShell cleanup script deployed across 5 agent VMs via weekly automated ADO pipelines, clearing ~ 50 GB of log data per run and eliminating pipeline failures caused by storage exhaustion.
+- Generic Software Testing
+- Basic IT Support
+- QA Terminology
 
-Example Bullet
+### Associate Product Developer (2 bullets)
 
-Investigated execution logs and system failure traces across Windows and Linux agent VMs, applying systematic root cause analysis to resolve network and script failures in enterprise build environments.
+Star Bullet (AppSec Defect Verification)
 
-Example Bullet
+Performed log-based root cause analysis on recurring CI/CD pipeline and script execution failures across agent VMs, tracing storage exhaustion, certificate expirations, and network timeouts to restore automated build stability.
 
-Managed application security lifecycle requirements by renewing application certificates and generating CA certificates, integrating secure configuration practices into Azure DevOps CI/CD workflows.
+Example Bullet (Certificate Lifecycle & Infrastructure)
+
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
+
+Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
+
+Example Bullet (Automation & Testing)
+
+Renewed application certificates and created CA certificates for enterprise application components, applying certificate lifecycle management alongside Azure DevOps pipeline orchestration and Agile delivery.
 
 ---
 
@@ -361,6 +376,8 @@ Avoid
 ✓ Mindpex in Experience section (titled "Security Consultant (Freelancer) - Mindpex" or "Freelance VAPT Engagement - Enterprise SaaS Platform")
 
 ✓ Agent should select 2 project slots based on JD alignment (3 bullets each)
+
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ Certifications & Achievements merged into single compact section
 

@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install beautifulsoup4
+
+      - name: Run Test Suite
+        run: |
+          python3 -m unittest discover tests
+
+      - name: Validate Baseline Resumes
+        run: |
+          python3 engine/validate_resume.py templates/resume_template.html --render
+          python3 engine/validate_resume.py S-Harsha-Bhat.html --render

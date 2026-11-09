@@ -223,7 +223,7 @@ The resume must strictly follow the visual layout of the reference PDF:
 
 ### Output Deliverable (Strictly HTML Only - Zero Token Overhead)
 Output **strictly and exclusively ONE deliverable**:
-1. **Self-Contained Print-Ready HTML Document:** A standalone `<!DOCTYPE html>` block with clean, embedded CSS (`@page { size: letter; margin: 0.38in 0.45in; }`, sans-serif ATS font, flex row spacing, horizontal rules) that renders the exact 1-page PDF upon "Print to PDF".
+1. **Self-Contained Print-Ready HTML Document:** A standalone `<!DOCTYPE html>` block with clean, embedded CSS (`@page { size: letter; margin: 0.38in 0.45in 0.35in 0.45in; }` for US/Canada or `size: A4; margin: 0.38in 0.45in 0.35in 0.45in;` for India/UK/EU, sans-serif ATS font, flex row spacing, horizontal rules) that renders the exact 1-page PDF upon "Print to PDF".
 
 **STRICT TOKEN CONSERVATION RULES (Do NOT Output):**
 - **DO NOT** output a Markdown version of the resume.
@@ -262,7 +262,7 @@ If evidence is unavailable, omit the information. Never guess.
 
 - Both Experience Entries Always Present
 - Mindpex: exactly 3 bullets, max 2 lines each
-- Epicor: exactly 3 bullets, max 2 lines each
+- Epicor: exactly 4 bullets total (2 for Associate Product Developer, 2 for Intern), max 2 lines each
 - Projects: exactly 2 entries selected based on JD alignment (3 bullets each)
 - Skills: dynamic list matching JD requirements + verified candidate skills
 - Certifications & Achievements: compact list - exactly 2 certs + max 3 achievements

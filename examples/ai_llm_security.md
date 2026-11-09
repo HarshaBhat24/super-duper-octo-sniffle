@@ -107,32 +107,40 @@ Discovered in-memory LLM context store with zero tenant isolation; any authentic
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
-- ADO CI/CD pipelines (agent-VM architecture)
-- PowerShell scripting deployed within those pipelines
-- TypeScript UI automation of enterprise application
-- VM disk cleanup and environment maintenance automation
+- Re-testing penetration testing defect tickets with Burp Suite (CSP bypass, BOLA user extraction, JWT failure)
+- ADO CI/CD pipelines (agent-VM architecture) and PowerShell automation
+- VM disk cleanup automation (~ 50 GB/wk cleared across 5 VMs)
+- Python/Locust load testing across parallel Chrome instances
 
 Suppress
 
 - Pipeline-as-code / Jenkinsfile authoring as primary framing
 - Azure Pipelines YAML authoring as primary framing
 
-Star Bullet
+### Associate Product Developer (2 bullets)
+
+Star Bullet (AppSec Defect Verification)
+
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+
+Example Bullet (Certificate Lifecycle & Infrastructure)
+
+Renewed application certificates and created CA certificates for enterprise application components, applying certificate lifecycle management alongside Azure DevOps pipeline orchestration and Agile delivery.
+
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
 
 Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
-Example Bullet
+Example Bullet (Automation & Testing)
 
-Created ADO CI/CD pipelines using agent-VM architecture to automate enterprise build workflows; authored PowerShell scripts executing within those pipelines for environment provisioning and maintenance.
-
-Example Bullet
-
-Developed TypeScript UI automation of the enterprise application, supporting automated validation and workflow testing across the enterprise software stack.
+Developed TypeScript UI automation of the enterprise application and authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
 
 ---
 
@@ -344,7 +352,7 @@ Highest Priority
 
 ✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
-✓ Three bullets per section
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ One-page resume
 

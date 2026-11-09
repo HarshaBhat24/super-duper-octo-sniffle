@@ -114,17 +114,17 @@ Suppress
 - Audit logging gaps (use for Detection Engineering roles)
 - RLS analysis detail (save for Product Security roles)
 
-Entry 2 - Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★☆
 
 Emphasize
 
-- Adversarial input testing
-- Edge-case validation
-- Linux
-- PowerShell
-- Automation
+- Re-testing 5 penetration testing defect tickets using Burp Suite; identifying 3 incomplete fixes (CSP unsafe-inline bypass, BOLA user extraction, JWT invalidation failure)
+- Adversarial input testing and edge-case boundary validation
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Application certificate renewal and CA certificate creation
+- Python/Locust load testing exercising application workflows under concurrent load
 
 Suppress
 
@@ -483,28 +483,28 @@ Role Score
 
 Experience
 
-Epicor
-
-★★★★★
-
-Focus
-
-- PowerShell
-- Automation
-- Log Analysis
-- Jenkins
-- Azure DevOps
-
-Mindpex
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★☆
 
-Focus
+Emphasize
 
-- Audit logging gaps
-- Rate limiting middleware review
-- API security testing
-- Remediation scripts
+- Audit logging gaps and missing telemetry
+- Rate limiting middleware review and bypass analysis
+- API security testing and SSRF attack surface mapping
+- 30+ CVSS-scored findings and remediation scripts
+
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
+
+★★★★☆
+
+Emphasize
+
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Log-based root cause analysis on pipeline failures and script execution errors
+- Azure DevOps CI/CD pipeline automation with PowerShell execution
+- Re-tested 5 penetration testing defect tickets with Burp Suite (incomplete fixes: CSP, BOLA, JWT)
+- Application certificate renewal and CA certificate creation
 
 ---
 
@@ -610,28 +610,26 @@ Role Score
 
 Experience
 
-Epicor
-
-★★★★★
-
-Focus
-
-- PowerShell log analysis
-- Script execution debugging
-- Linux
-- Root cause analysis
-- Automation
-
-Mindpex
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★☆
 
-Focus
+Emphasize
 
-- Web application security assessment
-- Attack surface enumeration
-- Audit logging analysis
-- Finding validation and remediation
+- Web application security assessment and threat attack surface enumeration
+- Audit logging gaps analysis and detection blind spots
+- 30+ CVSS-scored finding validation and remediation
+
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
+
+★★★★☆
+
+Emphasize
+
+- PowerShell log analysis and automated VM hygiene script (~ 50 GB/wk cleared)
+- Root cause analysis on pipeline/script failures (storage exhaustion, execution errors)
+- Re-tested 5 penetration testing defect tickets using Burp Suite (incomplete fixes: CSP, BOLA, JWT)
+- Certificate lifecycle and secure authentication tracking
 
 Suppress
 
@@ -748,25 +746,25 @@ Role Score
 
 Experience
 
-Epicor
-
-★★★☆☆
-
-Focus
-
-- Log analysis
-- Automation
-
-Mindpex
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★☆
 
-Focus
+Emphasize
 
-- Threat surface mapping
-- Vulnerability intelligence
-- SSRF attack vector validation
-- CVSS scoring
+- Threat surface mapping and attack vector validation (SSRF, BOLA)
+- Vulnerability intelligence and CVSS severity scoring across 30+ findings
+- Root cause mapping from external telemetry to code-level remediation
+
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
+
+★★★☆☆
+
+Emphasize
+
+- Re-testing 5 penetration testing defect tickets using Burp Suite (uncovering 3 incomplete fixes: CSP, BOLA, JWT)
+- PowerShell log analysis and automated VM hygiene script (~ 50 GB/wk cleared)
+- Certificate lifecycle monitoring and CA creation
 
 ---
 
@@ -880,18 +878,17 @@ Emphasize
 - Dead middleware (rate limiting bypass), audit logging gaps
 - Multi-tenant SaaS security architecture findings
 
-Entry 2 - Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★★
 
-Focus
+Emphasize
 
-- Automation
-- CI/CD
-- Linux
-- Azure DevOps
-- SQL
-- PowerShell
+- Re-tested 5 penetration testing defect tickets using Burp Suite; caught 3 incomplete fixes (CSP unsafe-inline bypass, BOLA user extraction, JWT invalidation failure)
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Application certificate renewal and CA certificate creation for enterprise applications
+- Azure DevOps CI/CD pipeline automation and PowerShell scripting
+- Python/Locust load testing and TypeScript UI automation
 
 ---
 
@@ -999,16 +996,17 @@ Suppress
 
 - Prompt injection detail (save for AI Security roles)
 
-Entry 2 - Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★★
 
 Emphasize
 
-- CI/CD pipeline-as-code (Jenkinsfile + Azure Pipelines YAML)
-- Jenkins to Azure DevOps migration
-- Build and test environment provisioning automation (PowerShell + Batch)
-- Log-based root cause analysis across Linux execution environments
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Re-tested 5 enterprise penetration testing defect tickets using Burp Suite; caught 3 incomplete fixes (CSP, BOLA, JWT)
+- Application certificate renewal and CA certificate creation for enterprise environments
+- Azure DevOps CI/CD pipeline automation and PowerShell execution on agent VMs
+- Log-based root cause analysis for pipeline and script execution failures
 
 Suppress
 
@@ -1129,26 +1127,28 @@ Role Score
 
 Experience
 
-Epicor
-
-★★★☆☆
-
-Focus
-
-- Root Cause Analysis
-- Automation
-
-Mindpex
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
-Focus
+Emphasize
 
-- Vulnerability research
-- Root cause analysis
-- Prompt injection analysis
-- PostgreSQL RLS policy audit
-- Code-level remediation
+- Vulnerability research and multi-vector attack chain modeling
+- Root cause analysis across 7 security domains
+- Prompt injection and zero tenant isolation in LLM context store
+- PostgreSQL RLS policy static audit across 47 migrations
+- 30+ CVSS findings with code-level remediation (TypeScript, Python, SQL)
+
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
+
+★★★☆☆
+
+Emphasize
+
+- Re-tested 5 penetration testing defect tickets using Burp Suite; caught 3 incomplete remediations (CSP unsafe-inline bypass, BOLA, JWT revocation failure)
+- Root cause analysis on pipeline/script failures and environment hygiene
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared)
+- Certificate lifecycle and CA certificate creation
 
 ---
 
@@ -1339,27 +1339,27 @@ Role Score
 
 Experience
 
-Epicor
+Entry 1 - Mindpex VAPT Freelance
 
 ★★★★★
 
-Focus
+Emphasize
 
-- Automation
-- Linux
-- Log Analysis
+- Full-scope offensive findings paired with defensive controls analysis
+- PostgreSQL RLS policies security audit (47 migration files)
+- Rate limiting middleware review and logging gap identification
+- Code-level remediation delivery (TypeScript, Python, SQL)
 
-Mindpex
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
-★★★★★
+★★★★☆
 
-Focus
+Emphasize
 
-- Full-scope offensive findings
-- Defense analysis
-- RLS policies
-- Rate limiting and logging gap identification
-- Code-level remediation
+- Re-tested 5 penetration testing defect tickets using Burp Suite; caught 3 incomplete remediations (CSP unsafe-inline bypass, BOLA, JWT revocation failure) and moved tickets back in Jira with PoCs
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Application certificate renewal and CA creation
+- Log-based root cause analysis across pipeline and script execution failures
 
 ---
 
@@ -1461,15 +1461,16 @@ Suppress
 - RLS policy detail (save for Product Security roles)
 - Rate limiting misconfiguration (save for DevSecOps)
 
-Entry 2 - Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★☆
 
 Emphasize
 
-- Python scripting
-- Automation
-- CI/CD pipeline as integration layer for security tooling
+- Re-tested 5 penetration testing defect tickets using Burp Suite and manual API testing (catching CSP unsafe-inline bypass, BOLA user extraction, JWT invalidation failure)
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Python/Locust load testing scripts exercising enterprise application flows under concurrent load
+- Application certificate renewal and CA certificate creation
 
 ---
 
@@ -1748,16 +1749,16 @@ Suppress
 - Audit logging gaps (save for Detection Engineering)
 - RLS detail (save for Product Security)
 
-Entry 2 - Epicor Software Internship
+Entry 2 - Epicor Software (Associate Product Developer & Intern)
 
 ★★★★☆
 
 Emphasize
 
-- Linux
-- Scripting (PowerShell, Bash)
-- Automation
-- CI/CD pipeline knowledge
+- Re-tested 5 penetration testing defect tickets using Burp Suite; caught 3 incomplete remediations (CSP unsafe-inline bypass, BOLA, JWT revocation failure) and moved tickets back in Jira
+- Automated VM cleanup PowerShell script (~ 50 GB/wk cleared, eliminating storage exhaustion)
+- Scripting (Python, PowerShell) and Linux execution environments
+- Application certificate renewal and CA creation
 
 Suppress
 

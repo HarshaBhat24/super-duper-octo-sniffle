@@ -28,7 +28,9 @@ career-engine/
 │   ├── 02_role_intelligence_matrix.md# Per-role emphasis, skills ordering, terminology
 │   ├── 03_resume_budget.md           # Bullet counts, space constraints
 │   ├── 04_company_intelligence.md    # Company type classification and tone modifiers
-│   └── export_pdf.py                 # CLI utility compiling HTML to 1-page PDF (--no-pdf-header-footer)
+│   ├── export_pdf.py                 # CLI utility compiling HTML to 1-page PDF (--no-pdf-header-footer)
+│   ├── issue_resume_generator.py     # GitHub Actions / CLI issue parser and PDF generator
+│   └── validate_resume.py            # Quality assurance linter (Truth Guard, bullet budgets, 1-page fit)
 │
 ├── templates/
 │   └── resume_template.html          # Reference HTML/CSS template matching 1-page PDF layout

@@ -73,7 +73,7 @@ The layout is unified across all roles:
 
 Both experience entries always on resume:
 
-- Each experience: 3 bullets, max 2 lines each
+- Epicor: 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex: 3 bullets; max 2 lines per bullet
 - Projects: exactly 2 projects selected out of 3 based on JD alignment, with 3 bullets each
 - Skills: dynamic skills list tailored to JD (all skills matching JD that candidate has + valuable verified candidate additions; no rigid numerical range)
 - Certifications: exactly 2 (CompTIA Security+ - June 2026, ISC2 CC - Feb 2026)

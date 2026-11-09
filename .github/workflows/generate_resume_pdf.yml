@@ -2,7 +2,7 @@ name: Generate Resume PDF
 
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
   workflow_dispatch:
     inputs:
       company_name:
@@ -27,6 +27,7 @@ permissions:
 jobs:
   generate-pdf:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout Repository
@@ -45,7 +46,7 @@ jobs:
           python3 engine/issue_resume_generator.py
 
       - name: Handle Error on Issue
-        if: steps.generator.outputs.status == 'error' && steps.generator.outputs.issue_number != ''
+        if: always() && steps.generator.outputs.status == 'error' && steps.generator.outputs.issue_number != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

@@ -22,7 +22,23 @@ Reason: [why - new skill, completed project, new cert, etc.]
 
 ## Log
 
-## 2026-10-21
+## 2026-11-09
+
+Files updated: prompts/master_resume_prompt.md, engine/*, knowledge-base/*, examples/*, templates/resume_template.html, .github/workflows/*, outputs/log.md, tests/*
+Change:
+- Rule & Prompt Alignment: Fixed Epicor bullet count contradictions in master_resume_prompt.md, 01_resume_generation_rules.md, 01_candidate_profile.md, 02_experience.md, and 06_epicor_internship.md to uniformly enforce 4 bullets total (2 for Associate Product Developer, 2 for Product Development Intern). Mindpex uniformly enforces 3 bullets. Selected projects enforce 3 bullets each.
+- Output Format Consistency: Removed residual Markdown output deliverable instruction from 01_candidate_profile.md; reinforced strict print-ready HTML/CSS output format across all prompt and KB files.
+- Metric Discrepancy Resolved: Standardized the VM cleanup script metric to ~ 50 GB/week across all files, correcting the legacy 15 GB/week mentions in 06_epicor_internship.md.
+- Role Intelligence Matrix & Examples: Updated all 10 roles in 02_role_intelligence_matrix.md and all 14 files in examples/ to feature Associate Product Developer (FTE) AppSec defect verification work alongside Product Development Intern automation/reliability work; updated validation checklists to the 4-bullet Epicor split.
+- Python Tooling Robustness:
+  - export_pdf.py: Fixed CLI error masking (exits 1 on error, 0 on success), added tempfile-isolated user data dirs to prevent SingletonLock collisions, added CHROME_BIN / BROWSER_PATH env var detection and msedge support, and handled FileNotFoundError gracefully.
+  - issue_resume_generator.py: Added fallback import for export_pdf to allow module invocation (`python3 -m engine.issue_resume_generator`), and added automated entry logging to outputs/log.md.
+- Automated Testing & Quality Assurance: Added engine/validate_resume.py (linter checking Truth Guard keywords, bullet budgets, section structure, and 1-page PDF rendering) and tests/test_resume.py unit test suite.
+- CI/CD Workflows:
+  - generate_resume_pdf.yml: Fixed error handling with `if: always() && ...`, added `types: [opened, edited]`, added `timeout-minutes: 10`, and added an automated resume validation step.
+  - ci.yml: Added GitHub Actions CI workflow to run test suite and validate baseline templates on push/PR.
+- Template Polish: Updated templates/resume_template.html to include Finalist - KJSSE CTF 2.0 (Ranked 17th out of 662 teams) and combined Solved 200+ CTF Challenges | Top 10% Ranking on TryHackMe; documented Letter vs A4 CSS page sizes.
+Reason: Comprehensive repository audit and inconsistency remediation across prompts, knowledge base, examples, CI/CD, and tooling.
 
 Files updated: knowledge-base/*, engine/*, prompts/master_resume_prompt.md, README.md, templates/resume_template.html, examples/*
 Change:

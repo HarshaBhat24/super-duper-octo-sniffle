@@ -411,7 +411,7 @@ Evidence
 Concepts
 
 - PowerShell scripting for pipeline task automation
-- VM cleanup script (5 VMs, 15GB/week, ADO-triggered)
+- VM cleanup script (5 VMs, ~ 50 GB/week, ADO-triggered)
 - Python/Locust load testing scripting
 - TypeScript UI automation
 
@@ -505,7 +505,7 @@ Very High
 Emphasize
 
 - ADO CI/CD pipeline creation
-- VM cleanup PowerShell script (5 VMs, 15GB/week, ADO-triggered)
+- VM cleanup PowerShell script (5 VMs, ~ 50 GB/week, ADO-triggered)
 - Pipeline failure root cause analysis
 
 Suppress
@@ -622,7 +622,9 @@ Emphasize
 
 # Resume Bullet Rules
 
-Generate exactly 3 bullets.
+Generate exactly 4 bullets total:
+- Associate Product Developer (Sep 2026 – Present): exactly 2 bullets
+- Product Development Intern (Oct 2025 – Sep 2026): exactly 2 bullets
 
 Maximum 2 lines per bullet.
 
@@ -630,25 +632,23 @@ Each bullet must follow:
 
 Action → Technical implementation → Cybersecurity relevance → Impact
 
-## Preferred Bullet Framings (in order of priority)
+## Preferred Bullet Framings by Role Entry
 
-### For Application Security / Product Security / API Security / Pentest Roles:
-- **Bullet 1 (AppSec Star Bullet - Highest Priority)**:
-  Re-tested 5 penetration testing vulnerabilities using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA / user-data extraction, and JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
-- **Bullet 2 (DevOps/Reliability Star Bullet)**:
-  Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
-- **Bullet 3 (Certificate / Infrastructure / Testing - Role-adaptive)**:
-  - Certificate Lifecycle: Renewed application certificates and created CA certificates for the enterprise application, ensuring secure communication and key lifecycle compliance.
-  - API / Stress Testing: Authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
+### Associate Product Developer (FTE, Sep 2026 – Present) - Exactly 2 Bullets:
+- **Bullet 1 (AppSec / Defect Verification Star Bullet - Priority for AppSec / ProdSec / Pentest / API roles)**:
+  Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+- **Bullet 2 (Certificate Lifecycle / Pipeline / Agile - Priority for Infrastructure / DevSecOps)**:
+  Renewed application certificates and created CA certificates for enterprise application components, applying certificate lifecycle management alongside Azure DevOps pipeline orchestration and Agile defect tracking in Jira.
+- **Alternative APD Bullet (Root Cause Analysis)**:
+  Conducted root-cause investigation and log analysis on failed CI/CD pipeline runs and agent execution errors across Azure DevOps environments, diagnosing storage limits and credential expirations.
+
+### Product Development Intern (Oct 2025 – Sep 2026) - Exactly 2 Bullets:
+- **Bullet 1 (DevOps / Reliability Star Bullet - Highest Priority)**:
+  Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated weekly ADO pipeline, clearing ~ 50 GB of logs and temp data per run - eliminating pipeline failures caused by storage exhaustion.
+- **Bullet 2 (Automation / Load Testing / Database - Role-adaptive)**:
+  - API / Stress Testing: Authored Python/Locust load testing scripts exercising enterprise application workflows across multiple parallel Chrome instances under concurrent load.
   - UI Automation: Developed TypeScript UI automation workflows to validate enterprise application functionality and input boundaries.
-
-### For DevSecOps / Security Engineering / Detection / SOC Roles:
-- **Bullet 1 (DevOps Star Bullet - Highest Priority)**:
-  Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
-- **Bullet 2 (Vulnerability Re-Testing / Root Cause Analysis)**:
-  Re-tested 5 enterprise penetration testing defect tickets using Burp Suite and manual API testing; caught 3 incomplete remediations (BOLA, unrevoked JWTs, CSP bypasses) and documented reproduction steps in Jira. *(Or: Performed log-based root cause analysis on pipeline and script execution failures tracing storage exhaustion and network errors).*
-- **Bullet 3 (Pipeline & Infrastructure Security)**:
-  Renewed application certificates and created CA certificates for enterprise application components; created ADO CI/CD pipelines executing PowerShell scripts on agent VMs.
+  - Database Inspection: Wrote SQL queries against SSMS-backed databases for test data validation and application state inspection; performed database backup and restoration.
 
 ## Always Avoid
 
@@ -716,7 +716,7 @@ If JD is DevSecOps
 Focus on
 
 - ADO CI/CD pipeline creation and automation
-- VM cleanup PowerShell script (5 VMs, 15GB/week, auto-triggered)
+- VM cleanup PowerShell script (5 VMs, ~ 50 GB/week, auto-triggered)
 - Pipeline failure root cause analysis
 - Re-testing penetration testing bugs (BOLA, JWT, CSP) and managing defect remediation lifecycle
 

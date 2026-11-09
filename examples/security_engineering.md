@@ -104,15 +104,15 @@ Delivered code-level remediation in TypeScript, Python, and SQL across 30+ CVSS-
 ## Epicor Software
 
 Roles on resume:
-- Associate Product Developer (Sep 2026 – Present)
-- Product Development Intern (Oct 2025 – Sep 2026)
+- Associate Product Developer (Sep 2026 – Present) (2 bullets)
+- Product Development Intern (Oct 2025 – Sep 2026) (2 bullets)
 
 Focus
 
-- PowerShell automation deployed within ADO pipelines
+- PowerShell automation deployed within ADO pipelines (~ 50 GB/wk cleared across 5 VMs)
+- Re-testing penetration testing defect tickets using Burp Suite (incomplete fixes: CSP, BOLA, JWT)
+- Application certificate renewal and CA certificate creation
 - Log-based root cause analysis across Linux execution environments
-- ADO CI/CD pipelines (agent-VM architecture)
-- Environment maintenance automation
 
 Suppress
 
@@ -120,17 +120,25 @@ Suppress
 - QA Terminology
 - Pipeline-as-code / Jenkinsfile authoring as primary framing
 
-Star Bullet
+### Associate Product Developer (2 bullets)
+
+Star Bullet (AppSec Defect Verification)
+
+Renewed application certificates and created CA certificates for enterprise application components, applying certificate lifecycle management alongside Azure DevOps pipeline orchestration and Agile delivery.
+
+Example Bullet (Certificate Lifecycle & Infrastructure)
+
+Re-tested 5 penetration testing defect tickets using Burp Suite and manual API manipulation; identified incomplete remediations across 3 defects (CSP unsafe-inline bypass, BOLA user-data exposure, JWT post-logout invalidation failure) and returned tickets in Jira with reproduction PoCs.
+
+### Product Development Intern (2 bullets)
+
+Star Bullet (Environment Reliability Automation)
 
 Engineered a PowerShell cleanup script deployed across 5 agent VMs via automated ADO pipeline, clearing ~ 50 GB of logs and temp data weekly - eliminating pipeline failures caused by storage exhaustion.
 
-Example Bullet
+Example Bullet (Automation & Testing)
 
-Developed PowerShell automation scripts for build environment provisioning across agent-VM ADO pipeline environments; applied scripting skills to automate repetitive operational tasks across Linux-based execution environments.
-
-Example Bullet
-
-Worked with ADO pipelines, Linux systems, and SQL-backed environments; gained practical understanding of enterprise build pipeline architecture and agent-VM execution models.
+Developed TypeScript UI automation of the enterprise application and authored Python/Locust load testing scripts exercising application workflows across multiple parallel Chrome instances under concurrent load.
 
 ---
 
@@ -351,7 +359,7 @@ High Priority
 
 ✓ Education section with New Horizon College of Engineering, CGPA: 8.57
 
-✓ Three bullets per section
+✓ Epicor has 4 bullets total (2 for Associate Product Developer, 2 for Intern); Mindpex has 3 bullets; selected projects have 3 bullets each
 
 ✓ One-page resume
 
